@@ -1,0 +1,135 @@
+﻿@{Layout = ""; }
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>XÁC NHẬN THANH TOÁN ĐƠN HÀNG - @Model.MaThamChieu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="booking,vietnam,reserve" />
+    <style>
+        .table-group {
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        .table-list-header {
+            font-weight: bold;
+        }
+
+            .table-list-header td {
+                text-align: center;
+                border-top: solid 1px #b4b4b4;
+                border-left: solid 1px #b4b4b4;
+                border-right: solid 1px #b4b4b4;
+            }
+
+        .table-list-item td {
+            border-left: solid 1px #b4b4b4;
+            border-right: solid 1px #b4b4b4;
+            padding: 3px;
+        }
+
+        .table-list-item-end td {
+            padding: 3px;
+            border-bottom: solid 1px #b4b4b4;
+            border-left: solid 1px #b4b4b4;
+            border-right: solid 1px #b4b4b4;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Arial',sans-serif; font-size: 14px;">
+    <div style="width:100%">
+        <div style="width: 100%; padding: 20px; text-align: center; background-color: #53a72e;">OTA TRÀNG AN GROUP XÁC NHẬN ĐƠN HÀNG ĐÃ THANH TOÁN</div>
+        <div style="width:100%;padding:20px">
+            <table border="0">
+
+                <tr class="table-group"><td colspan="4">I.Thông tin đơn hàng:</td></tr>
+                <tr>
+                    <td colspan="2">Mã OTA Booking:</td>
+                    <td colspan="2">@Model.MaThamChieu</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Trạng thái đơn hàng:</td>
+                    <td colspan="2">Đã thanh toán</td>
+                </tr>
+                <tr>
+                    <td colspan="2">OTA/Nhân viên lập:</td>
+                    <td colspan="2">@Model.TenNhanVien</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Ngày lập:</td>
+                    <td colspan="2">@Model.NgayTao.ToString("dd-MM-yyyy")</td>
+                </tr>
+                <tr>
+                    <td style="height:20px;"></td>
+                </tr>
+            </table>
+            <table>
+                <tr class="table-group"><td colspan="4">II.Thông tin Khách hàng:</td></tr>
+                <tr>
+                    <td>Khách hàng:</td>
+                    <td>@Model.TenKhachHang</td>
+                </tr>
+                <tr>
+                    <td>Số điện thoại:</td>
+                    <td>@Model.DienThoai</td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ:</td>
+                    <td>@Model.DiaChi</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>@Model.Email</td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>Ghi chú đơn hàng:</td>
+                    <td>@Model.GhiChu</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <h3 style="color:#a10808">Để tránh bị ảnh hưởng trong quá trình Soát vé tại KDL Yêu cầu Đoàn đi theo hàng thành một hàng duy nhất. Trưởng đoàn cầm vé đi đầu tiên.</h3>
+                    </td>
+                </tr>
+
+            </table>
+            <table>
+                <tr class="table-group"><td colspan="4">III.Thông tin dịch vụ:</td></tr>
+                <tr class="table-list-header">
+                    <td style="width: 20%; border-top-left-radius: 5px; background-color: #6aa052;">Dịch vụ</td>
+                    <td style="width: 10%; background-color: #6aa052;">Số lượng</td>
+                    <td style="width: 10%; background-color: #6aa052;">Dự kiến đi</td>
+                    <td style="width: 15%; background-color: #6aa052;">Đơn giá (VNĐ)</td>
+                    <td style="width: 15%; background-color: #6aa052;">Thành tiền (VNĐ)</td>
+                    <td style="width: 20%; background-color: #6aa052;">Trạng thái booking</td>
+                    <td style="width: 10%; border-top-right-radius: 5px; background-color: #6aa052;">Ghi chú</td>
+                </tr>
+                @try
+                {
+                    foreach (LSPos_Data.Models.DonHang_DichVuRequestAPIModel ct in Model.chitietdonhang)
+                    {
+                        <tr class="table-list-item">
+                            <td>@ct.DichVu.TenDichVu</td>
+                            <td style="text-align:right">@ct.SoLuong</td>
+                            <td style="text-align:right">@ct.Ngay.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td style="text-align:right">@ct.GiaBan.ToString("N0")</td>
+                            <td style="text-align:right">@((@ct.SoLuong * @ct.GiaBan).ToString("N0"))</td>
+                            <td style="text-align:center;color:#327216">@ct.BookingCode</td>
+                            <td></td>
+                        </tr>
+                    }
+                }
+                catch (Exception ex) { }
+                <tr class="table-list-item-end">
+                    <td style=" border-bottom-left-radius: 5px;">Tổng tiền</td>
+                    <td colspan="6" style="border-bottom-right-radius: 5px;text-align:right">@Model.TongTien.ToString("N0") VNĐ</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+﻿.btn-viengtham {
+    margin-top: 2rem;
+}
+
+.body-viengtham {
+    height: calc(100vh - 7rem);
+    overflow-y: scroll;
+}
+.card-body{
+        flex: 1 1 auto;
+        padding: 2.25rem;
+}

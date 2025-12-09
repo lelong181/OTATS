@@ -1,0 +1,71 @@
+﻿.map-editkhachhang {
+    height: calc((100vh - 100px)/2);
+}
+
+.btn-search {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.collapse-content.collapsed .fa-caret-right {
+    display: none;
+}
+
+.collapse-content .fa-caret-right {
+    display: block;
+}
+
+.collapse-content.collapsed .fa-caret-down {
+    display: block;
+}
+
+.collapse-content .fa-caret-down {
+    display: none;
+}
+
+/*.content-form {
+    padding: 1.25rem 0;
+    height: calc(100vh - 110px);
+    overflow-y: scroll;
+}*/
+
+.collapse-content {
+    padding: .75rem 0;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    cursor: pointer;
+    color: #048da2;
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+.k-widget.k-upload.k-header.k-upload-sync {
+    text-align: center;
+    border: none;
+    background: none;
+}
+
+.image-preview {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.card-body {
+    padding: 0 1.25rem;
+}
+
+.required-field-icon {
+    color: red;
+}
+
+.invalid .k-dropdown-wrap. {
+    border-color: red;
+}
+
+.invalid.k-textbox {
+    border-color: red;
+}

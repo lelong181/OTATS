@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Shared/_LayoutPos.cshtml";
+}
+<script src="~/Scripts/js/booking/listservices.js"></script>
+<style>
+    .product {
+        float: left;
+        width: 170px;
+        height: 120px;
+        margin: 0;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+        .product .product-info {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product img {
+            float: left;
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            color: #111;
+            margin: 0;
+            padding: 5px 0 0 5px;
+            font-size: .75em;
+            overflow: hidden;
+            font-weight: normal;
+            float: left;
+            max-width: 90px;
+            text-transform: uppercase;
+        }
+</style>
+<div class="container-fluid">
+    <input id="datepicker"></input>
+</div>
+<div id="listview">
+
+</div>
+
+<script type="text/x-kendo-tmpl" id="templateOrder">
+    <div class="product" onclick="addrow()">
+        <div class='product-info'">
+            <h3>#:Title#</h3>
+            <h3>#:kendo.toString(SellPrice,'n0')#</h3>
+        </div>
+    </div>
+</script>

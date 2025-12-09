@@ -1,0 +1,96 @@
+﻿
+<div class="container-fluid">
+    <div class="toolbarmenu">
+        <button id="btn_luu" ng-click="luuphieutondau()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-primary"></i> {{bindTextI18n('button_luu')}}</button>
+        <button id="btn_taifilemau" ng-click="taifilemau()" class="btn btn-link btn-menubar"><i class="fas fa-file-download fas-sm color-success"></i> {{bindTextI18n('button_taifilemau')}}</button>
+        <button id="btn_importexcel" ng-click="importexcel()" class="btn btn-link btn-menubar"><i class="fas fa-file-import fas-sm color-success"></i> {{bindTextI18n('button_thembangexcel')}}</button>
+    </div>
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_khohang')}}:</label>
+                    <select kendo-combo-box="khohang"
+                            id="khohang"
+                            k-placeholder="bindTextI18n('label_khohang')"
+                            k-data-text-field="'tenKho'"
+                            k-data-value-field="'iD_Kho'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="khohangselect"
+                            k-data-source="khohangData"
+                            k-on-change="khohangOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_ngaychot')}}:</label>
+                    <input kendo-date-time-picker="dateNgayChot"
+                           ng-model="str_NgayChot"
+                           k-ng-model="obj_NgayChot"
+                           k-format="'dd/MM/yyyy HH:mm:ss'" />
+                </div>
+            </div>
+            
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_nhanvien')}}:</label>
+                    <input type="text" class="k-textbox" id="nhanvien" ng-model="nhanvien" readonly/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_mathang')}}:</label>
+                    <select kendo-combo-box="mathang"
+                            id="mathang"
+                            k-placeholder="bindTextI18n('label_mathang')"
+                            k-data-text-field="'tenHang'"
+                            k-data-value-field="'idMatHang'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="mathangselect"
+                            k-data-source="mathangData"
+                            k-on-change="mathangOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_soluong')}}:</label>
+                    <input kendo-numeric-text-box k-min="0" k-max="100" ng-model="soluong" />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <button id="btn_themhang" ng-click="themdong()" class="btn btn-outline-primary btn-menu__report"><i class="fas fa-plus-circle fas-sm"></i> {{bindTextI18n('button_themhang')}}</button>
+                    <button id="btn_themtatcahang" ng-click="themtatcadong()" class="btn btn-outline-secondary btn-menu__report"><i class="far fa-check-circle fas-sm"></i> {{bindTextI18n('button_themtatca')}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+
+<!--popup import-->
+<div kendo-window="formimport" id="formimport" k-title="bindTextI18n('button_thembangexcel')" k-visible="false" k-modal="true" k-width="500" k-height="200">
+    <div class="import-body">
+        <div class="row">
+            <div class="col-12">
+                <div class="choose-file-import">
+                    <label class="labelDetail">{{bindTextI18n('label_chonfile')}}:</label>
+                    <input name="filesExcelimport" title="" id="filesExcel" type="file" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="import-btn">
+                    <button id="btn_capnhatimport" ng-click="capNhatTuExcel()" class="btn btn-sm btn-info btn-import"><i class="fa fa-plus" aria-hidden="true"></i> {{bindTextI18n('button_capnhat')}}</button>
+                    <button id="btn_huycapnhatimport" ng-click="huyCapNhatExcel()" class="btn btn-sm btn-danger btn-import"><i class="fa fa-trash-o" aria-hidden="true"></i> {{bindTextI18n('button_huy')}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

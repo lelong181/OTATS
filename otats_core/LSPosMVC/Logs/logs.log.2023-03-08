@@ -1,0 +1,1183 @@
+﻿2023/03/08 13:31:24,649 ERROR 68 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.) ---> System.ComponentModel.Win32Exception (0x80004005): The semaphore timeout period has expired
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 416
+ClientConnectionId:b0096ca0-12dd-4f25-976c-a09a82919dfd
+Error Number:121,State:0,Class:20
+2023/03/08 13:31:24,651 ERROR 76 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.) ---> System.ComponentModel.Win32Exception (0x80004005): The semaphore timeout period has expired
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 416
+ClientConnectionId:ca7c18e8-d2c4-43d5-afc1-af69c83431e8
+Error Number:121,State:0,Class:20
+2023/03/08 13:31:25,193 ERROR 68 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/08 13:31:25,193 ERROR 76 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/08 13:31:28,658 ERROR 77 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.) ---> System.ComponentModel.Win32Exception (0x80004005): The semaphore timeout period has expired
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 416
+ClientConnectionId:28043fc0-0c8f-4ce1-8972-5a9fea03fb8c
+Error Number:121,State:0,Class:20
+2023/03/08 13:31:28,660 ERROR 77 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/08 13:31:28,662 ERROR 77 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/08 13:31:43,719 ERROR 68 SqlDataHelper - System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+2023/03/08 13:31:43,720 ERROR 68 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/08 13:31:43,721 ERROR 68 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/08 13:40:01,410 ERROR 64 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 13:40:01,414 ERROR 64 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 13:40:01,415 ERROR 64 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 13:40:01,415 ERROR 64 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 13:40:01,415 ERROR 64 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 13:40:01,415 ERROR 64 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 13:40:01,415 ERROR 64 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 13:40:33,767 ERROR 77 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(3) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 13:40:33,919 ERROR 77 LSPos_Data.Utilities.Log - System.FormatException: Format specifier was invalid.
+   at System.Number.FormatDouble(Double value, String format, NumberFormatInfo info)
+   at LSPosMVC.Common.utilsCommon.genMaDonHang(NhanVienAppModels nhanVienInfor, String macuoicung, String idnhom, String MaNhom, Int32 sttDonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 126
+2023/03/08 13:40:34,321 ERROR 77 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 13:40:55,256 ERROR 76 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 13:40:55,318 ERROR 70 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 13:41:00,423 INFO 67 LSPos_Data.Utilities.Log - Đoc file từ request
+2023/03/08 13:41:00,423 INFO 67 LSPos_Data.Utilities.Log - Lấy file
+2023/03/08 13:41:00,423 INFO 67 LSPos_Data.Utilities.Log - Lấy tên file : filename="logo-01.jpg"
+2023/03/08 13:41:00,423 INFO 67 LSPos_Data.Utilities.Log - Tạo filename : 08032023014100.jpg
+2023/03/08 13:41:00,451 INFO 67 LSPos_Data.Utilities.Log - Đọc byte : 90317
+2023/03/08 13:41:00,451 INFO 67 LSPos_Data.Utilities.Log - Filepath: C:\Users\quang\source\repos\LSPosCore\LSPosMVC\FileUpload\Images\08032023014100.jpg
+2023/03/08 13:41:00,452 INFO 67 LSPos_Data.Utilities.Log - Ghi file
+2023/03/08 13:41:02,293 ERROR 71 SiteDAO - System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at GlobalDAO.GetCurrentGlobalBySite(String sitecode, DateTime date) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\GlobalDAO.cs:line 35
+2023/03/08 13:41:16,122 ERROR 71 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 13:41:20,757 ERROR 70 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:03:30,817 ERROR 75 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:03:33,333 ERROR 69 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:09:05,061 ERROR 70 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:10:43,448 ERROR 65 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 14:10:43,449 ERROR 65 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 14:10:43,449 ERROR 65 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 14:10:43,449 ERROR 65 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 14:10:43,449 ERROR 65 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 14:10:43,449 ERROR 65 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 14:10:43,449 ERROR 65 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/08 14:11:00,650 ERROR 106 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(3) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:11:00,695 ERROR 106 LSPos_Data.Utilities.Log - System.FormatException: Format specifier was invalid.
+   at System.Number.FormatDouble(Double value, String format, NumberFormatInfo info)
+   at LSPosMVC.Common.utilsCommon.genMaDonHang(NhanVienAppModels nhanVienInfor, String macuoicung, String idnhom, String MaNhom, Int32 sttDonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 126
+2023/03/08 14:11:00,950 ERROR 106 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:11:06,689 ERROR 67 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:11:06,698 ERROR 73 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:17:06,404 ERROR 67 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:17:14,642 ERROR 73 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:18:15,595 ERROR 66 SqlDataHelper - Command:sp_App_XoaChiTietDonHang,Command Parameter:@idchitietdonhang:705|@iddonhang:466|@idhanghoa:165|@soluong:1|@ghichu:|@hinhthucban:0|@giakhac:0|@giaban:120000|@idnhanvien:0|@idquanly:0|@ngaysuadoi:|
+2023/03/08 14:18:15,595 ERROR 66 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'TongTien', table 'LSCloud_HUB.dbo.DonHang'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at SqlDataHelper.ExecuteNonQuery(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 141
+ClientConnectionId:7f6e3eaf-eb37-4d5b-a9d1-10951cd18559
+Error Number:515,State:2,Class:16
+2023/03/08 14:18:15,599 ERROR 66 LSPos_Data.Utilities.Log - System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'TongTien', table 'LSCloud_HUB.dbo.DonHang'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at SqlDataHelper.ExecuteNonQuery(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 148
+   at LSPos_Data.Data.DonHangData.XoaChiTietDonHang(ChiTietDonHangModels cdh) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 983
+ClientConnectionId:7f6e3eaf-eb37-4d5b-a9d1-10951cd18559
+Error Number:515,State:2,Class:16
+2023/03/08 14:18:15,928 ERROR 73 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:18:29,863 ERROR 67 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:23:37,562 ERROR 68 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:23:50,930 ERROR 66 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:23:58,588 ERROR 71 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:44:25,976 ERROR 77 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:47:19,742 ERROR 76 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:47:26,177 ERROR 68 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:51:37,410 ERROR 75 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:51:41,457 ERROR 69 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:51:52,233 ERROR 67 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 14:52:21,450 ERROR 67 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 15:01:36,502 ERROR 66 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/08 15:29:14,505 ERROR 12 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:30:14,525 ERROR 18 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:30:14,525 ERROR 17 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyHoatDong.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceHoatDong.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllHoatDong(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 20
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 49
+2023/03/08 15:30:18,615 ERROR 12 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 15:31:14,472 ERROR 19 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:31:14,481 ERROR 16 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 15:33:14,497 ERROR 21 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 15:35:14,458 ERROR 53 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:35:14,459 ERROR 40 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 15:38:14,474 ERROR 51 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 15:38:14,475 ERROR 50 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:39:14,435 ERROR 55 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:39:18,456 ERROR 12 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 15:40:14,487 ERROR 55 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:42:14,742 ERROR 55 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 15:45:14,687 ERROR 37 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:46:14,704 ERROR 37 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 15:47:14,931 ERROR 48 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 15:47:15,004 ERROR 29 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:48:15,060 ERROR 55 LSPos_Data.Utilities.Log - System.InvalidOperationException: Internal connection fatal error. Error state: 15, Token : 1
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:49:14,520 ERROR 16 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:51:14,880 ERROR 46 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 15:51:14,918 ERROR 45 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:53:14,613 ERROR 43 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 15:54:14,937 ERROR 43 LSPos_Data.Utilities.Log - System.InvalidOperationException: Internal connection fatal error. Error state: 15, Token : 1
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 15:56:14,693 ERROR 47 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 15:57:14,606 ERROR 46 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 16:00:14,660 ERROR 45 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 16:00:18,570 ERROR 23 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:03:14,590 ERROR 51 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 16:05:18,617 ERROR 45 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:08:18,567 ERROR 32 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:09:14,531 ERROR 51 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 16:10:14,634 ERROR 48 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 16:11:14,570 ERROR 37 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 16:13:14,602 ERROR 29 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 16:13:18,592 ERROR 17 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:14:18,596 ERROR 27 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:15:18,553 ERROR 27 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:17:18,556 ERROR 51 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:19:14,550 ERROR 46 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 16:23:14,653 ERROR 24 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 16:24:18,560 ERROR 16 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:25:18,629 ERROR 26 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:27:14,539 ERROR 35 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 16:28:18,615 ERROR 31 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:30:14,578 ERROR 28 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 16:30:14,736 ERROR 31 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 16:31:14,541 ERROR 16 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 16:32:14,638 ERROR 28 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 16:32:14,638 ERROR 46 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 16:44:14,474 ERROR 24 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 16:44:18,496 ERROR 36 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:48:18,488 ERROR 39 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:49:18,472 ERROR 23 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:50:18,520 ERROR 10 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:52:18,533 ERROR 21 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:55:18,510 ERROR 63 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 16:57:18,483 ERROR 56 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 17:00:14,528 ERROR 50 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 17:00:18,517 ERROR 27 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 17:03:18,524 ERROR 62 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 17:04:16,505 ERROR 36 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyChupAnh.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceChupAnh.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllChupAnh(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 32
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 51
+2023/03/08 17:05:14,543 ERROR 62 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/08 17:05:18,546 ERROR 36 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/03/08 17:06:16,518 ERROR 39 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyChupAnh.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceChupAnh.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllChupAnh(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 32
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 51
+2023/03/08 17:10:14,463 ERROR 21 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/08 17:10:16,500 ERROR 17 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyChupAnh.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceChupAnh.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllChupAnh(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 32
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 51
+2023/03/08 17:14:14,453 ERROR 23 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489

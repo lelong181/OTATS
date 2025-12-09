@@ -1,0 +1,122 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="/app/components/donhang/inDonHangStyle.css" media="print" />
+</head>
+<body>
+    <div class="print-wrapper print-patient-summary">
+        <div class="print-header">
+            <div class="print-italic print-bold">{{objprint.tencongty}}</div>
+            <!--<h1>
+                <img ng-if="visitTabConfig.getPrintConfigForCurrentTab().logo" class="logo" ng-src="{{visitTabConfig.getPrintConfigForCurrentTab().logo}}" alt="logo">
+                {{visitTabConfig.getPrintConfigForCurrentTab().title}}
+            </h1>-->
+        </div>
+        <div class="print-body">
+            <div class="print-center print-title">ORDER DETAIL</div>
+            <div class="print-center print-italic">{{objprint.maThamChieu}}</div>
+            
+                <table class="table table-border-none" cellpadding="2" cellspacing="2"  style="width: 100%; border-collapse: collapse">
+                    <tr>
+                        <td style="width: 20%;">Created date:</td>
+                        <td>{{objprint.ngayTao}}</td>
+                        <td style="width: 20%;">Discount:</td>
+                        <td style="width: 20%;">{{objprint.tenCTKM}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;">Created by:</td>
+                        <td>{{objprint.tenNhanVien}}</td>
+                        <td style="width: 20%;">Discount Percentage (%):</td>
+                        <td style="width: 20%;">{{fomartnumberpercent(objprint.chietKhauPhanTramTheoCTKM)}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;">Customer:</td>
+                        <td>{{objprint.tenKhachHang}}</td>
+                        <td style="width: 20%;">Discount Value:</td>
+                        <td style="width: 20%;">{{fomartnumber(objprint.chietKhauTienTheoCTKM)}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;">Phone Number:</td>
+                        <td>{{objprint.dienThoai}}</td>
+                        <td style="width: 20%;">Other Discount Percentage (%):</td>
+                        <td style="width: 20%;">{{fomartnumberpercent(objprint.chietKhauPhanTramKhac)}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;">Delivery Status:</td>
+                        <td>{{objprint.tenTrangThaiGiaoHang}}</td>
+                        <td style="width: 20%;">Other Discount Value:</td>
+                        <td style="width: 20%;">{{fomartnumber(objprint.chietKhauTienKhac)}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;">Payment Status:</td>
+                        <td>{{objprint.tenTrangThaiThanhToan}}</td>
+                        <td style="width: 20%;">Total Discount Value:</td>
+                        <td style="width: 20%;">{{fomartnumber(objprint.tongTienChietKhau)}}</td>
+                    </tr>
+                    <tr>
+                        <td  style="width: 20%;">Address:</td>
+                        <td colspan="1" style="width:20%,">
+                            {{objprint.diaChi}}
+                        </td>
+                        <td style="width: 20%;">Total Value:</td>
+                        <td style="width: 20%;">{{fomartnumber(objprint.tongTien)}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Paid Value:</td>
+                        <td>{{fomartnumber(objprint.tienDaThanhToan)}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Remain:</td>
+                        <td>{{fomartnumber(objprint.conLai)}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Note:</td>
+                        <td>{{objprint.ghiChu}}</td>
+                    </tr>
+                </table>
+
+
+            <div class="table mt-lg-5">
+                <table cellpadding="7" cellspacing="3">
+                    <tr>
+                        <th>#</th>
+                        <th>Product ID</th>
+                        <th>Product name</th>
+                        <th>Sale price</th>
+                        <th>Quantity</th>
+                        <th>Delivered</th>
+                        <th>Unit</th>
+                        <th>Total Discount Value</th>
+                        <th>Total Value</th>
+                    </tr>
+                    <tr ng-repeat="data in list">
+                        <td>{{data.$id}}</td>
+                        <td>{{data.mahang}}</td>
+                        <td>{{data.tenhang}}</td>
+                        <td style="text-align:right">{{fomartnumber(data.giaban)}}</td>
+                        <td style="text-align:center">{{fomartnumber(data.soluong)}}</td>
+                        <td style="text-align:center">{{fomartnumber(data.dagiao)}}</td>
+                        <td style="text-align:center">{{data.tendonvi}}</td>
+                        <td style="text-align:right">{{fomartnumber(data.tongtienchietkhau)}}</td>
+                        <td style="text-align:right">{{fomartnumber(data.tongTien)}}</td>
+                        
+                    </tr>
+                    
+                </table>
+
+            </div>
+        </div>
+        <div class="print-footer">
+            <span>Customer</span>
+            <span>Delivery staff</span>
+            <span>Warehouseman</span>
+            <span>Accountant</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F754CF8B-43F2-4268-A51F-33E98BC82870}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSPos_Data</RootNamespace>
+    <AssemblyName>LSPos_Data</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Kendo.DynamicLinq">
+      <HintPath>..\packages\Kendo.DynamicLinq.1.1.2.0\lib\net40\Kendo.DynamicLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.Mvc">
+      <HintPath>..\packages\Kendo.Mvc.2016.2.616\lib\net451\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Ksmart_DataSon">
+      <HintPath>..\packages\Ksmart_DataSon.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\ApGia_dl.cs" />
+    <Compile Include="DataAccess\BaoCao_dl.cs" />
+    <Compile Include="DataAccess\CheckInOut_dl.cs" />
+    <Compile Include="DataAccess\CheckListDB.cs" />
+    <Compile Include="DataAccess\ChiTietKhuyenMai_dl.cs" />
+    <Compile Include="DataAccess\ChiTietMatHang_DichVuDAO.cs" />
+    <Compile Include="DataAccess\ChiTieu_KPI_dl.cs" />
+    <Compile Include="DataAccess\ChucNang_dl.cs" />
+    <Compile Include="DataAccess\ChucVuDB.cs" />
+    <Compile Include="DataAccess\CongTyDB.cs" />
+    <Compile Include="DataAccess\DanhMucDB.cs" />
+    <Compile Include="DataAccess\DiaGioiHanhChinhDB.cs" />
+    <Compile Include="DataAccess\DonHang_DichVuRequestAPIDAO.cs" />
+    <Compile Include="DataAccess\DonHang_dl.cs" />
+    <Compile Include="DataAccess\DonVi_dl.cs" />
+    <Compile Include="DataAccess\HinhThucThanhToanDB.cs" />
+    <Compile Include="DataAccess\HuongDanVienDAO.cs" />
+    <Compile Include="DataAccess\LichSuNapVi_NhomTaiKhoanDB.cs" />
+    <Compile Include="DataAccess\SmsBankingDAO.cs" />
+    <Compile Include="DataAccess\GoiChucNang_dl.cs" />
+    <Compile Include="DataAccess\GoiUngDung_dl.cs" />
+    <Compile Include="DataAccess\HangHoaAlbumDB.cs" />
+    <Compile Include="DataAccess\ImageDB.cs" />
+    <Compile Include="DataAccess\DichVuDAO.cs" />
+    <Compile Include="DataAccess\HangHoa_DichVuDAO.cs" />
+    <Compile Include="DataAccess\GlobalDAO.cs" />
+    <Compile Include="DataAccess\HangHoa_LoiNhanData.cs" />
+    <Compile Include="DataAccess\SiteDAO.cs" />
+    <Compile Include="DataAccess\KeHoachBaoDuongDB.cs" />
+    <Compile Include="DataAccess\KeHoachDiChuyen_dl.cs" />
+    <Compile Include="DataAccess\KeHoachDiChuyen_Tuyen_dl.cs" />
+    <Compile Include="DataAccess\KeHoachDonHang_dl.cs" />
+    <Compile Include="DataAccess\KenhBanHangDB.cs" />
+    <Compile Include="DataAccess\KhachHang_dl.cs" />
+    <Compile Include="DataAccess\KhoDB.cs" />
+    <Compile Include="DataAccess\KhuVuc_dl.cs" />
+    <Compile Include="DataAccess\KhuyenMai_dl.cs" />
+    <Compile Include="DataAccess\LichHenDB.cs" />
+    <Compile Include="DataAccess\LoaiKhachHangDB.cs" />
+    <Compile Include="DataAccess\LoTrinhDB.cs" />
+    <Compile Include="DataAccess\MatHang_dl.cs" />
+    <Compile Include="DataAccess\NhaCungCapDB.cs" />
+    <Compile Include="DataAccess\NhanHieuDB.cs" />
+    <Compile Include="DataAccess\NhanVien_dl.cs" />
+    <Compile Include="DataAccess\NhomDB.cs" />
+    <Compile Include="DataAccess\PhanHoiDB.cs" />
+    <Compile Include="DataAccess\PhanQuyenChucNang_Nhom_dl.cs" />
+    <Compile Include="DataAccess\PhanQuyenNganhHang_Nhom_dl.cs" />
+    <Compile Include="DataAccess\PhieuDieuChuyen_dl.cs" />
+    <Compile Include="DataAccess\PhieuNhap_dl.cs" />
+    <Compile Include="DataAccess\Quyen_dl.cs" />
+    <Compile Include="DataAccess\SqlDataHelper.cs" />
+    <Compile Include="DataAccess\test.cs" />
+    <Compile Include="DataAccess\Tinh_dl.cs" />
+    <Compile Include="DataAccess\TinNhanDB.cs" />
+    <Compile Include="DataAccess\TrangThaiDonHangDB.cs" />
+    <Compile Include="DataAccess\User_dl.cs" />
+    <Compile Include="DataAccess\ViTri_dl.cs" />
+    <Compile Include="DataAccess\XeDB.cs" />
+    <Compile Include="Data\AlbumData.cs" />
+    <Compile Include="Data\BangGiaLoaiKhachHangData.cs" />
+    <Compile Include="Data\BaoCaoCommon.cs" />
+    <Compile Include="Data\BaoCaoCommonDAL.cs" />
+    <Compile Include="Data\BaoCaoDoanhThuData.cs" />
+    <Compile Include="Data\BaoCaoNhanVienViengThamData.cs" />
+    <Compile Include="Data\BaoCaoSanLuongData.cs" />
+    <Compile Include="Data\BieuDoDanhThuDAL.cs" />
+    <Compile Include="Data\BieuDoSanLuongDAL.cs" />
+    <Compile Include="Data\CauHinhCongTyData.cs" />
+    <Compile Include="Data\ChiTieuKPIData.cs" />
+    <Compile Include="Data\ChucNangData.cs" />
+    <Compile Include="Data\ChuongTrinhKhuyenMaiData.cs" />
+    <Compile Include="Data\ChuongTrinhKMDAL.cs" />
+    <Compile Include="Data\Config.cs" />
+    <Compile Include="Data\CongViecData.cs" />
+    <Compile Include="Data\DanhMucData.cs" />
+    <Compile Include="Data\DashBoardData.cs" />
+    <Compile Include="Data\DiaChiData.cs" />
+    <Compile Include="Data\DonHangData.cs" />
+    <Compile Include="Data\GiuBanMatHangData.cs" />
+    <Compile Include="Data\HanMucData.cs" />
+    <Compile Include="Data\KhachHangData.cs" />
+    <Compile Include="Data\LichViengThamTuyenData.cs" />
+    <Compile Include="Data\LoTrinhData.cs" />
+    <Compile Include="Data\MatHangData.cs" />
+    <Compile Include="Data\NhanVienApp.cs" />
+    <Compile Include="Data\NhanVienWebData.cs" />
+    <Compile Include="Data\NhomData.cs" />
+    <Compile Include="Data\PhanQuyenData.cs" />
+    <Compile Include="Data\PhanQuyen_KhachHangNhanVienData.cs" />
+    <Compile Include="Data\PhanQuyen_KhachHangNhomNhanVienData.cs" />
+    <Compile Include="Data\PhieuDieuChinhNhapData.cs" />
+    <Compile Include="Data\PhieuDieuChuyenData.cs" />
+    <Compile Include="Data\PhieuNhapKhoData.cs" />
+    <Compile Include="Data\PhieuTonDauData.cs" />
+    <Compile Include="Data\TokenValidationHandler.cs" />
+    <Compile Include="Data\TuyenKhachHangData.cs" />
+    <Compile Include="Data\UserinforData.cs" />
+    <Compile Include="Data\XeData.cs" />
+    <Compile Include="Models\BaoCaoKQKDOTAHangNgay.cs" />
+    <Compile Include="Models\HuongDanVienModel.cs" />
+    <Compile Include="Models\NhanVienHinhThucTTModels.cs" />
+    <Compile Include="Models\HangHoa_LoiNhuanModel.cs" />
+    <Compile Include="Models\HinhThucThanhToanModel.cs" />
+    <Compile Include="Models\LichSuNapVi_NhomTaiKhoanModel.cs" />
+    <Compile Include="Models\LichSuThanhToanModel.cs" />
+    <Compile Include="Models\AlbumModel.cs" />
+    <Compile Include="Models\BangGiaLoaiKhachHangModel.cs" />
+    <Compile Include="Models\BaoCaoDoanhThuModel.cs" />
+    <Compile Include="Models\BaoCaoNhanVienViengTham.cs" />
+    <Compile Include="Models\BieuDoDiChuyenDTO.cs" />
+    <Compile Include="Models\BieuDoViengThamDTO.cs" />
+    <Compile Include="Models\BieuDo_DonHang_NhomNhanVienDTO.cs" />
+    <Compile Include="Models\CauHinhCongTyModel.cs" />
+    <Compile Include="Models\ChiTietDonHangModels.cs" />
+    <Compile Include="Models\ChiTietDonHangV2OBJ.cs" />
+    <Compile Include="Models\ChiTietMatHangDonHangModels.cs" />
+    <Compile Include="Models\ChiTietMatHangDonHangOBJ.cs" />
+    <Compile Include="Models\ChiTietMatHang_DichVuModel.cs" />
+    <Compile Include="Models\ChiTieuKPIByNhomModels.cs" />
+    <Compile Include="Models\ChucNangModels.cs" />
+    <Compile Include="Models\ComboboxDTO.cs" />
+    <Compile Include="Models\CongViecModel.cs" />
+    <Compile Include="Models\CTKMDB.cs" />
+    <Compile Include="Models\CTKM_OBJ.cs" />
+    <Compile Include="Models\DichVuModel.cs" />
+    <Compile Include="Models\DMTrangThaiDonHangModel.cs" />
+    <Compile Include="Models\DonHangModels.cs" />
+    <Compile Include="Models\DonHangV2OBJ.cs" />
+    <Compile Include="Models\DonHang_DichVuRequestAPIModel.cs" />
+    <Compile Include="Models\ExporLichSuThaoTacDTO.cs" />
+    <Compile Include="Models\ExportKhachHangDTO.cs" />
+    <Compile Include="Models\ExportNhanVienDTO.cs" />
+    <Compile Include="Models\HangHoaDB.cs" />
+    <Compile Include="Models\HangHoa_DichVuModel.cs" />
+    <Compile Include="Models\KhachHangDTO.cs" />
+    <Compile Include="Models\KhachHang_ExcelModel.cs" />
+    <Compile Include="Models\KhachHang_HangGuiModel.cs" />
+    <Compile Include="Models\MenuModels.cs" />
+    <Compile Include="Models\NhanVienAppModels.cs" />
+    <Compile Include="Models\NhanVienDTO.cs" />
+    <Compile Include="Models\NhanVienModels.cs" />
+    <Compile Include="Models\NhanVienWebModels.cs" />
+    <Compile Include="Models\NhomChucNangModel.cs" />
+    <Compile Include="Models\NhomModels.cs" />
+    <Compile Include="Models\PhanQuyen_KhachHangNhomNhanVienModel.cs" />
+    <Compile Include="Models\PhanQuyen_KhachHanngNhanVienModel.cs" />
+    <Compile Include="Models\PhieuDieuChinhNhapKhoChiTietModel.cs" />
+    <Compile Include="Models\PhieuDieuChinhNhapKhoModel.cs" />
+    <Compile Include="Models\PhieuNhapChiTietModel.cs" />
+    <Compile Include="Models\PhieuNhapModel.cs" />
+    <Compile Include="Models\PhieuTonDauChiTietModel.cs" />
+    <Compile Include="Models\PhieuTonDauModel.cs" />
+    <Compile Include="Models\QuyenModels.cs" />
+    <Compile Include="Models\QuyenNhomModels.cs" />
+    <Compile Include="Models\GlobalModel.cs" />
+    <Compile Include="Models\SiteModel.cs" />
+    <Compile Include="Models\SmsBankingModel.cs" />
+    <Compile Include="Models\TrangThaiDonHangModel.cs" />
+    <Compile Include="Models\TuyenDTO.cs" />
+    <Compile Include="Models\ViTriNhanVienGPSModel.cs" />
+    <Compile Include="Models\XeDTO.cs" />
+    <Compile Include="Objects\AlbumOBJ.cs" />
+    <Compile Include="Objects\AnhOBJ.cs" />
+    <Compile Include="Objects\ApGia.cs" />
+    <Compile Include="Objects\CheckListOBJ.cs" />
+    <Compile Include="Objects\ChiTietKhuyenMai.cs" />
+    <Compile Include="Objects\ChiTietPhienLamViecOBJ.cs" />
+    <Compile Include="Objects\ChiTieuKPI.cs" />
+    <Compile Include="Objects\ChucNangOBJ.cs" />
+    <Compile Include="Objects\ChucVuOBJ.cs" />
+    <Compile Include="Objects\CongTyOBJ.cs" />
+    <Compile Include="Objects\DanhMucOBJ.cs" />
+    <Compile Include="Objects\DiaGioiHanhChinhOBJ.cs" />
+    <Compile Include="Objects\DonVi.cs" />
+    <Compile Include="Objects\GoiChucNangOBJ.cs" />
+    <Compile Include="Objects\GoiUngDungOBJ.cs" />
+    <Compile Include="Objects\HangHoaAlbumOBJ.cs" />
+    <Compile Include="Objects\HangHoaImagesOBJ.cs" />
+    <Compile Include="Objects\HangHoaOBJ.cs" />
+    <Compile Include="Objects\ImageOBJ.cs" />
+    <Compile Include="Objects\KeHoachBaoDuongOBJ.cs" />
+    <Compile Include="Objects\KeHoachDiChuyenObj.cs" />
+    <Compile Include="Objects\KeHoachDiChuyen_TuyenObj.cs" />
+    <Compile Include="Objects\KeHoachDonHangOBJ.cs" />
+    <Compile Include="Objects\KenhBanHangOBJ.cs" />
+    <Compile Include="Objects\KhachHang.cs" />
+    <Compile Include="Objects\KhoOBJ.cs" />
+    <Compile Include="Objects\KhuVuc.cs" />
+    <Compile Include="Objects\KhuyenMai.cs" />
+    <Compile Include="Objects\LichHenOBJ.cs" />
+    <Compile Include="Objects\LichSuCheckList.cs" />
+    <Compile Include="Objects\LichSuDiChuyenOBJ.cs" />
+    <Compile Include="Objects\LichSuPhanHoi.cs" />
+    <Compile Include="Objects\LoaiKhachHangOBJ.cs" />
+    <Compile Include="Objects\MapsObject.cs" />
+    <Compile Include="Objects\MatHang.cs" />
+    <Compile Include="Objects\NhaCungCapOBJ.cs" />
+    <Compile Include="Objects\NhanHieuOBJ.cs" />
+    <Compile Include="Objects\NhanVien.cs" />
+    <Compile Include="Objects\NhomChucNangOBJ.cs" />
+    <Compile Include="Objects\NhomOBJ.cs" />
+    <Compile Include="Objects\PhanHoiOBJ.cs" />
+    <Compile Include="Objects\PhienLamViecOBJ.cs" />
+    <Compile Include="Objects\PhieuDieuChuyenChiTietOBJ.cs" />
+    <Compile Include="Objects\PhieuDieuChuyenOBJ.cs" />
+    <Compile Include="Objects\PhieuNhapChiTietOBJ.cs" />
+    <Compile Include="Objects\PhieuNhapOBJ.cs" />
+    <Compile Include="Objects\Quyen.cs" />
+    <Compile Include="Objects\TaiKhoanOBJ.cs" />
+    <Compile Include="Objects\ThongKeTrucTuyenOBJ.cs" />
+    <Compile Include="Objects\TinhThanh.cs" />
+    <Compile Include="Objects\TinNhanOBJ.cs" />
+    <Compile Include="Objects\ToaDoOBJ.cs" />
+    <Compile Include="Objects\TrangThaiDonHangOBJ.cs" />
+    <Compile Include="Objects\UserInfo.cs" />
+    <Compile Include="Objects\Util.cs" />
+    <Compile Include="Objects\XeOBJ.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\banglotrinhOBJ.cs" />
+    <Compile Include="Utilities\GeoCodeCalc.cs" />
+    <Compile Include="Utilities\GetObjectFromDataRow.cs" />
+    <Compile Include="Utilities\LayViTriTheoToaDo.cs" />
+    <Compile Include="Utilities\Log.cs" />
+    <Compile Include="Utilities\LoTrinhGPSFilter.cs" />
+    <Compile Include="Utilities\lotrinhmattinhieuOBJ.cs" />
+    <Compile Include="Utilities\lotrinhOBJ.cs" />
+    <Compile Include="Utilities\lotrinhtrinhvaodiemOBJ.cs" />
+    <Compile Include="Utilities\OBJdata.cs" />
+    <Compile Include="Utilities\TinhKhoangCach.cs" />
+    <Compile Include="Utilities\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Accord">
+      <Version>3.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="log4net">
+      <Version>2.0.15</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt">
+      <Version>6.25.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\DataSQL\[sp_QL_BaoCaoDonHangTongQuan_Kendo].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_BaoCaoDonHangTongQuan_Kendo_dongnn].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_BaoCaoDonHangTongQuan_Kendo_Report].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_BaoCaoDonHang_Kendo].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_BaoCaoDonHang_Kendo_Dongnn].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_BaoCaoDonHang_Kendo_Report].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_CapNhatNhanVienChoKhachHang_Kendo].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_DeleteAllKhachHangTheoNhanVien_Kendo].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_Getdata_Template_Kendo].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_getDSKhachHangTheoIDQLKENDO].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_getDSKhachHangTheoIDQL_ComBo_Kendo].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_GetDSNhanVien_Kendo].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_GetDSNhanVien_TheoNhom_Kendo].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_GetDSNhanVien_TheoNhom_Kendo_Count].sql" />
+    <Content Include="Data\DataSQL\[sp_QL_PhanQuyenKhachHang_Kendo].sql" />
+    <Content Include="Data\DataSQL\[sp_web_BaoCaoDoanhThu_KenDo].sql" />
+    <Content Include="Data\DataSQL\[sp_web_BaoCaoDoanhThu_KenDo_old_dongnn].sql" />
+    <Content Include="Data\DataSQL\[sp_web_BaoCaoDoanhThu_KenDo_Report].sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LSPos_API\LSPos_API.csproj">
+      <Project>{F48E7F94-0CA7-4795-8C27-46CDB0A1A743}</Project>
+      <Name>LSPos_API</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

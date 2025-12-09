@@ -1,0 +1,85 @@
+﻿.btn-multiselect-selectall {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+    .btn-multiselect-selectall:hover {
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;
+        padding: 0 4px;
+    }
+
+.k-multiselect-wrap {
+    max-height: 31.22px !important;
+    overflow: auto !important;
+}
+
+.disable {
+    background-color: #ececec !important;
+}
+
+.k-state-selected {
+    background-color: transparent;
+    border-color: transparent;
+    background-image: none;
+}
+
+td.k-state-focused.k-state-selected {
+    box-shadow: none;
+}
+
+.k-state-selected > .k-link {
+    color: black;
+}
+
+.selected {
+    background-color: #F35800;
+    border-color: #F85A00;
+    background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0) 100%);
+}
+
+    .selected > .k-link {
+        color: #FFF;
+    }
+
+.selectbottonKH {
+    height: 30px;
+    margin-top: 13px;
+    float: right;
+    margin-right: 50px;
+}
+
+.selectbotton {
+    height: 25px;
+    width: 50px;
+}
+
+.content-form {
+    padding: 1.25rem 0;
+    height: calc(100vh - 110px);
+    overflow:hidden;
+}
+.title-block {
+    font-weight: bold;
+    width: 100%;
+    padding: .75rem 0;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    cursor: pointer;
+    color: #048da2;
+}
+.form-group label {
+    font-weight: 500;
+}
+.k-window .row {
+    margin: 0px;
+    width:100%;
+}
+.k-prompt-container, .k-window-content{
+    padding:0;
+}

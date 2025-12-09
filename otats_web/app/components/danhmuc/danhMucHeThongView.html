@@ -1,0 +1,244 @@
+﻿<link href="/app/components/danhmuc/danhMucStyle.css" rel="stylesheet" />
+<div class="container-fluid danhmuc">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="" id="treeview">
+                <b class="headerdanhmuc">Danh mục hệ thống</b>
+            </div>
+            <div>
+                <ul class="uldanhmuc">
+                    <li class="listdanhmuc" ng-click="loaddanhmuc(1)">
+                        <span class="fa fa-briefcase"></span>
+                        {{bindTextI18n('label_danhmucloaikhachhang')}}
+                    </li>
+                    <li class="listdanhmuc" ng-click="loaddanhmuc(2)">
+                        <span class="fa fa-briefcase"></span>
+                        {{bindTextI18n('label_danhmuctrangthaidonhang')}}
+                    </li>
+                    <li class="listdanhmuc" ng-click="loaddanhmuc(3)">
+                        <span class="fa fa-briefcase"></span>
+                        {{bindTextI18n('label_danhmucloaihaohut')}}
+                    </li>
+                    <li class="listdanhmuc" ng-click="loaddanhmuc(4)">
+                        <span class="fa fa-briefcase"></span>
+                        {{bindTextI18n('label_danhmuckhohang')}} 
+                    </li>
+                    <li class="listdanhmuc" ng-click="loaddanhmuc(5)">
+                        <span class="fa fa-briefcase"></span>
+                        {{bindTextI18n('label_danhmucphanhoikhachhang')}}
+                    </li>
+                    <li class="listdanhmuc" ng-click="loaddanhmuc(6)">
+                        <span class="fa fa-briefcase"></span>
+                        {{bindTextI18n('label_danhmuckenhbanhang')}}
+                    </li>
+                    <li class="listdanhmuc" ng-click="loaddanhmuc(7)">
+                        <span class="fa fa-briefcase"></span>
+                        {{bindTextI18n('label_danhmucchecklist')}}
+                    </li>
+                    <li class="listdanhmuc" ng-click="loaddanhmuc(8)">
+                        <span class="fa fa-briefcase"></span>
+                        {{bindTextI18n('label_danhmucdonvitinh')}} 
+                    </li>
+                    <li class="listdanhmuc" ng-click="loaddanhmuc(9)">
+                        <span class="fa fa-briefcase"></span>
+                        {{bindTextI18n('label_danhmucnganhhang')}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="row">
+                <b class="headerdanhmuc">{{bindTextI18n('label_chitietdanhmuc')}}</b>
+            </div>
+            <div class="body-detail">
+                <div class="row" ng-show="show1">
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for="tenLoaiKhachHang">{{bindTextI18n('label_tenloaikhachhang')}} <span class="color-danger">(*)</span></label>
+                            <input type="text" class="k-textbox" id="tenLoaiKhachHang" ng-model="objectKhachHang.tenLoaiKhachHang" required />
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label class="content-filter__label">{{bindTextI18n('label_iconhienthi')}}:</label>
+                            <select id="iconHienThi" kendo-combo-box="iconHienThi"
+                                    k-data-text-field="'text'"
+                                    k-data-value-field="'value'"
+                                    k-filter="'contains'"
+                                    k-auto-bind="false"
+                                    k-ng-model="iconHienThiselect"
+                                    k-data-source="iconHienThiData"
+                                    k-on-change="iconHienThiOnChange(kendoEvent)"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="show2">
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for="tenTrangThai">{{bindTextI18n('label_tentrangthai')}} <span class="color-danger">(*)</span></label>
+                            <input type="text" class="k-textbox" id="tenTrangThai" ng-model="obj.tenTrangThai" required />
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label class="content-filter__label">{{bindTextI18n('label_loaitrangthai')}}:</label>
+                            <select kendo-combo-box
+                                    id="loai"
+                                    k-data-text-field="'value'"
+                                    k-data-value-field="'id_loai'"
+                                    k-filter="'contains'"
+                                    k-auto-bind="false"
+                                    k-ng-model="loaiselect"
+                                    k-data-source="loaiData"
+                                    k-on-change="loaiOnChange(kendoEvent)"></select>
+
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for="mauHienThi">{{bindTextI18n('label_mauhienthi')}}</label>
+                            <input kendo-numeric-text-box k-min="0" ng-model="obj.mauHienThi" id="mauHienThi" ng-change="mauHienThiOnchange()" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="show3">
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="maHaoHut">{{bindTextI18n('label_maloaihaohut')}} <span class="color-danger">(*)</span></label>
+                            <input type="text" class="k-textbox" id="maHaoHut" ng-model="obj.maHaoHut" required />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="tenHaoHut">{{bindTextI18n('label_tenloaihaohut')}} <span class="color-danger">(*)</span></label>
+                            <input type="text" class="k-textbox" id="tenHaoHut" ng-model="obj.tenHaoHut" required />
+                        </div>
+                    </div>
+
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="tyLeHaoHut">{{bindTextI18n('label_tilehaohut')}}</label>
+                            <input kendo-numeric-text-box k-min="0" ng-model="obj.tyLeHaoHut" id="tyLeHaoHut" ng-change="tyLeHaoHutOnchange()" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="ghiChu">{{bindTextI18n('label_ghichu')}} <span class="color-danger">(*)</span></label>
+                            <input type="text" class="k-textbox" id="ghiChu" ng-model="obj.ghiChu" required />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row" ng-show="show4">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="MaKho">{{bindTextI18n('label_makhohang')}}<b style="color:red">*</b></label>
+                            <input class="k-textbox" type="text" style="width:100%" id="MaKho" ng-model="obj.maKho" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="DiaChiKho" style="width:100%">{{bindTextI18n('label_diachi')}}</label>
+                            <textarea id="DiaChiKho" ng-model="obj.diaChi" class="k-textbox" cols="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="TenKho" style="width:100%">{{bindTextI18n('label_tenkhohang')}}<b style="color:red">*</b></label>
+                            <input class="k-textbox" type="text" style="width:100%" ng-model="obj.tenKho" id="TenKho" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="HoatDong" ng-checked="obj.trangThai" class="k-checkbox"> 
+                            <label class="k-checkbox-label mt-4" for="HoatDong">{{bindTextI18n('label_hoatdong')}}</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="show5">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="tenPhanHoi">{{bindTextI18n('label_tenphanhoi')}} <span class="color-danger">(*)</span></label>
+                            <input type="text" class="k-textbox" id="tenPhanHoi" ng-model="obj.tenPhanHoi" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="show6">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="tenKenhHang">{{bindTextI18n('label_tenkenhhang')}} <span class="color-danger">(*)</span></label>
+                            <input type="text" class="k-textbox" id="tenKenhHang" ng-model="obj.tenKenhHang" required />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="content-filter__label">{{bindTextI18n('label_kenhhangcapcha')}}:</label>
+                            <select id="kenhHang" kendo-combo-box="kenhHang"
+                                    k-data-text-field="'tenKenhBanHang'"
+                                    k-data-value-field="'iD_KenhBanHang'"
+                                    k-filter="'contains'"
+                                    k-auto-bind="false"
+                                    k-ng-model="kenhHangselect"
+                                    k-data-source="kenhHangData"
+                                    k-on-change="kenhHangOnChange(kendoEvent)"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="show7">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="tenChecklist">{{bindTextI18n('label_'tenchecklist)}} <span class="color-danger">(*)</span></label>
+                            <input type="text" class="k-textbox" id="tenChecklist" ng-model="obj.tenChecklist" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="show8">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="tenDonVi">{{bindTextI18n('label_tendonvi')}} <span class="color-danger">(*)</span></label>
+                            <input type="text" class="k-textbox" id="tenDonVi" ng-model="obj.tenDonVi" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="show9">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="tenNganhHang">{{bindTextI18n('label_tennganhhang')}} <span class="color-danger">(*)</span></label>
+                            <input type="text" class="k-textbox" id="tenNganhHang" ng-model="obj.tenNganhHang" required />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="content-filter__label">{{bindTextI18n('label_'tennganhhangcapcha)}}:</label>
+                            <select id="nganhHang" kendo-combo-box="nganhHang"
+                                    k-data-text-field="'name'"
+                                    k-data-value-field="'id'"
+                                    k-filter="'contains'"
+                                    k-auto-bind="false"
+                                    k-ng-model="nganhHangselect"
+                                    k-data-source="nganhHangData"
+                                    k-on-change="nganhHangOnChange(kendoEvent)"></select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group text-center">
+                <button id="luuThayDoi" class="btn btn-outline-info " ng-click="luuThayDoi()"><i class="fas fa-save fas-sm "></i> {{bindTextI18n('button_luuthaydoi')}}</button>
+                <button id="huy" class="btn btn-outline-danger" ng-click="huy()"><i class="fas fa-trash fas-sm "></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+            <div class="row">
+                <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

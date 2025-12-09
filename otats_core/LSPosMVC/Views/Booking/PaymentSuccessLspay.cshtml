@@ -1,0 +1,71 @@
+﻿@{Layout = ""; }
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>XÁC NHẬN THANH TOÁN THÀNH CÔNG</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/fontawesome-all.min.css" rel="stylesheet" />
+    <meta name="keywords" content="booking,vietnam,reserve" />
+    <style>
+        body {
+            text-align: center;
+            padding: 40px;
+            background: #EBF0F5;
+        }
+
+        h1 {
+            color: #88B04B;
+            font-family: sans-serif;
+            font-weight: 900;
+            font-size: 40px;
+            font-family: Arial margin-bottom: 10px;
+        }
+
+        i {
+            color: #9ABC66;
+            font-size: 100px;
+            line-height: 200px;
+            margin-left: -15px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 2px 3px #C8D0D8;
+            display: inline-block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    @if (@Model != null)
+    {
+        <div class="card">
+            <div style="border-radius: 200px; height: 200px; width: 200px; background: #F8FAF5; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-around; align-content: center;">
+                <i class="fa fa-check"></i>
+            </div>
+            <h1>Thành công</h1>
+            <h2>Nạp số tiền @Model.SoTien.ToString("N0") vào ví nhóm @Model.TenNhomTaiKhoan thành công.</h2>
+        </div>
+    }
+    else
+    {
+
+        <div class="card">
+            <div style="border-radius: 200px; height: 200px; width: 200px; background: #ff6a00; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-around; align-content: center;">
+                <i class="fa fa-times" style="color:red"></i>
+            </div>
+            <h1 style="color:red">Thất bại!</h1>
+            <h2>Vui lòng liên hệ quản trị viên để kiểm tra giao dịch của bạn.</h2>
+        </div>
+    }
+</body>
+</html>

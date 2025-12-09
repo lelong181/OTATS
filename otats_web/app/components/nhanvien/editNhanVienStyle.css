@@ -1,0 +1,64 @@
+﻿
+.checkbox-truongnhom {
+    margin-top: 2rem;
+}
+
+.collapse-content.collapsed .fa-caret-right {
+    display: none;
+}
+
+.collapse-content .fa-caret-right {
+    display: block;
+}
+
+.collapse-content.collapsed .fa-caret-down {
+    display: block;
+}
+
+.collapse-content .fa-caret-down {
+    display: none;
+}
+
+.content-form {
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+}
+
+.collapse-content {
+    padding: .75rem 0;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    cursor: pointer;
+    color: #048da2;
+}
+
+.k-widget.k-upload.k-header.k-upload-sync {
+    text-align: center;
+    /*border: dashed 1px #f00;
+    min-height: calc((100vh - 160px)/2);*/
+}
+/*.k-button.k-upload-button{
+    width:98%;
+}*/
+.image-preview {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.card-body {
+    padding: 0 1.25rem;
+}
+
+.required-field-icon {
+    color: red;
+}
+
+.invalid .k-dropdown-wrap {
+    border-color: red;
+}
+
+.invalid.k-textbox {
+    border-color: red;
+}

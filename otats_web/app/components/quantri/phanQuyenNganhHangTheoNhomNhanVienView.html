@@ -1,0 +1,62 @@
+﻿
+<link href="/app/components/nhanvien/nhanVienStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <div id="treeview"></div>
+        </div>
+        <div class="col-sm-9">
+            <div class="toolbarmenu">
+                <button class="btn btn-link btn-menubar" ng-show="(permission.them > 0)" ng-click="themnganhhang()"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_themnganhhang')}}</button>
+            </div>
+            <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+        </div>
+    </div>
+</div>
+
+<div kendo-window="formsetquyen" id="formsetquyen" k-title="bindTextI18n('button_themnganhhang')" k-visible="false" k-modal="true" k-width="400" k-height="200">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luu" ng-click="setquyen()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+                <button id="btn_huy" ng-click="huysetquyen()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="nhom">{{bindTextI18n('label_nhom')}}</label>
+                    <input type="text" class="k-textbox" id="nhom" ng-model="nhom" readonly />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_nganhhang')}}</label>
+                    <select kendo-combo-box="nganhhang"
+                            id="nganhhang"
+                            k-placeholder="bindTextI18n('label_nganhhang')"
+                            k-data-text-field="'tenDanhMuc'"
+                            k-data-value-field="'iD_DANHMUC'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="nganhhangselect"
+                            k-data-source="nganhhangData"
+                            k-on-change="nganhhangOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+

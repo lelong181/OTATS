@@ -1,0 +1,249 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\OTATS\\otats_core\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5AAD6D71-D730-46E5-9D63-84F7C1F65AFE}|LSPosMVC\\LSPosMVC.csproj|E:\\OTATS\\otats_core\\lsposmvc\\controllers\\otacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AAD6D71-D730-46E5-9D63-84F7C1F65AFE}|LSPosMVC\\LSPosMVC.csproj|solutionrelative:lsposmvc\\controllers\\otacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AAD6D71-D730-46E5-9D63-84F7C1F65AFE}|LSPosMVC\\LSPosMVC.csproj|e:\\otats\\otats_core\\lsposmvc\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AAD6D71-D730-46E5-9D63-84F7C1F65AFE}|LSPosMVC\\LSPosMVC.csproj|solutionrelative:lsposmvc\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AAD6D71-D730-46E5-9D63-84F7C1F65AFE}|LSPosMVC\\LSPosMVC.csproj|e:\\otats\\otats_core\\lsposmvc\\views\\booking\\printticketbybookingcode.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5AAD6D71-D730-46E5-9D63-84F7C1F65AFE}|LSPosMVC\\LSPosMVC.csproj|solutionrelative:lsposmvc\\views\\booking\\printticketbybookingcode.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AAD6D71-D730-46E5-9D63-84F7C1F65AFE}|LSPosMVC\\LSPosMVC.csproj|E:\\OTATS\\otats_core\\lsposmvc\\views\\booking\\printticketbysubbookingcode.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5AAD6D71-D730-46E5-9D63-84F7C1F65AFE}|LSPosMVC\\LSPosMVC.csproj|solutionrelative:lsposmvc\\views\\booking\\printticketbysubbookingcode.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AAD6D71-D730-46E5-9D63-84F7C1F65AFE}|LSPosMVC\\LSPosMVC.csproj|E:\\OTATS\\otats_core\\lsposmvc\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AAD6D71-D730-46E5-9D63-84F7C1F65AFE}|LSPosMVC\\LSPosMVC.csproj|solutionrelative:lsposmvc\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\onedrive\\documents\\source\\lscloudhub_web\\app\\components\\login\\logincontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\onedrive\\documents\\source\\lscloudhub_web\\app\\services\\authenticationservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 35,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:144:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:143:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:143:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:146:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:147:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:148:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:144:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:145:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "E:\\OTATS\\otats_core\\LSPosMVC\\Controllers\\DonHangController.cs",
+              "RelativeDocumentMoniker": "LSPosMVC\\Controllers\\DonHangController.cs",
+              "ToolTip": "E:\\OTATS\\otats_core\\LSPosMVC\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "LSPosMVC\\Controllers\\DonHangController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAswDAAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T04:08:39.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PrintTicketBySubBookingCode.cshtml",
+              "DocumentMoniker": "E:\\OTATS\\otats_core\\LSPosMVC\\Views\\Booking\\PrintTicketBySubBookingCode.cshtml",
+              "RelativeDocumentMoniker": "LSPosMVC\\Views\\Booking\\PrintTicketBySubBookingCode.cshtml",
+              "ToolTip": "E:\\OTATS\\otats_core\\LSPosMVC\\Views\\Booking\\PrintTicketBySubBookingCode.cshtml",
+              "RelativeToolTip": "LSPosMVC\\Views\\Booking\\PrintTicketBySubBookingCode.cshtml",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAUwKIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-05T07:52:04.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PrintTicketByBookingCode.cshtml",
+              "DocumentMoniker": "E:\\OTATS\\otats_core\\LSPosMVC\\Views\\Booking\\PrintTicketByBookingCode.cshtml",
+              "RelativeDocumentMoniker": "LSPosMVC\\Views\\Booking\\PrintTicketByBookingCode.cshtml",
+              "ToolTip": "E:\\OTATS\\otats_core\\LSPosMVC\\Views\\Booking\\PrintTicketByBookingCode.cshtml",
+              "RelativeToolTip": "LSPosMVC\\Views\\Booking\\PrintTicketByBookingCode.cshtml",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAYwKIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-05T07:52:03.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "loginController.js",
+              "DocumentMoniker": "D:\\OneDrive\\Documents\\source\\lscloudhub_web\\app\\components\\login\\loginController.js",
+              "ToolTip": "D:\\OneDrive\\Documents\\source\\lscloudhub_web\\app\\components\\login\\loginController.js",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-05T06:38:45.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthenticationService.js",
+              "DocumentMoniker": "D:\\OneDrive\\Documents\\source\\lscloudhub_web\\app\\services\\AuthenticationService.js",
+              "ToolTip": "D:\\OneDrive\\Documents\\source\\lscloudhub_web\\app\\services\\AuthenticationService.js",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-05T06:38:37.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OtaController.cs",
+              "DocumentMoniker": "E:\\OTATS\\otats_core\\LSPosMVC\\Controllers\\OtaController.cs",
+              "RelativeDocumentMoniker": "LSPosMVC\\Controllers\\OtaController.cs",
+              "ToolTip": "E:\\OTATS\\otats_core\\LSPosMVC\\Controllers\\OtaController.cs",
+              "RelativeToolTip": "LSPosMVC\\Controllers\\OtaController.cs",
+              "ViewState": "AQIAADoCAAAAAAAAAAAswCQCAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T15:27:34.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "E:\\OTATS\\otats_core\\LSPosMVC\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "LSPosMVC\\Controllers\\BookingController.cs",
+              "ToolTip": "E:\\OTATS\\otats_core\\LSPosMVC\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "LSPosMVC\\Controllers\\BookingController.cs",
+              "ViewState": "AQIAAMUAAAAAAAAAAAAkwNwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:51:59.229Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

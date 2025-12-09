@@ -1,0 +1,111 @@
+﻿@{
+    Layout = "_LayoutPos";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSPos - Điểm bán hàng</title>
+    @Styles.Render("~/Content/css")
+    <link href="~/Assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Assets/kendo/styles/kendo.common-bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Assets/kendo/styles/kendo.bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Assets/kendo/styles/kendo.common.min.css" />
+    <style>
+        .list-menu {
+            display: flex;
+            height: 100vh;
+            width: 104px;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0px 2px;
+            background-color: #ffffff1c;
+            color: #d9d9d9;
+            float:left;
+        }
+
+            .list-menu li {
+                height: 80px;
+                width: 100px;
+                /*border: solid 2px #2b353f;*/
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+                margin-bottom: 5px;
+                border-radius: 10px;
+                -webkit-transition: background-color 300ms linear;
+                -moz-transition: background-color 300ms linear;
+                -o-transition: background-color 300ms linear;
+                transition: background-color 300ms linear;
+            }
+
+                .list-menu li:hover {
+                    background-color: #d9d9d9;
+                    color: #2b353f;
+                    border: solid 2px #d9d9d9;
+                    cursor: pointer;
+                }
+
+                .list-menu li.active {
+                    background-color: #d9d9d9;
+                    color: #2b353f;
+                    border: solid 2px #2b353f;
+                    cursor: pointer;
+                }
+
+                .list-menu li .meu-icon {
+                    width: 100%;
+                    font-size: 1.8em;
+                }
+
+        .right-col {
+            width: calc(100% - 104px);
+            height:100vh;
+            float:left;
+        }
+    </style>
+
+</head>
+<body>
+    <ul class="list-menu">
+        <li>
+            <i class="fa fa-home meu-icon"></i> <span class="menu-title">Home</span>
+        </li>
+        <li>
+            <i class="fa fa-list-ul meu-icon"></i> <span class="menu-title">Menu</span>
+        </li>
+        <li>
+            <i class="fa fa-history meu-icon"></i> <span class="menu-title">History</span>
+        </li>
+        <li>
+            <i class="fa fa-star meu-icon"></i> <span class="menu-title">Promos</span>
+        </li>
+        <li>
+            <i class="fa fa-cog meu-icon"></i> <span class="menu-title">Setting</span>
+        </li>
+    </ul>
+    <div class="right-col">
+
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Assets/kendo/kendo2021.all.min.js"></script>
+    <script src="~/Assets/kendo/jszip.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".list-menu li").click(function (e) {
+                $(".list-menu li").each(function (index, item) {
+                    $(this).removeClass("active");
+                });
+                $(this).addClass("active");
+            })
+
+        });
+    </script>
+</body>
+</html>

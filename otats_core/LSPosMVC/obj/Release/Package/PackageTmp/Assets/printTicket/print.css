@@ -1,0 +1,129 @@
+ body {
+    font-size: 18px;
+    font-family: "Muli", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #292621;
+}
+#order-detail {
+    padding-top: 30px;
+}
+.page-order-detail .wrap-order-detail {
+    max-width: 945px;
+    width: 100%;
+    margin: 0 auto;
+}
+.page-order-detail .wrap-top-block {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+.style-print h5{
+    margin-bottom: 10px;
+}
+.style-print .print-col-1{
+    border: 1.5px solid #cccccc;
+    background: #F2F2F2;
+    padding-left: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 500px;
+    border-right: none;
+    padding-right: 0px;
+    background-blend-mode: color-burn;
+}
+.style-print .print-col-1 h5{
+    font-size: 18px;
+}
+.print-col-1 h5 span{
+    font-size: 25px;
+}
+
+.style-print .print-col-2{
+    border: 1.5px solid #cccccc;
+    border-left: none;
+    padding: 50px 0px 20px 50px;
+}
+.style-print .print-col-2 h6{
+    font-size: 15px;
+}
+.style-print .print-col-2 h3{
+    font-weight: 600;
+}
+.style-print .image-qrcode{
+    margin-left: -19px;
+    text-align: left;
+}
+#style-date{
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 35px;
+}
+#style-date span{
+    font-size: 14px;
+}
+
+.icon-style{
+    border: 1.5px solid #00000047;
+    padding: 8px 22px 8px 22px;
+    border-radius: 5px;
+    color: #0000009c;
+    font-weight: 600;
+    background: #e9ecef40;
+    width: 160px;
+    font-size: 18px;
+}
+.icon-style:hover{
+    color: #0000009c;
+}
+.fa-style{
+
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.info-user{
+    padding: 25px 30px 25px 30px;
+    border: 1.5px solid #00000047;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.info-user .title-h3{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.info-user .info-schulde{
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.info-user p .span-info{
+    font-weight: 600;
+    font-size: 17px;
+    margin-left: 10px;
+}
+/*body { font-family: Times Roman; }*/
+
+.btn-print {
+    padding: 10px;
+    border: 3px solid #292621;
+    border-radius: 5px;
+    margin: 0 20px;
+    font-weight: bold;
+    color: #292621;
+}
+a:hover {
+    text-decoration: none;
+}
+.date-print {
+    font-size: 15px;
+}
+#hide {
+	margin-bottom: 40px;
+}
+.ticket {
+	margin-top: 30px;
+}

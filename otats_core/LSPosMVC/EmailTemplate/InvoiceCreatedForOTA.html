@@ -1,0 +1,135 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>ĐƠN HÀNG KHỎI TẠO TỪ MÃ GIỚI THIỆU CỦA BẠN - @Model.MaThamChieu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="booking,vietnam,reserve" />
+    <style>
+        .table-group {
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        .table-list-header {
+            font-weight: bold;
+        }
+
+            .table-list-header td {
+                text-align: center;
+                border-top: solid 1px #b4b4b4;
+                border-left: solid 1px #b4b4b4;
+                border-right: solid 1px #b4b4b4;
+            }
+
+        .table-list-item td {
+            border-left: solid 1px #b4b4b4;
+            border-right: solid 1px #b4b4b4;
+            padding: 3px;
+        }
+
+        .table-list-item-end td {
+            padding: 3px;
+            border-bottom: solid 1px #b4b4b4;
+            border-left: solid 1px #b4b4b4;
+            border-right: solid 1px #b4b4b4;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Arial',sans-serif; font-size: 14px;">
+    <div style="width:100%">
+        <p>Xin chào @Model.TenNhanVien, OTA Tràng An Group đã nhận được yêu cầu đặt dịch vụ của khách hàng @Model.TenKhachHang.</p>
+        <p>Hệ thống xác nhận đơn hàng và tính doanh thu cho bạn ngay khi hoàn tất các bước thanh toán.</p>
+        <p>Vui lòng hỗ trợ khách hàng hoàn tất đơn hàng với thông tin dưới đây.</p>
+    </div>
+    <div style="width:100%">
+        <div style="width: 100%; padding: 20px; text-align: center; background-color: #76bcff;">OTA TRÀNG AN GROUP XÁC NHẬN ĐƠN HÀNG KHỎI TẠO TỪ MÃ GIỚI THIỆU CỦA BẠN</div>
+        <div style="width:100%;padding:20px">
+            <table border="0">
+
+                <tr class="table-group"><td colspan="4">I.Thông tin đơn hàng:</td></tr>
+                <tr>
+                    <td colspan="2">Mã OTA Booking:</td>
+                    <td colspan="2">@Model.MaThamChieu</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Trạng thái đơn hàng:</td>
+                    <td colspan="2">Khởi tạo đơn hàng</td>
+                </tr>
+                <tr>
+                    <td colspan="2">OTA/Nhân viên lập:</td>
+                    <td colspan="2">@Model.TenNhanVien</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Ngày lập:</td>
+                    <td colspan="2">@Model.NgayTao.ToString("dd-MM-yyyy")</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Thanh toán:</td>
+                    <!--<td><label style="width:100%">Thanh toán ck trực tiếp</label><img style="width: 250px; margin: auto;" ng-src="vietqrurl" src='@("https://img.vietqr.io/image/TCB-9009101994-compact.png?amount=" + Model.TongTien + "&addInfo=lsi"+Model.ID_DonHang)' /></td>-->
+                    <td><label style="width:100%">Thanh toán qua cổng Onepay</label><a href="http://server.lscloud.vn/Booking/ProcessPayment?iddh=@Model.ID_DonHang"><img style="width: 160px;margin: auto;margin-top: 10px;" src="https://play-lh.googleusercontent.com/mvedVCbQg6ADKUYYraVLOlmOfOy2Rz66kEPvbmxt5xZ2TTa90Go9jBD2dJrwWmEo5g8" /></a></td>
+                </tr>
+            </table>
+            <table>
+                <tr class="table-group"><td colspan="4">II.Thông tin Khách hàng:</td></tr>
+                <tr>
+                    <td>Khách hàng:</td>
+                    <td>@Model.TenKhachHang</td>
+                </tr>
+                <tr>
+                    <td>Số điện thoại:</td>
+                    <td>@Model.DienThoai</td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ:</td>
+                    <td>@Model.DiaChi</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>@Model.Email</td>
+                </tr>
+                <tr>
+                    <td>Xuất hóa đơn điện tử:</td>
+                    <td>@if(Model.XuatHoaDon){ <p>Có</p>}else {<p>Không</p>}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Ghi chú đơn hàng:</td>
+                    <td colspan="2">@Model.GhiChu</td>
+                </tr>
+                <tr>
+                    <td style="height:20px;"></td>
+                </tr>
+            </table>
+            <table>
+                <tr class="table-group"><td colspan="4">III.Thông tin dịch vụ:</td></tr>
+                <tr class="table-list-header">
+                    <td style="width: 30%; border-top-left-radius: 5px; background-color: #86ace8;">Dịch vụ</td>
+                    <td style="width: 10%; background-color: #86ace8;">Số lượng</td>
+                    <td style="width: 15%; background-color: #86ace8;">Đơn giá (VNĐ)</td>
+                    <td style="width: 15%; background-color: #86ace8;">Thành tiền (VNĐ)</td>
+                    <td style="width: 20%; background-color: #86ace8;">Trạng thái booking</td>
+                    <td style="width: 10%; border-top-right-radius: 5px; background-color: #86ace8;">Ghi chú</td>
+                </tr>
+                @foreach (LSPos_Data.Models.DonHang_DichVuRequestAPIModel ct in Model.chitietdonhang)
+                {
+                <tr class="table-list-item">
+                    <td>@ct.DichVu.TenDichVu</td>
+                    <td style="text-align:right">@ct.SoLuong</td>
+                    <td style="text-align:right">@ct.GiaBan.ToString("N0")</td>
+                    <td style="text-align:right">@((@ct.SoLuong*@ct.GiaBan).ToString("N0"))</td>
+                    <td style="text-align:center;color:#327216">Đang xử lý Booking...</td>
+                    <td></td>
+                </tr>
+                }
+                <tr class="table-list-item-end">
+                    <td style=" border-bottom-left-radius: 5px;">Tổng tiền</td>
+                    <td colspan="5" style="border-bottom-right-radius: 5px;text-align:right">@Model.TongTien.ToString("N0") VNĐ</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

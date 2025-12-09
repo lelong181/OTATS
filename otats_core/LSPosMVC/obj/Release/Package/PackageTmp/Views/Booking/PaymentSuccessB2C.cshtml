@@ -1,0 +1,157 @@
+﻿@{Layout = ""; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDL SINH THÁI TRÀNG AN - XÁC NHẬN THANH TOÁN ĐƠN HÀNG - @Model.MaThamChieu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="~/Assets/b2cpaymentsucess.css" rel="stylesheet" />
+</head>
+
+<body>
+    @if (Model.ID_DonHang > 0)
+    {
+        <header>
+            <div>
+                <h4>
+                    XÁC NHẬN ĐƠN HÀNG ĐÃ THANH TOÁN
+                </h4>
+                <p>OTA Tràng An xác nhận đơn hàng của Quý khách</p>
+                <p>đã thanh toán thành công với các thông tin như sau:</p>
+            </div>
+        </header>
+        <div class="main container-fluid">
+            <div class="row justify-content-center" style="margin: auto;">
+                <div class="box col-sm-12 col-lg-5">
+                    <div class="title">
+                        THÔNG TIN ĐƠN HÀNG
+                    </div>
+                    <div class="row content">
+                        <div class="col-sm-6">Mã OTA Booking:</div>
+                        <div class="col-sm-6">@Model.MaThamChieu</div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-sm-6">Trạng thái đơn hàng:</div>
+                        <div class="col-sm-6">Đã thanh toán</div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-sm-6">OTA/Nhân viên lập:</div>
+                        <div class="col-sm-6">@Model.TenNhanVien</div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-sm-6">Ngày lập:</div>
+                        <div class="col-sm-6">@Model.NgayTao.ToString("dd-MM-yyyy")</div>
+                    </div>
+                </div>
+                <div class="box col-sm-12 col-lg-5">
+                    <div class="title">
+                        THÔNG TIN KHÁCH HÀNG
+                    </div>
+                    <div class="row content">
+                        <div class="col-sm-6">Khách hàng:</div>
+                        <div class="col-sm-6">@Model.TenKhachHang</div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-sm-6">Số điện thoại:</div>
+                        <div class="col-sm-6">@Model.DienThoai</div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-sm-6">Email:</div>
+                        <div class="col-sm-6">@Model.Email</div>
+                    </div>
+                    @*<div class="row content">
+                            <div class="col-sm-6">Xuất hoá đơn điện tử:</div>
+                            <div class="col-sm-6">
+                                @if (Model.chitietdonhang[0].Site.SiteCode == "TRANGAN")
+                                {
+                                    <a href='@("https://hoadon.disantrangan.vn/EInvoiceTaxRequest/Index/" + Model.chitietdonhang[0].InvoiceCode)'>Đăng ký</a>
+                                }
+                            </div>
+                        </div>*@
+                    <div class="row content">
+                        <div class="col-sm-6">Ghi chú đơn hàng:</div>
+                        <div class="col-sm-6">@Model.GhiChu</div>
+                    </div>
+                </div>
+                <div class="box col-sm-12 col-lg-5">
+                    <div class="title">
+                        THÔNG TIN DỊCH VỤ
+                    </div>
+                    <table>
+                        <tr class="table-list-header">
+                            <td style="width: 20%; border-top-left-radius: 5px; ">Dịch vụ</td>
+                            <td style="width: 10%; ">Số lượng</td>
+                            <td style="width: 10%; ">Dự kiến đi</td>
+                            <td style="width: 15%; ">Đơn giá (VNĐ)</td>
+                            <td style="width: 15%; ">Thành tiền (VNĐ)</td>
+                            <td style="width: 20%; ">Trạng thái booking</td>
+                            <td style="width: 10%; border-top-right-radius: 5px; ">Ghi chú</td>
+                        </tr>
+
+                        @foreach (LSPos_Data.Models.DonHang_DichVuRequestAPIModel ct in Model.chitietdonhang)
+                        {
+                            <tr class="table-list-item">
+                                <td>@ct.DichVu.TenDichVu</td>
+                                <td style="text-align:right">@ct.SoLuong</td>
+                                <td style="text-align:right">@ct.Ngay.ToString("dd/MM/yyyy HH:mm")</td>
+                                <td style="text-align:right">@ct.GiaBan.ToString("N0")</td>
+                                <td style="text-align:right">@((@ct.SoLuong * @ct.GiaBan).ToString("N0"))</td>
+                                <td style="text-align:center;color:#327216">@ct.BookingCode</td>
+                                <td></td>
+                            </tr>
+                        }
+                        <tr class="table-list-item-end">
+                            <td style=" border-bottom-left-radius: 5px;">Tổng tiền</td>
+                            <td colspan="6" style="border-bottom-right-radius: 5px;text-align:right">@Model.TongTien.ToString("N0") VNĐ</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="box col-sm-12 col-lg-5">
+                    <div class="row content p-3">
+                        <p>
+                            Quý khách vui lòng kiểm tra email đã đăng ký với chúng tôi để nhận vé điện
+                            tử và sử dụng khi tới Khu Du lịch Sinh thái Tràng An. Để tránh bị ảnh
+                            hưởng trong quá trình soát vé, đoàn thăm quan nên lưu ý chỉ đi thành 1
+                            hàng duy nhất - trưởng đoàn cầm vé đi đầu tiên.
+                            Mọi thông tin cần hỗ trợ thêm, vui lòng liên hệ với chúng tôi qua hotline
+                            19009251.
+                        </p>
+                        <p class="w-100 text-right">Trân trọng!</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    }
+    else
+    {
+        <header>
+            <div>
+                <h4 style="color:#e93374">
+                    Thanh toán đơn hàng không thành công
+                </h4>
+                <p>
+                    Mọi thông tin cần hỗ trợ thêm, vui lòng liên hệ với chúng tôi qua hotline
+                    19009251.
+                </p>
+            </div>
+        </header>
+    }
+    <footer class="text-white text-center pt-3">
+        <div class="container-fluid">
+            <ul class="info">
+                <li> <img src="~/Images/logo-foter.png" style="width: 200px;" alt=""></li>
+                <li> <img src="~/Images/Icon1.png" alt=""> Khu Du Lịch Sinh Thái Tràng An, Xã Ninh Xuân, TP Hoa Lư, Ninh Bình</li>
+                <li> <img src="~/Images/icon2.png" alt=""> sales@disantrangan.com</li>
+                <li> <img src="~/Images/icon3.png" alt=""> 19009251</li>
+                <li> <img src="~/Images/icon4.png" alt=""> Fanpage Di sản Tràng An</li>
+            </ul>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

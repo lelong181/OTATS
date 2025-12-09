@@ -1,0 +1,31 @@
+﻿<html>
+<head>
+    <style>
+
+        .print-center {
+            text-align: center;
+        }
+
+        .print-italic {
+            font-style: italic;
+        }
+
+        .print-bold {
+            font-weight: bold;
+        }
+
+        .print-title {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+        <div class="print-wrapper print-patient-summary" ng-repeat="data in listtakeaway">
+            <div>{{objprint.ngayTao}}</div>
+            <div>ĐH:{{objprint.maThamChieu}}</div>
+            <div class="print-bold">{{data.tenhang}}</div>
+            <hr />
+            <div>Giá: {{fomartnumber(data.giaban)}}</div>
+        </div>
+</body>
+</html>

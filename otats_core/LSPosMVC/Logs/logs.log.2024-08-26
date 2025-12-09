@@ -1,0 +1,97 @@
+﻿2024/08/26 10:23:22,186 ERROR 62 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LSPos_Data.Data.UserinforData.CheckQuyen(String url, Int32 ID_QuanLy) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\UserinforData.cs:line 202
+2024/08/26 10:23:30,069 ERROR 26 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at LSPos_Data.Data.UserinforData.CheckQuyen(String url, Int32 ID_QuanLy) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\UserinforData.cs:line 202
+2024/08/26 10:30:15,263 ERROR 102 SqlDataHelper - getDSTinNhanTheoIDQuanLy_ChuaDoc
+2024/08/26 10:30:15,270 ERROR 102 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2024/08/26 10:30:15,325 ERROR 102 TinNhanDB - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at TinNhanDB.getDSTinNhanTheoID_ChuaDoc(Int32 ID_QLLH, Int32 ID_QuanLy) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\TinNhanDB.cs:line 256
+2024/08/26 10:30:15,326 ERROR 102 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\NotifycationsController.cs:line 622
+2024/08/26 15:04:17,109 ERROR 35 LSPos_Data.Utilities.Log - System.ArgumentNullException: String reference not set to an instance of a String.
+Parameter name: s
+   at System.Text.Encoding.GetBytes(String s)
+   at Utils.encryptData(String data) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Utilities\Utils.cs:line 130
+   at Utils.md5(String data) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Utilities\Utils.cs:line 122
+   at LSPos_Data.DataAccess.HuongDanVienDAO.ThemHuongDanVien(HuongDanVienModel nhanVienModels) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\HuongDanVienDAO.cs:line 69
+2024/08/26 15:08:42,904 ERROR 96 SqlDataHelper - sp_QL_GetDSNhanVien_TheoNhom
+2024/08/26 15:08:42,904 ERROR 96 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(65) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2024/08/26 15:08:42,905 ERROR 96 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoNhomQuanLy(Int32 IDQLLH, Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\NhanVien_dl.cs:line 464
+   at LSPos_Data.Data.NhanVienAppController.getallbynhom(ParamLocTheoNhom param) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\NhanVienAppController.cs:line 133
+2024/08/26 15:08:48,274 ERROR 96 SqlDataHelper - sp_QL_LichSuDiChuyen_Online_Offline
+2024/08/26 15:08:48,274 ERROR 96 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'tblGPSLog'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+ClientConnectionId:2eadec4d-4d99-4cc8-9c27-b098ebd3936a
+Error Number:208,State:1,Class:16
+2024/08/26 15:08:48,275 ERROR 96 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.BanDoController.getdatalotrinhnhanvien(Int32 idnhanvien, Int32 loaiLoTrinh, Int32 khongnoidiem, DateTime tungayF, DateTime denngayF) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\BanDoController.cs:line 591
+2024/08/26 15:09:50,809 ERROR 61 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at Utils.GiaiMa(String stringToDecrypt) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Utilities\Utils.cs:line 78
+   at LSPosMVC.Controllers.KeHoachNhanVienController.CreateLich(List`1 paramss) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\KeHoachNhanVienController.cs:line 430
+2024/08/26 15:20:05,759 ERROR 8 SqlDataHelper - sp_NhanVien_ThemHuongDanVien
+2024/08/26 15:20:05,766 ERROR 8 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'ID_QLLH', table 'LSCloud_HUB.dbo.NhanVien'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+ClientConnectionId:8ba94966-a3da-4cc0-be98-d6bd75e90139
+Error Number:515,State:2,Class:16
+2024/08/26 15:20:05,779 ERROR 8 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at LSPos_Data.DataAccess.HuongDanVienDAO.ThemHuongDanVien(HuongDanVienModel nhanVienModels) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\HuongDanVienDAO.cs:line 81

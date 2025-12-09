@@ -1,0 +1,106 @@
+﻿
+<div class="container-fluid">
+    <div class="content-title text-info"><i class="fas fa-map-marker-alt"></i> THEO DÕI VỊ TRÍ NHÂN VIÊN</div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <h4 class="color-infor d-none"><i class="fas fa-filter"></i><span ng-bind="bindTextI18n('label_tcl')"></span></h4>
+            <select kendo-drop-down-list>
+                <option>Albania</option>
+                <option>Andorra</option>
+                <option>Armenia</option>
+                <option>Austria</option>
+                <option>Azerbaijan</option>
+                <option>Belarus</option>
+            </select>
+            <hr />
+            <input type="text" id="diachi" name="diachi" class="k-textbox" placeholder="Địa chỉ" required validationMessage="Enter {0}" />
+            <hr/>
+            <select kendo-combo-box>
+                <option>Albania</option>
+                <option>Andorra</option>
+                <option>Armenia</option>
+                <option>Austria</option>
+                <option>Azerbaijan</option>
+            </select>
+            <hr />
+            <select kendo-combo-box>
+                <option>Albania</option>
+                <option>Andorra</option>
+                <option>Armenia</option>
+                <option>Austria</option>
+                <option>Azerbaijan</option>
+                <option>Belarus</option>
+            </select>
+            <hr />
+            <select kendo-combo-box>
+                <option>Albania</option>
+                <option>Andorra</option>
+                <option>Armenia</option>
+                <option>Austria</option>
+                <option>Azerbaijan</option>
+                <option>Belarus</option>
+            </select>
+
+            <button class="btn btn-info mt-3 float-right"><i class="fas fa-filter"></i> Tìm kiếm</button>
+        </div>
+        <div class="col-sm-9">
+            <div class="map-body">
+                <ng-map default-style="false" center="20.971365, 105.835165" zoom="10" class="map-customer">
+
+                    <shape name="polyline" id="foo"
+                           path="[
+                                    [20.9718887,105.8348832],
+                                    [20.9718498,105.8342872],
+                                    [20.9715895,105.8340407],
+                                    [20.9713295,105.8340617],
+                                    [20.9713883,105.8348848],
+                                    [20.9715423,105.8353168],
+                                    [20.9722133,105.8353718],
+                                    [20.9732763,105.8353508],
+                                    [20.974242,105.8337403],
+                                    [20.9754315,105.8348137],
+                                    [20.9761143,105.8353778]
+                                ]"
+                           icons="[{
+                         icon: {
+                           path: 'FORWARD_CLOSED_ARROW',
+                           scale: 4,
+                           strokeColor: '#995'
+                         },
+                         offset: '100%'
+                       }]"
+                           geodesic="true"
+                           stroke-color="#FF0000"
+                           stroke-opacity="1.0"
+                           stroke-weight="2">
+                    </shape>
+
+                    <info-window id="foo" ng-mouseover="mouseover()">
+                        <div ng-non-bindable="">
+                            Lat: {{anchor.getPosition().lat()}}<br />
+                            Lng: {{anchor.getPosition().lng()}}<br />
+                            <ul>
+                                <li ng-repeat='item in store.items'>{{item}}</li>
+                            </ul>
+                        </div>
+                    </info-window>
+
+                    <marker ng-repeat="(id, store) in stores" id="{{id}}"
+                            position="{{store.position}}"
+                            on-click="showStore(event, id)"></marker>
+
+                    <info-window id="bar" ng-mouseover="mouseover()">
+                        <div ng-non-bindable="">
+                            Lat: {{anchor.getPosition().lat()}}<br />
+                            Lng: {{anchor.getPosition().lng()}}<br />
+                        </div>
+                    </info-window>
+
+                    <marker position="20.971365, 105.835165" icons="" on-click="map.showInfoWindow('bar')" />
+                </ng-map>
+            </div>
+
+        </div>
+    </div>
+</div>

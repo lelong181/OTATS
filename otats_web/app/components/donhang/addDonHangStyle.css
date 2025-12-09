@@ -1,0 +1,36 @@
+﻿.body-donhang__chitiet {
+    height: calc(100vh - 5rem);
+    /*overflow-y: scroll;*/
+}
+
+#treehangchon {
+    max-height: 250px;
+}
+
+/*.body-thanhtien--thanhtien, .body-thanhtien--khuyenmai, .body-donhang__thongtin {
+    height: 17rem;
+}*/
+
+.body-donhang__thongtin, .body-thanhtien--thanhtien, .body-thanhtien--khuyenmai {
+    box-shadow: 0 6px 10px -4px rgba(0,0,0,.15);
+    border: 1px solid rgba(0,0,0,.125);
+    border-top: none;
+    margin-bottom: 1em;
+    padding: .5em .5em 0 .5em;
+}
+
+.toolbarmenu.menu-chitietdonhang {
+    background: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    border-radius: calc(.5rem - 1px) calc(.5rem - 1px) 0 0;
+}
+
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: blueviolet;
+    background-color: white !important;
+    border-bottom: blueviolet solid;
+}
+

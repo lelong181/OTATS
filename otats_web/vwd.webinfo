@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<!-- 
+  Visual Studio global web project settings.
+-->
+<VisualWebDeveloper>
+
+  <Globals>
+    
+  
+    <UserProperties scripts_4i18n_4message_4vi_1json__JsonSchema="https://taskfile.dev/schema.json"/>
+  </Globals>
+</VisualWebDeveloper>

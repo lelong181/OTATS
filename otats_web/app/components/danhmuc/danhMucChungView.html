@@ -1,0 +1,352 @@
+﻿<link href="/app/components/danhmuc/danhMucChungStyle.css" rel="stylesheet" />
+<style>
+    .selectfile .k-upload-button {
+        display: flex;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <div class="toolbarmenu text-center p-2">
+                <h5 class="font-weight-bold">{{bindTextI18n('label_danhmuchethong')}}</h5>
+            </div>
+            <div id="treedanhmuc"></div>
+        </div>
+        <div class="col-9">
+            <div class="toolbarmenu">
+                <button ng-click="themdanhmuc()" ng-show="(permission.them > 0)" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_themmoi')}}</button>
+                <button ng-click="suadanhmuc()" ng-show="(permission.sua > 0)" class="btn btn-link btn-menubar"><i class="fas fa-edit fas-sm color-infor"></i> {{bindTextI18n('button_sua')}}</button>
+                <button ng-click="xoadanhmuc()" ng-show="(permission.xoa > 0)" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> {{bindTextI18n('button_xoa')}}</button>
+            </div>
+            <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+        </div>
+    </div>
+</div>
+
+<div kendo-window="formdetail" id="formdetail" k-title="bindTextI18n('label_chitiet')" k-visible="false" k-modal="true" k-width="700" k-height="210">
+    <div class="row">
+        <div class="col-12">
+            <div class="toolbarmenu">
+                <button id="btn_luudanhmuc" ng-show="((permission.them > 0 && id <= 0) ||(permission.sua > 0 && id > 0))" ng-click="luudanhmuc()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+                <button id="btn_huyluudanhmuc" ng-click="huyluudanhmuc()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail mt-2">
+        <div class="row" ng-show="show1">
+            <div class="col-10">
+                <div class="form-group">
+                    <label for="tenLoaiKhachHang">{{bindTextI18n('label_tenloaikhachhang')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="tenLoaiKhachHang" ng-model="tenLoaiKhachHang" />
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_iconhienthi')}}</label>
+                    <input id="IconHienThi" style="width: 100%;" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="show2">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="tenDonVi">{{bindTextI18n('label_tendonvi')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="tenDonVi" ng-model="tenDonVi" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="show3">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="tenKenhHang">{{bindTextI18n('label_tenkenhbanhang')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="tenKenhBanHang" ng-model="tenKenhBanHang" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_tenkenhbanhangcapcha')}}</label>
+                    <select id="kenhHang" kendo-combo-box="kenhHang"
+                            k-data-text-field="'tenKenhBanHang'"
+                            k-data-value-field="'iD_KenhBanHang'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="kenhHangselect"
+                            k-data-source="kenhHangData"
+                            k-on-change="kenhHangOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="show4">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="tenNganhHang">{{bindTextI18n('label_tennganhhang')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="tenNganhHang" ng-model="tenNganhHang" required />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_tennganhhangcapcha')}}</label>
+                    <select id="nganhHang" kendo-combo-box="nganhHang"
+                            k-data-text-field="'tenDanhMuc'"
+                            k-data-value-field="'iD_DANHMUC'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="nganhHangselect"
+                            k-data-source="nganhHangData"
+                            k-on-change="nganhHangOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="show5">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="tenHaoHut">{{bindTextI18n('label_tenloaihaohut')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="tenHaoHut" ng-model="tenHaoHut" />
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="maHaoHut">{{bindTextI18n('label_maloaihaohut')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="maHaoHut" ng-model="maHaoHut" />
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="tyLeHaoHut">{{bindTextI18n('label_tilehaohut')}}</label>
+                    <input kendo-numeric-text-box k-min="0" ng-model="tyLeHaoHut" id="tyLeHaoHut" ng-change="tyLeHaoHutOnchange()" />
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="ghiChu">{{bindTextI18n('label_ghichu')}}</label>
+                    <input type="text" class="k-textbox" id="ghiChu" ng-model="ghiChuHaoHut" />
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row" ng-show="show6">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="tenTrangThai">{{bindTextI18n('label_tentrangthai')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="tenTrangThai" ng-model="tenTrangThaiDonHang" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_loaitrangthai')}} <span class="color-danger">(*)</span></label>
+                    <select kendo-combo-box
+                            id="loai"
+                            k-data-text-field="'value'"
+                            k-data-value-field="'id_loai'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="loaiselect"
+                            k-data-source="loaiData"
+                            k-on-change="loaiOnChange(kendoEvent)"></select>
+
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="mauHienThi">{{bindTextI18n('label_mauhienthi')}}</label>
+                    <input kendo-color-picker ng-model="color" k-buttons="false" k-preview="false" k-input="false" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="show7">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="tenChecklist">{{bindTextI18n('label_tenchecklist')}}<span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="tenChecklist" ng-model="tenChecklist" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row " ng-show="show8">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="tenPhanHoi">{{bindTextI18n('label_tenphanhoi')}}<span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="tenPhanHoi" ng-model="tenPhanHoi" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="show9">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="tenNhanHieu">{{bindTextI18n('label_tennhanhieu')}}<span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="tenNhanHieu" ng-model="tenNhanHieu" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="show10">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="tenNhanHieu">{{bindTextI18n('label_tennhacungcap')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="tenNhaCungCap" ng-model="tenNhaCungCap" />
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="dienThoaiLienHe">{{bindTextI18n('label_dienthoai')}}</label>
+                    <input type="text" class="k-textbox" id="dienThoaiLienHe" ng-model="dienThoaiLienHe" />
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="nguoiLienHe">{{bindTextI18n('label_nguoihienhe')}}</label>
+                    <input type="text" class="k-textbox" id="nguoiLienHe" ng-model="nguoiLienHe" />
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="diaChi">{{bindTextI18n('label_ghichu')}}</label>
+                    <input type="text" class="k-textbox" id="diaChi" ng-model="diaChi" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="show11">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="name">{{bindTextI18n('label_tenhinhthucthanhtoan')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="name" ng-model="name" />
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="virtualPaymentClientURL">Virtual Payment Client URL</label>
+                    <input type="text" class="k-textbox" id="virtualPaymentClientURL" ng-model="virtualPaymentClientURL" />
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="version">Version</label>
+                    <input type="text" class="k-textbox" id="version" ng-model="version" />
+                </div>
+            </div>
+
+            <div class="form-group col-6">
+                <label for="merchantCode">Merchant Code</label>
+                <input type="text" class="k-textbox" id="merchantCode" ng-model="merchantCode" />
+            </div>
+            <div class="form-group col-6">
+                <label for="merchantName">Merchant Name</label>
+                <input type="text" class="k-textbox" id="merchantName" ng-model="merchantName" />
+            </div>
+
+            <div class="form-group col-12">
+                <label for="serviceCode">Service Code</label>
+                <input type="text" class="k-textbox" id="serviceCode" ng-model="serviceCode" />
+            </div>
+
+            <div class="form-group col-12">
+                <label for="countryCode">Country Code</label>
+                <input type="text" class="k-textbox" id="countryCode" ng-model="countryCode" />
+            </div>
+
+            <div class="form-group col-12">
+                <label for="payType">Pay Type</label>
+                <input type="text" class="k-textbox" id="payType" ng-model="payType" />
+            </div>
+
+            <div class="form-group col-12">
+                <label for="ccy">CCY</label>
+                <input type="text" class="k-textbox" id="ccy" ng-model="ccy" />
+            </div>
+
+            <div class="form-group col-6">
+                <label for="masterMerCode">Master MerCode</label>
+                <input type="text" class="k-textbox" id="masterMerCode" ng-model="masterMerCode" />
+            </div>
+            <div class="form-group col-6">
+                <label for="merchantType">Merchant Type</label>
+                <input type="text" class="k-textbox" id="merchantType" ng-model="merchantType" />
+            </div>
+
+            <div class="form-group col-6">
+                <label for="terminalId">Terminal Id</label>
+                <input type="text" class="k-textbox" id="terminalId" ng-model="terminalId" />
+            </div>
+            <div class="form-group col-6">
+                <label for="terminalName">Terminal Name</label>
+                <input type="text" class="k-textbox" id="terminalName" ng-model="terminalName" />
+            </div>
+
+            <div class="form-group col-6">
+                <label for="user">User</label>
+                <input type="text" class="k-textbox" id="user" ng-model="user" />
+            </div>
+            <div class="form-group col-6">
+                <label for="password">Password</label>
+                <input type="text" class="k-textbox" id="password" ng-model="password" />
+            </div>
+
+            <div class="form-group col-12">
+                <label for="accessCode">Access Code</label>
+                <input type="text" class="k-textbox" id="accessCode" ng-model="accessCode" />
+            </div>
+
+            <div class="form-group col-12">
+                <label for="hascode">Hascode</label>
+                <input type="text" class="k-textbox" id="hascode" ng-model="hascode" />
+            </div>
+
+            <div class="form-group col-12">
+                <label for="currency">Currency</label>
+                <input type="text" class="k-textbox" id="currency" ng-model="currency" />
+            </div>
+
+            <div class="form-group col-12">
+                <label for="returnURL">Return URL</label>
+                <input type="text" class="k-textbox" id="returnURL" ng-model="returnURL" />
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div kendo-window="formVi" id="formVi" k-title="'Chi tiết ví'" k-visible="false" k-modal="true">
+    <div class="row mt-2">
+        <div class="col-6">
+            <div class="form-group">
+                <div class="image_frame">
+                    <div style="text-align:center" id="preview">
+                    </div>
+                </div>
+                <div class="selectfile">
+                    <input name="files" title="" id="files" type="file" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Ngân hàng chuyển tiền:</label>
+                <input type="text" class="k-textbox" ng-model="napvi.TenNganHang" />
+            </div>
+            <div class="form-group">
+                <label>Số tiền:</label>
+                <input kendo-numeric-text-box k-format="'{0:n0}'" k-min="0" ng-model="napvi.SoTien" />
+            </div>
+            <div class="form-group">
+                <label>Số tk nhận:</label>
+                <input type="text" class="k-textbox" ng-model="napvi.TaiKhoanNhanVien" />
+            </div>
+            <div class="form-group" style=" display: flex; justify-content: center; ">
+                <button class="k-button success"  ng-click="xuLyNapVi()"><i class="fas fa-save" style="margin-right:3px;"> </i> Xử lý nạp tiền vào ví</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <div kendo-grid="gridLichSuNapVi" k-data-source="gridDataLichSuNapVi" k-options="gridOption_LichSuNapVi" id="gridLichSuNapVi"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,545 @@
+﻿2023/03/09 13:09:37,897 ERROR 12 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:09:38,942 ERROR 12 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:09:39,399 ERROR 12 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:09:39,867 ERROR 12 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:09:40,807 ERROR 12 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:09:41,157 ERROR 12 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:09:41,413 ERROR 12 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:09:54,358 ERROR 15 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(3) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 13:09:54,554 ERROR 15 LSPos_Data.Utilities.Log - System.FormatException: Format specifier was invalid.
+   at System.Number.FormatDouble(Double value, String format, NumberFormatInfo info)
+   at LSPosMVC.Common.utilsCommon.genMaDonHang(NhanVienAppModels nhanVienInfor, String macuoicung, String idnhom, String MaNhom, Int32 sttDonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 126
+2023/03/09 13:09:54,985 ERROR 15 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 13:10:09,536 ERROR 22 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 13:10:09,729 ERROR 6 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 13:10:16,624 INFO 6 LSPos_Data.Utilities.Log - Đoc file từ request
+2023/03/09 13:10:16,624 INFO 6 LSPos_Data.Utilities.Log - Lấy file
+2023/03/09 13:10:16,626 INFO 6 LSPos_Data.Utilities.Log - Lấy tên file : filename="logo-01.jpg"
+2023/03/09 13:10:16,626 INFO 6 LSPos_Data.Utilities.Log - Tạo filename : 09032023011016.jpg
+2023/03/09 13:10:16,633 INFO 6 LSPos_Data.Utilities.Log - Đọc byte : 90317
+2023/03/09 13:10:16,633 INFO 6 LSPos_Data.Utilities.Log - Filepath: C:\Users\quang\source\repos\LSPosCore\LSPosMVC\FileUpload\Images\09032023011016.jpg
+2023/03/09 13:10:16,635 INFO 6 LSPos_Data.Utilities.Log - Ghi file
+2023/03/09 13:10:19,967 ERROR 12 SiteDAO - System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at GlobalDAO.GetCurrentGlobalBySite(String sitecode, DateTime date) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\GlobalDAO.cs:line 35
+2023/03/09 13:12:09,773 ERROR 12 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.DonHangController.CreateBookingToLocalAPI(List`1 serviceRateModel) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 4366
+   at LSPosMVC.Controllers.DonHangController.thanhToanDonHang(paramTToan param) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 1321
+2023/03/09 13:12:16,537 ERROR 20 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 13:12:25,929 ERROR 20 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyHoatDong.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceHoatDong.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllHoatDong(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 20
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 49
+2023/03/09 13:12:26,608 ERROR 6 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 13:31:21,048 ERROR 11 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) ---> System.ComponentModel.Win32Exception (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, _SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+ClientConnectionId:d590b21f-5c2f-46b6-aacd-a6915fb133a3
+Error Number:10054,State:0,Class:20
+2023/03/09 13:31:21,048 ERROR 44 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) ---> System.ComponentModel.Win32Exception (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, _SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+ClientConnectionId:a925bd2e-8f43-4bab-a084-ea08ab2f544d
+Error Number:10054,State:0,Class:20
+2023/03/09 13:31:21,142 ERROR 11 TinNhanDB - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at TinNhanDB.getDSTinNhanTheoID_ChuaDoc(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\TinNhanDB.cs:line 256
+2023/03/09 13:31:21,176 ERROR 44 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at LSPos_Data.Data.DonHangData.GetDSDonHangChuaDoc(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 1508
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 38
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/09 13:31:31,126 ERROR 11 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 622
+2023/03/09 13:31:42,034 ERROR 9 LSPos_Data.Utilities.Log - System.Exception: Có lỗi trong quá trình gửi Request API, Vui lòng kiểm tra lại. Message: Exception of type 'System.Exception' was thrown.
+   at Ticket.Utils.ApiUtility.CallApiSimple[T](String endpoint, Method method, Object dataObject, String localApi) in C:\Users\quang\source\repos\LSPosCore\LSPos_API\Ticket\Utils\ApiUtility.cs:line 155
+   at BusinessLayer.Repository.SellRepository.SaveBookingB2BExportTicket(CartB2BModel cart, Int64 redundancyMoney, Boolean isAutoCreateWallet) in C:\Users\quang\source\repos\LSPosCore\LSPos_API\Repository\SellRepository.cs:line 506
+   at LSPosMVC.Controllers.DonHangController.ConfirmBookingToLocalAPI(List`1 serviceRateModel) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 4516
+   at LSPosMVC.Controllers.DonHangController.xuLyDonHang(Int32 ID_DonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 1413
+2023/03/09 13:31:44,020 ERROR 47 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023/03/09 13:31:44,159 ERROR 48 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023/03/09 13:31:44,159 ERROR 50 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023/03/09 13:31:44,192 ERROR 39 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023/03/09 13:31:44,229 ERROR 47 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/09 13:31:44,415 ERROR 50 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/09 13:31:44,415 ERROR 39 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/09 13:31:44,416 ERROR 48 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/09 13:31:47,251 ERROR 39 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/09 13:31:47,417 ERROR 47 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023/03/09 13:31:47,417 ERROR 48 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023/03/09 13:31:47,629 ERROR 47 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/09 13:31:47,629 ERROR 48 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/09 13:31:47,629 ERROR 39 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023/03/09 13:31:47,696 ERROR 39 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/09 13:31:48,604 ERROR 39 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/09 13:31:48,744 ERROR 10 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023/03/09 13:31:48,744 ERROR 48 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023/03/09 13:31:48,833 ERROR 10 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/09 13:31:48,860 ERROR 48 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/09 13:39:11,715 ERROR 6 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:39:11,852 ERROR 6 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:39:12,028 ERROR 6 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:39:12,190 ERROR 6 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:39:12,337 ERROR 6 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:39:12,475 ERROR 6 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:39:12,631 ERROR 6 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/09 13:39:26,175 ERROR 38 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(3) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 13:39:26,336 ERROR 38 LSPos_Data.Utilities.Log - System.FormatException: Format specifier was invalid.
+   at System.Number.FormatDouble(Double value, String format, NumberFormatInfo info)
+   at LSPosMVC.Common.utilsCommon.genMaDonHang(NhanVienAppModels nhanVienInfor, String macuoicung, String idnhom, String MaNhom, Int32 sttDonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 126
+2023/03/09 13:39:26,961 ERROR 38 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 13:39:28,618 ERROR 17 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 13:39:35,460 ERROR 28 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 13:39:35,704 ERROR 16 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 13:39:41,263 INFO 40 LSPos_Data.Utilities.Log - Đoc file từ request
+2023/03/09 13:39:41,263 INFO 40 LSPos_Data.Utilities.Log - Lấy file
+2023/03/09 13:39:41,264 INFO 40 LSPos_Data.Utilities.Log - Lấy tên file : filename="logo-01.jpg"
+2023/03/09 13:39:41,264 INFO 40 LSPos_Data.Utilities.Log - Tạo filename : 09032023013941.jpg
+2023/03/09 13:39:41,264 INFO 40 LSPos_Data.Utilities.Log - Đọc byte : 90317
+2023/03/09 13:39:41,265 INFO 40 LSPos_Data.Utilities.Log - Filepath: C:\Users\quang\source\repos\LSPosCore\LSPosMVC\FileUpload\Images\09032023013941.jpg
+2023/03/09 13:39:41,265 INFO 40 LSPos_Data.Utilities.Log - Ghi file
+2023/03/09 13:40:05,423 ERROR 40 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 13:40:09,487 ERROR 40 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 14:09:40,554 ERROR 7 Ticket.Utils.ApiUtility - Người dùng chưa đăng ký Site, Vui lòng kiểm tra lại!
+2023/03/09 14:13:09,049 ERROR 5 Ticket.Utils.ApiUtility - Người dùng chưa đăng ký Site, Vui lòng kiểm tra lại!
+2023/03/09 14:14:41,173 ERROR 5 SiteDAO - System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at GlobalDAO.GetCurrentGlobalBySite(String sitecode, DateTime date) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\GlobalDAO.cs:line 35
+2023/03/09 14:17:44,903 ERROR 5 Ticket.Utils.ApiUtility - Có lỗi trong quá tình gửi Request: pos/b2b/get-ticket, Nội dung: SITE_NOT_FOUND, Site not found
+2023/03/09 14:20:52,237 ERROR 14 Ticket.Utils.ApiUtility - Có lỗi trong quá tình gửi Request: pos/b2b/get-ticket, Nội dung: SITE_NOT_FOUND, Site not found
+2023/03/09 14:34:22,365 ERROR 23 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 14:59:35,762 ERROR 8 LSPos_Data.Utilities.Log - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.) ---> System.ComponentModel.Win32Exception (0x80004005): The semaphore timeout period has expired
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+ClientConnectionId:cb01a29a-3f39-4ee6-8462-a325ab6fa63b
+Error Number:121,State:0,Class:20
+2023/03/09 15:00:01,310 ERROR 29 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2023/03/09 15:00:01,311 ERROR 29 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at User_dl.GetUserInfo(String username, String macongty) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\User_dl.cs:line 194
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 32
+2023/03/09 22:06:39,498 ERROR 8 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 22:07:15,470 ERROR 5 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.DonHangController.ConfirmBookingToLocalAPI(List`1 serviceRateModel) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 4444
+   at LSPosMVC.Controllers.DonHangController.xuLyDonHang(Int32 ID_DonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 1413
+2023/03/09 22:07:19,257 ERROR 8 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.DonHangController.ConfirmBookingToLocalAPI(List`1 serviceRateModel) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 4444
+   at LSPosMVC.Controllers.DonHangController.xuLyDonHang(Int32 ID_DonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 1413
+2023/03/09 22:07:48,330 ERROR 7 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.DonHangController.ConfirmBookingToLocalAPI(List`1 serviceRateModel) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 4444
+   at LSPosMVC.Controllers.DonHangController.xuLyDonHang(Int32 ID_DonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 1413
+2023/03/09 22:09:22,058 ERROR 7 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.DonHangController.ConfirmBookingToLocalAPI(List`1 serviceRateModel) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 4444
+   at LSPosMVC.Controllers.DonHangController.xuLyDonHang(Int32 ID_DonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 1413
+2023/03/09 22:09:39,928 ERROR 8 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.DonHangController.ConfirmBookingToLocalAPI(List`1 serviceRateModel) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 4444
+   at LSPosMVC.Controllers.DonHangController.xuLyDonHang(Int32 ID_DonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 1413
+2023/03/09 22:10:20,233 ERROR 19 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.DonHangController.ConfirmBookingToLocalAPI(List`1 serviceRateModel) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 4444
+   at LSPosMVC.Controllers.DonHangController.xuLyDonHang(Int32 ID_DonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 1413
+2023/03/09 22:12:01,980 ERROR 25 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/09 22:12:10,168 ERROR 8 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429

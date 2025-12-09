@@ -1,0 +1,645 @@
+﻿
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_LayoutPos.cshtml";
+}
+<style>
+    .row {
+        margin: 0 !important;
+    }
+
+    .main-layout {
+        width: auto;
+        height: 100vh;
+        overflow: hidden;
+        font-family: monospace;
+        color: #fff;
+        /*background-color: #ffffff1c;*/
+    }
+
+    .network-icon.online {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #00ff21;
+    }
+
+    .network-icon.offline {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: crimson;
+    }
+
+    .k-tabstrip {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+        .k-tabstrip:focus {
+            box-shadow: none;
+        }
+
+    .k-tabstrip-top .k-tabstrip-items-wrapper {
+        border: none;
+        box-shadow: none;
+    }
+
+        .k-tabstrip-top .k-tabstrip-items-wrapper .k-item.k-state-active {
+            box-shadow: none;
+            border: solid 6px #954f4f;
+            border-radius: 9px;
+            color: #111;
+        }
+
+
+
+    .k-tabstrip-item span {
+        color: #fff;
+    }
+
+    .k-state-active span {
+        color: #111;
+    }
+
+
+
+    .k-tabstrip-items .k-state-default.k-state-hover {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .k-tabstrip-items::-webkit-scrollbar {
+        width: 0px !important;
+        height: 0px !important;
+        background-color: #F5F5F5;
+        position: absolute;
+    }
+
+    .k-tabstrip-items {
+        overflow-x: scroll !important;
+    }
+
+    .k-tabstrip-item {
+        border: none;
+        background: none;
+        margin-left: 20px !important;
+    }
+
+        .k-tabstrip-item:hover {
+            border: none;
+            background: none;
+        }
+
+    .k-tabstrip-items .k-loading.k-complete {
+        width: 100%;
+        -webkit-animation: none;
+        animation: none;
+        display: none;
+    }
+
+    .k-tabstrip-items .k-item {
+        overflow: hidden;
+        margin-left: 20px;
+    }
+
+    .k-tabstrip-prev {
+        color: #fff !important;
+    }
+
+    .k-tabstrip-next {
+        color: #fff !important;
+    }
+
+    .k-state-selected {
+        background-color: #d9d9d95c;
+    }
+
+    .product {
+        float: left;
+        width: 170px;
+        /*height: 120px;*/
+        margin: 0;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+        .product img {
+            float: left;
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            color: #fff;
+            margin: 0;
+            padding: 10px 0 0 10px;
+            font-size: .75em;
+            overflow: hidden;
+            font-weight: normal;
+            float: left;
+            max-width: 90px;
+            text-transform: uppercase;
+        }
+
+    .k-pager-wrap {
+        border-top: 0;
+    }
+
+    .demo-section .k-listview:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .k-listview-content {
+        height: calc(100vh - 240px);
+        border: none;
+        padding: 15px;
+    }
+
+    .k-tabstrip .k-content.k-state-active {
+        background-color: transparent;
+        color: #fff;
+    }
+
+    .k-listview {
+        background-color: transparent;
+        border: solid 1px #3c4653;
+    }
+
+    .choose-customer {
+        float: left;
+        margin-top: 4px;
+        background: transparent;
+        color: #fff;
+    }
+
+        .choose-customer .fa {
+            line-height: 35px;
+            width: 30px;
+        }
+
+    .clear-customer {
+        float: left;
+        margin-top: 4px;
+        background: transparent;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+        .clear-customer .fa {
+            line-height: 20px;
+            width: 20px;
+        }
+
+    .customer-wrap {
+        float: left;
+        padding-left: 10px;
+        max-width: 185px;
+    }
+
+    .customer-name {
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    #order .k-listview-content {
+        height: calc(100vh - 380px);
+        border: none;
+        padding: 15px;
+        overflow-x: hidden;
+    }
+
+    #order .product {
+        width: 100%;
+    }
+
+    #order h3 {
+        max-width: 100%;
+        width: 100%;
+        white-space: nowrap;
+        padding: 2px 0px 8px 10px;
+    }
+
+    #order .k-button {
+        background: transparent;
+        color: #fff;
+    }
+
+    #order .k-textbox {
+        background: transparent;
+        color: #fff;
+    }
+
+    .unit-payment {
+        width: 100%;
+    }
+
+        .unit-payment label {
+            width: 48%;
+            float: left;
+            font-size: 1.3em;
+        }
+
+    .payment-method {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .btn-payment {
+        width: 70px;
+        height: 50px;
+        background: transparent;
+        color: #fff;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+        .btn-payment p {
+            font-size: 10px;
+            margin: 0;
+        }
+
+    .order-title {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .refresh-order {
+        background: transparent;
+        height: 40px;
+        margin-top: 25px;
+        width: 40px;
+        color: #fff;
+    }
+</style>
+<script>
+    var selectedView;
+    $(document).ready(function () {
+        for (var x = 0; x <= 7; x++) {
+            $("#list" + x).kendoListView({
+                height: function () {
+                    return window.height - 300;
+                },
+                dataSource: {
+                    transport: {
+                        read: {
+                            url: "https://demos.telerik.com/kendo-ui/service/Products",
+                            dataType: "jsonp"
+                        }
+                    },
+                },
+                selectable: true,
+                pageable: false,
+                //dataBound: onDataBound,
+                change: onChange,
+                template: kendo.template($("#template").html())
+            });
+        }
+        $("#tabstrip").kendoTabStrip({
+            animation: {
+                open: {
+                    effects: "fadeIn"
+                }
+            },
+            select: function (e) {
+                selectedView = $("#list" + $(e.item).attr("id").substr(13)).data("kendoListView");
+                if (selectedView) {
+                    
+                    applyClientFilters();
+                } else {
+                    $("#list" + $(e.item).attr("id").substr(13)).kendoListView({
+                        height: function () {
+                            return window.height - 300;
+                        },
+                        dataSource: {
+                            transport: {
+                                read: {
+                                    url: "https://demos.telerik.com/kendo-ui/service/Products",
+                                    dataType: "jsonp"
+                                }
+                            },
+                        },
+                        selectable: true,
+                        pageable: false,
+                        //dataBound: onDataBound,
+                        change: onChange,
+                        template: kendo.template($("#template").html())
+                    });
+                    applyClientFilters();
+
+                }
+            },
+            show: function (e) {
+
+
+            },
+        });
+
+        $("#order").kendoListView({
+            dataSource: {
+                schema: {
+                    model: { id: "ProductID" },
+                    fields: [
+                        { UnitQty: "number" },
+                        { Price: "number" }
+                    ]
+                },
+                aggregate: [
+                    { field: "Price", aggregate: "sum" },
+                ],
+                data: []
+            },
+            selectable: true,
+            pageable: false,
+            //dataBound: onDataBound,
+            //change: onChange,
+            template: kendo.template($("#templateOrder").html())
+        });
+
+        $("#windowCustomer").kendoWindow({
+            width: 800,
+            height: 600,
+            modal: true,
+            resizable: false,
+            visible: false,
+            title: "Danh sách khách hàng"
+        });
+        selectedView = $("#list1").data("kendoListView");
+
+    })
+
+    function onChange(e) {
+        var lview = e.sender;
+        var data = lview.dataSource.view(),
+            selected = $.map(lview.select(), function (item) {
+                var item = data[$(item).index()];
+                addItemToOrder(item)
+            });
+    }
+
+    function addItemToOrder(item) {
+        var lview = $("#order").data("kendoListView");
+        var data = lview.dataSource;
+        if (data.get(item.ProductID) == undefined) {
+            item.UnitQty = 1;
+            item.Price = item.UnitPrice;
+            data.add(item);
+            // save the created data item
+            data.fetch();
+        } else {
+            add(item.ProductID);
+        }
+        calcTotal();
+    }
+
+    function clearFilter() {
+        $(".search-filter").val("");
+        applyClientFilters();
+    }
+
+    function applyClientFilters() {
+        let listView = selectedView;
+        var listViewDataSource = listView.dataSource;
+        // clear existing datasource
+        listViewDataSource.filter([]);
+        // extract selected items from each of the dropdown controls and the search box
+        var searchString = $(".search-filter").val();
+        // setup filter object (using and logic)
+        var filter = {
+            logic: "and",
+            filters: [] // ready for filter from each of the dropdowns and search bar
+        };
+        // push new filter into array of filters with or logic on each filter
+
+
+
+
+        if (searchString.length > 0) {
+            var searchFilter = {
+                logic: "or",
+                filters: [
+                    { field: "ProductName", operator: "contains", value: searchString }
+                ]
+            };
+            filter.filters.push(searchFilter);
+        }
+
+        // apply filter query to datasource
+        listViewDataSource.query({
+            filter: filter
+        });
+    }
+
+    function add(id) {
+        var lview = $("#order").data("kendoListView");
+        var data = lview.dataSource;
+        item = data.get(id);
+        if (item != undefined) {
+            item.UnitQty = item.UnitQty + 1;
+            item.Price = item.UnitPrice * item.UnitQty;
+        }
+        data.fetch();
+        calcTotal();
+    }
+    function minus(id) {
+        var lview = $("#order").data("kendoListView");
+        var data = lview.dataSource;
+        item = data.get(id);
+        if (item != undefined) {
+            item.UnitQty = item.UnitQty - 1;
+            item.Price = item.UnitPrice * item.UnitQty;
+            if (item.UnitQty == 0) {
+                data.remove(item);
+            }
+        }
+        data.fetch();
+        //data.sync();
+        calcTotal();
+    }
+
+    function calcTotal() {
+        var lview = $("#order").data("kendoListView");
+        var subtotal = lview.dataSource.aggregates().Price.sum;
+        var tax = subtotal * 0.1;
+        var total = subtotal * 1.1;
+        $("#subtotal").html(kendo.toString(subtotal, "N2") + "$");
+        $("#tax").html(kendo.toString(tax, "N2") + "$");
+        $("#total").html(kendo.toString(total, "N2") + "$");
+    }
+
+    function clearOrder() {
+        openConfirm(dialogRoot, "Confirm to clear all item in current order?", function () { acceptClearOrder(); } , function () { });
+    }
+    function acceptClearOrder() {
+        var lview = $("#order").data("kendoListView");
+        lview.setDataSource(new kendo.data.DataSource({
+            schema: {
+                model: { id: "ProductID" },
+                fields: [
+                    { UnitQty: "number" },
+                    { Price: "number" }
+                ]
+            },
+            aggregate: [
+                { field: "Price", aggregate: "sum" },
+            ],
+            data: []
+        }));
+        calcTotal();
+    }
+</script>
+<div class="container-fluid main-layout">
+    <div class="row">
+        <div class="col-sm-9" style="height:100vh">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Cửa hàng: Cafe Mây</h3>
+                    <p>@DateTime.Now.ToLongDateString()</p>
+                </div>
+                <div class="col-sm-2">
+                    <h4>Casher:</h4>
+                    <p>Tạ Quang Sơn</p>
+                </div>
+                <div class="col-sm-2">
+                    <i class="fa fa-wifi network-icon online"></i>
+                    <p>Online</p>
+                </div>
+                @*<div class="col-sm-2">
+                <i class="fa fa-minus network-icon offline"></i>
+                <p>Offline</p>
+            </div>*@
+            </div>
+            <div class="search-box">
+                <input type="text" style="width: 90%; background: transparent; color: #fff;" placeholder="Tìm kiếm sản phẩm theo tên hoặc mã barcode" onkeyup="applyClientFilters()" class="search-filter k-textbox" />
+                <button class="k-button" style="width: 9%; color: #fff; background: transparent " onclick="clearFilter()"><i class="fa fa-refresh" style="line-height: 28px;"></i></button>
+            </div>
+            <div class="row">
+                <div id="tabstrip">
+                    <ul>
+                        <li class="k-state-active">
+                            <img src="~/Images/cat1.png" style="width:50px" />
+                            <span>Khai vị</span>
+                        </li>
+                        <li>
+                            <img src="~/Images/cat2.png" style="width:50px" />
+                            <span>Đồ uống</span>
+                        </li>
+                        <li>
+                            <img src="~/Images/cat3.png" style="width:50px" />
+                            <span>Món chính</span>
+                        </li>
+                        <li>
+                            <img src="~/Images/cat4.png" style="width:50px" />
+                            <span>Trái cây</span>
+                        </li>
+                        <li>
+                            <img src="~/Images/cat5.png" style="width:50px" />
+                            <span>Dịch vụ</span>
+                        </li>
+                        <li>
+                            <img src="~/Images/cat6.png" style="width:50px" />
+                            <span>Đồ ăn nhanh</span>
+                        </li>
+                        <li>
+                            <img src="~/Images/cat7.png" style="width:50px" />
+                            <span>Bánh ngọt</span>
+                        </li>
+                    </ul>
+                    <div style="border:none;padding:0px;margin:0px;">
+                        <div id="list1"></div>
+                    </div>
+                    <div style="border:none;padding:0px;margin:0px;">
+                        <div id="list2"></div>
+                    </div>
+                    <div style="border:none;padding:0px;margin:0px;">
+                        <div id="list3"></div>
+                    </div>
+                    <div style="border:none;padding:0px;margin:0px;">
+                        <div id="list4"></div>
+                    </div>
+                    <div style="border:none;padding:0px;margin:0px;">
+                        <div id="list5"></div>
+                    </div>
+                    <div style="border:none;padding:0px;margin:0px;">
+                        <div id="list6"></div>
+                    </div>
+                    <div style="border:none;padding:0px;margin:0px;">
+                        <div id="list7"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" style="height:100vh">
+            <div class="row" style="padding-top: 20px;">
+                <button class="k-button choose-customer"><i class="fa fa-filter"></i> </button>
+                <div class="customer-wrap">
+                    <label class="customer-name">Khách lẻ</label>
+                    <label class="customer-type">Take away</label>
+                </div>
+                <button class="k-button clear-customer"><i class="fa fa-times"></i> </button>
+            </div>
+            <div class="order-title">
+                <h3 style=" line-height: 56px;">Current Order</h3>
+                <button onclick="clearOrder()" class="k-button refresh-order"><i class="fa fa-refresh"></i></button>
+            </div>
+            <div id="order"></div>
+            <div class="unit-payment">
+                <label>Subtotal:</label>
+                <label class="text-right" id="subtotal">0$</label>
+            </div>
+            <div class="unit-payment">
+                <label>Tax:</label>
+                <label class="text-right" id="tax">0$</label>
+            </div>
+            <hr style="width:100%" />
+            <div class="unit-payment">
+                <label>Total:</label>
+                <label class="text-right" id="total">0$</label>
+            </div>
+            <div class="payment-method">
+                <button class="btn-payment k-button"><i class="fa fa-money"></i><p>Cash</p></button>
+                <button class="btn-payment k-button"><i class="fa fa-credit-card-alt"></i><p>Credit</p></button>
+                <button class="btn-payment k-button"><i class="fa fa-qrcode"></i><p>E-Banking</p></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="windowCustomer"></div>
+
+<script type="text/x-kendo-tmpl" id="template">
+    <div class="product">
+        <img src="https://demos.telerik.com/kendo-ui/content/web/foods/#:ProductID#.jpg" alt="#:ProductName# image" />
+        <h3>#:ProductName#</h3>
+    </div>
+</script>
+
+<script type="text/x-kendo-tmpl" id="templateOrder">
+    <div class="product">
+        <img src="https://demos.telerik.com/kendo-ui/content/web/foods/#:ProductID#.jpg" alt="#:ProductName# image" />
+        <div style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">
+            <h3>#:ProductName#</h3>
+            <h3>#:UnitPrice#$</h3>
+            <div style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">
+                <button onclick="add(#:ProductID#)" class="k-button"><i class="fa fa-plus-square"></i></button>
+                <input type="number" id="qty-#:ProductID#" value="#:UnitQty#" class="k-textbox" style="line-height: 20px;height: 25px;width: 50px;" />
+                <button onclick="minus(#:ProductID#)" class="k-button"><i class="fa fa-minus-square"></i></button>
+            </div>
+        </div>
+
+    </div>
+</script>

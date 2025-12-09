@@ -1,0 +1,158 @@
+﻿<link href="/app/components/donhang/donhangpkd/donHangPKDStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_tungay')"></span>:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_TuNgay"
+                           k-ng-model="obj_TuNgay"
+                           k-max="maxDate"
+                           k-rebind="maxDate"
+                           k-on-change="fromDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_denngay')"></span>:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_DenNgay"
+                           k-ng-model="obj_DenNgay"
+                           k-min="minDate"
+                           k-rebind="minDate"
+                           k-on-change="toDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+            <div class="col-sm-2" ng-show="!showthemmoi">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_nhomnhanvien')"></span>:</label>
+                    <select kendo-multi-select
+                            id="nhomnhanvien"
+                            k-placeholder="bindTextI18n('label_nhomnhanvien')"
+                            k-data-text-field="'tenNhom'"
+                            k-data-value-field="'iD_Nhom'"
+                            k-value-Primitive="true"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-auto-close="false"
+                            k-data-source="nhomnhanvienData"
+                            k-ng-model="selectedIdNhom"></select>
+                </div>
+            </div>
+            <div class="col-sm-2" ng-show="!showthemmoi">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_nhanvien')"></span>:</label>
+                    <select kendo-combo-box="nhanvien"
+                            id="nhanvien"
+                            k-placeholder="bindTextI18n('label_nhanvien')"
+                            k-data-text-field="'tenDayDu'"
+                            k-data-value-field="'idnv'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="nhanvienselect"
+                            k-data-source="nhanvienData"
+                            k-on-change="nhanvienOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_boloctrangthai')"></span>:</label>
+                    <a href="" ng-click="openfilterform()" class="text-info" title="{{bindTextI18n('label_xemtieuchilocdonhang')}}">
+                        <i class="fas fa-filter text-primary fa-lg"></i> 
+                        {{filterTrangThai}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toolbarmenu">
+        <button ng-click="loaddonhang()" id="btn_loaddonghang" class="btn btn-link btn-menubar"><i class="fas fa-chart-line fas-sm color-infor"></i> Load danh sách</button>
+        <button ng-show="showthemmoi" ng-click="themdonhang()"  class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> Tạo OTA Booking</button>
+        <button ng-show="(permission.sua > 0)" ng-click="suadonhang()" class="btn btn-link btn-menubar"><i class="fas fa-edit fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_sua')"></span></button>
+        <button ng-show="(permission.sua > 0)" ng-click="xuatexcel()" id="btn_xuatexceldonhang" class="btn btn-link btn-menubar"><i class="fas fa-file-excel fas-sm color-primary"></i> <span ng-bind="bindTextI18n('button_xuatexcel')"></span></button>
+        <button ng-show="(permission.sua > 0)" ng-click="xuatexcelchitiet()" id="btn_xuatexcelchitietdonhang" class="btn btn-link btn-menubar"><i class="fas fa-file-excel fas-sm color-success"></i> <span ng-bind="bindTextI18n('button_xuatexcelchitiet')"></span></button>
+        <button ng-show="(permission.xoa > 0)" ng-click="xoadonhang()" id="btn_xoadonhang" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> <span ng-bind="bindTextI18n('button_xoa')"></span></button>
+    </div>
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+
+<!--popup advanced filter-->
+<div kendo-window="formfilter" id="formfilter" k-title="bindTextI18n('label_tieuchiloc')" k-visible="false" k-modal="true" k-width="500" k-height="250">
+
+    <div class="body-filter">
+        
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_trangthaixem')"></span>:</label>
+                    <select kendo-combo-box="trangthaixem"
+                            id="trangthaixem"
+                            k-placeholder="bindTextI18n('label_trangthaixem')"
+                            k-data-text-field="'value'"
+                            k-data-value-field="'id'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="trangthaixemselect"
+                            k-data-source="trangthaixemData"
+                            k-on-change="trangthaixemOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_trangthaihoantat')"></span>:</label>
+                    <select kendo-combo-box="trangthaihoantat"
+                            k-placeholder="bindTextI18n('label_trangthaihoantat')"
+                            k-data-text-field="'value'"
+                            k-data-value-field="'id'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="trangthaihoantatselect"
+                            k-data-source="trangthaihoantatData"
+                            k-on-change="trangthaihoantatOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_trangthaigiaohang')"></span>:</label>
+                    <select kendo-combo-box="trangthaigiaohang"
+                            k-placeholder="bindTextI18n('label_trangthaigiaohang')"
+                            k-data-text-field="'value'"
+                            k-data-value-field="'id'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="trangthaigiaohangselect"
+                            k-data-source="trangthaigiaohangData"
+                            k-on-change="trangthaigiaohangOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_trangthaithanhtoan')"></span>:</label>
+                    <select kendo-combo-box="trangthaithanhtoan"
+                            k-placeholder="bindTextI18n('label_trangthaithanhtoan')"
+                            k-data-text-field="'value'"
+                            k-data-value-field="'id'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="trangthaithanhtoanselect"
+                            k-data-source="trangthaithanhtoanData"
+                            k-on-change="trangthaithanhtoanOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-filter float-right">
+        <button ng-click="donglocdonhang()" class="btn btn-outline-secondary btn-lg"><i class="fas fa-close"></i> <span ng-bind="bindTextI18n('button_dong')"></span></button>
+        <button ng-click="apdunglocdonhang()" class="btn btn-info btn-lg"><i class="fas fa-bell"></i> <span ng-bind="bindTextI18n('header_apdung')"></span></button>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+﻿<link href="/app/components/donhang/donhanghdv/donHangHDVStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_tungay')"></span>:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_TuNgay"
+                           k-ng-model="obj_TuNgay"
+                           k-max="maxDate"
+                           k-rebind="maxDate"
+                           k-on-change="fromDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_denngay')"></span>:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_DenNgay"
+                           k-ng-model="obj_DenNgay"
+                           k-min="minDate"
+                           k-rebind="minDate"
+                           k-on-change="toDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <div class="toolbarmenu">
+        <button ng-click="loaddonhang()" id="btn_loaddonghang" class="btn btn-link btn-menubar"><i class="fas fa-chart-line fas-sm color-infor"></i> Load danh sách</button>
+        <button ng-show="(permission.sua > 0)" ng-click="suadonhang()" class="btn btn-link btn-menubar"><i class="fas fa-edit fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_sua')"></span></button>
+        <button ng-show="(permission.sua > 0)" ng-click="xuatexcel()" id="btn_xuatexceldonhang" class="btn btn-link btn-menubar"><i class="fas fa-file-excel fas-sm color-primary"></i> <span ng-bind="bindTextI18n('button_xuatexcel')"></span></button>
+        <button ng-show="(permission.sua > 0)" ng-click="xuatexcelchitiet()" id="btn_xuatexcelchitietdonhang" class="btn btn-link btn-menubar"><i class="fas fa-file-excel fas-sm color-success"></i> <span ng-bind="bindTextI18n('button_xuatexcelchitiet')"></span></button>
+    </div>
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+
+

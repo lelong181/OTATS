@@ -1,0 +1,122 @@
+﻿<link href="/app/components/maps/viTriNhanVienStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <span ng-bind="bindTextI18n('label_kieuhienthi')">:</span>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="form-group">
+                        <select id="kieuhienthi"
+                                kendo-drop-down-list="kieuhienthi"
+                                ng-model="kieuhienthi"
+                                k-data-text-field="'name'"
+                                k-data-value-field="'id'"
+                                k-auto-bind="false"
+                                k-data-source="kieuhienthiDataSource"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <select id="nhomnhanvien" kendo-combo-box="nhomnhanvien"
+                                k-placeholder="bindTextI18n('label_nhomnhanvien')"
+                                k-data-text-field="'tenNhom'"
+                                k-data-value-field="'iD_Nhom'"
+                                k-filter="'contains'"
+                                k-auto-bind="false"
+                                k-ng-model="nhomnhanvienselect"
+                                k-data-source="nhomnhanvienData"
+                                k-on-change="nhomnhanvienOnChange(kendoEvent)"></select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <select kendo-combo-box="nhanvien"
+                                id="nhanvien"
+                                k-placeholder="bindTextI18n('label_nhanvien')"
+                                k-data-text-field="'tenNhanVien'"
+                                k-data-value-field="'iD_NhanVien'"
+                                k-filter="'contains'"
+                                k-auto-bind="false"
+                                k-ng-model="nhanvienselect"
+                                k-data-source="nhanvienData"
+                                k-on-change="nhanvienOnChange(kendoEvent)"></select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-9">
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-group">
+                        <button id="btn_online" ng-click="timkiemnhanvien(1)" class="btn bg-primary btn-full" title="{{bindTextI18n('label_tructuyen')}}">
+                            <span class="float-left"><i class="fas fa-wifi"></i></span>
+                            <span class="float-right">{{thongke.tructuyen}}</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="form-group">
+                        <button id="btn_off60" ng-click="timkiemnhanvien(0)" class="btn bg-secondary btn-full" title="{{bindTextI18n('label_chuadangnhap')}} < 60'">
+                            <span class="float-left"> <i class="fas fa-chevron-left"></i>60'</span>
+                            <span class="float-right">{{thongke.chuadangnhapduoi60}}</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="form-group">
+                        <button id="btn_60off" ng-click="timkiemnhanvien(0)" class="btn bg-secondary btn-full" title="{{bindTextI18n('label_chuadangnhap')}} > 60'">
+                            <span class="float-left"> <i class="fas fa-chevron-right"></i>60'</span>
+                            <span class="float-right">{{thongke.chuadangnhaptren60}}</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="form-group">
+                        <button id="btn_dc60" ng-click="timkiemnhanvien(2)" class="btn bg-danger btn-full" title="{{bindTextI18n('label_matketnoi')}} < 60'">
+                            <span class="float-left"> <i class="fas fa-chevron-left"></i>60'</span>
+                            <span class="float-right">{{thongke.mattinhieuduoi60}}</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <button id="btn_60dc" ng-click="timkiemnhanvien(2)" class="btn bg-danger btn-full" title="{{bindTextI18n('label_matketnoi')}} > 60'">
+                            <span class="float-left"> <i class="fas fa-chevron-right"></i>60'</span>
+                            <span class="float-right">{{thongke.mattinhieutren60}}</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="form-group">
+                        <button id="btn_total" ng-click="timkiemnhanvien(100)" class="btn bg-success btn-full" title={{bindTextI18n('label_total')}}>
+                            <span class="float-left"> <i class="fas fa-plus-square"></i></span>
+                            <span class="float-right">{{thongke.tong}}</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="map-body">
+                <ng-map id="map-vitrinhanvien" default-style="false" center="[21.0374858, 105.8374116]" zoom="10" class="map-nhanvien">
+                </ng-map>
+            </div>
+
+        </div>
+    </div>
+</div>

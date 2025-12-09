@@ -1,0 +1,2 @@
+﻿2023/02/04 16:09:57,568 ERROR 23 Ticket.Utils.ApiUtility - Có lỗi trong quá tình gửi Request: pos/booking/booking-b2b, Nội dung: ERROR, Booking Rates Null
+2023/02/04 16:12:02,619 ERROR 23 Ticket.Utils.ApiUtility - Có lỗi trong quá tình gửi Request: pos/booking/booking-b2b, Nội dung: ERROR, Booking Rates Null

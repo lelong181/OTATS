@@ -1,0 +1,170 @@
+﻿2025/03/21 14:51:42,064 ERROR 38 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2274
+2025/03/21 14:52:24,453 ERROR 14 LSPos_Data.Utilities.Log - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryCloseInternal(Boolean closeReader)
+   at System.Data.SqlClient.SqlDataReader.Close()
+   at System.Data.Common.DbDataReader.Dispose(Boolean disposing)
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\DependenceDonHang.cs:line 34
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+ClientConnectionId:88c5e706-01bf-4d34-a9ff-5f80ad091bd9
+Error Number:-2,State:0,Class:11
+2025/03/21 14:52:36,506 ERROR 29 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2274
+2025/03/21 14:53:02,845 ERROR 32 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2274
+2025/03/21 14:53:06,581 ERROR 14 LSPos_Data.Utilities.Log - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryCloseInternal(Boolean closeReader)
+   at System.Data.SqlClient.SqlDataReader.Close()
+   at System.Data.Common.DbDataReader.Dispose(Boolean disposing)
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\DependenceDonHang.cs:line 34
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+ClientConnectionId:88c5e706-01bf-4d34-a9ff-5f80ad091bd9
+Error Number:-2,State:0,Class:11
+2025/03/21 14:53:22,799 ERROR 19 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2025/03/21 14:53:37,341 ERROR 22 LSPos_Data.Utilities.Log - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryCloseInternal(Boolean closeReader)
+   at System.Data.SqlClient.SqlDataReader.Close()
+   at System.Data.Common.DbDataReader.Dispose(Boolean disposing)
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\DependenceDonHang.cs:line 34
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+ClientConnectionId:88c5e706-01bf-4d34-a9ff-5f80ad091bd9
+Error Number:-2,State:0,Class:11
+2025/03/21 14:55:03,336 ERROR 38 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2274
+2025/03/21 14:55:18,984 ERROR 32 SqlDataHelper - Command:sp_DonHang_GiaHanVe,Command Parameter:@ID_DonHang:260091|@Ngay:3/20/2025 11:59:59 PM|
+2025/03/21 14:55:18,984 ERROR 32 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'sp_DonHang_GiaHanVe'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at SqlDataHelper.ExecuteNonQuery(String procName, SqlParameter[] procParams) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\SqlDataHelper.cs:line 141
+ClientConnectionId:6a3a15cd-9015-446a-98a0-fa67ce37343d
+Error Number:2812,State:62,Class:16
+2025/03/21 14:55:32,874 ERROR 22 LSPos_Data.Utilities.Log - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryCloseInternal(Boolean closeReader)
+   at System.Data.SqlClient.SqlDataReader.Close()
+   at System.Data.Common.DbDataReader.Dispose(Boolean disposing)
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\DependenceDonHang.cs:line 34
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+ClientConnectionId:88c5e706-01bf-4d34-a9ff-5f80ad091bd9
+Error Number:-2,State:0,Class:11
+2025/03/21 14:56:32,479 ERROR 14 SqlDataHelper - Command:sp_DonHang_GiaHanVe,Command Parameter:@ID_DonHang:260091|@Ngay:3/20/2025 11:59:59 PM|
+2025/03/21 14:56:32,479 ERROR 14 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'sp_DonHang_GiaHanVe'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at SqlDataHelper.ExecuteNonQuery(String procName, SqlParameter[] procParams) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\SqlDataHelper.cs:line 141
+ClientConnectionId:6a3a15cd-9015-446a-98a0-fa67ce37343d
+Error Number:2812,State:62,Class:16
+2025/03/21 17:40:07,066 ERROR 84 SqlDataHelper - Command:sp_DonHang_GiaHanVe,Command Parameter:@ID_DonHang:260091|@Ngay:3/20/2025 11:59:59 PM|
+2025/03/21 17:40:07,083 ERROR 84 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.Booking'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at SqlDataHelper.ExecuteNonQuery(String procName, SqlParameter[] procParams) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\SqlDataHelper.cs:line 141
+ClientConnectionId:fc93b9c2-caab-486c-832d-03bc8bab2464
+Error Number:208,State:1,Class:16
+2025/03/21 17:40:33,704 ERROR 53 SqlDataHelper - Command:sp_DonHang_GiaHanVe,Command Parameter:@ID_DonHang:260091|@Ngay:3/20/2025 11:59:59 PM|
+2025/03/21 17:40:33,704 ERROR 53 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.Booking'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at SqlDataHelper.ExecuteNonQuery(String procName, SqlParameter[] procParams) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\SqlDataHelper.cs:line 141
+ClientConnectionId:fc93b9c2-caab-486c-832d-03bc8bab2464
+Error Number:208,State:1,Class:16
+2025/03/21 17:41:48,724 ERROR 53 SqlDataHelper - Command:sp_DonHang_GiaHanVe,Command Parameter:@ID_DonHang:260091|@Ngay:3/20/2025 11:59:59 PM|
+2025/03/21 17:42:00,585 ERROR 53 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.Booking'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at SqlDataHelper.ExecuteNonQuery(String procName, SqlParameter[] procParams) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\SqlDataHelper.cs:line 141
+ClientConnectionId:f4bc6661-516f-4c54-bcb6-717e3e8f0533
+Error Number:208,State:1,Class:16
+2025/03/21 17:46:42,843 ERROR 35 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2274
+2025/03/21 17:49:06,732 ERROR 52 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2274
+2025/03/21 17:49:35,169 ERROR 53 SqlDataHelper - getDS_DanhMucCon_ByIdDanhMuc
+2025/03/21 17:49:35,169 ERROR 53 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\SqlDataHelper.cs:line 413
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2025/03/21 17:49:35,172 ERROR 53 DanhMucDB - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at DanhMucDB.getDS_DanhMucCon_ByIdDanhMuc(Int32 ID_DANHMUC) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\DanhMucDB.cs:line 204
+2025/03/21 17:49:35,173 ERROR 53 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.MatHangController.GetTree_NhomMatHang(Int32 ID_Parent)
+   at LSPosMVC.Controllers.MatHangController.GetNhomMatHangTheoPhanQuyen(HttpRequestMessage requestMessage)

@@ -1,0 +1,94 @@
+﻿
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <select kendo-combo-box="khachhang"
+                                k-placeholder="bindTextI18n('label_chonkhachhang')"
+                                k-data-text-field="'tenKhachHang'"
+                                k-data-value-field="'iD_KhachHang'"
+                                k-filter="'contains'"
+                                k-auto-bind="false"
+                                k-ng-model="khachhangselect"
+                                k-data-source="khachhangData"
+                                k-on-change="khachhangOnChange(kendoEvent)"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <div class="form-group">
+                        <input type="text" id="diachi" name="diachi" class="k-textbox" placeholder="{{bindTextI18n('label_diachi')}}"  ng-model="diachi"/>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <button ng-click="timkiem()" class="btn btn-outline-dark float-right"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <select kendo-combo-box="tinhthanh"
+                                k-placeholder="bindTextI18n('label_tinhthanh')"
+                                k-data-text-field="'tenTinh'"
+                                k-data-value-field="'iD_Tinh'"
+                                k-filter="'contains'"
+                                k-auto-bind="false"
+                                k-ng-model="tinhthanhselect"
+                                k-data-source="tinhthanhData"
+                                k-on-change="tinhthanhOnChange(kendoEvent)"></select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <select kendo-combo-box="quanhuyen"
+                                id="quanhuyen"
+                                k-placeholder="bindTextI18n('label_quanhuyen')"
+                                k-data-text-field="'tenQuan'"
+                                k-data-value-field="'iD_Quan'"
+                                k-filter="'contains'"
+                                k-auto-bind="false"
+                                k-ng-model="quanhuyenselect"
+                                k-data-source="quanhuyenData"
+                                k-on-change="quanhuyenOnChange(kendoEvent)"></select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <select kendo-combo-box="loaikhachhang"
+                                id="loaikhachhang"
+                                k-placeholder="bindTextI18n('label_loaikhachhang')"
+                                k-data-text-field="'tenLoaiKhachHang'"
+                                k-data-value-field="'iD_LoaiKhachHang'"
+                                k-filter="'contains'"
+                                k-auto-bind="false"
+                                k-ng-model="loaikhachhangselect"
+                                k-data-source="loaikhachhangData"
+                                k-on-change="loaikhachhangOnChange(kendoEvent)"></select>
+                    </div>
+                </div>
+            </div>
+            
+
+            <button ng-click="lockhachhang()" class="btn btn-info mt-3 float-right"><i class="fas fa-filter"></i> <span ng-bind="bindTextI18n('button_timkiem')"></span> </button>
+        </div>
+        <div class="col-9">
+            <div class="map-body">
+                <ng-map id="map-vitrikhachhang" default-style="false" center="[21.0374858, 105.8374116]" zoom="10" class="map-customer">
+                </ng-map>
+            </div>
+
+        </div>
+    </div>
+</div>

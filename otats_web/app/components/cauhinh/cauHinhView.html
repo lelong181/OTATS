@@ -1,0 +1,90 @@
+﻿<link href="/app/components/cauhinh/cauHinhStyle.css" rel="stylesheet" />
+<div class="container">
+    <div class="changepass" id="password_modal">
+        <div class="modal-header">
+            <h3 class="color-infor text-uppercase"><i class="fas fa-user-cog"></i> {{bindTextI18n('label_capnhatcauhinhcongty')}} <span class="extra-title muted"></span></h3>
+        </div>
+        <div class="modal-body form-horizontal">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="form-group">
+
+                        <label for="InputName1"><b>{{bindTextI18n('label_tencongty')}}</b></label>
+                        <input type="text" class="form-control" id="InputName1" placeholder="{{bindTextI18n('label_tencongty')}}" ng-model="dataCauHinh.tenCongTy">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputAddress1"><b>{{bindTextI18n('label_diachi')}}</b></label>
+                        <input type="text" class="form-control" id="InputAddress1" placeholder="{{bindTextI18n('label_diachi')}}" ng-model="dataCauHinh.diaChi">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputPhone1"><b>{{bindTextI18n('label_sodienthoai')}}</b></label>
+                        <input type="text" class="form-control" id="InputPhone1" placeholder="{{bindTextI18n('label_dienthoai')}}" ng-model="dataCauHinh.dienThoai">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputEmail1"><b>{{bindTextI18n('label_email')}}</b></label>
+                        <input type="email" class="form-control" id="InputEmail1" placeholder="{{bindTextI18n('label_email')}}" ng-model="dataCauHinh.email">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12" >
+                    <div class="form-group">
+                        <label for="InputName1"><b>{{bindTextI18n('label_sophutvaodiemtoithieu')}}</b></label>
+                        <input type="number" class="form-control" id="minute" placeholder="{{bindTextI18n('label_sophutvaodiemtoithieu')}}" ng-model="dataCauHinh.soPhutVaoDiemToiThieu">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputAddress1"><b>{{bindTextI18n('label_thoigianthongbaogiamoi')}}</b></label>
+                        <input type="number" class="form-control" id="Day" placeholder="{{bindTextI18n('label_thoigianthongbaogiamoi')}}" ng-model="dataCauHinh.thoiGianThongBaoGiaMoi">
+                    </div>
+                    <div class="form-group">
+                        <label><b>{{bindTextI18n('label_dinhdangso')}}</b></label>
+                        <select kendo-combo-box
+                                id="dinhDangSo"
+                                k-placeholder="bindTextI18n('label_dinhdangso')"
+                                k-data-text-field="'value'"
+                                k-data-value-field="'id'"
+                                k-filter="'contains'"
+                                k-auto-bind="false"
+                                k-data-source="dinhDangDataSource"
+                                k-ng-model="dinhDangselect"
+                                k-on-change="dinhDangOnChange(kendoEvent)">
+                            
+                        </select>
+
+                    </div>
+                    <div class="checkbox ck-form">
+                        <input type="checkbox" id="eq1" class="k-checkbox" checked="checked" ng-model="dataCauHinh.suDungBangGiaLoaiKhachHang">
+                        <label class="k-checkbox-label" for="eq1">{{bindTextI18n('label_sudungbanggialoaikhachhang')}}</label>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="form-group logo">
+                        <!--<label for="InputFile"><b>LOGO</b></label>
+                        <br />-->
+                        <div class="selectfile">
+                            <input name="files" title="" id="files" type="file" />
+                        </div>
+                        <div class="image_frame">
+                            <div style="text-align:center" id="previewnhanvien">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <div class="modal-footer">
+            <button ng-click="backhome()" class="btn" data-dismiss="modal" aria-hidden="true">{{bindTextI18n('button_dong')}}</button>
+            <button ng-click="savechange()" class="btn btn-primary" id="password_modal_save">{{bindTextI18n('button_luuthaydoi')}}</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    

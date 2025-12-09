@@ -1,0 +1,42 @@
+﻿
+<div class="container-fluid">
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_tinhthanh')"></span>:</label>
+                    <select kendo-combo-box="tinhthanh"
+                            k-placeholder="bindTextI18n('label_tinhthanh')"
+                            k-data-text-field="'tenTinh'"
+                            k-data-value-field="'id_Tinh'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="tinhthanhselect"
+                            k-data-source="tinhthanhData"
+                            k-on-change="tinhthanhOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('header_quanhuyen')"></span>:</label>
+                    <select kendo-combo-box="quanhuyen"
+                            id="quanhuyen"
+                            k-placeholder="bindTextI18n('header_quanhuyen')"
+                            k-data-text-field="'tenQuan'"
+                            k-data-value-field="'id_Quan'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="quanhuyenselect"
+                            k-data-source="quanhuyenData"
+                            k-on-change="quanhuyenOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <button id="btn_bm008xembaocao" class="btn btn-outline-info btn-menu__report" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm "></i> {{bindTextI18n('button_xembaocao')}}</button>
+                <button id="btn_bm008xuatexcel" class="btn btn-outline-secondary btn-menu__report" ng-click="XuatExcel()"><i class="fas fa-file-excel fas-sm "></i> <span ng-bind="bindTextI18n('button_xuatexcel')"></span></button>
+            </div>
+        </div>
+        </div>
+    
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>

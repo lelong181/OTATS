@@ -1,0 +1,141 @@
+﻿<style>
+        .trangthaivaodiem {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+</style>
+<div class="container-fluid">
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_tungay')"></span>:</label>
+                    <input kendo-date-picker
+                            ng-model="str_TuNgay"
+                            k-ng-model="obj_TuNgay"
+                            k-max="maxDate"
+                            k-rebind="maxDate"
+                            k-on-change="fromDateChanged()"
+                            k-format="'yyyy/MM/dd'" />
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_denngay')"></span>:</label>
+                    <input kendo-date-picker
+                            ng-model="str_DenNgay"
+                            k-ng-model="obj_DenNgay"
+                            k-min="minDate"
+                            k-rebind="minDate"
+                            k-on-change="toDateChanged()"
+                            k-format="'yyyy/MM/dd '" />
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_nhanvien')"></span>:</label>
+                    <select kendo-combo-box
+                            k-placeholder="bindTextI18n('label_nhanvien')"
+                            k-data-text-field="'tenDayDu'"
+                            k-data-value-field="'idnv'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-value-Primitive="true"
+                            k-ng-model="idnhanvienselect"
+                            k-data-source="nhanvienData2"></select>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <button id="btn_bm022xembaocao" class="btn btn-outline-info btn-menu__report" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm "></i> {{bindTextI18n('button_xembaocao')}}</button>
+            </div>
+        </div>
+    </div>
+    <div class="toolbarmenu">
+        <button ng-show="(permission.them > 0)" ng-click="addKeHoach()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_them')"></span></button>
+        <button ng-show="(permission.sua > 0)" ng-click="editKeHoach()" class="btn btn-link btn-menubar"><i class="fas fa-edit fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_sua')"></span></button>
+        <button ng-show="(permission.xoa > 0)" ng-click="deleteKeHoach()" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> <span ng-bind="bindTextI18n('button_xoa')"></span></button>
+    </div>
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+
+ <!--thêm sửa kế hoạch-->
+<div kendo-window="formdetail" id="formdetail" k-title="bindTextI18n('label_thongtinkehoach')" k-visible="false" k-modal="true" k-width="700" k-height="480">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luuThongTinKH" ng-show="((permission.them > 0 && idkehoach <= 0) ||(permission.sua > 0 && idkehoach > 0))" ng-click="luuThongTinKeHoach()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_luu')"></span></button>
+                <button id="btn_huyluuThongTinKH" ng-click="huyLuuThongTinKeHoach()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> <span ng-bind="bindTextI18n('button_huy')"></span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label class="content-filter__label"><span ng-bind="bindTextI18n('label_nhanvien')"></span>:</label>
+                <select id="nhanVien" kendo-combo-box
+                        k-placeholder="bindTextI18n('label_nhanvien')"
+                        k-data-text-field="'tenDayDu'"
+                        k-data-value-field="'idnv'"
+                        k-filter="'contains'"
+                        k-auto-bind="false"
+                        k-value-Primitive="true"
+                        k-ng-model="nhanvienselect"
+                        k-data-source="nhanvienData"
+                        k-on-change="nhanvienOnChange(kendoEvent)"></select>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label class="content-filter__label"><span ng-bind="bindTextI18n('label_khachhang')"></span>:</label>
+                <select id="khachHang" kendo-combo-box="khachhang"
+                        k-placeholder="bindTextI18n('label_khachhang')"
+                        k-data-text-field="'tenDayDu'"
+                        k-data-value-field="'idKhachHang'"
+                        k-filter="'contains'"
+                        k-auto-bind="false"
+                        k-value-Primitive="true"
+                        k-ng-model="khachhangselect"
+                        k-data-source="khachhangData"></select>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label><span ng-bind="bindTextI18n('label_giobatdau')"></span>:</label>
+                <input id="ngayBDGanNhat" kendo-date-time-picker
+                        ng-model="ngayBDGanNhat"
+                        k-ng-model="obj_ngayBDGanNhat"
+                        k-format="'dd/MM/yyyy HH:mm'" />
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label><span ng-bind="bindTextI18n('label_gioketthuc')"></span>:</label>
+                <input id="ngayBDTiepTheo" kendo-date-time-picker
+                        ng-model="ngayBDTiepTheo"
+                        k-ng-model="obj_ngayBDTiepTheo"
+                        k-format="'dd/MM/yyyy HH:mm'" />
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="viecCanLam"><span ng-bind="bindTextI18n('label_vieccanlam')"></span>:</label>
+                <input type="text" class="k-textbox" id="viecCanLam" ng-model="obj.ViecCanLam" />
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="ghiChu"><span ng-bind="bindTextI18n('label_ghichu')"></span>: </label>
+                <input type="text" class="k-textbox" id="ghiChu" ng-model="obj.GhiChu" />
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+

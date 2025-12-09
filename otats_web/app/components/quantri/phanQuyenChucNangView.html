@@ -1,0 +1,19 @@
+﻿<link href="/app/components/quantri/phanQuyenChucNangStyle.css" rel="stylesheet" />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <div class="toolbarmenu">
+                <button id="btn_capnhat" ng-click="capnhat()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_capnhat')}}</button>
+            </div>
+            <div id="treeview"></div>
+        </div>
+        <div class="col-6">
+            <div kendo-grid="gridweb" k-data-source="gridwebData" k-options="gridwebOptions" id="gridweb"></div>
+        </div>
+        <div class="col-3">
+            <div kendo-grid="gridapp" k-data-source="gridappData" k-options="gridappOptions" id="gridapp"></div>
+        </div>
+    </div>
+</div>
+
+

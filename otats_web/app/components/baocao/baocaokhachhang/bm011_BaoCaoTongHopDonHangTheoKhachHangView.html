@@ -1,0 +1,52 @@
+﻿
+<div class="container-fluid">
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_tungay')}}:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_TuNgay"
+                           k-ng-model="obj_TuNgay"
+                           k-max="maxDate"
+                           k-rebind="maxDate"
+                           k-on-change="fromDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_denngay')}}:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_DenNgay"
+                           k-ng-model="obj_DenNgay"
+                           k-min="minDate"
+                           k-rebind="minDate"
+                           k-on-change="toDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_khachhang')}}:</label>
+                    <select kendo-combo-box="khachhang"
+                            k-placeholder="bindTextI18n('label_khachhang')"
+                            k-data-text-field="'tenKhachHang'"
+                            k-data-value-field="'iD_KhachHang'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="khachhangselect"
+                            k-data-source="khachhangData"
+                            k-on-change="khachhangOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <button id="btn_bm011xembaocao" class="btn btn-outline-info btn-menu__report" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm "></i> {{bindTextI18n('button_xembaocao')}}</button>
+                <button id="btn_bm011xuatexcel" class="btn btn-outline-secondary btn-menu__report" ng-click="XuatExcel()"><i class="fas fa-file-excel fas-sm "></i> {{bindTextI18n('button_xuatexcel')}}</button>
+            </div>
+        </div>
+        </div>
+    
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>

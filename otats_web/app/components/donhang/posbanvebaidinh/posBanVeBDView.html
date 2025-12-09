@@ -1,0 +1,388 @@
+﻿<link href="/app/components/donhang/posbanvebaidinh/posBanVeBDStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div class="body-donhang__chitiet">
+        <div class="body-donhang__chitiet-infor">
+            <div class="row">
+                <div class="col-5">
+                    <div class="row">
+                        <!--<div id="treehangchon"></div>-->
+                        <input kendo-drop-down-tree="dropdownHangChon" k-options="selectOptions" style="width: 85%; height: 30px;" />
+                        <select kendo-combo-box="comboTypeView"
+                                k-options="comboTypeViewOptions"
+                                id="comboTypeView"
+                                k-data-text-field="'name'"
+                                k-data-value-field="'id'"
+                                k-filter="'contains'"
+                                k-auto-bind="false"
+                                k-ng-model="typeViewSelect"
+                                k-data-source="typeViewData"
+                                k-on-change="typeViewOnChange(kendoEvent)"
+                                style="width:14%"></select>
+                    </div>
+                    <div class="row" ng-show="typeViewSelect.id == 1">
+                        <div kendo-grid="gridHangChon" k-data-source="gridHangChonData" k-options="gridHangChonOptions" id="gridHangChon" style="width:100%"></div>
+                    </div>
+                    <div class="row" ng-show="typeViewSelect.id == 2">
+                        <div class="search-box">
+                            <input type="text" style="width: 85%;" placeholder="Tìm kiếm sản phẩm theo tên hoặc mã barcode" my-enter="doSomething()" ng-keyup="applyClientFilters()" class="search-filter k-textbox" />
+                            <button class="k-button" style="width: 10%;" ng-click="clearFilter()"><i class="fas fa-sync fas-sm color-infor"></i></button>
+                        </div>
+                        <div kendo-listview="listviewHangChon" k-data-source="gridHangChonData" k-options="listHangChonOptions" id="listviewHangChon" style="width:100%"></div>
+                    </div>
+                    <div ng-show="dropdownHangChon.value().length == 0" class="nodata">Vui lòng chọn ngành hàng</div>
+                </div>
+                <div class="col-7">
+                    <div class="body-donhang__thongtin" style="overflow-y:scroll; overflow-x:hidden;">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>{{bindTextI18n('label_ngaylap')}}</label>
+                                    <input kendo-date-picker
+                                           id="tungay"
+                                           ng-model="str_TuNgay"
+                                           k-ng-model="obj_TuNgay"
+                                           k-format="'dd/MM/yyyy'"
+                                           k-min="mindate" />
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>{{bindTextI18n('label_nhanvien')}}</label>
+                                    <select kendo-combo-box="nhanvien"
+                                            id="nhanvien"
+                                            k-placeholder="bindTextI18n('label_nhanvien')"
+                                            k-data-text-field="'tenDayDu'"
+                                            k-data-value-field="'idnv'"
+                                            k-filter="'contains'"
+                                            k-auto-bind="false"
+                                            k-ng-model="nhanvienselect"
+                                            k-data-source="nhanvienData"
+                                            k-on-change="nhanvienOnChange(kendoEvent)"></select>
+                                </div>
+                            </div>
+
+                            <!--<div class="col-sm-4" style="display:none">
+                                <div class="form-group">
+                                    <label>{{bindTextI18n('label_khuyenmai')}}</label>
+                                    <select kendo-combo-box="khuyenmai"
+                                            id="khuyenmai"
+                                            k-placeholder="bindTextI18n('label_chuongtrinhkhuyenmai')"
+                                            k-data-text-field="'tenCTKM'"
+                                            k-data-value-field="'iD_CTKM'"
+                                            k-filter="'contains'"
+                                            k-auto-bind="false"
+                                            k-ng-model="khuyenmaiselect"
+                                            k-data-source="khuyenmaiData"
+                                            k-on-change="khuyenmaiOnChange(kendoEvent)"></select>
+                                </div>
+                            </div>-->
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    <label style="width:100%">Hóa đơn điện tử</label>
+                                    <input type="checkbox" id="xuathoadon" class="k-checkbox" ng-model="xuathoadon" ng-change="xuathoadonOnchange()">
+                                    <label class="k-checkbox-label" for="xuathoadon"><span ng-bind="bindTextI18n('label_xuathoadon')"></span></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>{{bindTextI18n('label_khachhang')}}</label>
+                                    <select kendo-combo-box="khachhang"
+                                            id="khachhang"
+                                            k-options="khachhangOptions"
+                                            k-placeholder="bindTextI18n('label_khachhang')"
+                                            k-data-text-field="'tenKhachHang'"
+                                            k-data-value-field="'iD_KhachHang'"
+                                            k-filter="'contains'"
+                                            k-auto-bind="false"
+                                            k-ng-model="khachhangselect"
+                                            k-data-source="khachhangData"
+                                            k-on-change="khachhangOnChange(kendoEvent)"></select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="ghichu">{{bindTextI18n('label_ghichudonhang')}}</label>
+                                    <textarea type="text" class="k-textbox" id="ghichu" ng-model="ghichu" />
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    <label style="width:100%">In vé</label>
+                                    <input type="checkbox" id="invetaiquay" class="k-checkbox" ng-model="invetaiquay">
+                                    <label class="k-checkbox-label" for="invetaiquay">Xuất vé tại quầy</label>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!--<div class="row">
+                            <div class="col-sm-4" style="display:none">
+                                <div class="form-group">
+                                    <label>{{bindTextI18n('label_hinhthucban')}}</label>
+                                    <select kendo-combo-box="hinhthucban"
+                                            readonly="true"
+                                            id="hinhthucban"
+                                            k-placeholder="bindTextI18n('label_hinhthucban')"
+                                            k-data-text-field="'name'"
+                                            k-data-value-field="'id'"
+                                            k-filter="'contains'"
+                                            k-auto-bind="false"
+                                            k-ng-model="hinhthucbanselect"
+                                            k-data-source="hinhthucbanData"
+                                            k-on-change="hinhthucbanOnChange(kendoEvent)"></select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4" style="display:none">
+                                <div class="form-group">
+                                    <label for="phone">{{bindTextI18n('label_sodienthoai')}}</label>
+                                    <input type="text" class="k-textbox" id="phone" ng-model="dienthoai" readonly />
+                                </div>
+                            </div>
+
+
+
+                        </div>-->
+
+                    </div>
+
+                    <div class="body-chitiet mt-2 mb-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="font-weight-bold">{{bindTextI18n('label_danhsachchitietdonhang')}}</h5>
+                                <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="body-donhang__thanhtien">
+                        <ul class="nav nav-tabs" id="moneyTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="thanhtien-tab" data-toggle="tab" data-target="#tongthanhtien" href="tongthanhtien" role="tab" aria-controls="tongthanhtien" aria-selected="true">{{bindTextI18n('label_tongtien')}}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="khuyenmai-tab" data-toggle="tab" data-target="#chuongtrinhkhuyenmai" href="chuongtrinhkhuyenmai" role="tab" aria-controls="chuongtrinhkhuyenmai" aria-selected="false">{{bindTextI18n('label_khuyenmai')}}</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="moneyTabContent">
+                            <!--Tổng tiền-->
+                            <div class="tab-pane fade show active" id="tongthanhtien" role="tabpanel" aria-labelledby="thanhtien-tab">
+                                <div style=" padding-left: 10px; padding-top: 10px;">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div class="form-group">
+                                                <span class="thanhtien-label">{{bindTextI18n('label_tienhang')}}:</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="form-group text-right">
+                                                <span class="thanhtien-number font-weight-bold">{{fomartnumber(tienhang)}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div class="form-group">
+                                                <span class="thanhtien-label">{{bindTextI18n('label_tienchietkhau')}}:</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="form-group text-right">
+                                                <span class="thanhtien-number font-weight-bold">{{fomartnumber(tienchietkhau)}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div class="form-group">
+                                                <span class="thanhtien-label">{{bindTextI18n('label_tienthanhtoan')}}:</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="form-group text-right">
+                                                <span class="thanhtien-number text-right font-weight-bold">{{fomartnumber(tienthanhtoan)}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label>
+                                                Hình thức thanh toán:
+                                            </label>
+                                            <label class="col-2" ng-repeat="httt in HTTTData">
+                                                <input type="radio" name="rdoHTTT" ng-checked="{{HTTTSelect == httt.id}}" ng-model="HTTTSelect" ng-click="changeHTTT(httt.id)" value="{{httt.id}}" />
+                                                {{httt.name}}
+                                            </label>
+                                            <!--<label class="col-3">
+        <input type="radio" name="rdoHTTT" ng-model="HTTTSelect" value="2" />
+        Chuyển khoản
+    </label>
+    <label class="col-3">
+        <input type="radio" name="rdoHTTT" ng-model="HTTTSelect" value="3" />
+        Thanh toán thẻ
+    </label>-->
+                                        </div>
+                                        <!--<div class="col-5">
+                                            <div class="form-group text-right">
+                                                <div ng-show="HTTTSelect == 2" id="qrthanhtoan">QRCODE</div>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Khuyến mãi-->
+                            <div class="tab-pane fade" id="chuongtrinhkhuyenmai" role="tabpanel" aria-labelledby="khuyenmai-tab">
+                                <div style=" padding-left: 10px; padding-top: 10px;">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <p class="thanhtien-label">{{bindTextI18n('label_chietkhautien')}}:</p>
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <p class="thanhtien-number font-weight-bold">{{fomartnumber(chietkhautien)}}</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <p class="thanhtien-label">{{bindTextI18n('label_chietkhauphantram')}}:</p>
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <p class="thanhtien-number font-weight-bold">{{fomartnumberpercent(chietkhauphantram)}}</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <p class="thanhtien-label">{{bindTextI18n('label_chietkhauphantramkhac')}}:</p>
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <input kendo-numeric-text-box k-min="0" ng-model="chieukhauphantramkhac" id="chieukhauphantramkhac" ng-change="chieukhauphantramkhacOnchange()" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <p class="thanhtien-label">{{bindTextI18n('label_chietkhautienkhac')}}:</p>
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <input kendo-numeric-text-box k-min="0" ng-model="chieukhautienkhac" id="chieukhautienkhac" ng-change="chieukhautienkhacOnchange()" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <p class="thanhtien-label">{{bindTextI18n('label_tongchietkhau')}}:</p>
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <p class="thanhtien-number font-weight-bold">{{fomartnumber(tienchietkhau)}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toolbarmenu groupbtn">
+                        <button id="btn_luudonhang" ng-click="luudonhang()" class="btn btn-link btn-menubar"><i class="fas fa-money-bill fas-sm color-infor"></i> {{bindTextI18n('button_thanhtoanvainhoadon')}}</button>
+                        <button id="btn_huydonhang" ng-click="huydonhang()" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> {{bindTextI18n('button_huydonhang')}}</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div kendo-window="formdetail" id="formdetail" k-title="bindTextI18n('label_chitietmathang')" k-close-button="false" k-visible="false" k-modal="true" k-width="800" k-height="430">
+    <div class="body-detail">
+        <!--<h5>Danh sách chi tiết kích thước mặt hàng</h5>-->
+        <div class="row">
+            <div class="col-12">
+                <div class="toolbarmenu inputmathedo">
+                    <!--<button id="btn_themdongchitiet" ng-click="themdongchitiet()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-success"></i> {{bindTextI18n('button_themdong')}}</button>-->
+                    <input class="k-textbox" style=" width: 50%; height: 46px; font-size: 1.5em;" id="mathedo" ng-model="mathedo" ng-keyup="keyupMaTheDo()" placeholder="Nhập mã thẻ đò" />
+                    <button id="btn_luuchitiet" ng-click="luuchitiet()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_capnhat')}}</button>
+                </div>
+                <div kendo-grid="gridchitiet" k-data-source="gridchitietData" k-options="gridchitietOptions" id="gridchitiet"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div kendo-window="formaddcustomer" id="formaddcustomer" k-title="bindTextI18n('menu_chitietkhachhang')" k-visible="false" k-modal="true" k-width="550" k-height="450">
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="MaKhachHang"><span ng-bind="bindTextI18n('header_makhachhang')"></span></label>
+                    <input name="MaKhachHang" type="text" placeholder="{{bindTextI18n('header_makhachhang')}}" ng-model="khachhangobj.maKH" class="k-textbox" id="MaKhachHang" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="TenKhachHang"><span ng-bind="bindTextI18n('label_tenkhachhang')"></span> <span class="color-danger">(*)</span></label>
+                    <input name="TenKhachHang" type="text" placeholder="{{bindTextI18n('label_tenkhachhang')}}" ng-model="khachhangobj.ten" class="k-textbox" id="TenKhachHang" />
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="SoDienThoai"><span ng-bind="bindTextI18n('label_sodienthoai')"></span> <span class="color-danger">(*)</span></label>
+                    <input name="SoDienThoai" type="text" placeholder={{bindTextI18n('label_sodienthoai')}} ng-model="khachhangobj.soDienThoai" class="k-textbox" id="SoDienThoai" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="Email"><span ng-bind="bindTextI18n('label_email')"></span></label>
+                    <input name="Email" type="text" placeholder="Email" ng-model="khachhangobj.email" class="k-textbox" id="Email" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="DiaChi"><span ng-bind="bindTextI18n('label_diachi')"></span> <span class="color-danger">(*)</span></label>
+                    <input name="DiaChi" type="text" placeholder={{bindTextI18n('label_diachi')}} ng-model="khachhangobj.diaChi" class="k-textbox" id="DiaChi" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="ghiChu"><span ng-bind="bindTextI18n('label_ghichu') "></span></label>
+                    <textarea type="text" placeholder="{{bindTextI18n('label_ghichu')}}" class="k-textbox text-area" id="ghiChu" ng-model="khachhangobj.ghiChu" />
+                </div>
+            </div>
+        </div>
+        <div class="mt-2">
+            <button id="btn_luukhachhang" ng-click="luuKhachHang()" class="btn btn-info"><i class="fas fa-save"></i> <span ng-bind="bindTextI18n('button_luu')"></span></button>
+            <button id="btn_dong" ng-click="dongFormKhachHang()" class="btn btn-outline-secondary"><i class="fas fa-close"></i> <span ng-bind="bindTextI18n('button_dong')"></span> </button>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/x-kendo-tmpl" id="templateOrder">
+    <div class="product" ng-click="addrow()">
+        <img src="#:SERVERIMAGE + anhDaiDien#" alt="#:tenHang# image" />
+        <div class='product-info'">
+            <h3>#:maHang#</h3>
+            <h3>#=tenHang#</h3>
+            <h3>#:kendo.toString(giaLe,'n0')#/ #:tenDonVi#</h3>
+        </div>
+    </div>
+</script>

@@ -1,0 +1,228 @@
+﻿<style>
+    .map-diadiemdi, .map-diadiemden {
+        display: block;
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 2%;
+        height: 200px;
+    }
+</style>
+
+<div class="container-fluid body-viengtham">
+    <div class="body-nhanvien">
+        <ul class="nav nav-pills mb-3 mt-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" ng-click="chuaTiepNhan()" id="pills-chuatiepnhan-tab" data-toggle="pill" data-target="#pills-chuatiepnhan" href="chuatiepnhan" ui-sref-active="false" role="tab" aria-controls="pills-chuatiepnhan" aria-selected="true">{{bindTextI18n('button_congviecchuatiepnhan')}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ng-click="dangXuLy()" id="pills-dangxuly-tab" data-toggle="pill" data-target="#pills-dangxuly" href="dangxuly" ui-sref-active="false" role="tab" aria-controls="pills-dangxuly" aria-selected="false">{{bindTextI18n('button_congviecdangxuly')}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ng-click="daKetThuc()" id="pills-daketthuc-tab" data-toggle="pill" data-target="#pills-daketthuc" href="daketthuc" ui-sref-active="false" role="tab" aria-controls="pills-daketthuc" aria-selected="false">{{bindTextI18n('button_congviecdaketthuc')}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ng-click="tatCa()" id="pills-tatca-tab" data-toggle="pill" data-target="#pills-tatca" href="tatca" ui-sref-active="false" role="tab" aria-controls="pills-tatca" aria-selected="false">{{bindTextI18n('button_tatcacongviec')}}</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-chuatiepnhan" role="tabpanel" aria-labelledby="pills-chuatiepnhan-tab">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="toolbarmenu">
+                            <button id="btn_themmoi" ng-click="themMoi()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_themmoi')}}</button>
+                        </div>
+                    </div>
+                </div>
+                <div kendo-grid="grid_chuatiepnhan" k-data-source="gridData_chuatiepnhan" k-options="gridOptions_chuatiepnhan" id="grid_chuatiepnhan"></div>
+            </div>
+            <div class="tab-pane fade" id="pills-dangxuly" role="tabpanel" aria-labelledby="pills-dangxuly-tab">
+                <div kendo-grid="grid_dangxuly" k-data-source="gridData_dangxuly" k-options="gridOptions_dangxuly" id="grid_dangxuly"></div>
+            </div>
+            <div class="tab-pane fade" id="pills-daketthuc" role="tabpanel" aria-labelledby="pills-daketthuc-tab">
+                <div kendo-grid="grid_daketthuc" k-data-source="gridData_daketthuc" k-options="gridOptions_daketthuc" id="grid_daketthuc"></div>
+            </div>
+            <div class="tab-pane fade" id="pills-tatca" role="tabpanel" aria-labelledby="pills-tatca-tab">
+                <div kendo-grid="grid_tatca" k-data-source="gridData_tatca" k-options="gridOptions_tatca" id="grid_tatca"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" kendo-window="formdetail" id="formdetail" k-title="'{{bindTextI18n('label_capnhatthongtin')}}'" k-visible="false" k-modal="true" k-width="900" k-height="500">
+    <div class="toolbarmenu">
+        <button class="btn" ng-click="luuCongViec()"><i class="fas fa-plus-circle fas-sm color-success"></i> {{bindTextI18n('button_luu')}}</button>
+        <button class="btn" ng-click="huy()"><i class="fas fa-trash-alt fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+    </div>
+    <div class="noidungthem row mt-3">
+
+        <div class="col-md-6">
+            <div class="form-group row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label>{{bindTextI18n('header_tencongviec')}}<span class="color-danger"> (*)</span></label>
+                </div>
+                <div class="col-md-8">
+                    <input class="form-control" id="tenCongViec" ng-model="objectCongViec.tenCongViec" required />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label>{{bindTextI18n('header_ngayhethan')}}<span class="color-danger"> (*)</span></label>
+                </div>
+                <div class="col-md-8">
+                    <!--<input kendo-date-time-picker="ngayHetHan"
+                           ng-model="objectCongViec.ngayhethan"
+                           k-format="'dd/MM/yyyy HH:mm:ss'" />-->
+                    <input kendo-date-time-picker
+                           k-ng-model="ngayhethan"
+                           k-min="minDate"
+                           k-format="'dd/MM/yyyy HH:mm:ss'" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label>{{bindTextI18n('header_diadiemdi')}}<span class="color-danger"> (*)</span></label>
+                </div>
+                <div class="col-md-8">
+                    <input class="form-control" id="diaDiemDi" ng-model="objectCongViec.diaDiemDi" required />
+                </div>
+            </div>
+            <div class="form-group row">
+                <ng-map id="map-diadiemdi" default-style="false" center="20.971365, 105.835165" zoom="8" class="map-diadiemdi">
+                    <marker id="marker-diemdi" position="20.971365, 105.835165" icons="" draggable="true" on-dragend="changeDiemDi()" />
+                </ng-map>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label>{{bindTextI18n('header_nhomnhancongviec')}}</label>
+                </div>
+                <div class="col-md-8">
+                    <select kendo-combo-box
+                            id="nhomnhanvien"
+                            k-data-text-field="'tenNhom'"
+                            k-data-value-field="'iD_Nhom'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="nhomnhanvienselect"
+                            k-data-source="nhomnhanvienData"
+                            k-on-change="nhomnhanvienOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label>{{bindTextI18n('header_nhanvien')}}</label>
+                </div>
+                <div class="col-md-8">
+                    <select kendo-multi-select
+                            id="nhanvien"
+                            k-placeholder="bindTextI18n('header_nhanvien')"
+                            k-data-text-field="'tenDayDu'"
+                            k-value-Primitive="true"
+                            k-data-value-field="'idnv'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-auto-close="false"
+                            k-ng-model="selectedIdNhanVien"
+                            k-data-source="nhanvienData"
+                            k-on-change="nhanvienOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label>{{bindTextI18n('label_songuoinhan')}}<span class="color-danger"> (*)</span></label>
+                </div>
+                <div class="col-md-8">
+                    <input kendo-numeric-text-box k-min="0" ng-model="objectCongViec.soNguoiNhan" id="soNguoiNhan" ng-change="soNguoiNhanOnchange()" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label>{{bindTextI18n('label_noidungcongviec')}}<span class="color-danger"> (*)</span></label>
+                </div>
+                <div class="col-md-8">
+                    <textarea typeof="text" style="height:75px;" class="form-control" id="noiDungCongViec" rows="3" ng-model="objectCongViec.noiDungCongViec">  </textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label>{{bindTextI18n('header_diadiemden')}}<span class="color-danger"> (*)</span></label>
+                </div>
+                <div class="col-md-8">
+                    <input class="form-control" id="diaDiemDen" ng-model="objectCongViec.diaDiemDen" required />
+                </div>
+            </div>
+            <div class="form-group row">
+                <ng-map id="map-diadiemden" default-style="false" center="20.971365, 105.835165" zoom="8" class="map-diadiemden">
+                    <marker id="marker-diemden" position="20.971365, 105.835165" icons="" draggable="true" on-dragend="changeDiemDen()" />
+                </ng-map>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"></div>
+                <div class="col-md-2">
+                    <input type="checkbox" id="checkIn" class="k-checkbox" ng-model="objectCongViec.checkIn">
+                    <label class="k-checkbox-label checkbox-checkin" for="checkIn">{{bindTextI18n('label_checkin')}}</label>
+                </div>
+                <div class="col-md-2">
+                    <input type="checkbox" id="chupAnh" class="k-checkbox" ng-model="objectCongViec.chupAnh">
+                    <label class="k-checkbox-label checkbox-chupanh" for="chupAnh">{{bindTextI18n('label_chupanh')}}</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox" id="hoanThanh" class="k-checkbox" ng-model="objectCongViec.hoanThanh">
+                    <label class="k-checkbox-label checkbox-hoanthanh" for="hoanThanh">{{bindTextI18n('label_hoanthanhtrongngay')}}</label>
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label>{{bindTextI18n('label_sotienthuong')}}</label>
+                </div>
+                <div class="col-md-8">
+                    <input kendo-numeric-text-box k-min="0" ng-model="objectCongViec.soTienThuong" id="soTienThuong" ng-change="soTienThuongOnchange()" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label>{{bindTextI18n('label_sotienhang')}}</label>
+                </div>
+                <div class="col-md-8">
+                    <input kendo-numeric-text-box k-min="0" ng-model="objectCongViec.soTienHang" id="soTienHang" ng-change="soTienHangOnchange()" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label>{{bindTextI18n('label_filedinhkem')}}</label>
+                </div>
+                <div class="col-md-8">
+                    <input name="files"
+                           type="file"
+                           title=""
+                           kendo-upload
+                           k-option="dscongviec_file_option"
+                           k-select="onUploadImageSuccess"
+                           k-localization="{ select: bindTextI18n('label_chontep') }" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div kendo-window="formchitietcongviec" id="formchitietcongviec" k-title="bindTextI18n('label_chitietcongviec')" k-visible="false" k-modal="true" k-width="800" k-height="450">
+    <div kendo-grid="griddetail" k-data-source="griddetailData" k-options="griddetailOptions" id="griddetail"></div>
+</div>
+
+<div kendo-window="formchitiettrangthai" id="formchitiettrangthai" k-title="bindTextI18n('label_chitiettrangthai')" k-visible="false" k-modal="true" k-width="800" k-height="450">
+    <div kendo-grid="gridstate" k-data-source="gridstateData" k-options="gridstateOptions" id="gridstate"></div>
+</div>

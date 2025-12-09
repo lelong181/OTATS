@@ -1,0 +1,44 @@
+﻿<script src="js/libs/kendo/js/kendo.timezones.min.js"></script>
+<link href="app/components/kehoach/kehoachnhanvienStyle.css" rel="stylesheet" />
+<div class="container-fluid">
+    <!--<div class="content-title text-info"><i class="fas fa-id-card"></i> KẾ HOẠCH BẢO DƯỠNG</div>-->
+    <div kendo-scheduler="scheduler" style="height:500px;" id="scheduler" k-options="schedulerOptions">
+    </div>
+</div>
+
+<div id="templateSchedulerTooltip" style="display:none">
+    #var uid = target.attr("data-uid");#
+    #var scheduler = target.closest("[data-role=scheduler]").data("kendoScheduler");#
+    #var model = scheduler.occurrenceByUid(uid);#
+    <p>{{bindTextI18n('label_nhanvien')}} : #= model.tenNhanVien #</p>
+    <p>{{bindTextI18n('label_bks')}} :#= model.title #</p>
+    <p>#= $.i18n(model.mota) #</p>
+</div>
+
+<script id="eventschedule_baoduong_template" type="text/x-kendo-template">
+    <div style="background-color:#: text_color #; height:100%;padding-top:5px;text-align:center;width:100%">
+        #:kendo.toString(start,'HH:mm')# - {{bindTextI18n('label_nhanvien')}}: #= tenNhanVien #
+    </div>
+</script>
+
+<script id="scheduler_editkehoachbaoduong" type="text/x-kendo-template">
+
+    <div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachbaoduong_nhanvien" class="labelForm">{{bindTextI18n('label_xe')}} :<span style="color:red">(*)</span></label>
+        </div>
+        <div class="col-sm-9 valid">
+            <input class="input" id="kehoachbaoduong_xe" />
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachbaoduong_giocheckin" class="labelForm">{{bindTextI18n('header_ngaybaoduong')}}:</label>
+        </div>
+        <div class="col-sm-9">
+            <input style="width:100%" id="kehoachbaoduong_giocheckin" />
+        </div>
+    </div>
+
+</script>

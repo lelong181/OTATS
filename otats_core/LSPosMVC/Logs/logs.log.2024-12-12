@@ -1,0 +1,15 @@
+﻿2024/12/12 23:10:53,341 ERROR 26 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at LSPos_Data.Data.UserinforData.GetUserInfo(String username, String macongty) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\UserinforData.cs:line 79
+   at LSPosMVC.Controllers.UserinfoController.Login(LoginRequest login) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\UserinfoController.cs:line 38
+2024/12/12 23:11:05,811 ERROR 5 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at LSPos_Data.Data.UserinforData.GetUserInfo(String username, String macongty) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\UserinforData.cs:line 79
+   at LSPosMVC.Controllers.UserinfoController.Login(LoginRequest login) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\UserinfoController.cs:line 38
+2024/12/12 23:12:36,381 ERROR 21 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at LSPos_Data.Data.UserinforData.GetUserInfo(String username, String macongty) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\UserinforData.cs:line 79
+   at LSPosMVC.Controllers.UserinfoController.DoAuthenticate(LoginRequest login) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\UserinfoController.cs:line 99

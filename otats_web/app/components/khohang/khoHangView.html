@@ -1,0 +1,97 @@
+﻿<link href="/app/components/khohang/khoHangStyle.css" rel="stylesheet" />
+
+<div class="container-fluid container-scroll">
+    <div class="row">
+        <div class="col-12">
+            <div class="toolbarmenu">
+                <button ng-click="addkho()" ng-show="(permission.them > 0)" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_them')}}</button>
+                <button ng-click="editkho()" ng-show="(permission.sua > 0)" class="btn btn-link btn-menubar"><i class="fas fa-edit fas-sm color-infor"></i> {{bindTextI18n('button_sua')}}</button>
+                <button ng-click="deletekho()" ng-show="(permission.xoa > 0)" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> {{bindTextI18n('button_xoa')}}</button>
+            </div>
+            <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-6">
+            <h4>{{bindTextI18n('label_danhsachmathang')}}</h4>
+            <div kendo-grid="gridDetailMatHang" k-data-source="gridDetailMatHangData" k-options="gridDetailMatHangOptions" id="gridDetailMatHang"></div>
+        </div>
+        <div class="col-6">
+            <h4>{{bindTextI18n('label_danhsachnhanvien')}}</h4>
+            <div kendo-grid="gridDetailNhanVien" k-data-source="gridDetailNhanVienData" k-options="gridDetailNhanVienOptions" id="gridDetailNhanVien"></div>
+        </div>
+    </div>
+</div>
+
+
+<div kendo-window="formdetail" id="formdetail" k-title="bindTextI18n('label_chitiet')" k-visible="false" k-modal="true" k-width="700" k-height="300">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luukho" ng-show="((permission.them > 0 && idkho <= 0) ||(permission.sua > 0 && idkho > 0))" ng-click="luukho()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+                <button id="btn_huyluukhon" ng-click="huyluukho()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_makho')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="maKho" ng-model="maKho" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_tenkho')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="tenKho" ng-model="tenKho" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="diachi">{{bindTextI18n('label_diachi')}}</label>
+                    <textarea type="text" placeholder="{{bindTextI18n('label_diachi')}}" class="k-textbox text-area" id="diaChi" ng-model="diaChi" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <input type="checkbox" id="hoatdong" class="k-checkbox" ng-model="hoatdong">
+                    <label class="k-checkbox-label" for="hoatdong">{{bindTextI18n('label_hoatdong')}}</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div kendo-window="formdetailphanquyen" id="formdetailphanquyen" k-title="bindTextI18n('label_phanquyenkhonhanvien')" k-visible="false" k-modal="true" k-width="700" k-height="300">
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-3">
+                <div class="toolbarmenu">
+                </div>
+                <div id="treeview"></div>
+            </div>
+            <div class="col-9">
+                <div class="toolbarmenu">
+                    <button id="btn_luuphanquyen" ng-click="luuphanquyen()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+                    <button id="btn_huyluuphanquyen" ng-click="huyluuphanquyen()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+                </div>
+                <div kendo-grid="gridnhanvien" k-data-source="gridnhanvienData" k-options="gridnhanvienOptions" id="gridnhanvien"></div>
+                <div class="mt-2">
+                    <h5>{{bindTextI18n('label_danhsachnhanviendachon')}}</h5>
+                    <div kendo-grid="gridchon" k-data-source="gridchonData" k-options="gridchonOptions" id="gridchon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

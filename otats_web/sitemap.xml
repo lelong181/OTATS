@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<siteMap>
+
+	<siteMapNode title="Trang chủ" description="Trang chủ">
+		<siteMapNode title="Dashbroad" description="Dashbroad" url="home"/>
+
+		<siteMapNode title="menu_khachhang">
+			<siteMapNode title="menu_danhsachkhachhang" description="Danh sách khách hàng" url="khachhang"/>
+			<siteMapNode title="menu_chitietkhachhang" description="Chi tiết khách hàng" url="editkhachhang"/>
+			<siteMapNode title="menu_vitrikhachhang" description="Vị trí khách hàng" url="vitrikhachhang"/>
+			<siteMapNode title="menu_duyetxoakhachhang" description="Duyệt xóa khách hàng" url="duyetxoakhachhang"/>
+		</siteMapNode>
+
+		<siteMapNode title="menu_nhanvien">
+			<siteMapNode title="menu_danhsachnhanvien" description="Danh sách nhân viên" url="nhanvien" />
+			<siteMapNode title="menu_chitietnhanvien" description="Chi tiết nhân viên" url="editnhanvien" />
+			<siteMapNode title="menu_chuyenquyenkhachhang" description="Chuyển quyền khách hàng" url="chuyenquyen" />
+			<siteMapNode title="menu_lichsuthaotacnguoidung" description="Lịch sử thao tác người dùng" url="lichsuthaotac" />
+			<siteMapNode title="menu_vitrihientaicuanhanvien" description="Vị trí hiện tại của nhân viên" url="vitrinhanvien" />
+			<siteMapNode title="menu_lotrinhnhanvien" description="Lộ trình nhân viên" url="lotrinhdichuyen" />
+			<siteMapNode title="menu_lichsuravaodiem" description="Lịch sử vào ra điểm" url="lichsuvaoradiem" />
+			<siteMapNode title="menu_baocaophienlamviec" description="Báo cáo phiên làm việc" url="baocaophienlamviec" />
+			<siteMapNode title="menu_quanlyxenhanvien" description="Quản lý xe nhân viên" url="quanlyxe" />
+			<siteMapNode title="menu_baocaothoigiankhongketnoi" description="Báo cáo thời gian không kết nối" url="baocaomatketnoi" />
+			<siteMapNode title="menu_quanlycongviec">
+				<siteMapNode title="menu_danhsachcongviec" description="Danh sách công việc" url="congviec" />
+				<siteMapNode title="menu_chitieukpi" description="Chỉ tiêu KPI" url="chitieukpi" />
+			</siteMapNode>
+			<siteMapNode title="menu_quanlytinnhan">
+				<siteMapNode title="menu_guitinnhanchonhanvien" description="Gửi tin nhắn cho nhân viên" url="guitinnhan" />
+				<siteMapNode title="menu_tinnhanguitunv" description="Tin nhắn gửi từ nhân viên" url="baocaotinnhannhanvien" />
+				<siteMapNode title="menu_baocaotn" description="Báo cáo tin nhắn" url="baocaoguitinnhan" />
+				<siteMapNode title="menu_chitiettinnhan" description="Chi tiết tin nhắn" url="baocaochitiettinnhan" />
+			</siteMapNode>
+		</siteMapNode>
+
+		<siteMapNode title="menu_donhang">
+			<siteMapNode title="label_danhsachmathang" description="Danh sách mặt hàng" url="danhsachmathang" />
+			<siteMapNode title="menu_danhsachdonhang" description="Danh sách đơn hàng" url="danhsachdonhang" />
+			<siteMapNode title="menu_danhsachdonhang" description="Danh sách đơn hàng" url="danhsachdonhangpchl" />
+			<siteMapNode title="menu_danhsachdonhang" description="Danh sách đơn hàng" url="danhsachdonhangota" />
+			<siteMapNode title="menu_danhsachdonhang" description="Danh sách đơn hàng" url="danhsachdonhangpkd" />
+			<siteMapNode title="menu_danhsachdonhang" description="Danh sách đơn hàng" url="danhsachdonhangpchl" />
+			<siteMapNode title="menu_posbanhang" description="POS" url="posbanve" />
+			<siteMapNode title="button_chitietdonhang" description="Chi tiết đơn hàng" url="editdonhang" />
+			<siteMapNode title="button_chitietdonhang" description="Chi tiết đơn hàng" url="editdonhangpchl" />
+			<siteMapNode title="button_chitietdonhang" description="Chi tiết đơn hàng" url="editdonhangota" />
+			<siteMapNode title="button_chitietdonhang" description="Chi tiết đơn hàng" url="editdonhangpkd" />
+			<siteMapNode title="menu_themmoidonhang" description="Thêm mới đơn hàng" url="adddonhang" />
+			<siteMapNode title="menu_themmoidonhang" description="Thêm mới đơn hàng" url="adddonhangpchl" />
+			<siteMapNode title="menu_themmoidonhangpos" description="POS" url="adddonhangpos" />
+			<siteMapNode title="menu_themmoidonhangdichvu" description="Thêm đơn hàng dịch vụ" url="adddonhangdv" />
+			<siteMapNode title="menu_themmoidonhangdichvu" description="Thêm đơn hàng dịch vụ" url="adddonhangpkd" />
+			<siteMapNode title="menu_themmoidonhangdichvu" description="Thêm đơn hàng dịch vụ" url="adddonhangota" />
+			<siteMapNode title="label_chuongtrinhkhuyenmai" description="Chương trình khuyến mãi" url="khuyenmai" />
+			<siteMapNode title="menu_chitietchuongtrinhkhuyenmai" description="Chi tiết chương trình khuyến mãi" url="editkhuyenmai" />
+			<siteMapNode title="menu_tonghopdonhang" description="Tổng hợp đơn hàng" url="baocaotonghopdonhang" />
+			<siteMapNode title="menu_baocaodonhangtheonhanvien" description="Báo cáo đơn hàng theo nhân viên" url="baocaodonhangtheonhanvien" />
+			<siteMapNode title="menu_baocaodoanhthu" description="Báo cáo doanh thu" url="baocaodoanhthu" />
+			<siteMapNode title="menu_guibanmathang" description="Gửi bán mặt hàng" url="guibanmathang" />
+		</siteMapNode>
+
+		<siteMapNode title="menu_kehoach">
+			<siteMapNode title="menu_kehoachlamviecnhanvien" description="Kế hoạch làm việc nhân viên" url="kehoachnhanvien" />
+			<siteMapNode title="menu_kehoachlamviecnhanvien" description="Kế hoạch làm việc nhân viên" url="kehoachnhanvienV2" />
+			<siteMapNode title="menu_baocaokehoachnhanvien" description="Báo cáo kế hoạch nhân viên" url="baocaokehoachnhanvien" />
+			<siteMapNode title="menu_laplichgiaohang" description="Lập lịch giao hàng" url="kehoachgiaohang" />
+			<siteMapNode title="menu_kehoachbaoduong" description="Kế hoạch bảo dưỡng" url="kehoachbaoduong" />
+			<siteMapNode title="menu_lapkehoachtuyenkhachhang" description="Kế hoạch tuyến khách hàng" url="quanlytuyen" />
+		</siteMapNode>
+
+		<siteMapNode title="menu_congno">
+			<siteMapNode title="menu_hanmuccongnokhachhang" description="Hạn mức công nợ khách hàng" url="hanmuckhachhang" />
+			<siteMapNode title="menu_hanmuccongnonhanvien" description="Hạn mức công nợ nhân viên" url="hanmucnhanvien" />
+			<siteMapNode title="menu_hanmuccongnotheonhom" description="Hạn mức công nợ nhóm nhân viên - nhóm khách hàng" url="hanmucnhomnhanvien" />
+		</siteMapNode>
+
+		<siteMapNode title="menu_khohang">
+			<siteMapNode title="menu_tonkhobandau" description="Tồn kho ban đầu" url="tonkhobandau" />
+			<siteMapNode title="menu_phieudieuchuyen" description="Phiếu điều chuyển" url="phieudieuchuyen" />
+			<siteMapNode title="menu_phieunhapkho" description="Phiếu nhập kho" url="phieunhapkho" />
+			<siteMapNode title="menu_phieudieuchinhnhapkho" description="Phiếu điều chỉnh nhập kho" url="phieudieuchinh" />
+			<siteMapNode title="menu_baocaodieuchinhnhapkho" description="Báo cáo điều chỉnh nhập kho" url="baocaodieuchinh" />
+		</siteMapNode>
+
+		<siteMapNode title="menu_baocao">
+			<siteMapNode title="menu_baocaokhachhang">
+				<siteMapNode title="menu_baocaoanhchup" description="Báo cáo ảnh chụp" url="baocaoanhchup" />
+				<siteMapNode title="menu_chitietanhchup" description="Chi tiết ảnh chụp" url="album" />
+				<siteMapNode title="menu_baocaodoanhthutheokhachhang" description="Báo cáo doanh thu theo khách hàng" url="baocaodoanhthutheokhachhang" />
+				<siteMapNode title="menu_baocaokhachhang-mathang-donhang" description="Báo cáo khách hàng - mặt hàng - đơn hàng" url="baocaokhachhangmathangdonhang" />
+				<siteMapNode title="menu_baocaokhachhangmomoi" description="Báo cáo khách hàng mở mới" url="baocaokhachhangmomoi" />
+				<siteMapNode title="menu_baocaokhachhangtheogiaodich" description="Báo cáo khách hàng theo giao dịch" url="baocaokhachhangtheogiaodich" />
+				<siteMapNode title="menu_baocaokhachhangtheokhuvuc" description="Báo cáo khác hàng theo khu vực" url="baocaokhachhangtheokhuvuc" />
+				<siteMapNode title="menu_baocaokhachhang-mathang" description="Báo cáo khách hàng - mặt hàng" url="baocaomathangkhachhang" />
+				<siteMapNode title="menu_baocaophanhoi" description="Báo cáo phản hồi" url="baocaophanhoi" />
+				<siteMapNode title="menu_baocaotonghopdonhangtheokhachhang" description="Báo cáo tổng hợp đơn hàng theo khách hàng" url="baocaotonghopdonhangtheokhachhang" />
+				<siteMapNode title="menu_baocaotonghopvaodiemtheokhachhang" description="Báo cáo tổng hợp vào điểm theo khách hàng" url="baocaotonghopvaodiemtheokhachhang" />
+				<siteMapNode title="menu_baocaoviengthamkhachhang" description="Báo cáo viếng thăm khách hàng" url="baocaoviengthamkhachhang" />
+			</siteMapNode>
+			<siteMapNode title="menu_baocaonhanvien">
+				<siteMapNode title="menu_baocaokpinhanvien-donhangcoban" description="Báo cáo KPI nhân viên - đơn hàng cơ bản" url="baocaodonhangcobankpi" />
+				<siteMapNode title="menu_baocaodonhangtheodiem" description="Báo cáo đơn hàng theo điểm" url="baocaodonhangtheodiem" />
+				<siteMapNode title="menu_baocaodungdo" description="Báo cáo dừng đỗ" url="baocaodungdo" />
+				<siteMapNode title="menu_baocaochuyendo" description="Báo cáo chuyến đò" url="baocaochuyendo" />
+				<siteMapNode title="menu_baocaokmdichuyen" description="Báo cáo KM di chuyển" url="baocaokmdichuyen" />
+				<siteMapNode title="menu_baocaokpinhanvien" description="Báo cáo KPI nhân viên" url="baocaokpinhanvien" />
+				<siteMapNode title="menu_baocaolichhen" description="Báo cáo lịch hẹn" url="baocaolichhen" />
+				<siteMapNode title="menu_baocaolichsugiaohang" description="Báo cáo lịch sử giao hàng" url="baocaolichsugiaohang" />
+				<siteMapNode title="menu_baocaolichsumattinhieu" description="Báo cáo lịch sử mất tín hiệu" url="baocaolichsumattinhieu" />
+				<siteMapNode title="menu_baocaolichsusuachua" description="Báo cáo lịch sử sửa chữa" url="baocaolichsusuachua" />
+				<siteMapNode title="menu_baocaotinhtrangfakegps" description="Báo cáo tính trạng fake GPS" url="baocaofakegps" />
+				<siteMapNode title="menu_baocaotinhtranggps" description="Báo cáo tình trạng GPS" url="baocaogps" />
+				<siteMapNode title="menu_baocaotonghopcongviecnhanvien" description="Báo cáo tổng hợp công việc nhân viên" url="baocaotonghopcongviec" />
+				<siteMapNode title="menu_baocaotonghopmathangtheonhanvien" description="Báo cáo tổng hợp mặt hàng theo nhân viên" url="baocaotonghopmathangtheonhanvien" />
+				<siteMapNode title="menu_baocaotonghopravaodiem" description="Báo cáo tổng hợp ra vào điểm" url="baocaotonghopravaodiem" />
+				<siteMapNode title="menu_baocaoviengthamkhachhangtheotuyen" description="Báo cáo viếng thăm khách hàng theo tuyến" url="baocaoviengthamkhachhangtheotuyen" />
+				<siteMapNode title="menu_baocaoviengthamtheotuyen" description="Báo cáo viếng thăm theo tuyến" url="baocaoviengthamtheotuyen" />
+				<siteMapNode title="menu_bieudokpitheocacchitieu" description="Biểu đồ KPI theo các chỉ tiêu" url="bieudokpichitieu" />
+				<siteMapNode title="menu_bieudokpitheonhanvien" description="Biểu đồ KPI theo nhân viên" url="bieudokpinhanvien" />			
+			</siteMapNode>
+			<siteMapNode title="menu_bieudosanluong">
+				<siteMapNode title="menu_bieudodonhangtheokhuvuc" description="Biều đồ đơn hàng theo khu vực" url="bieudodonhangtheokhuvuc" />
+				<siteMapNode title="menu_bieudodonhangtheonhanvien" description="Biều đồ đơn hàng theo nhân viên" url="bieudodonhangtheonhanvien" />
+				<siteMapNode title="menu_bieudotop10donhangtheokhachhang" description="Biểu đồ Top 10 đơn hàng theo khách hàng" url="bieudotopdonhangtheokhachhang" />
+				<siteMapNode title="menu_bieudotop10donhangtheonhanvien" description="Biều đồ Top 10 đơn hàng theo nhân viên" url="bieudotopdonhangtheonhanvien" />
+				<siteMapNode title="menu_bieudotop10nhanviendichuyen" description="Biều đồ Top 10 nhân viên di chuyển" url="bieudotopnhanviendichuyen" />
+				<siteMapNode title="menu_bieudotop10sanphambanchay" description="Biều đồ Top 10 sản phẩm bán chạy" url="bieudotopsanphambanchay" />
+				<siteMapNode title="menu_bieudotop10sanphambanitnhat" description="Biều đồ Top 10 sản phẩm bán ít nhất" url="bieudotopsanphambanthap" />
+				<siteMapNode title="menu_bieudotop10viengtham" description="Biều đồ Top 10 viếng thăm" url="bieudotopviengtham" />
+				<siteMapNode title="menu_bieudokhachhangtheonganhhang" description="Biều đồ khách hàng theo ngành hàng" url="bieudokhachhangtheonganhhang" />
+				<siteMapNode title="menu_bieudokhachhangtheokhuvuc" description="Biều đồ khách hàng theo khu vực" url="bieudokhachhangtheokhuvuc" />
+			</siteMapNode>
+			<siteMapNode title="button_bieudodoanhthu">
+				<siteMapNode title="menu_baocaotonghopctkm" description="Báo cáo tổng hợp chương trình khuyến mãi" url="baocaotonghopchuongtrinhkhuyenmai" />
+				<siteMapNode title="menu_baocaochitietctkm" description="Báo cáo chi tiết chương trình khuyến mãi" url="baocaochitietchuongtrinhkhuyenmai" />
+				<siteMapNode title="menu_bieudodoanhthuthang" description="Biều đồ doanh thu tháng" url="bieudodoanhthuthang" />
+				<siteMapNode title="menu_bieudodoanhthutheokhuvuc" description="Biểu đồ doanh thu theo khu vực" url="bieudodoanhthutheokhuvuc" />
+				<siteMapNode title="menu_bieudodoanhthutheonhanvien" description="Biểu đồ doanh thu theo nhân viên" url="bieudodoanhthutheonhanvien" />
+				<siteMapNode title="menu_bieudodoanhthutheonhomnhanvien" description="Biều đồ doanh thu theo nhóm nhân viên" url="bieudodoanhthutheonhomnhanvien" />
+				<siteMapNode title="menu_bieudotop10doanhthutheokhachhang" description="Biểu đồ Top 10 doanh thu theo khách hàng" url="bieudotopdoanhthutheokhachhang" />
+				<siteMapNode title="menu_bieudotop10doanhthutheonhanvien" description="Biểu đồ Top 10 doanh thu theo nhân viên" url="bieudotopdoanhthutheonhanvien" />
+				<siteMapNode title="menu_bieudotytrongdoanhthutheokhachhang" description="Biều đồ tỷ trọng doanh thu theo khách hàng" url="bieudotytrongdoanhthukhachhang" />
+			</siteMapNode>
+			<siteMapNode title="menu_baocaocongno">
+				<siteMapNode title="menu_baocaotheodoicongno" description="Báo cáo theo dõi công nợ" url="baocaotheodoicongno" />
+				<siteMapNode title="menu_baocaothuhoicongno" description="Báo cáo thu hồi công nợ" url="baocaothuhoicongno" />
+			</siteMapNode>
+			<siteMapNode title="menu_baocaokhohang">
+				<siteMapNode title="menu_baocaonhapxuatton" description="Báo cáo nhập xuất tồn" url="baocaonhapxuatton" />
+				<siteMapNode title="menu_baocaonhapxuattoncackho" description="Báo cáo nhập xuất tồn các kho" url="baocaocackhonhapxuatton" />
+			</siteMapNode>
+		</siteMapNode>
+
+		<siteMapNode title="menu_danhmuc">
+			<siteMapNode title="label_danhmuchethong" description="Danh mục hệ thống" url="danhmuc" />
+			<siteMapNode title="menu_danhmuckhohang" description="Danh mục kho hàng" url="danhmuckhohang" />
+		</siteMapNode>
+
+		<siteMapNode title="menu_quantri">
+			<siteMapNode title="menu_phanquyenchucnang" description="Phân quyền chức năng" url="phanquyenchucnang" />
+			<siteMapNode title="menu_phanquyenkhachhangtheonhomnhanvien" description="Phân quyền khách hàng theo nhóm nhân viên" url="phanquyenkhachhangnhomnhanvien" />
+			<siteMapNode title="menu_phanquyennganhhangtheonhomnhanvien" description="Phân quyền ngành hàng theo nhóm nhân viên" url="phanquyennganhhangnhomnhanvien" />
+			<siteMapNode title="menu_phanquyennhanvientheokhachhang" description="Phân quyền nhân viên theo khách hàng" url="phanquyennhanvienkhanhhang" />
+			<siteMapNode title="menu_phanquyenkhachhangtheonhanvien" description="Phân quyền khách hàng theo nhân viên" url="phanquyenkhachhangnhanvien" />
+			<siteMapNode title="menu_quanlytaikhoanquantriweb" description="Quản lý tài khoản quản trị web" url="quanlyweb" />
+		</siteMapNode>
+
+		<siteMapNode title="menu_trogiup">
+			<siteMapNode title="header_thongtinlienhe" description="Thông tin liên hệ" url="thongtinlienhe" />
+			<siteMapNode title="menu_thongtinphanmem" description="Thông tin phần mềm" url="thongtinphanmem" />
+		</siteMapNode>
+
+		<siteMapNode title="menu_cauhinhchung">
+			<siteMapNode title="menu_cauhinhchung" description="Cấu hình chung" url="cauhinh" />
+			<siteMapNode title="button_doimatkhau" description="Đổi mật khẩu" url="doimatkhau" />
+		</siteMapNode>
+
+	</siteMapNode>
+
+</siteMap>

@@ -1,0 +1,19 @@
+﻿body {
+}
+.thongtinlienhe_class {
+    text-align: center;
+}
+.footer-ttLienHe{
+    margin-top:17rem;
+}
+.ul-ttLienHe {
+    list-style: none;
+    padding-left: 49px;
+    text-align: left;
+    font-size: 15px;
+    padding-top:1.5rem;
+}
+
+.list-none {
+    list-style: none;
+}

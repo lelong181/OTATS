@@ -1,0 +1,70 @@
+﻿<link href="app/components/baocao/bieudosanluong/bm048_BieuDoTop10ViengThamStyle.css" rel="stylesheet" />
+<div class="container-fluid body-viengtham">
+    <div class="content-filter ">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_nhomnhanvien')}}:</label>
+                    <select id="nhomnhanvien" kendo-combo-box="nhomnhanvien"
+                            k-placeholder="bindTextI18n('label_nhomnhanvien')"
+                            k-data-text-field="'tenNhom'"
+                            k-data-value-field="'iD_Nhom'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="nhomnhanvienselect"
+                            k-data-source="nhomnhanvienData"
+                            k-on-change="nhomnhanvienOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_thang')}}:</label>
+                    <input kendo-date-picker
+                           k-ng-model="obj_Thang"
+                           k-options="monthSelectorOptions"
+                           k-format="'MMMM yyyy'" />
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <button id="btn_xembaocao" class="btn btn-outline-info btn-viengtham" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm"></i> {{bindTextI18n('button_xembaocao')}}</button>
+            </div>
+        </div>
+    </div>
+    <ul class="nav nav-pills mb-3 mt-1" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="pills-bieudo-tab" ng-click="clicktabbieudo()" data-toggle="pill" data-target="#pills-bieudo" href="bieudo" ui-sref-active="false" role="tab" aria-controls="pills-bieudo" aria-selected="true">{{bindTextI18n('label_bieudo')}}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-baocao-tab" data-toggle="pill" ng-click="clicktabdanhsach()" data-target="#pills-baocao" href="baocao" ui-sref-active="false" role="tab" aria-controls="pills-baocao" aria-selected="false">{{bindTextI18n('label_baocaochitiet')}}</a>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-bieudo" role="tabpanel" aria-labelledby="pills-bieudo-tab">
+            <div class="body-chart">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center color-gray" ng-show="!showchart">{{bindTextI18n('label_khongcodulieubieudo')}}</h2>
+                            <div class="card-body">
+                                <div class="chart-area">
+                                    <canvas id="bar" class="chart chart-bar"
+                                            chart-colors="colors"
+                                            chart-data="data"
+                                            chart-labels="labels"
+                                            chart-series="series"
+                                            chart-dataset-override="datasetOverride"
+                                            chart-options="options"></canvas>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-baocao" role="tabpanel" aria-labelledby="pills-baocao-tab">
+            <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+        </div>
+    </div>
+    </div>
+
+

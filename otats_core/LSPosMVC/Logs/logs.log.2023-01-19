@@ -1,0 +1,717 @@
+﻿2023/01/19 00:01:40,684 ERROR 37 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:01:40,715 ERROR 37 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:01:40,754 ERROR 37 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:01:40,756 ERROR 47 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 00:01:40,783 ERROR 37 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:01:40,814 ERROR 37 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:01:40,844 ERROR 37 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:01:40,875 ERROR 37 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:06,926 ERROR 61 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:06,957 ERROR 61 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:06,990 ERROR 61 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:06,990 ERROR 37 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 00:03:07,025 ERROR 61 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:07,056 ERROR 61 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:07,086 ERROR 61 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:07,108 ERROR 61 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:38,489 ERROR 45 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 00:03:38,526 ERROR 42 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:38,567 ERROR 42 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:38,605 ERROR 42 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:38,640 ERROR 42 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:38,674 ERROR 42 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:38,704 ERROR 42 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:03:38,759 ERROR 42 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:07:54,481 ERROR 50 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 00:07:54,594 ERROR 40 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:07:54,626 ERROR 40 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:07:54,655 ERROR 40 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:07:54,684 ERROR 40 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:07:54,713 ERROR 40 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:07:54,744 ERROR 40 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:07:54,774 ERROR 40 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:09:00,545 ERROR 36 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 00:09:00,677 ERROR 34 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:09:00,714 ERROR 34 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:09:00,751 ERROR 34 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:09:00,788 ERROR 34 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:09:00,827 ERROR 34 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:09:00,860 ERROR 34 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:09:00,906 ERROR 34 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPos_Data.Data.DonHangData.GetChiTietDonHangFromDataRow(DataRow dr, String language) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\Data\DonHangData.cs:line 597
+2023/01/19 00:12:00,014 ERROR 46 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyHoatDong.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceHoatDong.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllHoatDong(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 20
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 49
+2023/01/19 00:13:00,027 ERROR 46 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyHoatDong.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceHoatDong.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllHoatDong(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 20
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 49
+2023/01/19 00:18:04,078 ERROR 47 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDangNhap.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDangNhap.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllDangNhap(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 26
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 53
+2023/01/19 00:19:00,000 ERROR 47 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyHoatDong.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceHoatDong.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllHoatDong(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 20
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 49
+2023/01/19 00:20:59,967 ERROR 61 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyHoatDong.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceHoatDong.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllHoatDong(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 20
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 49
+2023/01/19 00:22:59,959 ERROR 42 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyHoatDong.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceHoatDong.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllHoatDong(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 20
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 49
+2023/01/19 00:26:42,160 ERROR 37 LSPos_Data.Utilities.Log - System.IO.FileLoadException: Could not load file or assembly 'log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821'
+   at Ksmart_DataSon.Helpers.SqlDataHelper..ctor()
+   at Ksmart_DataSon.DataAccess.HaoHut_Data..ctor()
+   at LSPosMVC.Controllers.DonHangController.danhSachHaoHut() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 2153
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2023/01/19 00:26:42,285 ERROR 40 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 00:26:55,765 ERROR 61 LSPos_Data.Utilities.Log - System.FormatException: Format specifier was invalid.
+   at System.Number.FormatDouble(Double value, String format, NumberFormatInfo info)
+   at LSPosMVC.Common.utilsCommon.genMaDonHang(NhanVienAppModels nhanVienInfor, String macuoicung, String idnhom, String MaNhom, Int32 sttDonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 126
+2023/01/19 00:26:56,153 ERROR 36 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 00:28:02,701 ERROR 44 LSPos_Data.Utilities.Log - System.IO.FileLoadException: Could not load file or assembly 'log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821'
+   at Ksmart_DataSon.Helpers.SqlDataHelper..ctor()
+   at Ksmart_DataSon.DataAccess.HaoHut_Data..ctor()
+   at LSPosMVC.Controllers.DonHangController.danhSachHaoHut() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 2153
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2023/01/19 00:28:02,764 ERROR 45 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 00:28:08,464 ERROR 40 LSPos_Data.Utilities.Log - System.IO.FileLoadException: Could not load file or assembly 'log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821'
+   at Ksmart_DataSon.Helpers.SqlDataHelper..ctor()
+   at Ksmart_DataSon.DataAccess.HaoHut_Data..ctor()
+   at LSPosMVC.Controllers.DonHangController.danhSachHaoHut() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\DonHangController.cs:line 2153
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2023/01/19 00:28:08,582 ERROR 36 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 00:28:19,483 ERROR 37 LSPos_Data.Utilities.Log - System.FormatException: Format specifier was invalid.
+   at System.Number.FormatDouble(Double value, String format, NumberFormatInfo info)
+   at LSPosMVC.Common.utilsCommon.genMaDonHang(NhanVienAppModels nhanVienInfor, String macuoicung, String idnhom, String MaNhom, Int32 sttDonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 126
+2023/01/19 00:28:19,808 ERROR 49 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:31:08,477 ERROR 9 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Ambiguous column name 'AnhDaiDien'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+ClientConnectionId:3addd789-c625-40dd-b4bf-653a3e3d11fa
+Error Number:209,State:1,Class:16
+2023/01/19 23:31:08,743 ERROR 11 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(80) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:31:08,884 ERROR 9 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at MatHang_dl.GetMatHangAll_TheoKho(Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\MatHang_dl.cs:line 550
+   at LSPosMVC.Controllers.KhoHangController.getlistmathangbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 179
+2023/01/19 23:31:08,915 ERROR 11 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoKho(Int32 IDQLLH, Int32 ID_QuanLy, Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 1537
+   at LSPosMVC.Controllers.KhoHangController.getlistnhanvienbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 147
+2023/01/19 23:31:09,187 ERROR 9 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyHoatDong.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceHoatDong.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllHoatDong(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 20
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 49
+2023/01/19 23:31:09,328 ERROR 15 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Ambiguous column name 'AnhDaiDien'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+ClientConnectionId:9accfc2d-9f61-4ffd-b0d3-686789c6bfda
+Error Number:209,State:1,Class:16
+2023/01/19 23:31:09,420 ERROR 15 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at MatHang_dl.GetMatHangAll_TheoKho(Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\MatHang_dl.cs:line 550
+   at LSPosMVC.Controllers.KhoHangController.getlistmathangbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 179
+2023/01/19 23:31:09,588 ERROR 16 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(80) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:31:09,681 ERROR 16 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoKho(Int32 IDQLLH, Int32 ID_QuanLy, Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 1537
+   at LSPosMVC.Controllers.KhoHangController.getlistnhanvienbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 147
+2023/01/19 23:31:11,088 ERROR 7 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(80) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:31:11,187 ERROR 7 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoKho(Int32 IDQLLH, Int32 ID_QuanLy, Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 1537
+   at LSPosMVC.Controllers.KhoHangController.getlistnhanvienbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 147
+2023/01/19 23:31:35,635 ERROR 7 LSPos_Data.Utilities.Log - System.IO.FileLoadException: Could not load file or assembly 'log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821'
+   at Ksmart_DataSon.Helpers.SqlDataHelper..ctor()
+   at Ksmart_DataSon.DataAccess.NhanVienKho_Data..ctor()
+   at LSPosMVC.Controllers.KhoHangController.phanquyennhanvienkho(Int32 idkho, List`1 listidnhanvien) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 258
+
+=== Pre-bind state information ===
+LOG: DisplayName = log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821
+ (Fully-specified)
+LOG: Appbase = file:///C:/Users/quang/source/repos/LSPosCore/LSPosMVC/
+LOG: Initial PrivatePath = C:\Users\quang\source\repos\LSPosCore\LSPosMVC\bin
+Calling assembly : Ksmart_DataSon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: C:\Users\quang\source\repos\LSPosCore\LSPosMVC\web.config
+LOG: Using host configuration file: C:\Users\quang\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821
+LOG: Attempting download of new URL file:///C:/Users/quang/AppData/Local/Temp/Temporary ASP.NET Files/vs/35750492/a6c7d8e/log4net.DLL.
+LOG: Attempting download of new URL file:///C:/Users/quang/AppData/Local/Temp/Temporary ASP.NET Files/vs/35750492/a6c7d8e/log4net/log4net.DLL.
+LOG: Attempting download of new URL file:///C:/Users/quang/source/repos/LSPosCore/LSPosMVC/bin/log4net.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: Major Version
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+2023/01/19 23:36:11,355 ERROR 29 LSPos_Data.Utilities.Log - System.IO.FileLoadException: Could not load file or assembly 'log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821'
+   at Ksmart_DataSon.Helpers.SqlDataHelper..ctor()
+   at Ksmart_DataSon.DataAccess.NhanVienKho_Data..ctor()
+   at LSPosMVC.Controllers.KhoHangController.phanquyennhanvienkho(Int32 idkho, List`1 listidnhanvien) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 258
+
+=== Pre-bind state information ===
+LOG: DisplayName = log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821
+ (Fully-specified)
+LOG: Appbase = file:///C:/Users/quang/source/repos/LSPosCore/LSPosMVC/
+LOG: Initial PrivatePath = C:\Users\quang\source\repos\LSPosCore\LSPosMVC\bin
+Calling assembly : Ksmart_DataSon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: C:\Users\quang\source\repos\LSPosCore\LSPosMVC\web.config
+LOG: Using host configuration file: C:\Users\quang\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821
+LOG: Attempting download of new URL file:///C:/Users/quang/AppData/Local/Temp/Temporary ASP.NET Files/vs/35750492/a6c7d8e/log4net.DLL.
+LOG: Attempting download of new URL file:///C:/Users/quang/AppData/Local/Temp/Temporary ASP.NET Files/vs/35750492/a6c7d8e/log4net/log4net.DLL.
+LOG: Attempting download of new URL file:///C:/Users/quang/source/repos/LSPosCore/LSPosMVC/bin/log4net.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: Major Version
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+2023/01/19 23:51:21,332 ERROR 37 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Ambiguous column name 'AnhDaiDien'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+ClientConnectionId:229ae3ce-6189-4006-8891-bd6c0cb7bca0
+Error Number:209,State:1,Class:16
+2023/01/19 23:51:21,388 ERROR 37 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at MatHang_dl.GetMatHangAll_TheoKho(Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\MatHang_dl.cs:line 550
+   at LSPosMVC.Controllers.KhoHangController.getlistmathangbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 179
+2023/01/19 23:51:21,514 ERROR 46 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(80) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:51:21,515 ERROR 46 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoKho(Int32 IDQLLH, Int32 ID_QuanLy, Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 1537
+   at LSPosMVC.Controllers.KhoHangController.getlistnhanvienbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 147
+2023/01/19 23:51:23,248 ERROR 34 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(80) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:51:23,249 ERROR 34 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoKho(Int32 IDQLLH, Int32 ID_QuanLy, Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 1537
+   at LSPosMVC.Controllers.KhoHangController.getlistnhanvienbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 147
+2023/01/19 23:51:23,283 ERROR 41 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(80) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:51:23,283 ERROR 41 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoKho(Int32 IDQLLH, Int32 ID_QuanLy, Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 1537
+   at LSPosMVC.Controllers.KhoHangController.getlistnhanvienbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 147
+2023/01/19 23:51:23,314 ERROR 46 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Ambiguous column name 'AnhDaiDien'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+ClientConnectionId:eacba85e-76d3-4f8a-b9e4-72d1527d8dd9
+Error Number:209,State:1,Class:16
+2023/01/19 23:51:23,315 ERROR 46 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at MatHang_dl.GetMatHangAll_TheoKho(Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\MatHang_dl.cs:line 550
+   at LSPosMVC.Controllers.KhoHangController.getlistmathangbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 179
+2023/01/19 23:51:25,462 ERROR 34 Ksmart_DataSon.Helpers.SqlDataHelper - Command:Select * from Kho_NhanVien where ID_Kho = 5 and ID_NhanVien = 4
+2023/01/19 23:51:25,462 ERROR 34 Ksmart_DataSon.Helpers.SqlDataHelper - System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at System.Data.SqlClient.SqlConnection.PermissionDemand()
+   at System.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Ksmart_DataSon.Helpers.SqlDataHelper.ExecuteDataSet(String strQuery)
+2023/01/19 23:51:25,470 ERROR 34 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at Ksmart_DataSon.DataAccess.NhanVienKho_Data.AddNhanVienKho(Int32 idnv, Int32 idkho)
+   at LSPosMVC.Controllers.KhoHangController.phanquyennhanvienkho(Int32 idkho, List`1 listidnhanvien) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 262
+2023/01/19 23:51:51,005 ERROR 37 Ksmart_DataSon.Helpers.SqlDataHelper - Command:Select * from Kho_NhanVien where ID_Kho = 5 and ID_NhanVien = 4
+2023/01/19 23:51:51,005 ERROR 37 Ksmart_DataSon.Helpers.SqlDataHelper - System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at System.Data.SqlClient.SqlConnection.PermissionDemand()
+   at System.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Ksmart_DataSon.Helpers.SqlDataHelper.ExecuteDataSet(String strQuery)
+2023/01/19 23:52:55,366 ERROR 37 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at Ksmart_DataSon.DataAccess.NhanVienKho_Data.AddNhanVienKho(Int32 idnv, Int32 idkho)
+   at LSPosMVC.Controllers.KhoHangController.phanquyennhanvienkho(Int32 idkho, List`1 listidnhanvien) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 262
+2023/01/19 23:59:47,576 ERROR 41 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(80) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:59:47,679 ERROR 41 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoKho(Int32 IDQLLH, Int32 ID_QuanLy, Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 1537
+   at LSPosMVC.Controllers.KhoHangController.getlistnhanvienbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 148
+2023/01/19 23:59:53,645 ERROR 24 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(80) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:59:53,763 ERROR 22 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Ambiguous column name 'AnhDaiDien'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+ClientConnectionId:08459ab8-8583-4e3b-a911-8d041543cfb2
+Error Number:209,State:1,Class:16
+2023/01/19 23:59:53,792 ERROR 24 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoKho(Int32 IDQLLH, Int32 ID_QuanLy, Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 1537
+   at LSPosMVC.Controllers.KhoHangController.getlistnhanvienbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 148
+2023/01/19 23:59:53,850 ERROR 22 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at MatHang_dl.GetMatHangAll_TheoKho(Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\MatHang_dl.cs:line 550
+   at LSPosMVC.Controllers.KhoHangController.getlistmathangbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 180
+2023/01/19 23:59:54,176 ERROR 25 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(80) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:59:54,285 ERROR 41 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Ambiguous column name 'AnhDaiDien'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+ClientConnectionId:08459ab8-8583-4e3b-a911-8d041543cfb2
+Error Number:209,State:1,Class:16
+2023/01/19 23:59:54,319 ERROR 25 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoKho(Int32 IDQLLH, Int32 ID_QuanLy, Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 1537
+   at LSPosMVC.Controllers.KhoHangController.getlistnhanvienbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 148
+2023/01/19 23:59:54,424 ERROR 41 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at MatHang_dl.GetMatHangAll_TheoKho(Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\MatHang_dl.cs:line 550
+   at LSPosMVC.Controllers.KhoHangController.getlistmathangbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 180
+2023/01/19 23:59:55,068 ERROR 11 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Ambiguous column name 'AnhDaiDien'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+ClientConnectionId:08459ab8-8583-4e3b-a911-8d041543cfb2
+Error Number:209,State:1,Class:16
+2023/01/19 23:59:55,068 ERROR 41 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(80) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:59:55,152 ERROR 11 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at MatHang_dl.GetMatHangAll_TheoKho(Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\MatHang_dl.cs:line 550
+   at LSPosMVC.Controllers.KhoHangController.getlistmathangbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 180
+2023/01/19 23:59:55,220 ERROR 41 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoKho(Int32 IDQLLH, Int32 ID_QuanLy, Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 1537
+   at LSPosMVC.Controllers.KhoHangController.getlistnhanvienbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 148
+2023/01/19 23:59:57,231 ERROR 24 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(80) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:59:57,361 ERROR 22 SqlDataHelper - System.Data.SqlClient.SqlException (0x80131904): Ambiguous column name 'AnhDaiDien'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+ClientConnectionId:08459ab8-8583-4e3b-a911-8d041543cfb2
+Error Number:209,State:1,Class:16
+2023/01/19 23:59:57,441 ERROR 24 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoKho(Int32 IDQLLH, Int32 ID_QuanLy, Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 1537
+   at LSPosMVC.Controllers.KhoHangController.getlistnhanvienbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 148
+2023/01/19 23:59:57,665 ERROR 22 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at MatHang_dl.GetMatHangAll_TheoKho(Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\MatHang_dl.cs:line 550
+   at LSPosMVC.Controllers.KhoHangController.getlistmathangbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 180
+2023/01/19 23:59:57,800 ERROR 11 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(80) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/01/19 23:59:57,983 ERROR 11 LSPos_Data.Utilities.Log - System.IndexOutOfRangeException: Cannot find table 0.
+   at System.Data.DataTableCollection.get_Item(Int32 index)
+   at NhanVien_dl.GetDSNhanVien_TheoKho(Int32 IDQLLH, Int32 ID_QuanLy, Int32 ID_Kho) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 1537
+   at LSPosMVC.Controllers.KhoHangController.getlistnhanvienbyidkho(Int32 idkho) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\KhoHangController.cs:line 148

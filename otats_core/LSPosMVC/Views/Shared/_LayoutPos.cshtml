@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSPos - Điểm bán hàng</title>
+    @Styles.Render("~/Content/css")
+    <link href="~/Assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Assets/kendo/styles/kendo.common-bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Assets/kendo/styles/kendo.bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Assets/kendo/styles/kendo.common.min.css" />
+    <style>
+        .root-logo {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+        }
+
+            .root-logo img {
+                width: 80%;
+                margin: auto;
+                display: block;
+            }
+
+            .root-logo .logo-title {
+                width: 100%;
+                display: block;
+                text-align: center;
+                color: #4a90e2;
+                font-weight: 700;
+                font-size: 1.5em;
+                font-family: monospace;
+            }
+
+        .list-menu {
+            display: flex;
+            height: 100vh;
+            width: 104px;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0px 2px;
+            background-color: #ffffff1c;
+            color: #d9d9d9;
+            float: left;
+        }
+
+            .list-menu li {
+                height: 80px;
+                width: 100px;
+                /*border: solid 2px #2b353f;*/
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+                margin-bottom: 5px;
+                border-radius: 10px;
+                -webkit-transition: background-color 300ms linear;
+                -moz-transition: background-color 300ms linear;
+                -o-transition: background-color 300ms linear;
+                transition: background-color 300ms linear;
+            }
+
+                .list-menu li:hover {
+                    background-color: #d9d9d9;
+                    color: #2b353f;
+                    border: solid 2px #d9d9d9;
+                    cursor: pointer;
+                }
+
+                .list-menu li.active {
+                    background-color: #d9d9d9;
+                    color: #2b353f;
+                    border: solid 2px #2b353f;
+                    cursor: pointer;
+                }
+
+                .list-menu li .meu-icon {
+                    width: 100%;
+                    font-size: 1.8em;
+                }
+
+        .right-col {
+            width: calc(100% - 104px);
+            height: 100vh;
+            float: left;
+        }
+    </style>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</head>
+<body>
+    <span class="root-logo">
+        <img src="~/Images/icon.ico" />
+        <span class="logo-title">LSPOS</span>
+    </span>
+    <ul class="list-menu">
+        <li>
+            <i class="fa fa-home meu-icon"></i> <span class="menu-title">Home</span>
+        </li>
+        <li>
+            <i class="fa fa-list-ul meu-icon"></i> <span class="menu-title">Menu</span>
+        </li>
+        <li>
+            <i class="fa fa-history meu-icon"></i> <span class="menu-title">History</span>
+        </li>
+        <li>
+            <i class="fa fa-star meu-icon"></i> <span class="menu-title">Promos</span>
+        </li>
+        <li>
+            <i class="fa fa-cog meu-icon"></i> <span class="menu-title">Setting</span>
+        </li>
+    </ul>
+    <div class="right-col">
+        @RenderBody()
+    </div>
+    <div id="dialogRoot"></div>
+
+
+    <script src="~/Assets/kendo/kendo2021.all.min.js"></script>
+    <script src="~/Assets/kendo/kendo-multi-calendar.js"></script>
+    <script src="~/Assets/kendo/kendo-multi-date-select.js"></script>
+    <script src="~/Assets/kendo/jszip.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var action = window.location.href.substring(window.location.origin.length);
+            switch (action) {
+                case '/Home/Order':
+                    $($(".list-menu li")[0]).addClass("active");
+                    break;
+                default:
+                    break;
+            }
+
+            $(".list-menu li").click(function (e) {
+                $(".list-menu li").each(function (index, item) {
+                    $(this).removeClass("active");
+                });
+                $(this).addClass("active");
+            })
+
+        });
+        var dialogRoot = $("#dialogRoot").kendoDialog().data("kendoDialog").close();
+        // Hàm bật dialog thông báo
+        function openDialog(dialogRoot, message) {
+            dialogRoot.setOptions({
+                width: "450px",
+                closable: true,
+                modal: true,
+                title: "Thông báo!",
+                content: message,
+                actions: []
+            });
+            dialogRoot.open();
+        }
+        function openConfirm(dialogRoot, message, acceptAction, cancelAction) {
+            var result;
+            dialogRoot.setOptions({
+                width: "450px",
+                closable: true,
+                modal: true,
+                title: "Confirm!",
+                content: message,
+                actions: [
+                    {
+                        text: 'Yes', action: function () {
+                            acceptAction();
+                            result = true;
+                        }
+                    },
+                    {
+                        text: 'No', action: function () {
+                            cancelAction();
+                            result = false;
+                        }
+                    }
+
+                ],
+            });
+            dialogRoot.open();
+            return result;
+        }
+        var notification;
+        function notify() {
+            //#notify
+            var wWidth = $(window).width(),
+                newLeft = Math.floor(wWidth / 2 - 400 / 2);
+            notification = $("<div />").kendoNotification({
+                position: {
+                    //pinned: true,
+                    top: 50,
+                    right: newLeft
+                },
+                templates: [{
+                    type: "error",
+                    template: $("#errorTemplate").html()
+                }, {
+                    type: "success",
+                    template: $("#successTemplate").html()
+                }]
+            }).data("kendoNotification");
+            //console.log(notification);
+        }
+        notify();
+    </script>
+    <script id="errorTemplate" type="text/x-kendo-template">
+        <div class="wrong-pass">
+            <i class="fa fa-close" style="color:red;font-size:40px;"></i>
+            <p>#= kValue # </p>
+        </div>
+    </script>
+    <script id="successTemplate" type="text/x-kendo-template">
+        <div class="upload-success">
+            <i class="fa fa-check" style="color:green;font-size:40px;"></i>
+            <p>#= kValue # </p>
+        </div>
+    </script>
+</body>
+</html>

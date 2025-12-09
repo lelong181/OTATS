@@ -1,0 +1,30 @@
+﻿2025/01/25 23:46:07,065 ERROR 77 LSPos_Data.Utilities.Log - System.ArgumentNullException: IDX10000: The parameter 'jwtEncodedString' cannot be a 'null' or an empty object. 
+Parameter name: jwtEncodedString
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityToken..ctor(String jwtEncodedString)
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Common\utilsCommon.cs:line 26
+2025/01/25 23:46:53,219 ERROR 67 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.UserinfoController.Login(LoginRequest login) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\UserinfoController.cs:line 42
+2025/01/25 23:47:50,590 ERROR 77 LSPosMVC.Common.EmailHelper - System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. For more information, go to
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at LSPosMVC.Common.EmailHelper.SendEmail(String htmlString, String Email, String[] To, String subject) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Common\EmailHelper.cs:line 40
+2025/01/25 23:50:04,738 ERROR 73 LSPosMVC.Common.EmailHelper - System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. For more information, go to
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at LSPosMVC.Common.EmailHelper.SendEmail(String htmlString, String Email, String[] To, String subject) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Common\EmailHelper.cs:line 40
+2025/01/25 23:50:39,831 ERROR 73 LSPosMVC.Common.EmailHelper - System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. For more information, go to
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at LSPosMVC.Common.EmailHelper.SendEmail(String htmlString, String Email, String[] To, String subject) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Common\EmailHelper.cs:line 40
+2025/01/25 23:51:56,996 ERROR 72 LSPosMVC.Common.EmailHelper - System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. For more information, go to
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at LSPosMVC.Common.EmailHelper.SendEmail(String htmlString, String Email, String[] To, String subject) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Common\EmailHelper.cs:line 40

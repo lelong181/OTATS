@@ -1,0 +1,162 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Assets/printTicket/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/printTicket/main.css" rel="stylesheet" />
+    <link href="~/Assets/printTicket/print.css" rel="stylesheet" />
+    <script src="~/Assets/printTicket/jquery.js"></script>
+</head>
+<body>
+    <div class="page-order-detail">
+        <section id="order-detail">
+            <div class="container">
+                <div class="row">
+                    <div class="wrap-order-detail" id="test">
+                        <div id="hide">
+                            <div class="text-center">
+                                <div class="col-md-12">
+                                    <a href="" class="btn-print" onclick='printDiv();'>
+                                        <i class="fa fa-print fa-style" aria-hidden="true" style="color: #ff9933;"></i>
+                                        <span>In tất cả vé</span>
+                                    </a>
+                                    @{
+                                        IEnumerable<string> l = from m in (List<LSPos_Data.Models.ChiTietMatHangDonHangModels>)Model.lstTicket select m.ServiceID;
+                                    }
+                                    @foreach (string sv in l.Distinct())
+                                    {
+                                        <a href="" class="btn-print" onclick='printDiv("@sv");'>
+                                            <i class="fa fa-print fa-style" aria-hidden="true" style="color: #ff9933;"></i>
+                                            <span>In vé</span>
+                                        </a>
+                                    }
+                                </div>
+                            </div>
+                            <div class="info-user">
+                                <div class="col-md-12">
+                                    <h3 class="title-h3">Số booking: @Model.BookingCode</h3>
+                                    <div class="image-qrcode" style="">
+                                        <img style="" src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=@Model.BookingCode" alt="">
+                                    </div>
+                                    <h3 class="title-h3">Ghi chú: @Model.GhiChu</h3>
+                                    <h3 style="color:#a10808">Để tránh bị ảnh hưởng trong quá trình Soát vé tại KDL Yêu cầu Đoàn đi theo hàng thành một hàng duy nhất. Trưởng đoàn cầm vé đi đầu tiên.</h3>
+                                    <h3 style="color:#052779"><a href="https://docs.google.com/forms/d/e/1FAIpQLScqPlKBRosnqUYcuMs3WKdlCsXoT1NavYxXjrF0fGyXhoGn_Q/viewform" target="_blank"><i> Đánh giá hành trình Tour: Trong quá trình sử dụng dịch vụ nếu quý khách không hài lòng xin vui lòng gửi Góp ý để KDL được phục vụ tốt hơn. (Đính kèm hình ảnh, video để KDL nắm rõ hơn được nội dung Du khách, Đoàn góp ý)</i></a></h3>
+                                    @*@if (count($order->customerRes) > 0)
+                                            <p style="float: left">Họ Tên: <span class="span-info">{{ $order->customerRes[0]->name }}</span></p>
+                                        <p style="margin-left: 350px">Email: <span class="span-info">{{ $order->customerRes[0]->email }}</span></p>
+                                        <p style="float: left; clear: both">Điện thoại: <span class="span-info">{{ $order->customerRes[0]->phoneNumber }}</span></p>
+                                        <p style="margin-left: 350px">Địa chỉ: <span class="span-info">{{ $order->customerRes[0]->address }}</span></p>
+                                        @endif*@
+                                    @if (Model.lstTicket[0].ID_MatHang == 255 || Model.lstTicket[0].ID_MatHang == 254)
+                                    {
+                                        <img src="~/Images/map99.jpg" />
+                                        <img src="~/Images/noiquy99.jpg" />
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap-bottom-block" id="section-print">
+                            <div>
+                                @{ int i = 1; }
+                                @foreach (LSPos_Data.Models.ChiTietMatHangDonHangModels ct in Model.lstTicket)
+                                {
+                                    <div class="page-break"></div>
+                                    <div class="col-md-12 ticket sv-@ct.ServiceID" style="position: relative;">
+                                        <img src="~/Images/logo/test.png" alt="" style="position: absolute; z-index: 10000; top: -6px;left: -9px; transform: rotate(-271deg);"> @*{{-- Trên trái --}}*@
+                                        <img src="~/Images/logo/test.png" alt="" style="position: absolute; z-index: 10000; top: -8px; right: -8px; transform: rotate(-180deg);"> @*{{-- Trên phải --}}*@
+                                        <img src="~/Images/logo/test.png" alt="" style="position: absolute; z-index: 10000; top: 362px;left: -7px;"> @*{{-- Dưới trái --}}*@
+                                        <img src="~/Images/logo/test.png" alt="" style="position: absolute; z-index: 10000; top: 361px;right: -8px; transform: rotate(-90deg);"> @*{{-- Dưới phải --}}*@
+
+                                        <div class="row style-print" style="border: 1.5px solid #cccccc;">
+
+                                            <div class="col-md-7 print-col-1">
+                                                <div style="border: 10px solid transparent; border-image: url(https://muave.disantrangan.vn/images/logo/list-ve.png) 0 30 0 0 repeat;
+                                                        height: 400px;
+                                                        padding-top: 30px;
+                                                        ">
+                                                    <img src="@Model.Site.SiteLogo" alt="" style="margin-left: 105px; margin-bottom: 30px; height: 140px;">
+                                                    <h5>
+                                                        Site/Địa điểm: <span style="font-size: 1em; font-weight: bold">@Model.Site.SiteName</span>
+                                                    </h5>
+                                                    <h5>
+                                                        Expire On/Hạn sử dụng: <span style="font-size: 1em; font-weight: bold;">@Model.Ngay.ToString("dd/MM/yyyy")</span>
+                                                    </h5>
+                                                    <h5>
+                                                        Tên dịch vụ: <span style="font-size: 1em; font-weight: bold">@ct.TenHienThi</span>
+                                                    </h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-5 print-col-2">
+                                                <h3>@ct.TenHienThi</h3>
+                                                <div class="image-qrcode" style="">
+                                                    <img style="" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=@ct.MaVeDichVu" alt="">
+                                                </div>
+                                                <h6>Vé số: <span>  @(i++)</span></h6>
+                                                <h6>
+                                                    Trạng thái: @{ if (ct.TenTrangThai == "INACTIVE")
+                                                        {
+                                                            <span style="color:#009708">  Chưa sử dụng</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span style="color:#ff0000">Đã khóa hoặc đã sử dụng</span>
+                                                        }
+                                                    }
+                                                </h6>
+                                                <h6>Code/Mã vé: <span>  @ct.MaVeDichVu</span></h6>
+                                                <h6>Booking/Mã đặt chỗ: <span>  @Model.BookingCode</span></h6>
+                                                <h6>InvoiceCode/Số bill: <span>  @ct.MaDonHangDichVu</span></h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="text-center" style="margin-top:20px;">
+                            <a href="https://lscloud.vn" style="font-size: 14px;" target="_blank">
+                                <p>LSCLOUD.VN ĐƠN VỊ CUNG CẤP GIẢI PHÁP TỔNG THỂ QUẢN TRỊ DOANH NGHIỆP DU LỊCH - TOUR LỮ HÀNH</p>
+                                <p>MST: 0110236110</p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    function printDiv(svcode) {
+        $('#hide').css('display', 'none');
+        $('.ticket').css('margin-top', '120px');
+        $('.ticket').first().css('margin-top', '0');
+        console.log(svcode);
+        $('.ticket').css('display', 'block');
+        if (svcode != undefined) {
+            $('.sv-' + svcode).css('display', 'none');
+        }
+        if (print()) {
+
+            $('#hide').css('display', 'none');
+        } else {
+            $('#hide').css('display', 'block');
+        }
+    }
+    $(document).ready(function () {
+
+    });
+</script>
+
+

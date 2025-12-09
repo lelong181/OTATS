@@ -1,0 +1,75 @@
+﻿
+<div class="container-fluid">
+    <div class="toolbarmenu">
+        <button id="btn_them" ng-show="(permission.them > 0)" ng-click="themphieudieuchinh()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_them')}}</button>
+        <button id="btn_sua" ng-show="(permission.sua > 0)" ng-click="suaphieudieuchinh()" class="btn btn-link btn-menubar"><i class="fas fa-edit fas-sm color-success"></i> {{bindTextI18n('button_sua')}}</button>
+    </div>
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+
+<!--popup thêm mới phiếu điều chỉnh nhập kho-->
+<div kendo-window="formdetail" id="formdetail" k-title="bindTextI18n('label_phieudieuchinh')" k-visible="false" k-modal="true" k-width="900" k-height="500">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luuphieudieuchinh" ng-show="((permission.them > 0 && idphieu <= 0) ||(permission.sua > 0 && idphieu > 0))" ng-click="luuphieudieuchinh()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+                <button id="btn_huyluuphieudieuchinh" ng-click="huyluuphieudieuchinh()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_phieunhap')}} <span class="color-danger">(*)</span></label>
+                    <select kendo-combo-box="phieunhap"
+                            id="phieunhap"
+                            k-placeholder="bindTextI18n('label_chonphieunhap')"
+                            k-data-text-field="'tenPhieuNhap'"
+                            k-data-value-field="'iD_PhieuNhap'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="phieunhapselect"
+                            k-data-source="phieunhapData"
+                            k-on-change="phieunhapOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_ngaydieuchinh')}}</label>
+                    <input kendo-date-time-picker="ngaydieuchinh"
+                           ng-model="str_ngaydieuchinh"
+                           k-ng-model="obj_ngaydieuchinh"
+                           k-format="'dd/MM/yyyy HH:mm'" />
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="nhanvien">{{bindTextI18n('label_nhanvien')}}</label>
+                    <input type="text" placeholder="{{bindTextI18n('label_nhanvien')}}" class="k-textbox" id="nhanvien" ng-model="nhanvien" readonly/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="ghichu">{{bindTextI18n('label_ghichu')}}</label>
+                    <input type="text" placeholder="{{bindTextI18n('label_ghichu')}}" class="k-textbox" id="ghichu" ng-model="ghichu" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-5">
+                <div kendo-grid="gridphieunhap" k-data-source="gridphieunhapData" k-options="gridphieunhapOptions" id="gridphieunhap"></div>
+            </div>
+            <div class="col-7">
+                <div kendo-grid="gridphieudieuchinh" k-data-source="gridphieudieuchinhData" k-options="gridphieudieuchinhOptions" id="gridphieudieuchinh"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,167 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANH TOÁN ĐƠN HÀNG</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+        .table-group {
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        .table-list-header {
+            font-weight: bold;
+        }
+
+            .table-list-header td {
+                text-align: center;
+                border-top: solid 1px #b4b4b4;
+                border-left: solid 1px #b4b4b4;
+                border-right: solid 1px #b4b4b4;
+            }
+
+        .table-list-item td {
+            border-left: solid 1px #b4b4b4;
+            border-right: solid 1px #b4b4b4;
+            padding: 3px;
+        }
+
+        .table-list-item-end td {
+            padding: 3px;
+            border-bottom: solid 1px #b4b4b4;
+            border-left: solid 1px #b4b4b4;
+            border-right: solid 1px #b4b4b4;
+        }
+    </style>
+    <script src="~/Assets/printTicket/jquery.js"></script>
+    <script src="~/Scripts/qrcode.js"></script>
+    <script>
+    $(document).ready(function () {
+
+            var QR_CODE = new QRCode("qrcode", {
+                width: 140,
+                height: 140,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H,
+            });
+        QR_CODE.makeCode("@(Model.MaThanhToan.data)");
+
+    });
+
+        function checkthanhtoan() {
+            $("#btn-checkthanhtoan").hide();
+            $.ajax({
+                url: '/Booking/CheckThanhToan?ID_DonHang=@Model.ID_DonHang',
+                type: 'GET'
+            }).done(function successCallback(response) {
+                console.log(response);
+                if (response.data.trangthaidonhang == 3) {
+                    window.location.replace("https://server.lscloud.vn/Booking/PrintQRTicketByBookingCodeForPCHL" + window.location.search)
+                } else {
+                    $("#btn-checkthanhtoan").show();
+                    alert("Giao dịch đang xử lý! vui lòng kiểm tra lại sau giây lát!")
+                }
+            })
+        }
+    </script>
+</head>
+
+<body style="font-family: 'Arial',sans-serif; font-size: 14px;">
+    <div style="width:100%">
+        <div style="width: 100%; padding: 20px; text-align: center; background-color: #76bcff;">PHÔ CỔ HOA LƯ XÁC NHẬN ĐƠN HÀNG ĐƯỢC KHỞI TẠO</div>
+        <div style="width:100%;padding:20px">
+            <table border="0">
+
+                <tr class="table-group"><td colspan="4">I.Thông tin đơn hàng:</td></tr>
+                <tr>
+                    <td colspan="2">Mã OTA Booking:</td>
+                    <td colspan="2">@Model.MaThamChieu</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Trạng thái đơn hàng:</td>
+                    <td colspan="2">Khởi tạo đơn hàng</td>
+                </tr>
+                <tr>
+                    <td colspan="2">OTA/Nhân viên lập:</td>
+                    <td colspan="2">@Model.TenNhanVien</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Ngày lập:</td>
+                    <td colspan="2">@Model.NgayTao.ToString("dd-MM-yyyy")</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Thanh toán:</td>
+                    <td><label style="width:100%">Thanh toán qua cổng VNPAY</label> <div id="qrcode"></div></td>
+                </tr>
+            </table>
+            <div class="hideonprint" style="width: 400px; margin-left: 5px; margin-top:20px;margin-bottom:20px;">
+                <button id="btn-checkthanhtoan" style="width:100%; text-align:center; border:solid 1px #808080; height:30px" onclick="checkthanhtoan()">Check thanh toán</button>
+            </div>
+            <table>
+                <tr class="table-group"><td colspan="4">II.Thông tin Khách hàng:</td></tr>
+                <tr>
+                    <td>Khách hàng:</td>
+                    <td>@Model.TenKhachHang</td>
+                </tr>
+                <tr>
+                    <td>Số điện thoại:</td>
+                    <td>@Model.DienThoai</td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ:</td>
+                    <td>@Model.DiaChi</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>@Model.Email</td>
+                </tr>
+                </tr>
+                <tr>
+                    <td colspan="2">Ghi chú đơn hàng:</td>
+                    <td colspan="2">@Model.GhiChu</td>
+                </tr>
+                <tr>
+                    <td style="height:20px;"></td>
+                </tr>
+            </table>
+            <table>
+                <tr class="table-group"><td colspan="4">III.Thông tin dịch vụ:</td></tr>
+                <tr class="table-list-header">
+                    <td style="width: 20%; border-top-left-radius: 5px; background-color: #86ace8;">Dịch vụ</td>
+                    <td style="width: 10%; background-color: #86ace8;">Số lượng</td>
+                    <td style="width: 10%; background-color: #86ace8;">Dự kiến đi</td>
+                    <td style="width: 15%; background-color: #86ace8;">Đơn giá (VNĐ)</td>
+                    <td style="width: 15%; background-color: #86ace8;">Thành tiền (VNĐ)</td>
+                    <td style="width: 10%; border-top-right-radius: 5px; background-color: #86ace8;">Ghi chú</td>
+                </tr>
+                @foreach (LSPos_Data.Models.DonHang_DichVuRequestAPIModel ct in Model.chitietdonhang)
+                {
+                    <tr class="table-list-item">
+                        <td>@ct.DichVu.TenDichVu</td>
+                        <td style="text-align:right">@ct.SoLuong</td>
+                        <td style="text-align:right">@ct.Ngay.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td style="text-align:right">@ct.GiaBan.ToString("N0")</td>
+                        <td style="text-align:right">@((@ct.SoLuong*@ct.GiaBan).ToString("N0"))</td>
+                        <td></td>
+                    </tr>
+                }
+                <tr class="table-list-item-end">
+                    <td style=" border-bottom-left-radius: 5px;">Tổng tiền</td>
+                    <td colspan="6" style="border-bottom-right-radius: 5px;text-align:right">@Model.TongTien.ToString("N0") VNĐ</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

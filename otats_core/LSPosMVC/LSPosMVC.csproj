@@ -1,0 +1,1340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5AAD6D71-D730-46E5-9D63-84F7C1F65AFE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSPosMVC</RootNamespace>
+    <AssemblyName>LSPosMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44368</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=22.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Cells.22.12.0\lib\net40\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words, Version=22.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Words.22.12.0\lib\net461\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words.Pdf2Word, Version=22.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Words.22.12.0\lib\net461\Aspose.Words.Pdf2Word.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\ICSharpCode.SharpZipLib.dll.0.85.4.369\lib\net20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.DynamicLinq">
+      <HintPath>..\packages\Kendo.DynamicLinq.1.1.2.0\lib\net40\Kendo.DynamicLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.Mvc">
+      <HintPath>..\packages\Kendo.Mvc.2016.2.616\lib\net451\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Ksmart_DataSon">
+      <HintPath>..\packages\Ksmart_DataSon.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.3\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.4.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.4.3\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Html.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Html.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Html.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Razor, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Razor.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Razor.Language, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Razor.Language.2.2.0\lib\net46\Microsoft.AspNetCore.Razor.Language.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Razor.Runtime, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Razor.Runtime.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Razor.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.2.8.0\lib\netstandard1.3\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.2.8.0\lib\netstandard1.3\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.0.3\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Abstractions.6.25.1\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.25.1\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.25.1\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.25.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.2.2\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.4.2.2\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.10.0\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.FileVersionInfo.4.3.0\lib\net46\System.Diagnostics.FileVersionInfo.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.StackTrace.4.3.0\lib\net46\System.Diagnostics.StackTrace.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.25.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=1.4.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.1.4.2\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Extensions.4.3.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.5.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.4.5.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.5.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.4.3.0\lib\net46\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.7.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Thread.4.3.0\lib\net46\System.Threading.Thread.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.9\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.9\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.XmlDocument.4.3.0\lib\net46\System.Xml.XmlDocument.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.XPath.4.3.0\lib\net46\System.Xml.XPath.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.XPath.XDocument.4.3.0\lib\net46\System.Xml.XPath.XDocument.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AllowCrossSiteJsonAttribute.cs" />
+    <Compile Include="App_Start\BookingUtilities.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\DependenceChupAnh.cs" />
+    <Compile Include="App_Start\DependenceDangNhap.cs" />
+    <Compile Include="App_Start\DependenceDonHang.cs" />
+    <Compile Include="App_Start\DependenceHoatDong.cs" />
+    <Compile Include="App_Start\DependenceTinNhan.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\GlobalUtilities.cs" />
+    <Compile Include="App_Start\NotifyData.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\ClientHttpGet.cs" />
+    <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\EmailHelper.cs" />
+    <Compile Include="Common\ExportExcel.cs" />
+    <Compile Include="Common\GetObjectFromDataRow.cs" />
+    <Compile Include="Common\ImageUtils.cs" />
+    <Compile Include="Common\ImportValidate.cs" />
+    <Compile Include="Common\OnepayDRResponse.cs" />
+    <Compile Include="Common\Paycollect\AccountOP.cs" />
+    <Compile Include="Common\Paycollect\Authorization.cs" />
+    <Compile Include="Common\Paycollect\BatchOP.cs" />
+    <Compile Include="Common\Paycollect\BatchOPResponse.cs" />
+    <Compile Include="Common\Paycollect\CallHttpRequest.cs" />
+    <Compile Include="Common\Paycollect\InvoiceOP.cs" />
+    <Compile Include="Common\Paycollect\OnePayIPNRequest.cs" />
+    <Compile Include="Common\Paycollect\PaycollectTest.cs" />
+    <Compile Include="Common\Paycollect\QRCodeOP.cs" />
+    <Compile Include="Common\Paycollect\RequestInvoiceOP.cs" />
+    <Compile Include="Common\Paycollect\RequestUserOP.cs" />
+    <Compile Include="Common\Paycollect\UserOP.cs" />
+    <Compile Include="Common\RazorViewToString.cs" />
+    <Compile Include="Common\StringHelper.cs" />
+    <Compile Include="Common\UploadingUtils.cs" />
+    <Compile Include="Common\utilsCommon.cs" />
+    <Compile Include="Common\VnPayUtils.cs" />
+    <Compile Include="Common\VPCRequest.cs" />
+    <Compile Include="Controllers\HDVController.cs" />
+    <Compile Include="Controllers\OtaController.cs" />
+    <Compile Include="Controllers\albumController.cs" />
+    <Compile Include="Controllers\BanDoController.cs" />
+    <Compile Include="Controllers\BangGiaLoaiKhachHangController.cs" />
+    <Compile Include="Controllers\BaoCaoAPIController.cs" />
+    <Compile Include="Controllers\BaoCaoCommonController.cs" />
+    <Compile Include="Controllers\BaoCaoController.cs" />
+    <Compile Include="Controllers\BaoCaoDoanhThuController.cs" />
+    <Compile Include="Controllers\BaoCaoKeHoachNhanVienController.cs" />
+    <Compile Include="Controllers\BaoCaoNhanVienViengThamController.cs" />
+    <Compile Include="Controllers\BaoCaoPhienLamViecController.cs" />
+    <Compile Include="Controllers\BaoCaoSanLuongController.cs" />
+    <Compile Include="Controllers\BieuDoDanhThuController.cs" />
+    <Compile Include="Controllers\BieuDoSanLuongController.cs" />
+    <Compile Include="Controllers\BookingController.cs" />
+    <Compile Include="Controllers\CauHinhCongTyController.cs" />
+    <Compile Include="Controllers\ChiTieuKPIController.cs" />
+    <Compile Include="Controllers\ChucNangController.cs" />
+    <Compile Include="Controllers\ChucVuController.cs" />
+    <Compile Include="Controllers\ChuongTrinhKhuyenMaiController.cs" />
+    <Compile Include="Controllers\ChuyenQuyenController.cs" />
+    <Compile Include="Controllers\CongTyController.cs" />
+    <Compile Include="Controllers\CongViecController.cs" />
+    <Compile Include="Controllers\DanhMucController.cs" />
+    <Compile Include="Controllers\DashBoardController.cs" />
+    <Compile Include="Controllers\DonHangController.cs" />
+    <Compile Include="Controllers\DuyetXoaKhachHangController.cs" />
+    <Compile Include="Controllers\GuiBanMatHangController.cs" />
+    <Compile Include="Controllers\GuiTinNhanController.cs" />
+    <Compile Include="Controllers\HanMucCongNoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KeHoachBaoDuongController.cs" />
+    <Compile Include="Controllers\KeHoachGiaoHangController.cs" />
+    <Compile Include="Controllers\KeHoachNhanVienController.cs" />
+    <Compile Include="Controllers\KenhBanHangController.cs" />
+    <Compile Include="Controllers\KhachHangController.cs" />
+    <Compile Include="Controllers\KhoHangController.cs" />
+    <Compile Include="Controllers\KhuVucController.cs" />
+    <Compile Include="Controllers\LichSuThaoTacNguoiDungController.cs" />
+    <Compile Include="Controllers\LoaiKhachHangController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MapsController.cs" />
+    <Compile Include="Controllers\MatHangController.cs" />
+    <Compile Include="Controllers\NhanVienAppController.cs" />
+    <Compile Include="Controllers\NhanVienWebController.cs" />
+    <Compile Include="Controllers\NhomController.cs" />
+    <Compile Include="Controllers\NotifycationsController.cs" />
+    <Compile Include="Controllers\PhanQuyenController.cs" />
+    <Compile Include="Controllers\PhieuDieuChinhNhapController.cs" />
+    <Compile Include="Controllers\PhieuDieuChuyenController.cs" />
+    <Compile Include="Controllers\PhieuNhapKhoController.cs" />
+    <Compile Include="Controllers\PhieuTonDauController.cs" />
+    <Compile Include="Controllers\QuanController.cs" />
+    <Compile Include="Controllers\QuyenController.cs" />
+    <Compile Include="Controllers\TinhController.cs" />
+    <Compile Include="Controllers\TrangThaiDonHangController.cs" />
+    <Compile Include="Controllers\TuyenKhachHangController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="Controllers\UserinfoController.cs" />
+    <Compile Include="Controllers\XaPhuongController.cs" />
+    <Compile Include="Controllers\XeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Hubs\NotiChupAnh_Hub.cs" />
+    <Compile Include="Hubs\NotiDangNhap_Hub.cs" />
+    <Compile Include="Hubs\NotiDonHangHub.cs" />
+    <Compile Include="Hubs\NotiDonHang_Hub .cs" />
+    <Compile Include="Hubs\NotiHoatDong_Hub.cs" />
+    <Compile Include="Hubs\NotiTinNhan_Hub.cs" />
+    <Compile Include="Models\CreateModelKeHoach.cs" />
+    <Compile Include="Models\FileExcelUpload.cs" />
+    <Compile Include="Models\LoginRequest.cs" />
+    <Compile Include="Models\Models_Filter\ChuyenQuyenModelFilter.cs" />
+    <Compile Include="Models\Models_Filter\FileUploadModelFilter.cs" />
+    <Compile Include="Models\Models_Filter\GroupLinkModel.cs" />
+    <Compile Include="Models\Models_Filter\KhuyenMaiSaveModelFilter.cs" />
+    <Compile Include="Models\Models_Filter\ResetPassModelFilter.cs" />
+    <Compile Include="Models\Models_Filter\TieuChiLoc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Common.css" />
+    <Content Include="Assets\common.js" />
+    <Content Include="Assets\custom.css" />
+    <Content Include="Assets\custom.js" />
+    <Content Include="Assets\custom.min.css" />
+    <Content Include="Assets\custom.min.js" />
+    <Content Include="Assets\kendo\jszip.min.js" />
+    <Content Include="Assets\kendo\kendo-multi-calendar.js" />
+    <Content Include="Assets\kendo\kendo-multi-calendar.min.js" />
+    <Content Include="Assets\kendo\kendo-multi-date-select.js" />
+    <Content Include="Assets\kendo\kendo-multi-date-select.min.js" />
+    <Content Include="Assets\kendo\kendo.all.min.js" />
+    <Content Include="Assets\kendo\kendo.ext.css" />
+    <Content Include="Assets\kendo\kendo.web.ext.js" />
+    <Content Include="Assets\kendo\kendo2021.all.min.js" />
+    <Content Include="Assets\kendo\styles\Black\editor.png" />
+    <Content Include="Assets\kendo\styles\Black\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\Black\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\Black\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\Black\loading.gif" />
+    <Content Include="Assets\kendo\styles\Black\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\Black\markers.png" />
+    <Content Include="Assets\kendo\styles\Black\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\Black\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\Black\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\Black\sprite.png" />
+    <Content Include="Assets\kendo\styles\Black\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\Black\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\Black\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\BlueOpal\editor.png" />
+    <Content Include="Assets\kendo\styles\BlueOpal\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\BlueOpal\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\BlueOpal\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\BlueOpal\loading.gif" />
+    <Content Include="Assets\kendo\styles\BlueOpal\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\BlueOpal\markers.png" />
+    <Content Include="Assets\kendo\styles\BlueOpal\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\BlueOpal\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\BlueOpal\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\BlueOpal\sprite.png" />
+    <Content Include="Assets\kendo\styles\BlueOpal\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\BlueOpal\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\BlueOpal\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\Bootstrap\editor.png" />
+    <Content Include="Assets\kendo\styles\Bootstrap\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\Bootstrap\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\Bootstrap\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\Bootstrap\loading.gif" />
+    <Content Include="Assets\kendo\styles\Bootstrap\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\Bootstrap\markers.png" />
+    <Content Include="Assets\kendo\styles\Bootstrap\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\Bootstrap\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\Bootstrap\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\Bootstrap\sprite.png" />
+    <Content Include="Assets\kendo\styles\Bootstrap\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\Bootstrap\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\Bootstrap\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\Default\editor.png" />
+    <Content Include="Assets\kendo\styles\Default\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\Default\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\Default\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\Default\loading.gif" />
+    <Content Include="Assets\kendo\styles\Default\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\Default\markers.png" />
+    <Content Include="Assets\kendo\styles\Default\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\Default\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\Default\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\Default\sprite.png" />
+    <Content Include="Assets\kendo\styles\Default\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\Default\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\Default\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\Fiori\editor.png" />
+    <Content Include="Assets\kendo\styles\Fiori\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\Fiori\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\Fiori\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\Fiori\loading.gif" />
+    <Content Include="Assets\kendo\styles\Fiori\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\Fiori\markers.png" />
+    <Content Include="Assets\kendo\styles\Fiori\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\Fiori\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\Fiori\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\Fiori\sprite.png" />
+    <Content Include="Assets\kendo\styles\Fiori\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\Fiori\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\Fiori\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\Flat\editor.png" />
+    <Content Include="Assets\kendo\styles\Flat\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\Flat\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\Flat\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\Flat\loading.gif" />
+    <Content Include="Assets\kendo\styles\Flat\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\Flat\markers.png" />
+    <Content Include="Assets\kendo\styles\Flat\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\Flat\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\Flat\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\Flat\sprite.png" />
+    <Content Include="Assets\kendo\styles\Flat\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\Flat\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\Flat\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\LICENSE.txt" />
+    <Content Include="Assets\kendo\styles\fonts\glyphs\KendoUIGlyphs.svg" />
+    <Content Include="Assets\kendo\styles\fonts\glyphs\WebComponentsIcons.svg" />
+    <Content Include="Assets\kendo\styles\HighContrast\editor.png" />
+    <Content Include="Assets\kendo\styles\HighContrast\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\HighContrast\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\HighContrast\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\HighContrast\loading.gif" />
+    <Content Include="Assets\kendo\styles\HighContrast\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\HighContrast\markers.png" />
+    <Content Include="Assets\kendo\styles\HighContrast\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\HighContrast\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\HighContrast\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\HighContrast\sprite.png" />
+    <Content Include="Assets\kendo\styles\HighContrast\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\HighContrast\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\HighContrast\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\images\back.png" />
+    <Content Include="Assets\kendo\styles\images\kendoui.svg" />
+    <Content Include="Assets\kendo\styles\images\wp8_icons.png" />
+    <Content Include="Assets\kendo\styles\images\wp8_inverseicons.png" />
+    <Content Include="Assets\kendo\styles\kendo.black.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.black.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.blueopal.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.blueopal.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.bootstrap-v4.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.bootstrap.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.bootstrap.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.common-bootstrap.core.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.common-bootstrap.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.common-fiori.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.common-material.core.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.common-material.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.common-nova.core.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.common-nova.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.common-office365.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.common.core.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.common.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.dataviz.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.default-v2.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.default.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.default.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.fiori.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.fiori.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.flat.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.flat.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.highcontrast.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.highcontrast.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.material.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.material.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.materialblack.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.materialblack.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.metro.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.metro.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.metroblack.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.metroblack.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.all.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.android.dark.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.android.light.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.blackberry.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.common.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.fiori.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.flat.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.ios.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.material.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.meego.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.nova.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.office365.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.wp8.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.moonlight.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.moonlight.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.nova.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.nova.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.office365.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.office365.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.rtl.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.silver.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.silver.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.uniform.min.css" />
+    <Content Include="Assets\kendo\styles\kendo.uniform.mobile.min.css" />
+    <Content Include="Assets\kendo\styles\kendo2021.default-main.min.css" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\editor.png" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\loading.gif" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\markers.png" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\sprite.png" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\MaterialBlack\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\Material\editor.png" />
+    <Content Include="Assets\kendo\styles\Material\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\Material\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\Material\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\Material\loading.gif" />
+    <Content Include="Assets\kendo\styles\Material\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\Material\markers.png" />
+    <Content Include="Assets\kendo\styles\Material\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\Material\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\Material\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\Material\sprite.png" />
+    <Content Include="Assets\kendo\styles\Material\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\Material\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\Material\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\MetroBlack\editor.png" />
+    <Content Include="Assets\kendo\styles\MetroBlack\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\MetroBlack\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\MetroBlack\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\MetroBlack\loading.gif" />
+    <Content Include="Assets\kendo\styles\MetroBlack\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\MetroBlack\markers.png" />
+    <Content Include="Assets\kendo\styles\MetroBlack\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\MetroBlack\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\MetroBlack\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\MetroBlack\sprite.png" />
+    <Content Include="Assets\kendo\styles\MetroBlack\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\MetroBlack\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\MetroBlack\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\Metro\editor.png" />
+    <Content Include="Assets\kendo\styles\Metro\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\Metro\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\Metro\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\Metro\loading.gif" />
+    <Content Include="Assets\kendo\styles\Metro\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\Metro\markers.png" />
+    <Content Include="Assets\kendo\styles\Metro\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\Metro\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\Metro\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\Metro\sprite.png" />
+    <Content Include="Assets\kendo\styles\Metro\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\Metro\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\Metro\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\Moonlight\editor.png" />
+    <Content Include="Assets\kendo\styles\Moonlight\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\Moonlight\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\Moonlight\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\Moonlight\loading.gif" />
+    <Content Include="Assets\kendo\styles\Moonlight\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\Moonlight\markers.png" />
+    <Content Include="Assets\kendo\styles\Moonlight\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\Moonlight\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\Moonlight\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\Moonlight\sprite.png" />
+    <Content Include="Assets\kendo\styles\Moonlight\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\Moonlight\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\Moonlight\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\Nova\editor.png" />
+    <Content Include="Assets\kendo\styles\Nova\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\Nova\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\Nova\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\Nova\loading.gif" />
+    <Content Include="Assets\kendo\styles\Nova\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\Nova\markers.png" />
+    <Content Include="Assets\kendo\styles\Nova\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\Nova\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\Nova\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\Nova\sprite.png" />
+    <Content Include="Assets\kendo\styles\Nova\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\Nova\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\Nova\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\Office365\editor.png" />
+    <Content Include="Assets\kendo\styles\Office365\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\Office365\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\Office365\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\Office365\loading.gif" />
+    <Content Include="Assets\kendo\styles\Office365\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\Office365\markers.png" />
+    <Content Include="Assets\kendo\styles\Office365\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\Office365\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\Office365\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\Office365\sprite.png" />
+    <Content Include="Assets\kendo\styles\Office365\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\Office365\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\Office365\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\Silver\editor.png" />
+    <Content Include="Assets\kendo\styles\Silver\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\Silver\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\Silver\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\Silver\loading.gif" />
+    <Content Include="Assets\kendo\styles\Silver\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\Silver\markers.png" />
+    <Content Include="Assets\kendo\styles\Silver\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\Silver\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\Silver\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\Silver\sprite.png" />
+    <Content Include="Assets\kendo\styles\Silver\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\Silver\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\Silver\sprite_kpi_2x.png" />
+    <Content Include="Assets\kendo\styles\textures\brushed-metal.png" />
+    <Content Include="Assets\kendo\styles\textures\dots1.png" />
+    <Content Include="Assets\kendo\styles\textures\dots10.png" />
+    <Content Include="Assets\kendo\styles\textures\dots11.png" />
+    <Content Include="Assets\kendo\styles\textures\dots12.png" />
+    <Content Include="Assets\kendo\styles\textures\dots13.png" />
+    <Content Include="Assets\kendo\styles\textures\dots2.png" />
+    <Content Include="Assets\kendo\styles\textures\dots3.png" />
+    <Content Include="Assets\kendo\styles\textures\dots4.png" />
+    <Content Include="Assets\kendo\styles\textures\dots5.png" />
+    <Content Include="Assets\kendo\styles\textures\dots6.png" />
+    <Content Include="Assets\kendo\styles\textures\dots7.png" />
+    <Content Include="Assets\kendo\styles\textures\dots8.png" />
+    <Content Include="Assets\kendo\styles\textures\dots9.png" />
+    <Content Include="Assets\kendo\styles\textures\glass-lighter.png" />
+    <Content Include="Assets\kendo\styles\textures\glass.png" />
+    <Content Include="Assets\kendo\styles\textures\highlight.png" />
+    <Content Include="Assets\kendo\styles\textures\hsv-gradient.png" />
+    <Content Include="Assets\kendo\styles\textures\hue.png" />
+    <Content Include="Assets\kendo\styles\textures\leather1.png" />
+    <Content Include="Assets\kendo\styles\textures\leather2.png" />
+    <Content Include="Assets\kendo\styles\textures\noise.png" />
+    <Content Include="Assets\kendo\styles\textures\stripe1.png" />
+    <Content Include="Assets\kendo\styles\textures\stripe2.png" />
+    <Content Include="Assets\kendo\styles\textures\stripe3.png" />
+    <Content Include="Assets\kendo\styles\textures\stripe4.png" />
+    <Content Include="Assets\kendo\styles\textures\stripe5.png" />
+    <Content Include="Assets\kendo\styles\textures\stripe6.png" />
+    <Content Include="Assets\kendo\styles\textures\transparency.png" />
+    <Content Include="Assets\kendo\styles\textures\transtexture.png" />
+    <Content Include="Assets\kendo\styles\Uniform\editor.png" />
+    <Content Include="Assets\kendo\styles\Uniform\imagebrowser.png" />
+    <Content Include="Assets\kendo\styles\Uniform\indeterminate.gif" />
+    <Content Include="Assets\kendo\styles\Uniform\loading-image.gif" />
+    <Content Include="Assets\kendo\styles\Uniform\loading.gif" />
+    <Content Include="Assets\kendo\styles\Uniform\loading_2x.gif" />
+    <Content Include="Assets\kendo\styles\Uniform\markers.png" />
+    <Content Include="Assets\kendo\styles\Uniform\markers_2x.png" />
+    <Content Include="Assets\kendo\styles\Uniform\slider-h.gif" />
+    <Content Include="Assets\kendo\styles\Uniform\slider-v.gif" />
+    <Content Include="Assets\kendo\styles\Uniform\sprite.png" />
+    <Content Include="Assets\kendo\styles\Uniform\sprite_2x.png" />
+    <Content Include="Assets\kendo\styles\Uniform\sprite_kpi.png" />
+    <Content Include="Assets\kendo\styles\Uniform\sprite_kpi_2x.png" />
+    <Content Include="Assets\printQR.css" />
+    <Content Include="Assets\print.css" />
+    <Content Include="Assets\printTicket\bootstrap.css" />
+    <Content Include="Assets\printTicket\bootstrap.min.css" />
+    <Content Include="Assets\printTicket\jquery.js" />
+    <Content Include="Assets\printTicket\main.css" />
+    <Content Include="Assets\printTicket\print.css" />
+    <Content Include="Assets\stringeeConfig.js" />
+    <Content Include="Assets\b2cpaymentsucess.css" />
+    <Content Include="Assets\tracuulichhoc.css" />
+    <Content Include="Assets\vendors\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="Assets\vendors\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Assets\vendors\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Assets\vendors\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Assets\vendors\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\vendors\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Assets\vendors\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Assets\vendors\bootstrap\dist\js\npm.js" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\vendors\bootstrap\Gruntfile.js" />
+    <Content Include="Assets\vendors\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="Assets\vendors\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="Assets\vendors\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="Assets\vendors\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="Assets\vendors\bootstrap\js\affix.js" />
+    <Content Include="Assets\vendors\bootstrap\js\alert.js" />
+    <Content Include="Assets\vendors\bootstrap\js\button.js" />
+    <Content Include="Assets\vendors\bootstrap\js\carousel.js" />
+    <Content Include="Assets\vendors\bootstrap\js\collapse.js" />
+    <Content Include="Assets\vendors\bootstrap\js\dropdown.js" />
+    <Content Include="Assets\vendors\bootstrap\js\modal.js" />
+    <Content Include="Assets\vendors\bootstrap\js\popover.js" />
+    <Content Include="Assets\vendors\bootstrap\js\scrollspy.js" />
+    <Content Include="Assets\vendors\bootstrap\js\tab.js" />
+    <Content Include="Assets\vendors\bootstrap\js\tooltip.js" />
+    <Content Include="Assets\vendors\bootstrap\js\transition.js" />
+    <Content Include="Assets\vendors\bootstrap\package.js" />
+    <Content Include="Assets\vendors\font-awesome\css\font-awesome.css" />
+    <Content Include="Assets\vendors\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\vendors\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Assets\xlsx.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fontawesome-all.min.css" />
+    <Content Include="EmailTemplate\B2C_BookingConfirm.txt" />
+    <Content Include="EmailTemplate\DailyInvReport.html" />
+    <Content Include="EmailTemplate\InvoiceExportTicket_old.html" />
+    <Content Include="EmailTemplate\WelcomeHDV.html" />
+    <Content Include="EmailTemplate\WelcomeOTA.html" />
+    <Content Include="EmailTemplate\InvoiceCreatedForOTA.html" />
+    <Content Include="EmailTemplate\InvoiceCreatedPCHL.html" />
+    <Content Include="EmailTemplate\InvoiceExportTicket.html" />
+    <Content Include="EmailTemplate\InvoicePaid.html" />
+    <Content Include="EmailTemplate\InvoiceCreated.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="FileUpload\Images\anhdaidien02042020054939.jpg" />
+    <Content Include="FileUpload\Images\anhdaidien02042020054939_medium.jpg" />
+    <Content Include="FileUpload\Images\anhdaidien02042020054939_small.jpg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\cat1.png" />
+    <Content Include="Images\cat2.png" />
+    <Content Include="Images\cat3.png" />
+    <Content Include="Images\cat4.png" />
+    <Content Include="Images\cat5.png" />
+    <Content Include="Images\cat6.png" />
+    <Content Include="Images\cat7.png" />
+    <Content Include="Images\icon.ico" />
+    <Content Include="Images\Icon1.png" />
+    <Content Include="Images\icon2.png" />
+    <Content Include="Images\icon3.png" />
+    <Content Include="Images\icon4.png" />
+    <Content Include="Images\location.png" />
+    <Content Include="Images\location_mb.png" />
+    <Content Include="Images\logo-foter.png" />
+    <Content Include="Images\logo\icontreem.png" />
+    <Content Include="Images\logo\list-ve.png" />
+    <Content Include="Images\logo\logo.png" />
+    <Content Include="Images\logo\test.png" />
+    <Content Include="Images\map99.jpg" />
+    <Content Include="Images\noiquy99.jpg" />
+    <Content Include="Images\search.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="log4net.config" />
+    <Content Include="FileExport\Excel\DSKhachHang_Template.xls" />
+    <Content Include="FileExport\Excel\DSKhachHang_Template.xlsx" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSans-Bold.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSans-BoldOblique.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSans-ExtraLight.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSans-Oblique.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSans.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSansMono-Bold.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSansMono-BoldOblique.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSansMono-Oblique.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSansMono.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSerif-Bold.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSerif-BoldItalic.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSerif-Italic.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\DejaVu\DejaVuSerif.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\glyphs\KendoUIGlyphs.eot" />
+    <Content Include="Assets\kendo\styles\fonts\glyphs\KendoUIGlyphs.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\glyphs\KendoUIGlyphs.woff" />
+    <Content Include="Assets\kendo\styles\fonts\glyphs\WebComponentsIcons.eot" />
+    <Content Include="Assets\kendo\styles\fonts\glyphs\WebComponentsIcons.ttf" />
+    <Content Include="Assets\kendo\styles\fonts\glyphs\WebComponentsIcons.woff" />
+    <Content Include="Assets\kendo\styles\images\kendoui.ttf" />
+    <Content Include="Assets\kendo\styles\images\kendoui.woff" />
+    <Content Include="Assets\kendo\styles\kendo.black.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.black.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.blueopal.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.blueopal.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.bootstrap-v4.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.bootstrap.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.bootstrap.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.common-bootstrap.core.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.common-bootstrap.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.common-fiori.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.common-material.core.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.common-material.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.common-nova.core.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.common-nova.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.common-office365.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.common.core.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.common.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.dataviz.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.default-v2.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.default.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.default.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.fiori.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.fiori.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.flat.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.flat.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.highcontrast.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.highcontrast.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.material.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.material.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.materialblack.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.materialblack.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.metro.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.metro.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.metroblack.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.metroblack.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.all.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.android.dark.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.android.light.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.blackberry.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.common.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.fiori.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.flat.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.ios.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.material.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.meego.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.nova.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.office365.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.mobile.wp8.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.moonlight.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.moonlight.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.nova.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.nova.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.office365.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.office365.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.rtl.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.silver.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.silver.mobile.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.uniform.min.css.map" />
+    <Content Include="Assets\kendo\styles\kendo.uniform.mobile.min.css.map" />
+    <Content Include="Assets\serviceAccount.json" />
+    <Content Include="Assets\vendors\bootstrap\.bower.json" />
+    <Content Include="Assets\vendors\bootstrap\bower.json" />
+    <Content Include="Assets\vendors\bootstrap\CHANGELOG.md" />
+    <Content Include="Assets\vendors\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="Assets\vendors\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="Assets\vendors\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Assets\vendors\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Assets\vendors\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\vendors\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\vendors\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\vendors\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\vendors\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\vendors\bootstrap\grunt\.jshintrc" />
+    <Content Include="Assets\vendors\bootstrap\grunt\configBridge.json" />
+    <Content Include="Assets\vendors\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="Assets\vendors\bootstrap\js\.jscsrc" />
+    <Content Include="Assets\vendors\bootstrap\js\.jshintrc" />
+    <Content Include="Assets\vendors\bootstrap\less\.csscomb.json" />
+    <Content Include="Assets\vendors\bootstrap\less\.csslintrc" />
+    <Content Include="Assets\vendors\bootstrap\less\alerts.less" />
+    <Content Include="Assets\vendors\bootstrap\less\badges.less" />
+    <Content Include="Assets\vendors\bootstrap\less\bootstrap.less" />
+    <Content Include="Assets\vendors\bootstrap\less\breadcrumbs.less" />
+    <Content Include="Assets\vendors\bootstrap\less\button-groups.less" />
+    <Content Include="Assets\vendors\bootstrap\less\buttons.less" />
+    <Content Include="Assets\vendors\bootstrap\less\carousel.less" />
+    <Content Include="Assets\vendors\bootstrap\less\close.less" />
+    <Content Include="Assets\vendors\bootstrap\less\code.less" />
+    <Content Include="Assets\vendors\bootstrap\less\component-animations.less" />
+    <Content Include="Assets\vendors\bootstrap\less\dropdowns.less" />
+    <Content Include="Assets\vendors\bootstrap\less\forms.less" />
+    <Content Include="Assets\vendors\bootstrap\less\glyphicons.less" />
+    <Content Include="Assets\vendors\bootstrap\less\grid.less" />
+    <Content Include="Assets\vendors\bootstrap\less\input-groups.less" />
+    <Content Include="Assets\vendors\bootstrap\less\jumbotron.less" />
+    <Content Include="Assets\vendors\bootstrap\less\labels.less" />
+    <Content Include="Assets\vendors\bootstrap\less\list-group.less" />
+    <Content Include="Assets\vendors\bootstrap\less\media.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\alerts.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\buttons.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\center-block.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\forms.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\gradients.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\grid.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\image.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\labels.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\list-group.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\opacity.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\pagination.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\panels.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\resize.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\size.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\table-row.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="Assets\vendors\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="Assets\vendors\bootstrap\less\modals.less" />
+    <Content Include="Assets\vendors\bootstrap\less\navbar.less" />
+    <Content Include="Assets\vendors\bootstrap\less\navs.less" />
+    <Content Include="Assets\vendors\bootstrap\less\normalize.less" />
+    <Content Include="Assets\vendors\bootstrap\less\pager.less" />
+    <Content Include="Assets\vendors\bootstrap\less\pagination.less" />
+    <Content Include="Assets\vendors\bootstrap\less\panels.less" />
+    <Content Include="Assets\vendors\bootstrap\less\popovers.less" />
+    <Content Include="Assets\vendors\bootstrap\less\print.less" />
+    <Content Include="Assets\vendors\bootstrap\less\progress-bars.less" />
+    <Content Include="Assets\vendors\bootstrap\less\responsive-embed.less" />
+    <Content Include="Assets\vendors\bootstrap\less\responsive-utilities.less" />
+    <Content Include="Assets\vendors\bootstrap\less\scaffolding.less" />
+    <Content Include="Assets\vendors\bootstrap\less\tables.less" />
+    <Content Include="Assets\vendors\bootstrap\less\theme.less" />
+    <Content Include="Assets\vendors\bootstrap\less\thumbnails.less" />
+    <Content Include="Assets\vendors\bootstrap\less\tooltip.less" />
+    <Content Include="Assets\vendors\bootstrap\less\type.less" />
+    <Content Include="Assets\vendors\bootstrap\less\utilities.less" />
+    <Content Include="Assets\vendors\bootstrap\less\variables.less" />
+    <Content Include="Assets\vendors\bootstrap\less\wells.less" />
+    <Content Include="Assets\vendors\bootstrap\LICENSE" />
+    <Content Include="Assets\vendors\bootstrap\nuget\bootstrap.less.nuspec" />
+    <Content Include="Assets\vendors\bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="Assets\vendors\bootstrap\nuget\MyGet.ps1" />
+    <Content Include="Assets\vendors\bootstrap\package.json" />
+    <Content Include="Assets\vendors\bootstrap\README.md" />
+    <Content Include="Assets\vendors\font-awesome\.bower.json" />
+    <Content Include="Assets\vendors\font-awesome\.gitignore" />
+    <Content Include="Assets\vendors\font-awesome\.npmignore" />
+    <Content Include="Assets\vendors\font-awesome\bower.json" />
+    <Content Include="Assets\vendors\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\vendors\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\vendors\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Assets\vendors\font-awesome\less\animated.less" />
+    <Content Include="Assets\vendors\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Assets\vendors\font-awesome\less\core.less" />
+    <Content Include="Assets\vendors\font-awesome\less\fixed-width.less" />
+    <Content Include="Assets\vendors\font-awesome\less\font-awesome.less" />
+    <Content Include="Assets\vendors\font-awesome\less\icons.less" />
+    <Content Include="Assets\vendors\font-awesome\less\larger.less" />
+    <Content Include="Assets\vendors\font-awesome\less\list.less" />
+    <Content Include="Assets\vendors\font-awesome\less\mixins.less" />
+    <Content Include="Assets\vendors\font-awesome\less\path.less" />
+    <Content Include="Assets\vendors\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Assets\vendors\font-awesome\less\screen-reader.less" />
+    <Content Include="Assets\vendors\font-awesome\less\stacked.less" />
+    <Content Include="Assets\vendors\font-awesome\less\variables.less" />
+    <Content Include="Assets\vendors\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_animated.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_core.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_icons.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_larger.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_list.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_mixins.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_path.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_stacked.scss" />
+    <Content Include="Assets\vendors\font-awesome\scss\_variables.scss" />
+    <Content Include="Assets\tourshopping-6bb85abcf6fd.json" />
+    <Content Include="fonts\SF-Pro-Display-Black.otf" />
+    <Content Include="fonts\SF-Pro-Display-BlackItalic.otf" />
+    <Content Include="fonts\SF-Pro-Display-Bold.otf" />
+    <Content Include="fonts\SF-Pro-Display-BoldItalic.otf" />
+    <Content Include="fonts\SF-Pro-Display-Heavy.otf" />
+    <Content Include="fonts\SF-Pro-Display-HeavyItalic.otf" />
+    <Content Include="fonts\SF-Pro-Display-Light.otf" />
+    <Content Include="fonts\SF-Pro-Display-LightItalic.otf" />
+    <Content Include="fonts\SF-Pro-Display-Medium.otf" />
+    <Content Include="fonts\SF-Pro-Display-MediumItalic.otf" />
+    <Content Include="fonts\SF-Pro-Display-Regular.otf" />
+    <Content Include="fonts\SF-Pro-Display-RegularItalic.otf" />
+    <Content Include="fonts\SF-Pro-Display-Semibold.otf" />
+    <Content Include="fonts\SF-Pro-Display-SemiboldItalic.otf" />
+    <Content Include="fonts\SF-Pro-Display-Thin.otf" />
+    <Content Include="fonts\SF-Pro-Display-ThinItalic.otf" />
+    <Content Include="fonts\SF-Pro-Display-Ultralight.otf" />
+    <Content Include="fonts\SF-Pro-Display-UltralightItalic.otf" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.3.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.3.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\booking\listservices.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\qrcode.js" />
+    <Content Include="Scripts\qrcode.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutPos.cshtml" />
+    <Content Include="Views\Home\Order.cshtml" />
+    <Content Include="Views\Booking\ListServices.cshtml" />
+    <Content Include="Views\Booking\ThongBaoBookingThanhCong.cshtml" />
+    <Content Include="Views\Booking\PrintTicket1.cshtml" />
+    <Content Include="Views\Booking\PrintTicket.cshtml" />
+    <Content Include="Views\Booking\PrintTicketByBookingCode.cshtml" />
+    <Content Include="Views\Booking\PrintQRTicketByBookingCode.cshtml" />
+    <Content Include="Views\Booking\PrintQRTicketByBookingCodeForTamCoc.cshtml" />
+    <Content Include="Views\Booking\PrintQRTicketByBookingCodeForBaiDinh.cshtml" />
+    <Content Include="Views\Booking\PrintQRTicketByBookingCodeForPCHL.cshtml" />
+    <Content Include="Views\Booking\PaymentSuccess.cshtml" />
+    <Content Include="Views\Booking\PaymentSuccessLspay.cshtml" />
+    <Content Include="Views\Booking\VnpayWaitPayment.cshtml" />
+    <Content Include="Views\Booking\VnpayWaitPaymentPCHL.cshtml" />
+    <Content Include="Views\Booking\VnpayWaitPayment_KC.cshtml" />
+    <Content Include="Views\Booking\PaymentSuccessB2C_old.cshtml" />
+    <Content Include="Views\Booking\PrintTicketBySubBookingCode.cshtml" />
+    <Content Include="Views\Booking\PaymentSuccessB2C.cshtml" />
+    <Content Include="Views\Booking\OnlineTicketByBookingCode.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="EmployeeImage\" />
+    <Folder Include="FileUpload\ExcelFiles\" />
+    <Folder Include="FileUpload\invoice_qr\" />
+    <Folder Include="FileUpload\user_qr\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LSPos_API\LSPos_API.csproj">
+      <Project>{F48E7F94-0CA7-4795-8C27-46CDB0A1A743}</Project>
+      <Name>LSPos_API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSPos_Data\LSPos_Data.csproj">
+      <Project>{f754cf8b-43f2-4268-a51f-33e98bc82870}</Project>
+      <Name>LSPos_Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54524</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44368/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Grpc.Core.2.46.5\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Core.2.46.5\build\net45\Grpc.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\Grpc.Core.2.46.5\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.2.46.5\build\net45\Grpc.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,872 @@
+﻿2023/03/05 20:37:12,420 ERROR 7 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 20:37:29,353 ERROR 7 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 20:49:08,890 ERROR 31 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 20:50:20,364 ERROR 25 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 20:51:42,995 ERROR 11 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 20:54:19,316 ERROR 30 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 20:54:52,761 ERROR 11 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(3) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:54:52,855 ERROR 11 LSPos_Data.Utilities.Log - System.FormatException: Format specifier was invalid.
+   at System.Number.FormatDouble(Double value, String format, NumberFormatInfo info)
+   at LSPosMVC.Common.utilsCommon.genMaDonHang(NhanVienAppModels nhanVienInfor, String macuoicung, String idnhom, String MaNhom, Int32 sttDonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 126
+2023/03/05 20:54:56,104 ERROR 11 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:54:56,335 ERROR 17 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:55:18,588 ERROR 30 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:55:18,606 ERROR 13 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:55:27,043 ERROR 36 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:55:51,032 ERROR 16 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:56:39,801 ERROR 29 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:57:19,260 ERROR 36 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/05 20:57:19,262 ERROR 12 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyHoatDong.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceHoatDong.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllHoatDong(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 20
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 49
+2023/03/05 20:57:19,273 ERROR 16 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/05 20:57:19,368 ERROR 29 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2023/03/05 20:57:19,372 ERROR 13 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyHoatDong.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceHoatDong.cs:line 32
+   at LSPos_Data.Data.NotifyData.GetAllHoatDong(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 20
+   at LSPosMVC.Controllers.NotifycationsController.getnewfeed(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 49
+2023/03/05 20:57:19,373 ERROR 17 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyTinNhan.CreateCommand(SqlCommand cmd) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\DependenceTinNhan.cs:line 30
+   at LSPos_Data.Data.NotifyData.GetAllTinNhan(Int32 ID_QLLH) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\App_Start\NotifyData.cs:line 42
+   at LSPosMVC.Controllers.NotifycationsController.canhbaotinnhanmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 609
+2023/03/05 20:57:53,024 ERROR 23 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:58:09,550 ERROR 16 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:58:12,628 ERROR 29 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 20:59:06,470 ERROR 13 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:59:16,596 ERROR 12 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:59:20,719 ERROR 20 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 20:59:22,789 ERROR 12 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:01:59,664 ERROR 16 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:02:54,369 ERROR 36 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:02:57,068 ERROR 16 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:03:37,215 ERROR 28 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:04:55,352 ERROR 20 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:06:40,612 ERROR 19 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:13:13,125 ERROR 17 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:13:25,678 ERROR 20 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 21:13:25,679 ERROR 20 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 21:13:25,680 ERROR 20 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 21:13:25,680 ERROR 20 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 21:13:25,680 ERROR 20 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 21:13:25,681 ERROR 20 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 21:13:25,682 ERROR 20 NhanVien_dl - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at NhanVien_dl.GetNhanVienFromDataRow(DataRow dr) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\NhanVien_dl.cs:line 90
+2023/03/05 21:13:55,520 ERROR 12 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(3) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:13:55,584 ERROR 12 LSPos_Data.Utilities.Log - System.FormatException: Format specifier was invalid.
+   at System.Number.FormatDouble(Double value, String format, NumberFormatInfo info)
+   at LSPosMVC.Common.utilsCommon.genMaDonHang(NhanVienAppModels nhanVienInfor, String macuoicung, String idnhom, String MaNhom, Int32 sttDonHang) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 126
+2023/03/05 21:13:55,944 ERROR 12 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:14:03,752 ERROR 23 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:14:03,770 ERROR 27 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:14:15,015 ERROR 20 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:14:56,713 ERROR 17 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:15:36,308 ERROR 28 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:17:23,371 ERROR 29 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:18:32,968 ERROR 36 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:18:54,383 ERROR 28 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:20:01,092 ERROR 27 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:20:21,693 ERROR 23 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:22:54,940 ERROR 20 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:23:58,229 ERROR 23 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:24:08,523 ERROR 27 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:29:14,531 ERROR 11 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 21:30:03,310 ERROR 13 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 22:24:45,435 ERROR 25 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 22:41:44,640 ERROR 30 SqlDataHelper - System.InvalidOperationException: DataReader.GetFieldType(2) returned null.
+   at System.Data.ProviderBase.SchemaMapping.SetupSchemaWithoutKeyInfo(MissingMappingAction mappingAction, MissingSchemaAction schemaAction, Boolean gettingData, DataColumn parentChapterColumn, Object chapterValue)
+   at System.Data.ProviderBase.SchemaMapping..ctor(DataAdapter adapter, DataSet dataset, DataTable datatable, DataReaderContainer dataReader, Boolean keyInfo, SchemaType schemaType, String sourceTableName, Boolean gettingData, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMappingInternal(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillMapping(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 schemaCount, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at SqlDataHelper.ExecuteDataSet(String procName, SqlParameter[] procParams) in C:\Users\quang\source\repos\LSPosCore\LSPos_Data\DataAccess\SqlDataHelper.cs:line 429
+2023/03/05 23:04:41,269 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:04:41,269 ERROR 17 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:04:41,280 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:04:41,422 ERROR 17 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:05:26,282 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:05:26,282 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:05:26,283 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:05:26,292 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:05:41,201 ERROR 11 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:05:41,205 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:05:41,205 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:05:41,205 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:06:26,258 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:06:26,259 ERROR 23 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:06:26,260 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:06:26,260 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:06:41,236 ERROR 17 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:06:41,236 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:06:41,236 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:06:41,242 ERROR 23 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:07:26,254 ERROR 11 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:07:26,254 ERROR 11 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:07:26,254 ERROR 27 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:07:26,254 ERROR 30 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:07:41,210 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:07:41,212 ERROR 11 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:07:41,513 ERROR 27 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:07:41,513 ERROR 27 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:08:26,244 ERROR 30 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:08:26,249 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:08:26,275 ERROR 19 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:08:26,276 ERROR 19 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:08:41,239 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:08:41,240 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:08:41,240 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:08:41,242 ERROR 13 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:09:43,238 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:09:43,252 ERROR 30 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:09:43,255 ERROR 19 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:09:43,255 ERROR 19 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:09:43,277 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:09:43,296 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:09:43,301 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:09:43,301 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:10:45,268 ERROR 13 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:10:45,268 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:10:45,269 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:10:45,269 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:10:45,316 ERROR 12 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:10:45,317 ERROR 12 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:10:45,339 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:10:45,339 ERROR 11 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:11:45,215 ERROR 17 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:11:45,215 ERROR 17 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:11:45,215 ERROR 27 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:11:45,220 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:11:45,261 ERROR 12 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:11:45,261 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:11:45,261 ERROR 13 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:11:45,555 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:12:45,229 ERROR 13 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:12:45,229 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:12:45,229 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:12:45,229 ERROR 17 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:12:45,269 ERROR 19 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:12:45,270 ERROR 36 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:12:45,271 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:12:45,271 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:13:45,244 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:13:45,245 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:13:45,246 ERROR 23 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:13:45,258 ERROR 11 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:13:45,285 ERROR 23 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:13:45,285 ERROR 23 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:13:45,287 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:13:45,297 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:14:45,223 ERROR 17 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:14:45,223 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:14:45,224 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:14:45,224 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:14:45,263 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:14:45,263 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:14:45,267 ERROR 36 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:14:45,267 ERROR 36 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:15:45,245 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:15:45,245 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:15:45,245 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:15:45,246 ERROR 13 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:15:45,289 ERROR 19 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:15:45,289 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:15:45,290 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:15:45,290 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:16:45,249 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:16:45,249 ERROR 23 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:16:45,250 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:16:45,250 ERROR 17 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:16:45,291 ERROR 36 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:16:45,291 ERROR 36 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:16:45,291 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:16:45,292 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:17:45,256 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:17:45,257 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:17:45,265 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:17:45,268 ERROR 17 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:17:45,296 ERROR 30 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:17:45,297 ERROR 30 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:17:45,306 ERROR 27 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:17:45,308 ERROR 11 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:18:45,230 ERROR 12 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:18:45,230 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:18:45,230 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:18:45,230 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:18:45,277 ERROR 19 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:18:45,278 ERROR 30 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:18:45,278 ERROR 19 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:18:45,278 ERROR 36 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:19:45,232 ERROR 19 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:19:45,233 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:19:45,233 ERROR 36 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:19:45,233 ERROR 36 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:19:45,274 ERROR 30 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:19:45,276 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:19:45,311 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:19:45,311 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:20:45,253 ERROR 36 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:20:45,261 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:20:45,261 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:20:45,261 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:20:45,292 ERROR 17 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:20:45,304 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:20:45,304 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:20:45,305 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:21:45,267 ERROR 13 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:21:45,268 ERROR 25 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:21:45,269 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:21:45,269 ERROR 20 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:21:45,310 ERROR 27 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:21:45,310 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:21:45,311 ERROR 30 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:21:45,312 ERROR 30 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:22:45,236 ERROR 19 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:22:45,236 ERROR 19 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:22:45,236 ERROR 16 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:22:45,239 ERROR 28 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:22:45,279 ERROR 17 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:22:45,279 ERROR 27 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42
+2023/03/05 23:22:45,280 ERROR 27 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Controllers\NotifycationsController.cs:line 470
+2023/03/05 23:22:45,283 ERROR 29 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.Common.utilsCommon.checkAuthorization() in C:\Users\quang\source\repos\LSPosCore\LSPosMVC\Common\utilsCommon.cs:line 42

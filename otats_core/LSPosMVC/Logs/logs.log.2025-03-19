@@ -1,0 +1,86 @@
+﻿2025/03/19 13:20:13,349 ERROR 14 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:20:34,221 ERROR 7 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:20:53,125 ERROR 15 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:21:45,367 ERROR 14 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:21:58,704 ERROR 11 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:22:13,600 ERROR 10 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:22:48,098 ERROR 14 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:27:07,545 ERROR 34 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:27:47,757 ERROR 34 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:27:57,947 ERROR 31 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:28:19,004 ERROR 35 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:29:00,227 ERROR 38 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:31:24,445 ERROR 41 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:32:17,137 ERROR 37 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:32:25,312 ERROR 37 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:33:36,191 ERROR 49 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:34:01,508 ERROR 50 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:40:42,043 ERROR 50 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/03/19 13:40:46,760 ERROR 26 LSPos_Data.Utilities.Log - System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at LSPosMVC.DependencyDonhang.CreateCommand(SqlCommand cmd) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\DependenceDonHang.cs:line 31
+   at LSPos_Data.Data.NotifyData.GetAllDonHang(Int32 ID_QLLH, Int32 ID_QuanLy) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\NotifyData.cs:line 36
+   at LSPosMVC.Controllers.NotifycationsController.canhbaodonhangmoi(String type) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\NotifycationsController.cs:line 489
+2025/03/19 13:40:46,848 ERROR 19 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250

@@ -1,0 +1,20 @@
+﻿2024/08/29 08:06:22,420 ERROR 9 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at LSPos_Data.Data.UserinforData.GetUserInfo(String username, String macongty) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\UserinforData.cs:line 79
+   at LSPosMVC.Controllers.UserinfoController.Login(LoginRequest login) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\UserinfoController.cs:line 38
+2024/08/29 08:06:22,631 ERROR 22 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at LSPos_Data.Data.UserinforData.GetUserInfo(String username, String macongty) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\UserinforData.cs:line 79
+   at LSPosMVC.Controllers.UserinfoController.Login(LoginRequest login) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\UserinfoController.cs:line 38
+2024/08/29 08:06:35,788 ERROR 13 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at LSPos_Data.Data.UserinforData.GetUserInfo(String username, String macongty) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\UserinforData.cs:line 79
+   at LSPosMVC.Controllers.UserinfoController.Login(LoginRequest login) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\UserinfoController.cs:line 38
+2024/08/29 08:07:19,590 ERROR 6 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at LSPos_Data.Data.UserinforData.GetUserInfo(String username, String macongty) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\UserinforData.cs:line 79
+   at LSPosMVC.Controllers.UserinfoController.Login(LoginRequest login) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\UserinfoController.cs:line 38

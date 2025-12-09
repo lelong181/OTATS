@@ -1,0 +1,65 @@
+﻿<!--<script src="js/libs/kendo/js/kendo.timezones.min.js"></script>-->
+<link href="app/components/kehoach/kehoachnhanvienStyle.css" rel="stylesheet" />
+<div class="container-fluid">
+    <!--<div class="content-title text-info"><i class="fas fa-id-card"></i> LẬP LỊCH GIAO HÀNG</div>-->
+    <div kendo-scheduler="scheduler" id="scheduler" k-options="schedulerOptions">
+    </div>
+</div>
+
+<div id="templateSchedulerTooltip" style="display:none">
+    #var uid = target.attr("data-uid");#
+    #var scheduler = target.closest("[data-role=scheduler]").data("kendoScheduler");#
+    #var model = scheduler.occurrenceByUid(uid);#
+    <p>{{bindTextI18n('label_nhanvien')}}: #= model.tenNhanVien #</p>
+    <p>{{bindTextI18n('header_donhang')}}: #= model.title #</p>
+    <!--<p>#= model.start #</p>-->
+    <p>{{bindTextI18n('label_giaohangdukien')}}: #: kendo.toString(model.start, "HH:mm") #</p>
+    <p>#= $.i18n(model.mota) #</p>
+</div>
+
+<script id="eventschedule_giaohang_template" type="text/x-kendo-template">
+    <div style="background-color:#: text_color #; height:100%;padding-top:5px;text-align:center;width:100%">
+        <span>#:kendo.toString(start,'HH:mm')# - #= title #</span>
+    </div>
+</script>
+
+<script id="scheduler_editkehoachgiaohang" type="text/x-kendo-template">
+
+    <div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachgiaohang_nhanvien" class="labelForm">{{bindTextI18n('label_nhanvien')}} :</label>
+        </div>
+        <div class="col-sm-9">
+            <input style="width:100%" id="kehoachgiaohang_nhanvien" />
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachgiaohang_donhang" class="labelForm">{{bindTextI18n('header_donhang')}} :</label>
+        </div>
+        <div class="col-sm-9">
+            <input style="width:100%" id="kehoachgiaohang_donhang" />
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachgiaohang_giocheckin" class="labelForm">{{bindTextI18n('label_ngaygiogiaohang')}}:</label>
+        </div>
+        <div class="col-sm-9">
+            <input style="width:100%" id="kehoachgiaohang_giocheckin" />
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachgiaohang_ghichu" class="labelForm">{{bindTextI18n('label_ghichu')}} :</label>
+        </div>
+        <div class="col-sm-9">
+            <input class="k-textbox" style="width:100%" id="kehoachgiaohang_ghichu" />
+
+        </div>
+    </div>
+
+</script>

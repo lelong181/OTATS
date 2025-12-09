@@ -1,0 +1,78 @@
+﻿<style>
+    #formCheckOnepay {
+        text-align: center;
+    }
+
+        #formCheckOnepay label {
+            width: 100%;
+            text-align: center;
+        }
+
+        #formCheckOnepay i {
+            font-size: 100px;
+            line-height: 150px;
+        }
+</style>
+<div class="container-fluid">
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_tungay')}}:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_TuNgay"
+                           k-ng-model="obj_TuNgay"
+                           k-max="maxDate"
+                           k-rebind="maxDate"
+                           k-on-change="fromDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_denngay')}}:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_DenNgay"
+                           k-ng-model="obj_DenNgay"
+                           k-min="minDate"
+                           k-rebind="minDate"
+                           k-on-change="toDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+
+            <!--<div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">Ví:</label>
+                    <select id="nhomnhanvien" kendo-combo-box="nhomnhanvien"
+                            k-placeholder="bindTextI18n('label_nhomnhanvien')"
+                            k-data-text-field="'tenNhom'"
+                            k-data-value-field="'iD_Nhom'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="nhomnhanvienselect"
+                            k-data-source="nhomnhanvienData"
+                            k-on-change="nhomnhanvienOnChange(kendoEvent)"></select>
+                </div>
+            </div>-->
+            <div class="col-sm-3">
+                <button id="btn_bm022xembaocao" class="btn btn-outline-info btn-menu__report" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm "></i> {{bindTextI18n('button_xembaocao')}}</button>
+                <button id="btn_bm022xuatexcel" class="btn btn-outline-secondary btn-menu__report" ng-click="XuatExcel()"><i class="fas fa-file-excel fas-sm "></i> {{bindTextI18n('button_xuatexcel')}}</button>
+            </div>
+        </div>
+    </div>
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+
+<div kendo-window="formCheckOnepay" id="formCheckOnepay" k-title="'Kiểm tra trạng thái giao dịch - OnePay'" k-visible="false" k-modal="true" k-width="700" k-height="420">
+    <i ng-show="giaodich.vpc_TxnResponseCode === '0'" class="fas fa-check-circle fas-sm" style=" color: #259d09;"></i>
+    <i ng-show="giaodich.vpc_TxnResponseCode !== '0'" class="fas fa-times-circle fas-sm" style=" color: #ff0000;"></i>
+    <label>Số tiền: <b>{{fomartnumber(giaodich.vpc_Amount)}} VNĐ</b></label>
+    <label>Mã tham chiếu giao dịch: <b>{{giaodich.vpc_MerchTxnRef}}</b></label>
+    <label>Merchant: <b>{{giaodich.vpc_Merchant}}</b></label>
+    <label>Trạng thái: <b>{{giaodich.vpc_Message}}</b></label>
+    <label>Kênh thanh toán: <b>{{giaodich.vpc_PayChannel}}</b></label>
+    <label>Mã số giao dịch: <b>{{giaodich.vpc_TransactionNo}}</b></label>
+    <label>Mã lỗi: <b>{{giaodich.vpc_TxnResponseCode}}</b></label>
+</div>
+

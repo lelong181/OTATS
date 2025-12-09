@@ -1,0 +1,120 @@
+﻿<link href="/app/components/congviec/chiTieuKPIStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="toolbarmenu">
+            </div>
+            <div id="treeview"></div>
+        </div>
+        <div class="col-sm-9">
+            <div class="toolbarmenu">
+                <button id="btn_themkpi" ng-show="(permission.them > 0)" ng-click="addChiTieuKPI()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_them')}}</button>
+                <button id="btn_themkpinhom" ng-show="(permission.them > 0)" ng-click="addChiTieuKPINhom()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_themchitieukpitheonhom')}}</button>
+                <button id="btn_suakpi"  ng-show="(permission.sua > 0)"  ng-click="editChiTieuKPI()" class="btn btn-link btn-menubar"><i class="fas fa-edit fas-sm color-infor"></i> {{bindTextI18n('button_sua')}}</button>
+                <button id="btn_xoakpi"  ng-show="(permission.xoa > 0)"  ng-click="deleteChiTieuKPI()" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> {{bindTextI18n('button_xoa')}}</button>
+            </div>
+            <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+        </div>
+    </div>
+</div>
+
+<!--popup chi tiết-->
+<div kendo-window="formdetail" id="formdetail" k-title="bindTextI18n('label_chitiet')" k-visible="false" k-modal="true" k-width="400" k-height="500">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luukpi" ng-show="((permission.them > 0 && idkpi <= 0) ||(permission.sua > 0 && idkpi > 0))" ng-click="luukpi()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+                <button id="btn_huykpi" ng-click="huykpi()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="row" ng-show="!shownhom">
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_nhanvien')}} <span class="color-danger">(*)</span></label>
+                    <select kendo-combo-box="nhanvien"
+                            id="nhanvien"
+                            k-placeholder="bindTextI18n('label_nhanvien')"
+                            k-data-text-field="'tenDayDu'"
+                            k-data-value-field="'idnv'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="nhanvienselect"
+                            k-data-source="nhanvienData"
+                            k-on-change="nhanvienOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="shownhom">
+            <div class="col-sm-12">
+                <label class="labelBaoCaoNgang">{{bindTextI18n('label_nhomnhanvien')}} <span class="color-danger">(*)</span></label>
+                <select kendo-combo-box
+                        k-placeholder="bindTextI18n('label_nhomnhanvien')"
+                        id="nhomNhanVien"
+                        k-data-text-field="'tenNhom'"
+                        k-data-value-field="'iD_Nhom'"
+                        k-filter="'contains'"
+                        k-auto-bind="true"
+                        k-data-source="listNhomNhanVien"
+                        k-ng-model="selectNhomNhanVien"
+                        k-on-change="nhomNhanVienOnChange(kendoEvent)"></select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="doanhSo">{{bindTextI18n('header_doanhso')}}</label>
+                    <input kendo-numeric-text-box k-min="0" ng-model="object.doanhSo" id="doanhSo" ng-change="doanhSoOnchange()" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="soDonHang">{{bindTextI18n('label_sodonhang')}}</label>
+                    <input kendo-numeric-text-box k-min="0" ng-model="object.soDonHang" id="soDonHang" ng-change="soDonHangOnchange()" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="ngayCong">{{bindTextI18n('label_songaycong')}}</label>
+                    <input kendo-numeric-text-box k-min="0" ng-model="object.ngayCong" id="ngayCong" ng-change="ngayCongOnchange()" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="luotViengTham">{{bindTextI18n('label_soluotviengtham')}}</label>
+                    <input kendo-numeric-text-box k-min="0" ng-model="object.luotViengTham" id="luotViengTham" ng-change="luotViengThamOnchange()" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="fromDatepicker">{{bindTextI18n('label_thangbatdauapdung')}}</label>
+                    <input kendo-date-picker
+                           id="fromDatepicker"
+                           k-ng-model="dateObject"
+                           k-options="monthSelectorOptions"
+                           k-format="'MM/yyyy'"
+                           k-on-change="toDateChanged()" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

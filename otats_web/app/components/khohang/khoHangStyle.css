@@ -1,0 +1,8 @@
+﻿.container-fluid.container-scroll {
+    height: calc(100vh - 7rem);
+    overflow-y: scroll;
+}
+
+#treeview {
+    max-height: calc(100vh - 8rem);
+}

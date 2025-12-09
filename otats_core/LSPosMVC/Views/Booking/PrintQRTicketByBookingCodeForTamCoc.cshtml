@@ -1,0 +1,276 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Assets/printTicket/bootstrap.css" rel="stylesheet" />
+    <link href="~/Assets/printTicket/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/printQR.css" rel="stylesheet" />
+    <script src="~/Assets/printTicket/jquery.js"></script>
+    <script src="~/Scripts/qrcode.js"></script>
+    <script src="https://cdn.jsdelivr.net/jsbarcode/3.3.20/JsBarcode.all.min.js"></script>
+    <script>
+    function printDiv(svcode) {
+        $('#hide').css('display', 'none');
+        $('.ticket').css('margin-top', '120px');
+        $('.ticket').first().css('margin-top', '0');
+        console.log(svcode);
+        $('.ticket').css('display', 'block');
+        if (svcode != undefined) {
+            $('.sv-' + svcode).css('display', 'none');
+        }
+        if (print()) {
+            $("body").hover(function () {
+                console.log("close");
+                window.close();
+            });
+            $('#hide').css('display', 'none');
+        } else {
+            //$('#hide').css('display', 'block');
+        }
+    }
+        $(document).ready(function () {
+            window.onafterprint = window.close;
+    @foreach (LSPos_Data.Models.ChiTietMatHangDonHangModels ct in Model.lstTicket)
+    {
+        if (ct.ID_MatHang == 190 || ct.ID_MatHang == 165 || ct.ID_MatHang == 195 || ct.ID_MatHang == 196
+            || ct.ID_MatHang == 208
+            || ct.ID_MatHang == 209
+            || ct.ID_MatHang == 210
+            || ct.ID_MatHang == 211)
+        {
+            <text>
+            var QR_CODE1@(ct.MaVeDichVu) = new QRCode("qrcode1@(ct.MaVeDichVu)", {
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H,
+            });
+            QR_CODE1@(ct.MaVeDichVu).makeCode("@(ct.MaVeDichVu)");
+           
+         </text>
+                }
+            }
+
+
+
+            var qrcode = new QRCode("qrcode", {
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H,
+            });
+        qrcode.makeCode("https://docs.google.com/forms/d/e/1FAIpQLScL42wDGe9wiN5UHdW8o6tikotdNT8VgPT5YjJPYb_X2LeXuA/viewform");
+
+         JsBarcode("#barcode", @Model.lstTicket[0].MaDonHangDichVu, {
+            width: 4,
+            height: 80,
+            displayValue: false
+            });
+    });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="hide">
+            <a href="" class="btn-print" onclick='printDiv();'>
+                <i class="fa fa-print fa-style" aria-hidden="true" style="color: #ff9933;"></i>
+                <span>In vé</span>
+            </a>
+        </div>
+        <div style="width:400px; margin-left:5px;">
+            @{ int i = 1; }
+            @foreach (LSPos_Data.Models.ChiTietMatHangDonHangModels ct in Model.lstTicket)
+            {
+                if (ct.ID_MatHang == 190 || ct.ID_MatHang == 165 || ct.ID_MatHang == 195 || ct.ID_MatHang == 196
+          || ct.ID_MatHang == 208
+          || ct.ID_MatHang == 209
+          || ct.ID_MatHang == 210
+          || ct.ID_MatHang == 211)
+                {
+
+                    <p style="width:100%;font-size:17px; text-align:center;font-weight:700;">DNXD XUÂN TRƯỜNG</p>
+                    <div style="width: 100%; display: flex; flex-wrap: nowrap; flex-direction: row; justify-content: center;">
+                        <div id="qrcode1@(ct.MaVeDichVu)"></div>
+                        <div style="margin-left:25px;" id="qrcode2@(ct.MaVeDichVu)"></div>
+                    </div>
+                    <b style="width: 100%; text-align: center; display: block;
+                            margin-top:5px;font-size:20px;">
+                        VÉ / TICKET
+                    </b>
+                    <b style="width: 100%; text-align: center; display: block;
+                            margin-top:5px;font-size:20px;">
+                        @ct.TenHienThi
+                    </b>
+                    <b style="width: 100%; display: block" ;">
+                        Quý khách vui lòng không vò vé và giữ vé cẩn thận
+                    </b>
+                    <b style="width: 100%; display: block;">
+                        Please keep the code ticket carefully
+                    </b>
+                    <table>
+                        <tr>
+                            <td style="width:65%">Ngày sử dụng/ Valid On:</td>
+                            <td><b>@Model.Ngay.ToString("dd/MM/yyyy")</b></td>
+                        </tr>
+                        <tr>
+                            <td>Ngày hết hạn/ Expiration time:</td>
+                            <td><b>@Model.Ngay.ToString("dd/MM/yyyy")</b></td>
+                        </tr>
+                        <tr>
+                            <td>Mã vé/ Ticket code:</td>
+                            <td><b>@ct.MaVeDichVu</b></td>
+                        </tr>
+                        <tr>
+                            <td>Số biên lai/ Receipt No:</td>
+                            <td> @ct.MaDonHangDichVu</td>
+                        </tr>
+                        <tr>
+                            <td>Thời gian in vé / Time Print:</td>
+                            <td> @DateTime.Now.ToString("dd/MM/yyyy HH:mm")</td>
+                        </tr>
+                        <tr>
+                            <td>Số thứ tự/ Ticket No:</td>
+                            <td>@(i++)</td>
+                        </tr>
+                        <tr>
+                            <td>Giá vé/ Price:</td>
+                            <td><b style="font-size:20px;">@ct.Giaban.ToString("N0") VNĐ</b></td>
+                        </tr>
+                    </table>
+                    <b style="width:100%;overflow:hidden;">----------------------------------------------------------------------------------</b>
+                    <b style="width: 100%; font-size: 15px; display: block;">
+                        KDL không chịu trách nhiệm nếu quý khách làm mất vé
+                    </b>
+                    <b style="width: 90%; font-size: 15px; text-align: center; display: block; ">
+                        Vé có giá trị trong ngày
+                    </b>
+                    <b style="width: 90%; font-size: 15px; text-align: center; display: block; ">
+                        Power by LsCloud.vn - MST 0110236110
+                    </b>
+                    @*<b style="width: 100%; font-size: 15px; display: block; font-family: 'Times New Roman', Times, serif ">
+                    Quý khách quan tâm các dịch vụ khác của KDL xin truy cập:
+                </b>
+                <b style="width: 90%; font-size: 15px; display: block; text-align: center; font-family: 'Times New Roman', Times, serif">
+                    dichvu.disantrangan.vn
+                </b>*@
+                    <div style="width: 100%; display: flex; flex-wrap: nowrap; flex-direction: row; justify-content: center;">
+                        <div id="qrcode3@(ct.MaVeDichVu)"></div>
+                        <div style="margin-left:25px;" id="qrcode4@(ct.MaVeDichVu)"></div>
+                    </div>
+                    if (i < Model.lstTicket.Count)
+                    {
+                        <div class="page-break"></div>
+                    }
+                }
+            }
+
+            @*Hóa đơn tổng*@
+            <div class="page-break"></div>
+            <p style="width:100%;font-size:20px; text-align:center;font-weight:700;">KHU DU LỊCH TAM CỐC</p>
+            <div style="width: 100%; display: flex; flex-wrap: nowrap; flex-direction: row; justify-content: center;">
+                <svg style="width: 100%; float: left; margin: 0; padding: 0;" id="barcode"></svg>
+            </div>
+            <b style="width: 100%; text-align: center; display: block;
+                            margin-top:5px;font-size:22px;">
+                BIÊN LAI THANH TOÁN/ RECEIPT
+
+            </b>
+            <b style="width:100%;overflow:hidden;">----------------------------------------------------------------------------------</b>
+            <table>
+                <tr>
+                    <td style="width:65%">Mã biên lai/ Receipt no:</td>
+                    <td><b>@Model.lstTicket[0].MaDonHangDichVu</b></td>
+                </tr>
+                <tr>
+                    <td style="width:65%">Mã OTA Booking:</td>
+                    <td><b>@Model.MaThamChieu</b></td>
+                </tr>
+                <tr>
+                    <td>Ngày/ Date:</td>
+                    <td> @DateTime.Now.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+                <tr>
+                    <td>Thu ngân/ Cashier:</td>
+                    <td><b>@Model.ThuNgan</b></td>
+                </tr>
+            </table>
+
+            <table style="width:95%">
+                <tr style="border-bottom: solid 1px;">
+                    <th><b>Dịch vụ<br /> Service</b></th>
+                    <th style="text-align:right"><b>SL<br /> Qty</b></th>
+                    <th style="text-align:right"><b>Đơn giá Price</b></th>
+                </tr>
+                @{double tongtien = 0; }
+                @foreach (LSPos_Data.Models.ChiTietDonHangModels chitiet in Model.lstChiTiet)
+                {
+                    tongtien = tongtien + chitiet.tongTien;
+                    <tr>
+                        <td>@chitiet.tenhang</td>
+                        <td style="text-align:right">@chitiet.soluong</td>
+                        <td style="text-align:right">@chitiet.tongTien.ToString("N0")</td>
+                    </tr>
+                }
+            </table>
+            <b style="width:100%;overflow:hidden;">----------------------------------------------------------------------------------</b>
+            <table style="width:95%">
+                <tr>
+                    <td>Thành tiền/ Amount</td>
+                    <td style="text-align:right">@tongtien.ToString("N0")</td>
+                </tr>
+                <tr>
+                    <td>Chiết khấu/ Discount </td>
+                    <td style="text-align:right">0 </td>
+                </tr>
+                <tr>
+                    <td>Tổng tiền/ Total</td>
+                    <td style="text-align:right">@tongtien.ToString("N0")</td>
+                </tr>
+            </table>
+            <b style="width:100%;overflow:hidden;">----------------------------------------------------------------------------------</b>
+            <table style="width:95%">
+                <tr>
+                    <th>
+                        Payment detail
+                    </th>
+                    <th></th>
+                </tr>
+                @foreach (LSPos_Data.Models.LichSuThanhToanModel ls in Model.lstThanhToan)
+                {
+                    <tr>
+                        <td>@ls.HinhThucThanhToan</td>
+                        <td style="text-align:right">@ls.SoTien.ToString("N0")</td>
+                    </tr>
+                }
+            </table>
+            <b style="width:100%;overflow:hidden;">----------------------------------------------------------------------------------</b>
+            <div style="width: 100%; display: flex; flex-wrap: nowrap; flex-direction: row; justify-content: center;">
+                <div id="qrcode"></div>
+            </div>
+            <i style="width: 100%; font-size: 15px; display: block;">
+                Hotline hỗ trợ:
+            </i>
+            <i style="width: 90%; font-size: 15px; display: block; ">
+                Để xuất hóa đơn điện tử vui lòng quét mã QR phía trên
+            </i>
+            <i style="width: 100%; font-size: 15px; display: block; ">
+                Mã biên lai thanh toán có giá trị xuất hóa đơn trong ngày
+            </i>
+            <i style="width: 90%; font-size: 15px; display: block; text-align: center;">
+                Power by LsCloud.vn - MST 0110236110
+            </i>
+
+        </div>
+    </div>
+</body>
+
+</html>

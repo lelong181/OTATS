@@ -1,0 +1,101 @@
+﻿<div class="container-fluid">
+    <div class="body-chart-report">
+        <div class="content-filter">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label class="content-filter__label">{{bindTextI18n('label_tungay')}}:</label>
+                        <input kendo-date-time-picker
+                               ng-model="str_TuNgay"
+                               k-ng-model="obj_TuNgay"
+                               k-max="maxDate"
+                               k-rebind="maxDate"
+                               k-on-change="fromDateChanged()"
+                               k-format="'yyyy/MM/dd HH:mm:ss'" />
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label class="content-filter__label">{{bindTextI18n('label_denngay')}}:</label>
+                        <input kendo-date-time-picker
+                               ng-model="str_DenNgay"
+                               k-ng-model="obj_DenNgay"
+                               k-min="minDate"
+                               k-rebind="minDate"
+                               k-on-change="toDateChanged()"
+                               k-format="'yyyy/MM/dd HH:mm:ss'" />
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label class="content-filter__label">{{bindTextI18n('label_nhomnhanvien')}}:</label>
+                        <select id="nhomnhanvien" kendo-combo-box="nhomnhanvien"
+                                k-placeholder="bindTextI18n('label_nhomnhanvien')"
+                                k-data-text-field="'tenNhom'"
+                                k-data-value-field="'iD_Nhom'"
+                                k-filter="'contains'"
+                                k-auto-bind="false"
+                                k-ng-model="nhomnhanvienselect"
+                                k-data-source="nhomnhanvienData"
+                                k-on-change="nhomnhanvienOnChange(kendoEvent)"></select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label class="content-filter__label">{{bindTextI18n('label_nhanvien')}}:</label>
+                        <select kendo-combo-box="nhanvien"
+                                k-placeholder="bindTextI18n('label_nhanvien')"
+                                k-data-text-field="'tenDayDu'"
+                                k-data-value-field="'idnv'"
+                                k-filter="'contains'"
+                                k-auto-bind="false"
+                                k-ng-model="nhanvienselect"
+                                k-data-source="nhanvienData"
+                                k-on-change="nhanvienOnChange(kendoEvent)"></select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <button id="btn_xembaocao" class="btn btn-outline-info btn-viengtham" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm"></i> {{bindTextI18n('button_xembaocao')}}</button>
+                    <button id="btn_xuatExcel" class="btn btn-outline-secondary btn-viengtham" ng-click="xuatExcel()"><i class="fas fa-file-excel fas-sm"></i> {{bindTextI18n('button_xuatexcel')}}</button>
+                </div>
+
+            </div>
+        </div>
+
+        <ul class="nav nav-pills mb-3 mt-1" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-bieudo-tab" ng-click="clicktabbieudo()" data-toggle="pill" data-target="#pills-bieudo" href="bieudo" ui-sref-active="false" role="tab" aria-controls="pills-bieudo" aria-selected="true">{{bindTextI18n('label_bieudodoanhthu')}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-baocao-tab" ng-click="clicktabdanhsach()" data-toggle="pill" data-target="#pills-baocao" href="baocao" ui-sref-active="false" role="tab" aria-controls="pills-baocao" aria-selected="false">{{bindTextI18n('label_baocaodoanhthu')}}</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-bieudo" role="tabpanel" aria-labelledby="pills-bieudo-tab">
+                <div class="body-chart mt-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="text-center color-gray" ng-show="!showchart">{{bindTextI18n('label_khongcodulieubieudo')}}</h2>
+                            <div class="chart-container" ng-show="showchart">
+                                <canvas id="bar" class="chart chart-bar"
+                                        chart-options="options"
+                                        chart-colors="colors"
+                                        chart-data="data"
+                                        chart-labels="labels"
+                                        chart-dataset-override="datasetOverride"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-baocao" role="tabpanel" aria-labelledby="pills-baocao-tab">
+                <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>

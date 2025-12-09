@@ -1,0 +1,550 @@
+﻿<link href="app/components/khachhang/editKhachHangStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div class="toolbarmenu">
+
+        <button class="btn btn-link btn-menubar"
+                ng-show="((permission.them > 0 && idkhachhang <= 0) ||(permission.sua > 0 && idkhachhang > 0))"
+                ng-click="LuuKhachHang()"
+                title="{{bindTextI18n('button_luuthaydoi')}}">
+            <i class="fas fa-save fas-sm color-infor"></i>
+            <span ng-bind="bindTextI18n('button_luuthaydoi')"></span>
+        </button>
+        <button class="btn btn-link btn-menubar" ng-click="HuyKhachHang()">
+            <i class="fas fa-trash fas-sm color-danger"></i>
+            <span ng-bind="bindTextI18n('button_huy')"></span>
+        </button>
+
+    </div>
+    <div class="row content-form">
+        <div class="col-sm-8">
+            <!--Dữ liệu bắt buộc-->
+            <div class="collapse-content">
+                <b class="card-link">
+
+                    <i class="fas fa-address-book"></i>
+                    <span ng-bind="bindTextI18n('label_thongtincobankhachhang')"></span>
+
+                </b>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+
+                            <label for="MaKhachHang">
+                                <span ng-bind="bindTextI18n('header_makhachhang')"></span>
+                            </label>
+                            <input name="MaKhachHang"
+                                   type="text"
+                                   placeholder="{{bindTextI18n('header_makhachhang')}}"
+                                   ng-model="khachhangobj.maKH"
+                                   class="k-textbox"
+                                   id="MaKhachHang" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+
+                            <label for="TenKhachHang">
+                                <span ng-bind="bindTextI18n('label_tenkhachhang')"></span>
+                                <span class="required-field-icon">(*)</span>
+                            </label>
+                            <input name="TenKhachHang"
+                                   type="text"
+                                   placeholder="{{bindTextI18n('label_tenkhachhang')}}"
+                                   ng-model="khachhangobj.ten"
+                                   class="k-textbox"
+                                   id="TenKhachHang"
+                                   required />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+
+                            <label for="SoDienThoai">
+                                <span ng-bind="bindTextI18n('label_sodienthoai')"></span>
+                                <span class="required-field-icon">(*)</span>
+                            </label>
+                            <input name="SoDienThoai" type="text"
+                                   placeholder={{bindTextI18n('label_sodienthoai')}}
+                                   ng-model="khachhangobj.soDienThoai"
+                                   class="k-textbox" id="SoDienThoai" required />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+
+                            <label for="Email">
+                                <span ng-bind="bindTextI18n('label_email')"></span>
+                                <span class="required-field-icon">(*)</span>
+                            </label>
+                            <input name="Email"
+                                   type="text"
+                                   placeholder="Email"
+                                   ng-model="khachhangobj.email"
+                                   class="k-textbox"
+                                   id="Email" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="form-group">
+
+                            <label for="DiaChi">
+                                <span ng-bind="bindTextI18n('label_diachi')"></span>
+                                <span class="required-field-icon">(*)</span>
+                            </label>
+                            <input name="DiaChi" type="text"
+                                   placeholder={{bindTextI18n('label_diachi')}}
+                                   ng-model="khachhangobj.diaChi" class="k-textbox"
+                                   id="DiaChi" required />
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+
+                            <button ng-click="timdiachi()"
+                                    class="btn btn-outline-secondary btn-search">
+                                <i class="fas fa-search"></i>
+                                <span ng-bind="bindTextI18n('button_timkiem')"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+
+                            <label for="kinhdo">
+                                <span ng-bind="bindTextI18n('label_kinhdo')"></span>
+                            </label>
+                            <input type="text"
+                                   placeholder="{{bindTextI18n('label_kinhdo')}}"
+                                   class="k-textbox"
+                                   id="kinhdo"
+                                   ng-model="khachhangobj.kinhDo"
+                                   readonly />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+
+                            <label for="vido">
+                                <span ng-bind="bindTextI18n('label_vido')"></span>
+                            </label>
+                            <input type="text"
+                                   placeholder="{{bindTextI18n('label_vido')}}"
+                                   class="k-textbox"
+                                   id="vido"
+                                   ng-model="khachhangobj.viDo"
+                                   readonly />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Dữ liệu thông tin kinh doanh-->
+
+            <div class="collapse-content"
+                 data-toggle="collapse"
+                 href="#collapseTwo">
+                <b class="card-link">
+                    <i class="fas fa-address-card"></i>
+                    <span ng-bind="bindTextI18n('label_thongtinkinhdoanh') "></span>
+                    <i class="float-right fa fa-caret-down"></i>
+                    <i class="float-right fa fa-caret-right"></i>
+                </b>
+            </div>
+            <div id="collapseTwo" class="collapse show">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label for="maSoThue">
+                                    <span ng-bind="bindTextI18n('label_masothue') "></span>
+                                </label>
+                                <input type="text"
+                                       placeholder="{{bindTextI18n('label_masothue')}}"
+                                       class="k-textbox"
+                                       id="maSoThue"
+                                       ng-model="khachhangobj.maSoThue" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label>
+                                    <span ng-bind="bindTextI18n('label_loaikhachhang') "></span>
+                                </label>
+                                <select kendo-combo-box="loaikhachhang"
+                                        id="loaikhachhang"
+                                        k-options="loaikhachhangOptions"
+                                        k-placeholder="bindTextI18n('label_loaikhachhang')"
+                                        k-data-text-field="'tenLoaiKhachHang'"
+                                        k-data-value-field="'iD_LoaiKhachHang'"
+                                        k-filter="'contains'"
+                                        k-auto-bind="false"
+                                        k-ng-model="loaikhachhangselect"
+                                        k-data-source="loaikhachhangData"
+                                        k-on-change="loaikhachhangOnChange(kendoEvent)"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--<div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="MaKH"><span ng-bind="bindTextI18n('label_kenhbanhang') "></span></label>
+                                <select kendo-combo-box="kenhbanhang"
+                                        id="kenhbanhang"
+                                        k-placeholder="bindTextI18n('label_kenhbanhang')"
+                                        k-data-text-field="'tenKenhBanHang'"
+                                        k-data-value-field="'iD_KenhBanHang'"
+                                        k-filter="'contains'"
+                                        k-auto-bind="false"
+                                        k-ng-model="kenhbanhangselect"
+                                        k-data-source="kenhbanhangData"
+                                        k-on-change="kenhbanhangOnChange(kendoEvent)"></select>
+                            </div>
+                        </div>-->
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label for="nguoiLienHe">
+                                    <span ng-bind="bindTextI18n('label_tendoanhnghiep') "></span>
+                                </label>
+                                <input type="text"
+                                       placeholder="{{bindTextI18n('label_tendoanhnghiep')}}"
+                                       class="k-textbox"
+                                       id="nguoiLienHe"
+                                       ng-model="khachhangobj.nguoiLienHe" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label for="soTKNganHang">
+                                    <span ng-bind="bindTextI18n('label_sotaikhoannganhang') "></span>
+                                </label>
+                                <input type="text"
+                                       placeholder="{{bindTextI18n('label_sotaikhoannganhang')}}"
+                                       class="k-textbox"
+                                       id="soTKNganHang"
+                                       ng-model="khachhangobj.soTKNganHang" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="MaKH"><span ng-bind="bindTextI18n('label_kenhbanhangcaptren') "></span></label>
+                                <select kendo-combo-box="kenhbanhangcaptren"
+                                        id="kenhbanhangcaptren"
+                                        k-placeholder="bindTextI18n('label_kenhbanhangcaptren')"
+                                        k-data-text-field="'tenKhachHang'"
+                                        k-data-value-field="'iD_KhachHang'"
+                                        k-filter="'contains'"
+                                        k-auto-bind="false"
+                                        k-ng-model="kenhbanhangcaptrenselect"
+                                        k-data-source="kenhbanhangcaptrenData"
+                                        k-on-change="kenhbanhangcaptrenOnChange(kendoEvent)"></select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="soTKNganHang"><span ng-bind="bindTextI18n('label_sotaikhoannganhang') "></span></label>
+                                <input type="text" placeholder="{{bindTextI18n('label_sotaikhoannganhang')}}" class="k-textbox" id="soTKNganHang" ng-model="khachhangobj.soTKNganHang" />
+                            </div>
+                        </div>
+                    </div>-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label for="diaChiXuatHoaDon">
+                                    <span ng-bind="bindTextI18n('label_diachixuathoadon') "></span>
+                                </label>
+                                <input type="text"
+                                       placeholder="{{bindTextI18n('label_diachixuathoadon')}}"
+                                       class="k-textbox"
+                                       id="diaChiXuatHoaDon"
+                                       ng-model="khachhangobj.diaChiXuatHoaDon" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label for="email">
+                                    <span ng-bind="bindTextI18n('label_website') "></span>
+                                </label>
+                                <input type="text"
+                                       placeholder="Website"
+                                       class="k-textbox"
+                                       id="website"
+                                       ng-model="khachhangobj.website" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+
+                                <label for="ghiChu">
+                                    <span ng-bind="bindTextI18n('label_ghichu') "></span>
+                                </label>
+                                <textarea type="text"
+                                          placeholder="{{bindTextI18n('label_ghichu')}}"
+                                          class="k-textbox text-area"
+                                          id="ghiChu"
+                                          ng-model="khachhangobj.ghiChu" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Dữ liệu thông tin liên hệ-->
+
+            <div class="collapse-content"
+                 data-toggle="collapse"
+                 href="#collapseOne">
+                <b class="card-link">
+                    <i class="fas fa-address-book"></i>
+                    <span ng-bind="bindTextI18n('label_thongtinlienlac')"></span>
+                    <i class="float-right fa fa-caret-down"></i>
+                    <i class="float-right fa fa-caret-right"></i>
+                </b>
+            </div>
+            <div id="collapseOne" class="collapse show">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label for="duongpho">
+                                    <span ng-bind="bindTextI18n('label_duongpho')"></span>
+                                </label>
+                                <input type="text"
+                                       placeholder="{{bindTextI18n('label_duongpho')}}"
+                                       class="k-textbox"
+                                       id="duongpho"
+                                       ng-model="khachhangobj.duongPho" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label>
+                                    <span ng-bind="bindTextI18n('label_khuvuc')"></span>
+                                </label>
+                                <select kendo-combo-box="cbb_khuvuc"
+                                        id="khuvuc"
+                                        k-placeholder="bindTextI18n('label_khuvuc')"
+                                        k-data-text-field="'tenKhuVuc'"
+                                        k-data-value-field="'iD_KhuVuc'"
+                                        k-filter="'contains'"
+                                        k-auto-bind="false"
+                                        k-ng-model="khuvucselect"
+                                        k-data-source="khuvucData"
+                                        k-on-change="khuvucOnChange(kendoEvent)"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label>
+                                    <span ng-bind="bindTextI18n('label_tinhthanh')"></span>
+                                </label>
+                                <select kendo-combo-box="cbb_tinhthanh"
+                                        id="tinhthanh"
+                                        k-placeholder="bindTextI18n('label_tinhthanh')"
+                                        k-data-text-field="'tenTinh'"
+                                        k-data-value-field="'iD_Tinh'"
+                                        k-filter="'contains'"
+                                        k-auto-bind="false"
+                                        k-ng-model="tinhthanhselect"
+                                        k-data-source="tinhthanhData"
+                                        k-on-change="tinhthanhOnChange(kendoEvent)"></select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label>
+                                    <span ng-bind="bindTextI18n('label_quanhuyen')"></span>
+                                </label>
+                                <select kendo-combo-box="quanhuyen"
+                                        id="quanhuyen"
+                                        k-placeholder="bindTextI18n('label_quanhuyen')"
+                                        k-data-text-field="'tenQuan'"
+                                        k-data-value-field="'iD_Quan'"
+                                        k-filter="'contains'"
+                                        k-auto-bind="false"
+                                        k-ng-model="quanhuyenselect"
+                                        k-data-source="quanhuyenData"
+                                        k-on-change="quanhuyenOnChange(kendoEvent)"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label>
+                                    <span ng-bind="bindTextI18n('header_phuongxa')"></span>
+                                </label>
+                                <select kendo-combo-box="phuongxa"
+                                        id="phuongxa"
+                                        k-placeholder="bindTextI18n('header_phuongxa')"
+                                        k-data-text-field="'tenPhuong'"
+                                        k-data-value-field="'iD_Phuong'"
+                                        k-filter="'contains'"
+                                        k-auto-bind="false"
+                                        k-ng-model="phuongxaselect"
+                                        k-data-source="phuongxaData"
+                                        k-on-change="phuongxaOnChange(kendoEvent)"></select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label for="soDienThoai2">
+                                    <span ng-bind="bindTextI18n('label_sodienthoai') + '1'"></span>
+                                </label>
+                                <input type="text"
+                                       placeholder="{{bindTextI18n('label_sodienthoai')}}"
+                                       class="k-textbox"
+                                       id="soDienThoai2"
+                                       ng-model="khachhangobj.soDienThoai2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label for="fax">
+                                    <span ng-bind="bindTextI18n('label_fax')"></span>
+                                </label>
+                                <input type="text"
+                                       placeholder="Fax"
+                                       class="k-textbox"
+                                       id="fax"
+                                       ng-model="khachhangobj.fax" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+
+                                <label for="soDienThoai3">
+                                    <span ng-bind="bindTextI18n('label_sodienthoai') + '2'"></span>
+                                </label>
+                                <input type="text"
+                                       placeholder="{{bindTextI18n('label_sodienthoai')}}"
+                                       class="k-textbox"
+                                       id="soDienThoai3"
+                                       ng-model="khachhangobj.soDienThoai3" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <!--Bản đồ-->
+            <div class="map-body">
+
+                <ng-map id="map-khachhang"
+                        default-style="false"
+                        center="20.971365, 105.835165"
+                        zoom="10"
+                        class="map-customer map-editkhachhang">
+                    <marker id="marker-diadiem"
+                            position="20.971365, 105.835165"
+                            icons=""
+                            draggable="true"
+                            on-dragend="changediadiem()" />
+                </ng-map>
+            </div>
+
+            <div class="collapse-content">
+                <b class="card-link">
+                    <i class="fas fa-address-book"></i>
+                    <span ng-bind="bindTextI18n('label_anhdaidien') "></span>
+                </b>
+            </div>
+            <div id="collapsethree" class="collapse show">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="image_frame">
+
+                                    <div style="text-align: center"
+                                         id="previewnhanvien"></div>
+                                </div>
+                                <div class="selectfile">
+                                    <input name="files"
+                                           title=""
+                                           id="files"
+                                           type="file" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="windowThemLoaiKhachHang"
+     k-options="windowthemloaikhOption"
+     kendo-window="windowThemLoaiKhachHang"
+     k-title="bindTextI18n('label_themloaikhachhang')"
+     k-visible="false"
+     k-modal="true"
+     k-width="600"
+     k-height="500">
+    <br />
+    <div class="form-group row">
+        <input type="hidden" id="IDLoaiKhachHang" />
+        <div class="valid"
+             toggle-valid="TenLoaiKH"
+             style="width: 25%; padding-left: 5%; float: left">
+            <label for="TenLoaiKH" style="width: 100%">
+                <span ng-bind="bindTextI18n('label_tenloaikhachhang')"></span>
+            </label>
+            <input type="text" class="k-textbox" id="TenLoaiKH" />
+        </div>
+        <div style="width: 25%; padding-left: 5%; float: left">
+            <label for="IconHienThi" style="width: 100%">
+                <span ng-bind="bindTextI18n('label_iconhienthi')"></span>
+            </label>
+            <input style="width: 100%" id="IconHienThi" />
+        </div>
+        <div style="padding-top: 17px; padding-left: 5%; float: left">
+            <button id="btnLuuLoaiKhachHang"
+                    class="btn btn-link btn-menubar"
+                    ng-click="ThemLoaiKhachHang()"
+                    title="{{bindTextI18n('button_luu')}}">
+                <i class="fas fa-save fas-sm color-infor"></i>
+                <span ng-bind="bindTextI18n('button_luuthaydoi')"></span>
+            </button>
+            <button class="btn btn-link btn-menubar"
+                    id="btnHuyLoaiKhachHang"
+                    ng-click="HuyLoaiKhachHang()">
+                <i class="fas fa-trash fas-sm color-danger"></i>
+                <span ng-bind="bindTextI18n('button_huy')"></span>
+            </button>
+        </div>
+    </div>
+    <div kendo-grid="gridLoaiKhachHang"
+         k-data-source="gridLoaiKhachHangData"
+         k-options="gridLoaiKhachHangOptions"
+         id="gridLoaiKhachHang"></div>
+</div>

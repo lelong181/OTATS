@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>TOURSHOPPING.VN - IN VÉ</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="booking,vietnam,reserve" />
+</head>
+
+<body>
+    <div style="font-family: 'Arial',sans-serif; font-size: 14px;">
+        @foreach (LSPos_Data.Models.ChiTietDonHangModels mh in Model)
+        {
+            <b>@mh.tenhang</b>
+            <table>
+                @foreach (LSPos_Data.Models.ChiTietMatHangDonHangModels ct in mh.dschitietmathang)
+                {
+                    <tr>
+                        <td class="tg-0pky"
+                            style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:inherit;text-align:left;vertical-align:top">
+                            @ct.MaBookingDichVu
+                        </td>
+                        <td class="tg-0pky"
+                            style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:inherit;text-align:left;vertical-align:top">
+                            @ct.MaVeDichVu
+                        </td>
+                        <td class="tg-0pky"                   
+                    </tr>
+
+                }
+            </table>
+        }
+        <div align="center">
+            <table style="text-align:left; background: #bcdfff; border-collapse: collapse; word-wrap: break-word; word-break: break-word;"
+                   border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td style="width: 450.0pt; padding: 0cm 0cm 0cm 0cm;" valign="top" width="600">
+                            <ul style="list-style-type: none;">
+                                <li>Thanh toán được trừ vào thẻ tín dụng của Quý khách.</li>
+                                <li><i>Payment is deducted from your credit card.</i></li>
+                                <li>Thanh toán số tiền đặt vé trực tuyến và hệ thống đặt chỗ của bạn được bảo mật.</li>
+                                <li><i>Pay your online booking amount and your booking system is secure.</i></li>
+                                <li>Không hủy, không hoàn tiền, không thay đổi vé.</li>
+                                <li><i>No cancellations, no refunds, no ticket changes.</i></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <div align="center">
+                <i>Yêu cầu hỗ trợ xin vui lòng liên hệ: 0916312212</i> <br> <b>Powered by LsCloud</b>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

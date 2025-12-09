@@ -1,0 +1,159 @@
+﻿
+<style>
+    .card-lichsu {
+        height: calc(100vh - 150px)
+    }
+</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="color-infor"> <i class="fas fa-wallet"></i> Thông tin ví LsPay</h5>
+                </div>
+                <div class="card-body row">
+                    <div class="form-group col-8">
+                        <label class="content-filter__label">Ví - {{ bindTextI18n('label_nhomnhanvien') }}:</label>
+                        <select id="nhomnhanvien" kendo-combo-box="nhomnhanvien"
+                                k-placeholder="bindTextI18n('label_nhomnhanvien')"
+                                k-data-text-field="'tenNhom'"
+                                k-data-value-field="'iD_Nhom'"
+                                k-filter="'contains'"
+                                k-auto-bind="false"
+                                k-ng-model="nhomnhanvienselect"
+                                k-data-source="nhomnhanvienData"
+                                k-on-change="nhomnhanvienOnChange(kendoEvent)"></select>
+                    </div>
+                    <div class="col-4" style="text-align: right; padding: 18px; ">
+                        <label class="content-filter__label" style="font-weight: bold; font-size: 20px">Số dư: {{fomartnumber(sodukhadung)}}</label>
+                    </div>
+
+                </div>
+                <div class="card-body row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <h5>Lịch sử nạp ví</h5>
+                        </div>
+                        <div kendo-grid="gridLichSuNap" k-data-source="gridLichSuNapData" k-options="gridLichSuNapOptions" id="gridLichSuNap"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="color-infor"> <i class="fas fa-cash-register"></i> Nạp ví - {{nhomnhanvienselect.tenNhom}}</h5>
+                </div>
+                <div class="card-body">
+                    <label>Số tiền cần nạp ví:</label>
+                    <div class="form-group row">
+                        <div class="col-8"><input kendo-numeric-text-box k-format="'{0:n0}'" k-min="0" ng-model="SoTien" /></div>
+                        <div class="col-4"><button class="k-button success" ng-click="createPayment()"><i class="fas fa-wallet" style="margin-right:3px;"> </i> Tạo lệnh nạp ví</button> <button id="btncancelpayment" class="k-button danger" ng-click="cancelPayment()"><i class="fas fa-trash" style="margin-right:3px;"> </i> Hủy lệnh</button> </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-sm-6" id="qrthanhtoan"></div>
+                            </div>
+                            <div class="form-group" ng-show="showXuLyNapVi">
+                                <div class="image_frame">
+                                    <div style="text-align:center" id="preview">
+                                    </div>
+                                </div>
+                                <div class="selectfile">
+                                    <input name="files" title="" style="width:100%" id="files" type="file" />
+                                </div>
+                            </div>
+                            <div class="form-group" ng-show="showXuLyNapVi">
+                                <label>Ngân hàng chuyển tiền:</label>
+                                <input type="text" class="k-textbox" ng-model="napvi.TenNganHang" />
+                            </div>
+                            <div class="form-group" ng-show="showXuLyNapVi">
+                                <label>Số tiền:</label>
+                                <input kendo-numeric-text-box k-format="'{0:n0}'" k-min="0" ng-model="napvi.SoTien" />
+                            </div>
+                            <div class="form-group" ng-show="showXuLyNapVi">
+                                <label>Số tk nhận:</label>
+                                <input type="text" class="k-textbox" ng-model="napvi.TaiKhoanNhan" />
+                            </div>
+                            <div class="form-group" style=" display: flex; justify-content: center; " ng-show="showXuLyNapVi">
+                                <button class="k-button success" ng-click="xuLyNapVi()"><i class="fas fa-save" style="margin-right:3px;"> </i> Xử lý nạp tiền vào ví</button>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-sm-6" id="onepaythanhtoan"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="color-infor"> <i class="fas fa-history"></i> Lịch sử giao dịch - {{nhomnhanvienselect.tenNhom}}</h5>
+                </div>
+                <div class="card-body row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="content-filter__label">{{ bindTextI18n('label_tungay') }}:</label>
+                            <input kendo-date-time-picker
+                                   ng-model="str_TuNgay"
+                                   k-ng-model="obj_TuNgay"
+                                   k-max="maxDate"
+                                   k-rebind="maxDate"
+                                   k-on-change="fromDateChanged()"
+                                   k-format="'yyyy/MM/dd HH:mm:ss'" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="content-filter__label">{{ bindTextI18n('label_denngay') }}:</label>
+                            <input kendo-date-time-picker
+                                   ng-model="str_DenNgay"
+                                   k-ng-model="obj_DenNgay"
+                                   k-min="minDate"
+                                   k-rebind="minDate"
+                                   k-on-change="toDateChanged()"
+                                   k-format="'yyyy/MM/dd HH:mm:ss'" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <button id="btn_bm034xembaocao" class="btn btn-outline-info btn-menu__report" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm "></i> {{ bindTextI18n('button_xembaocao') }}</button>
+                        <!--<button id="btn_bm034xuatexcel" class="btn btn-outline-secondary btn-menu__report" ng-click="XuatExcel()"><i class="fas fa-file-excel fas-sm "></i> {{ bindTextI18n('button_xuatexcel') }}</button>-->
+                    </div>
+                </div>
+                <div class="card-body row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <h5>Đầu kỳ: {{fomartnumber(sodudauky)}}</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <h5>Nạp: {{fomartnumber(sonaptrongky)}}</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <h5>Sử dụng: {{fomartnumber(sotieutrongky*-1)}}</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <h5>Cuối kỳ: {{fomartnumber(sodudauky + sonaptrongky + sotieutrongky)}}</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+

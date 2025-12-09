@@ -1,0 +1,165 @@
+﻿<link href="/app/components/hanghoa/hangHoaStyle.css" rel="stylesheet" />
+<script src="/Scripts/qrcode.js"></script>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="toolbarmenu">
+                <button ng-show="false" ng-click="addnhom()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_them')}}</button>
+                <button ng-show="false" ng-click="editnhom()" class="btn btn-link btn-menubar"><i class="fas fa-edit fas-sm color-infor"></i> {{bindTextI18n('button_sua')}}</button>
+                <button ng-show="false" ng-click="deletenhom()" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> {{bindTextI18n('button_xoa')}}</button>
+            </div>
+            <div id="treeview"></div>
+        </div>
+        <div class="col-sm-9">
+            <div class="toolbarmenu">
+                <button ng-click="addTaiKhoan()" ng-show="(permission.them > 0)" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_them')}}</button>
+                <button ng-click="editTaiKhoan()" ng-show="(permission.sua > 0)" class="btn btn-link btn-menubar"><i class="fas fa-edit fas-sm color-infor"></i> {{bindTextI18n('button_sua')}}</button>
+                <button ng-click="datLaiMatKhau()" ng-show="(permission.sua > 0)" class="btn btn-link btn-menubar"><i class="fas fa-redo-alt fas-sm color-dark"></i> {{bindTextI18n('button_datlaimatkhau')}}</button>
+                <button ng-click="deleteTaiKhoan()" ng-show="(permission.xoa > 0)" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> {{bindTextI18n('button_xoa')}}</button>
+                <button ng-click="printQR()" ng-show="(permission.them > 0)" class="btn btn-link btn-menubar"><i class="fas fa-print fas-sm color-success"></i> In A6</button>
+            </div>
+            <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+        </div>
+    </div>
+</div>
+
+<!--popup chi tiết tài khoản quản trị web-->
+<div kendo-window="formdetail" id="formdetail" k-title="bindTextI18n('label_chitiet')" k-visible="false" k-modal="true" k-width="800" k-height="600">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luutaikhoan" ng-click="luuTaiKhoan()" ng-show="((permission.them > 0 && id <= 0) ||(permission.sua > 0 && id > 0))" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+                <button id="btn_huyluutaikhoan" ng-click="huyluuTaiKhoan()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="TenDayDu">{{bindTextI18n('label_tendaydu')}}: </label>
+                    <input type="text" placeholder="{{bindTextI18n('label_tendaydu')}}" class="k-textbox" id="TenDayDu" ng-model="objectTaiKhoan.TenDayDu" />
+                </div>
+                <div class="form-group">
+                    <label for="TenDangNhap">{{bindTextI18n('label_tendangnhap')}}: </label>
+                    <input type="text" placeholder="{{bindTextI18n('label_tendangnhap')}}" class="k-textbox" ng-readonly="isEdit" id="TenDangNhap" ng-model="objectTaiKhoan.TenDangNhap" />
+                </div>
+                <div class="form-group">
+                    <label for="MatKhau">{{bindTextI18n('label_matkhau')}}: </label>
+                    <input type="password" placeholder="{{bindTextI18n('label_matkhau')}}" class="k-textbox" ng-readonly="isEdit" id="MatKhau" ng-model="objectTaiKhoan.MatKhau" />
+                </div>
+                <div class="form-group">
+                    <label for="MK_replay">{{bindTextI18n('label_nhaplaimatkhau')}}: </label>
+                    <input type="password" placeholder="{{bindTextI18n('label_nhaplaimatkhau')}}" class="k-textbox" ng-readonly="isEdit" id="MK_replay" ng-model="objectTaiKhoan.MK_replay" />
+                </div>
+                <div class="form-group">
+                    <label for="MK_replay">{{bindTextI18n('label_linkref')}}: </label>
+                    <input type="text" class="k-textbox" readonly="readonly" ng-model="objectTaiKhoan.refLink" />
+                </div>
+                <div class="form-group" ng-show="isActivation">
+                    <label for="email">{{bindTextI18n('label_email')}}:</label>
+                    <input type="email" placeholder={{bindTextI18n('label_email')}} class="k-textbox" id="Email" ng-model="objectTaiKhoan.Email" />
+                </div>
+                <div class="form-group" ng-show="isActivation">
+                    <label for="Phone">{{bindTextI18n('label_sodienthoai')}}:</label>
+                    <input type="tel" placeholder={{bindTextI18n('label_sodienthoai')}} class="k-textbox" id="Phone" ng-model="objectTaiKhoan.Phone" />
+                </div>
+            </div>
+
+            <div class="col-6">
+                <label for="Phone">{{bindTextI18n('label_QRlinkref')}}:</label>
+                <div id="qrcode" style=" display: flex; justify-content: center;"></div>
+                <label for="Phone">{{bindTextI18n('header_nhom')}}:</label>
+                <div kendo-tree-view="tree"
+                     ng-class="{'tree-disable': disabletree}"
+                     id="tree"
+                     k-options="options"
+                     k-on-change="selecteditem=dataItem">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--popup chi tiết nhóm-->
+<div kendo-window="formnhom" id="formnhom" k-title="bindTextI18n('label_nhomtaikhoan')" k-visible="false" k-modal="true" k-width="400" k-height="300">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luunhomnhanvien" ng-click="luuNhomNhanVien()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+                <button id="btn_huyluunhomnhanvien" ng-click="huyLuuNhomNhanVien()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="maNhom">{{bindTextI18n('label_manhom')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" placeholder="{{bindTextI18n('label_manhom')}}" class="k-textbox" id="maNhom" ng-model="objectNhom.maNhom" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="tenNhom">{{bindTextI18n('label_tennhom')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" placeholder="{{bindTextI18n('label_tennhom')}}" class="k-textbox" id="tenNhom" ng-model="objectNhom.tenNhom" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_nhomcha')}}</label>
+                    <select kendo-combo-box="nhomcha"
+                            id="nhomcha"
+                            k-placeholder="bindTextI18n('label_nhomcha')"
+                            k-data-text-field="'tenNhom'"
+                            k-data-value-field="'iD_Nhom'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="nhomchaselect"
+                            k-data-source="nhomchaData"
+                            k-on-change="nhomchaOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--popup reset password-->
+<div kendo-window="formresetpass" id="formresetpass" k-title="bindTextI18n('button_doimatkhau')" k-visible="false" k-modal="true" k-width="400" k-height="200">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luumatkhau" ng-click="luuMatKhau()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_datlaimatkhau')}}</button>
+                <button id="btn_huyluumatkhau" ng-click="huyLuuMatKhau()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="pass">{{bindTextI18n('label_matkhau')}} <span class="color-danger">(*)</span></label>
+                    <input type="password" placeholder="{{bindTextI18n('label_matkhau')}}" class="k-textbox" id="pass" ng-model="objectpass.pass" />
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="repass">{{bindTextI18n('label_nhaplaimatkhau')}} <span class="color-danger">(*)</span></label>
+                    <input type="password" placeholder="{{bindTextI18n('label_nhaplaimatkhau')}}" class="k-textbox" id="repass" ng-model="objectpass.repass" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

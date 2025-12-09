@@ -1,0 +1,199 @@
+﻿<link href="/app/components/home/homeStyle.css" rel="stylesheet" />
+<div class="container-fluid">
+    <div class="body-dashboard">
+        <div class="body-box">
+            <div class="row">
+
+                <!--<div class="col-xl-3 col-md-6">
+                    <div class="card card-stats border-left-primary">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5 col-sm-4">
+                                    <div class="icon-big text-center color-danger">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                    <div class="numbers">
+                                        <a class="card-category link" href="" ng-click="opennhanvientructuyen()">
+                                            <span ng-bind="bindTextI18n('button_nhanvientructuyen')"></span>
+                                        </a>
+                                        <p class="card-title">{{objbox.nhanvientructuyen}}/{{objbox.tongnhanvien}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+                <!--<div class="col-xl-3 col-md-6 ">
+                    <div class="card card-stats border-left-info">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5 col-sm-4">
+                                    <div class="icon-big text-center color-infor">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                    <div class="numbers">
+                                        <a class="card-category link" href="" ng-click="openviengthamngay()">
+                                            <span ng-bind="bindTextI18n('button_viengthamngay')"></span>
+                                        </a>
+                                        <p class="card-title">{{objbox.viengthamngay}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+                <div class="col-xl-3 col-md-6 ">
+                    <div class="card card-stats border-left-warning">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5 col-sm-4">
+                                    <div class="icon-big text-center color-warning">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                    <div class="numbers">
+                                        <a class="card-category link" href="" ng-click="opendoanhthungay()">
+                                            <span ng-bind="bindTextI18n('button_doanhthungay')"></span>
+                                        </a>
+                                        <p class="card-title">{{objbox.doanhthungay}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="card card-stats border-left-secondary">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5 col-sm-4">
+                                    <div class="icon-big text-center color-secondary">
+                                        <i class="fas fa-id-card"></i>
+                                    </div>
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                    <div class="numbers">
+                                        <a class="card-category link" href="" ng-click="opencongnokhackhang()">
+                                            <span ng-bind="bindTextI18n('button_congnokhachhang')"></span>
+                                        </a>
+                                        <p class="card-title">{{objbox.congnokhachhang}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content Row -->
+
+        <div class="row">
+            <div class="col-xl-7 col-lg-6">
+                <div class="card shadow card-home">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h5 class="m-0 font-weight-bold text-info"><span ng-bind="bindTextI18n('label_bieudodoanthuthang')"></span></h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-area">
+                            <canvas id="line" class="chart chart-line"
+                                    chart-colors="colors"
+                                    chart-data="data"
+                                    chart-labels="labels"
+                                    chart-series="series"
+                                    chart-options="options"
+                                    chart-dataset-override="datasetOverride"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-6">
+                <div class="card card-home">
+                    <div class="card-header">
+                        <h5 class="m-0 font-weight-bold text-info"><span ng-bind="bindTextI18n('header_thongtintonghopdonhang')"></span></h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mt-1">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="bg-primary p-2 text-white text-center">
+                                        <h3 class="mt-1">{{objbox.donhangtrongngay}}</h3>
+                                        <span class="font-light">{{bindTextI18n('label_donhangtrongngay')}}</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-success p-2 text-white text-center">
+                                        <h3 class="mt-1">{{objbox.donhanghoantat}}</h3>
+                                        <span class="font-light">{{bindTextI18n('label_donhanghoantat')}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3 mb-3">
+                                <div class="col-6">
+                                    <div class="bg-warning p-2 text-white text-center">
+                                        <h3 class="mt-1">{{objbox.donhangchuahoantat}}</h3>
+                                        <span class="font-light">{{bindTextI18n('label_donhangchuahoantat')}}</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-danger p-2 text-white text-center">
+                                        <h3 class="mt-1">{{objbox.donhanghuy}}</h3>
+                                        <span class="font-light">{{bindTextI18n('label_donhanghuy')}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <h5 class="font-weight-bold text-info"><i class="fas fa-info-circle"></i> {{bindTextI18n('truycapnhanh')}}</h5>
+                        </div>
+
+                        <div class="link-truycap mb-4">
+                            <a class="link-truycapnhanh" href="#" ui-sref="nhanvien"> <i class="far fa-circle color-infor"></i> {{bindTextI18n('menu_quanlynhanvien')}}</a><br />
+                            <a class="link-truycapnhanh" href="#" ui-sref="khachhang"> <i class="far fa-circle color-infor"></i> {{bindTextI18n('menu_quanlykhachhang')}}</a><br />
+                            <a class="link-truycapnhanh" href="#" ui-sref="danhsachdonhang"> <i class="far fa-circle color-infor"></i> {{bindTextI18n('menu_quanlydonhang')}}</a><br />
+                            <!--<a class="link-truycapnhanh" href="#" ui-sref="lotrinhdichuyen"> <i class="far fa-circle color-infor"></i> {{bindTextI18n('menu_lotrinhdichuyen')}}</a>--><br />
+                            <!--<a class="link-truycapnhanh" href="#" ui-sref="kehoachnhanvienV2"> <i class="far fa-circle color-infor"></i> {{bindTextI18n('menu_kehoachlamviec')}}</a>--><br />
+                            <!--<a class="link-truycapnhanh" href="#" ui-sref="lichsuvaoradiem"> <i class="far fa-circle color-infor"></i> {{bindTextI18n('menu_lichsuravaodiem')}}</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        if (!Notification) {
+            alert('Desktop notifications not available in your browser. Try Chromium.');
+            return;
+        }
+
+        if (Notification.permission !== 'granted')
+            Notification.requestPermission();
+    });
+
+     function notifyMe() {
+            if (Notification.permission !== 'granted')
+                Notification.requestPermission();
+            else {
+                var notification = new Notification('Thông báo!', {
+                    icon: '/images/icon.ico',
+                    body: 'Thông báo đơn hàng'
+                });
+                notification.onclick = function () {
+                    window.open('/DiemDanh/DiemDanhFromNoti?ID_Lop=' + ID_Lop + '&Ca=' + Ca);
+                };
+            }
+        }
+</script>

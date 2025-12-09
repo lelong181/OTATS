@@ -1,0 +1,51 @@
+@media all {
+    .page-break {
+        display: none;
+    }
+    .hideonprint {
+        display: block;
+    }
+}
+
+@media print {
+    .page-break {
+        display: block;
+        page-break-before: always;
+    }
+
+    .hideonprint {
+        display: none
+    }
+
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+
+
+.iconleft {
+    /*width: 85px;*/
+    height: 70px;
+    margin-right: 20px;
+}
+
+.iconright {
+    /*width: 85px;*/
+    height: 70px;
+    margin-left: 20px;
+}
+
+.btn-print {
+    padding: 10px;
+    border: 3px solid #292621;
+    border-radius: 5px;
+    margin: 0 20px;
+    font-weight: bold;
+    color: #292621;
+}
+
+body {
+    font-size: 14px;
+}

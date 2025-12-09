@@ -1,0 +1,40 @@
+﻿2025/08/10 08:54:23,029 INFO 26 LSPos_Data.Utilities.Log - SetGlobal Start
+2025/08/10 08:54:23,054 ERROR 26 GlobalDAO - System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at GlobalDAO.GetCurrentGlobalBySite(String sitecode, DateTime date) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\GlobalDAO.cs:line 35
+2025/08/10 08:54:23,120 INFO 26 LSPos_Data.Utilities.Log - Create new session start
+2025/08/10 08:54:23,445 ERROR 26 Ticket.Utils.ApiUtility - Người dùng chưa đăng ký Site, Vui lòng kiểm tra lại!
+2025/08/10 08:54:23,446 ERROR 26 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.App_Start.GlobalUtilities.SetGlobal(String ApiUrl, String username, String password, String SiteCode, String ProfileID, String ProfileCode, String MemberID) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\GlobalUtilities.cs:line 39
+   at LSPosMVC.Controllers.BaoCaoController.ticket_tonghophttt(String SiteCode, DateTime ReportDate) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\BaoCaoController.cs:line 1704
+2025/08/10 08:54:27,678 INFO 7 LSPos_Data.Utilities.Log - SetGlobal Start
+2025/08/10 08:54:27,697 ERROR 7 GlobalDAO - System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at GlobalDAO.GetCurrentGlobalBySite(String sitecode, DateTime date) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\GlobalDAO.cs:line 35
+2025/08/10 08:54:27,697 INFO 7 LSPos_Data.Utilities.Log - Create new session start
+2025/08/10 08:54:27,795 ERROR 7 Ticket.Utils.ApiUtility - Người dùng chưa đăng ký Site, Vui lòng kiểm tra lại!
+2025/08/10 08:54:27,795 ERROR 7 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.App_Start.GlobalUtilities.SetGlobal(String ApiUrl, String username, String password, String SiteCode, String ProfileID, String ProfileCode, String MemberID) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\GlobalUtilities.cs:line 39
+   at LSPosMVC.Controllers.BaoCaoController.ticket_tonghophttt(String SiteCode, DateTime ReportDate) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\BaoCaoController.cs:line 1704
+2025/08/10 08:54:35,908 INFO 6 LSPos_Data.Utilities.Log - SetGlobal Start
+2025/08/10 08:54:35,924 ERROR 6 GlobalDAO - System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at GlobalDAO.GetCurrentGlobalBySite(String sitecode, DateTime date) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\GlobalDAO.cs:line 35
+2025/08/10 08:54:35,924 INFO 6 LSPos_Data.Utilities.Log - Create new session start
+2025/08/10 08:54:35,994 ERROR 6 Ticket.Utils.ApiUtility - Người dùng chưa đăng ký Site, Vui lòng kiểm tra lại!
+2025/08/10 08:54:35,994 ERROR 6 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.App_Start.GlobalUtilities.SetGlobal(String ApiUrl, String username, String password, String SiteCode, String ProfileID, String ProfileCode, String MemberID) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\GlobalUtilities.cs:line 39
+   at LSPosMVC.Controllers.BaoCaoController.ticket_tonghophttt(String SiteCode, DateTime ReportDate) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\BaoCaoController.cs:line 1704
+2025/08/10 08:56:03,638 INFO 18 LSPos_Data.Utilities.Log - SetGlobal Start
+2025/08/10 08:56:03,705 ERROR 18 GlobalDAO - System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at GlobalDAO.GetCurrentGlobalBySite(String sitecode, DateTime date) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\DataAccess\GlobalDAO.cs:line 35
+2025/08/10 08:56:03,705 INFO 18 LSPos_Data.Utilities.Log - Create new session start
+2025/08/10 08:56:03,782 ERROR 18 Ticket.Utils.ApiUtility - Người dùng chưa đăng ký Site, Vui lòng kiểm tra lại!
+2025/08/10 08:56:07,846 ERROR 18 LSPos_Data.Utilities.Log - System.NullReferenceException: Object reference not set to an instance of an object.
+   at LSPosMVC.App_Start.GlobalUtilities.SetGlobal(String ApiUrl, String username, String password, String SiteCode, String ProfileID, String ProfileCode, String MemberID) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\App_Start\GlobalUtilities.cs:line 39
+   at LSPosMVC.Controllers.BaoCaoController.ticket_tonghophttt(String SiteCode, DateTime ReportDate) in D:\OneDrive\Documents\source\lscloudhub_core\LSPosMVC\Controllers\BaoCaoController.cs:line 1704

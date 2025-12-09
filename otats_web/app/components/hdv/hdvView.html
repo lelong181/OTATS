@@ -1,0 +1,101 @@
+﻿<link href="/app/components/nhanvien/nhanVienStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="toolbarmenu">
+                <button ng-show="(permission.them > 0)" ng-click="addNhanVien()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_them')"></span> </button>
+                <button ng-show="(permission.sua > 0)" ng-click="editNhanVien()" class="btn btn-link btn-menubar"><i class="fas fa-edit fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_sua')"></span> </button>
+                <button ng-show="(permission.sua > 0)" ng-click="xuatExcel()" id="btn_xuatexcelnhanvien" class="btn btn-link btn-menubar"><i class="fas fa-file-excel fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_xuatexcel')"></span></button>
+                <button ng-show="(permission.sua > 0)" ng-click="datLaiMatKhau()" class="btn btn-link btn-menubar"><i class="fas fa-redo-alt fas-sm color-dark"></i> <span ng-bind="bindTextI18n('button_datlaimatkhau')"></span></button>
+                <button ng-show="(permission.xoa > 0)" ng-click="deleteNhanVien()" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> <span ng-bind="bindTextI18n('button_xoa')"></span></button>
+            </div>
+            <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+        </div>
+    </div>
+</div>
+
+<!--popup reset password-->
+<div kendo-window="formresetpass" id="formresetpass" k-title="bindTextI18n('button_datlaimatkhau')" k-visible="false" k-modal="true" k-width="400" k-height="220">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luumatkhau" ng-click="luuMatKhau()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luuthaydoi')}}</button>
+                <button id="btn_huyluumatkhau" ng-click="huyLuuMatKhau()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="pass">{{bindTextI18n('label_matkhau')}} <span class="color-danger">(*)</span></label>
+                    <input type="password" placeholder="{{bindTextI18n('label_matkhau')}}" class="k-textbox" id="pass" ng-model="objectpass.pass" />
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="repass">{{bindTextI18n('label_xacnhanmatkhau')}} <span class="color-danger">(*)</span></label>
+                    <input type="password" placeholder="{{bindTextI18n('label_xacnhanmatkhau')}}" class="k-textbox" id="repass" ng-model="objectpass.repass" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--popup chi tiết nhân viên-->
+<div kendo-window="formnhanvien" id="formnhanvien" k-title="bindTextI18n('button_nhanvien')" k-visible="false" k-modal="true" k-width="700" k-height="300">
+    <div class="row">
+        <div class="col-12">
+            <div class="toolbarmenu">
+                <button id="btn_luuNhanVien" ng-click="luuNhanVien()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+                <button id="btn_huyLuuNhanVien" ng-click="huyLuuNhanVien()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="tenNhom"><span ng-bind="bindTextI18n('label_tendaydu')"></span> <span class="color-danger">(*)</span></label>
+                    <input type="text" placeholder="{{bindTextI18n('label_tendaydu')}}" class="k-textbox" id="tenNhanVien" ng-model="objectNhanVien.TenDayDu" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="tenNhom"><span>Mã thẻ HDV</span> <span class="color-danger">(*)</span></label>
+                    <input type="text" placeholder="Mã thẻ HDV" class="k-textbox" id="thehdv" ng-model="objectNhanVien.MaTheHDV" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="phone"><span ng-bind="bindTextI18n('label_sodienthoai')"></span></label>
+                    <input type="tel" placeholder="Điện thoại" class="k-textbox" id="phone" ng-model="objectNhanVien.DienThoai" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="phone"><span>Email</span></label>
+                    <input type="email" placeholder='Email' class="k-textbox" id="email" ng-model="objectNhanVien.Email" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="phone"><span>CCCD</span></label>
+                    <input type="text" placeholder="Số CCCD" class="k-textbox" id="cccd" ng-model="objectNhanVien.DienThoai" />
+                </div>
+            </div>           
+        </div>
+
+    </div>
+
+</div>

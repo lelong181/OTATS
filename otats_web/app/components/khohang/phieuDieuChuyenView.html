@@ -1,0 +1,117 @@
+﻿
+<div class="container-fluid">
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_tungay')}}:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_TuNgay"
+                           k-ng-model="obj_TuNgay"
+                           k-max="maxDate"
+                           k-rebind="maxDate"
+                           k-on-change="fromDateChanged()"
+                           k-format="'dd/MM/yyyy'" />
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_denngay')}}:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_DenNgay"
+                           k-ng-model="obj_DenNgay"
+                           k-min="minDate"
+                           k-rebind="minDate"
+                           k-on-change="toDateChanged()"
+                           k-format="'dd/MM/yyyy'" />
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="content-grid">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="toolbarmenu">
+                    <button id="btn_load" ng-click="loadphieudieuchuyen()" class="btn btn-link btn-menubar"><i class="fas fa-chart-line fas-sm color-primary"></i> {{bindTextI18n('button_xembaocao')}}</button>
+                    <button id="btn_themphieu" ng-click="themphieudieuchuyen()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_them')}}</button>
+                    <button id="btn_xuatExcel" ng-click="xuatexcel()" class="btn btn-link btn-menubar"><i class="fas fa-file-excel fas-sm color-primary"></i> {{bindTextI18n('button_xuatexcel')}}</button>
+                </div>
+                <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+            </div>
+            <div class="col-sm-6">
+                <div class="toolbarmenu">
+                    <h6 class="toolbarmenu-title color-infor"> <i class="fas fa-comment-dots"></i> {{bindTextI18n('label_chitietphieudieuchuyen')}}</h6>
+                </div>
+                <div kendo-grid="gridDetail" k-data-source="gridDetailData" k-options="gridDetailOptions" id="gridDetail"></div>
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+
+<!--popup thêm mới phiếu điều chuyển-->
+<div kendo-window="formdetail" id="formdetail" k-title="bindTextI18n('label_themmoiphieudieuchuyen')" k-visible="false" k-modal="true" k-width="900" k-height="550">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luuphieudieuchuyen" ng-click="luuphieudieuchuyen()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+                <button id="btn_huyluuphieudieuchuyen" ng-click="huyluuphieudieuchuyen()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_khoxuat')}} <span class="color-danger">(*)</span></label>
+                    <select kendo-combo-box="khoxuat"
+                            id="khoxuat"
+                            k-placeholder="bindTextI18n('label_khoxuat')"
+                            k-data-text-field="'tenKho'"
+                            k-data-value-field="'iD_Kho'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="khoxuatselect"
+                            k-data-source="khoxuatData"
+                            k-on-change="khoxuatOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_khonhap')}} <span class="color-danger">(*)</span></label>
+                    <select kendo-combo-box="khonhap"
+                            id="khonhap"
+                            k-placeholder="bindTextI18n('label_khonhap')"
+                            k-data-text-field="'tenKho'"
+                            k-data-value-field="'iD_Kho'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="khonhapselect"
+                            k-data-source="khonhapData"
+                            k-on-change="khonhapOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="ghichu">{{bindTextI18n('label_diengiai')}}</label>
+                    <textarea type="text" placeholder="{{bindTextI18n('label_diengiai')}}" class="k-textbox text-area" id="ghichu" ng-model="ghichu" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div kendo-grid="gridhangdieuchuyen" k-data-source="gridhangdieuchuyenData" k-options="gridhangdieuchuyenOptions" id="gridhangdieuchuyen"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

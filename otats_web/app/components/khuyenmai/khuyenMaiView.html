@@ -1,0 +1,23 @@
+﻿<link href="app/components/khuyenmai/editKhuyenMaiStyle.css" rel="stylesheet" />
+
+<div class="container-fluid container-scroll">
+    <div class="toolbarmenu">
+        <button ng-show="(permission.them > 0)" ng-click="themkhuyenmai()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i>  <span ng-bind="bindTextI18n('button_themkhuyenmai')"></span></button>
+        <button ng-show="(permission.sua > 0)" ng-click="suakhuyenmai()" class="btn btn-link btn-menubar"><i class="fas fa-edit fas-sm color-infor"></i>  <span ng-bind="bindTextI18n('button_suakhuyenmai')"></span></button>
+        <button ng-show="(permission.sua > 0)" id="btn_xuatexcel" ng-click="xuatexcelkhuyenmai()" class="btn btn-link btn-menubar"><i class="fas fa-file-excel fas-sm color-infor"></i>  <span ng-bind="bindTextI18n('button_xuatexcel')"></span></button>
+        <button ng-show="(permission.sua > 0)" ng-click="tamdungkhuyenmai()" class="btn btn-link btn-menubar"><i class="fas fa-pause-circle fas-sm color-primary"></i>  <span ng-bind="bindTextI18n('button_tamdung')"></span></button>
+        <button ng-show="(permission.xoa > 0)" ng-click="deletekhuyenmai()" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> {{bindTextI18n('button_xoa')}}</button>
+    </div>
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+
+    <div class="row mt-2">
+        <div class="col-6">
+            <h5 ng-bind="bindTextI18n('menu_danhsachdonhang')"></h5>
+            <div kendo-grid="griddonhang" k-data-source="griddonhangData" k-options="griddonhangOptions" id="griddonhang"></div>
+        </div>
+        <div class="col-6">
+            <h5 ng-bind="bindTextI18n('menu_danhsachmathang')"></h5>
+            <div kendo-grid="gridchitiet" k-data-source="gridchitietData" k-options="gridchitietOptions" id="gridchitiet"></div>
+        </div>
+    </div>
+</div>

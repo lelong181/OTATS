@@ -1,0 +1,64 @@
+﻿<link href="/app/components/cauhinh/doiMatKhauStyle.css" rel="stylesheet" />
+    <div class="container-fluid" >
+
+        <!--<div class="modal-fade" id="modal-id">
+            <div class="modal-dialog" style="background: url(/assets/img/BG.jpg) repeat;width: 100%;
+    height: 100%;">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <form class="form" method="POST" role="form">
+                            <h3 class="text-center">ĐỔI MẬT KHẨU</h3>
+
+
+                            <div class="form-group">
+
+                                <input type="text" name="pass-old" class="form-control" placeholder="Mật khẩu cũ">
+                            </div>
+                            <div class="form-group">
+
+                                <input name="pass-new" type="text" class="form-control" placeholder="Mật khẩu mới">
+                            </div>
+                            <div class="form-group">
+
+                                <input name="pass-new-repeat" type="text" class="form-control" placeholder="Nhập lại mật khẩu mới">
+                            </div>
+
+
+                            <div class="form-group">
+                                <button name="submit" type="submit" class="btn btn-info">ĐỔI MẬT KHẨU </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <div class="row justify-content-center" style="margin-top:3em;margin-bottom:2em">
+            <a class="navbar-brand" ui-sref="home">
+                <img src="assets/img/logo.png" class="logo-login" alt="">
+            </a></div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 col-sm-12">
+                <div class="change-pass">
+                    <h2 class="title text-center text-uppercase">{{bindTextI18n('button_doimatkhau')}}</h2>
+                    <div class="form_reg text-center">
+                        <div class="form-group">
+                            <input type="password" id="passold" name="pass-old" class="form-control" placeholder="{{bindTextI18n('label_nhapmatkhaucu')}}" ng-model="passold">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="pass" name="pass-new" class="form-control" placeholder="{{bindTextI18n('label_nhapmatkhaumoi')}}" ng-model="pass">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="passrep" name="pass-new-rep" class="form-control" placeholder="{{bindTextI18n('label_nhaplaimatkhaumoi')}}" ng-model="passrep">
+                        </div>
+                    </div>
+                    <button type="button" ng-click="changpass()" class="btn btn-info col-md-12 col-xs-12">{{bindTextI18n('button_doimatkhau')}}</button>
+                    
+                </div>
+                
+            </div>
+            <div class="col-md-4"> </div>
+        </div>
+
+        </div>

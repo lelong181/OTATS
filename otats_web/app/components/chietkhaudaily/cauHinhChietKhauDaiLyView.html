@@ -1,0 +1,42 @@
+﻿
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div kendo-grid="gridnhomnhanvien" k-data-source="gridnhomnhanvienData" k-options="gridnhomnhanvienOptions" id="gridnhomnhanvien"></div>
+        </div>
+    </div>
+</div>
+
+<div kendo-window="formsetnguong" id="formsetnguong" k-title="'Cấu hình mức hoa hồng'" k-visible="false" k-modal="true" k-width="400" k-height="205">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luu" ng-click="setHoaHong()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+                <button id="btn_huy" ng-click="huysetHoaHong()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="nhom">{{bindTextI18n('label_nhom')}}</label>
+                    <input type="text" class="k-textbox" id="nhom" ng-model="nhom" readonly />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="content-filter__label">Mức hoa hồng (%)</label>
+                    <input kendo-numeric-text-box k-min="0" ng-model="hoaHong" id="hoahong" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

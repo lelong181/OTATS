@@ -1,0 +1,23 @@
+﻿
+<div class="container-fluid">
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+
+<!--popup giao hàng-->
+<div kendo-window="formtraloi" id="formtraloi" k-title="'Gửi tin nhắn trả lời'" k-visible="false" k-modal="true" k-width="400" k-height="230">
+    <div class="body">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="ghichugiaohang">Nội dung trả lời</label>
+                    <textarea placeholder="Nội dung trả lời" class="k-textbox text-area-md" id="noidung" ng-model="noidung" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer float-right">
+        <button id="btn_apdunggiaohang" ng-click="traloitinnhan()" class="btn btn-primary btn-lg"><i class="fas fa-check-circle"></i> Trả lời</button>
+        <button ng-click="dongtraloi()" class="btn btn-outline-secondary btn-lg"><i class="fas fa-close"></i> Đóng</button>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+﻿
+<div class="container-fluid">
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label><span ng-bind="bindTextI18n('label_tinhthanh')"></span>:</label>
+                    <select kendo-combo-box="cbb_tinhthanh"
+                            id="tinhthanh"
+                            k-placeholder="bindTextI18n('label_tinhthanh')"
+                            k-data-text-field="'tenTinh'"
+                            k-data-value-field="'iD_Tinh'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="tinhthanhselect"
+                            k-data-source="tinhthanhData"
+                            k-on-change="tinhthanhOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label><span ng-bind="bindTextI18n('header_quanhuyen')"></span>:</label>
+                    <select kendo-combo-box="quanhuyen"
+                            id="quanhuyen"
+                            k-placeholder="bindTextI18n('header_quanhuyen')"
+                            k-data-text-field="'tenQuan'"
+                            k-data-value-field="'iD_Quan'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="quanhuyenselect"
+                            k-data-source="quanhuyenData"
+                            k-on-change="quanhuyenOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label><span ng-bind="bindTextI18n('header_loaikhachhang')"></span>:</label>
+                    <select kendo-combo-box="loaikhachhang"
+                            id="loaikhachhang"
+                            k-placeholder="bindTextI18n('header_loaikhachhang')"
+                            k-data-text-field="'tenLoaiKhachHang'"
+                            k-data-value-field="'iD_LoaiKhachHang'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="loaikhachhangselect"
+                            k-data-source="loaikhachhangData"
+                            k-on-change="loaikhachhangOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <button id="btn_xembaocao" ng-click="xemBaoCao()" class="btn btn-outline-info btn-menu__report"><i class="fas fa-chart-pie fas-sm"></i> <span ng-bind="bindTextI18n('button_timkiem')"></span></button>
+            </div>
+
+        </div>
+    </div>
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+
+<div kendo-window="formsetnguong" id="formsetnguong" k-title="bindTextI18n('label_thietlapnguongcongno')" k-visible="false" k-modal="true" k-width="400" k-height="200">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luu" ng-click="setnguong()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_luu')"></span></button>
+                <button id="btn_huy" ng-click="huysetnguong()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i>  <span ng-bind="bindTextI18n('button_huy')"></span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="khachhang"><span ng-bind="bindTextI18n('label_khachhang')"></span></label>
+                    <input type="text" class="k-textbox" id="khachhang" ng-model="khachhang" readonly />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_nguongcongno')"></span></label>
+                    <input kendo-numeric-text-box k-min="0" ng-model="nguong" id="nguong" ng-change="nguongOnchange()" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

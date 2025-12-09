@@ -1,0 +1,183 @@
+﻿.label-donhang-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.label-donhang-2 {
+    flex: 0 0 16%;
+    max-width: 16%;
+}
+
+.form-group__donhang {
+    margin-bottom: .5rem;
+    display: flex;
+}
+
+.body-line {
+    /*border-top: dotted 1px #343a40;*/
+}
+
+.body-thanhtien--thanhtien, .body-thanhtien--khuyenmai, .body-donhang__thongtin {
+    /*height: calc(100vh - 35rem);*/
+    height: 15rem;
+}
+
+#btn_thanhtoan {
+    width: 100%;
+}
+
+#btn_thanhtoanvi {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.table-border-none td {
+    border: 0;
+}
+
+.textarea-lydo {
+    height: 7rem;
+}
+
+.img-donhang {
+    width: 100%;
+}
+
+.body-donhang__chitiet-grid .k-autocomplete .k-input {
+    height: calc(.25rem + 1.5em);
+}
+
+.body-donhang__chitiet-grid .k-grid td {
+    padding: .5rem .75rem;
+}
+
+
+.combo-trangthaidonhang {
+    width: 100%;
+    padding: 0px 5px 5px 0px;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.body-donhang__thongtin, .body-thanhtien--thanhtien, .body-thanhtien--khuyenmai {
+    box-shadow: 0 6px 10px -4px rgba(0,0,0,.15);
+    border: 1px solid rgba(0,0,0,.125);
+    border-top: none;
+    margin-bottom: 1em;
+    padding: .5em .5em 0 .5em;
+}
+
+.toolbarmenu.menu-chitietdonhang {
+    background: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    border-radius: calc(.5rem - 1px) calc(.5rem - 1px) 0 0;
+}
+
+
+/*home style*/
+.body-dashboard {
+    background-color: white;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    height: calc(100vh - 11rem);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 6px 10px -4px rgba(0,0,0,.15);
+    background-color: #fff;
+    color: #252422;
+    margin-bottom: 20px;
+    position: relative;
+    border: 1px solid rgba(0,0,0,.05);
+    -webkit-transition: transform .3s cubic-bezier(.34,2,.6,1),box-shadow .2s ease;
+    -moz-transition: transform .3s cubic-bezier(.34,2,.6,1),box-shadow .2s ease;
+    -o-transition: transform .3s cubic-bezier(.34,2,.6,1),box-shadow .2s ease;
+    -ms-transition: transform .3s cubic-bezier(.34,2,.6,1),box-shadow .2s ease;
+    transition: transform .3s cubic-bezier(.34,2,.6,1),box-shadow .2s ease;
+}
+
+.card-stats .card-body {
+    padding: 15px 15px 0;
+}
+
+.card .card-body {
+    padding: 15px 15px 10px 15px;
+}
+
+.card-stats .card-footer {
+    padding: 0 15px 15px;
+}
+
+.card .card-footer {
+    background-color: transparent;
+    border: 0;
+}
+
+/*.card-footer:last-child {
+    border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+}*/
+
+.card-stats .icon-big {
+    font-size: 3em;
+    min-height: 64px;
+}
+
+.card-stats .card-body .numbers {
+    text-align: right;
+    font-size: 2em;
+}
+
+.card .numbers {
+    font-size: 2em;
+}
+
+.card-stats .card-body .numbers .card-category {
+    color: #9a9a9a;
+    font-size: 16px;
+    line-height: 1.4em;
+}
+
+.card-stats .card-body .numbers p {
+    margin-bottom: 0;
+}
+
+.card-category {
+    font-size: 1em;
+}
+
+.card-category, .category {
+    /*text-transform: capitalize;*/
+    font-weight: 400;
+    color: #9a9a9a;
+    font-size: .7142em;
+}
+
+.card-stats .card-footer .stats {
+    color: #9a9a9a;
+}
+
+.card-link, .card .card-footer .stats i {
+    margin-right: 5px;
+    position: relative;
+    top: 0;
+    color: #66615b;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: blueviolet;
+    background-color: white !important;
+    border-bottom: blueviolet solid;
+}
+
+.card.card-thanhtoan {
+    height: calc(100vh - 11rem);
+}
+
+.body-huydonhang{
+    padding: 1em;
+}

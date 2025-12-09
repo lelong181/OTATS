@@ -1,0 +1,113 @@
+﻿
+<div class="container-fluid" style="position:absolute;z-index:99;background:#fff">
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label>Khu du lịch</label>
+                    <select kendo-combo-box="sitecombo"
+                            id="sitecombo"
+                            k-data-text-field="'siteName'"
+                            k-data-value-field="'siteCode'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="siteselect"
+                            k-data-source="sitedata"
+                            k-on-change="siteOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_tungay')}}:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_TuNgay"
+                           k-ng-model="obj_TuNgay"
+                           k-max="maxDate"
+                           k-rebind="maxDate"
+                           k-on-change="fromDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_denngay')}}:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_DenNgay"
+                           k-ng-model="obj_DenNgay"
+                           k-min="minDate"
+                           k-rebind="minDate"
+                           k-on-change="toDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <button id="btn_bm009xembaocao" class="btn btn-outline-info btn-menu__report" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm "></i> {{bindTextI18n('button_xembaocao')}}</button>
+                <button id="btn_bm009xuatexcel" class="btn btn-outline-secondary btn-menu__report" ng-click="XuatExcel()" id="dataBm009_XuatExcel"><i class="fas fa-file-excel fas-sm" style="color:green"></i> Xuất excel</button>
+                <button id="btn_bm009xuatexcel" class="btn btn-outline-secondary btn-menu__report" ng-click="XuatPDF()" id="dataBm009_XuatPDF"><i class="fas fa-file-pdf fas-sm" style="color:orangered"></i> Tải báo cáo</button>
+            </div>
+        </div>
+    </div>
+
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+
+<script>
+    /*
+        This demo renders the grid in "DejaVu Sans" font family, which is
+        declared in kendo.common.css. It also declares the paths to the
+        fonts below using <tt>kendo.pdf.defineFont</tt>, because the
+        stylesheet is hosted on a different domain.
+    */
+    kendo.pdf.defineFont({
+        "DejaVu Sans": "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans.ttf",
+        "DejaVu Sans|Bold": "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Bold.ttf",
+        "DejaVu Sans|Bold|Italic": "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf",
+        "DejaVu Sans|Italic": "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf",
+        "WebComponentsIcons": "https://kendo.cdn.telerik.com/2017.1.223/styles/fonts/glyphs/WebComponentsIcons.ttf"
+    });
+</script>
+
+<div class="content" style="position:absolute;top:0;width:100%;z-index:1">
+    <div class="page-template" style="padding-left: 20px; padding-right: 20px; font-family: 'DejaVu Sans', 'Arial' , sans-serif; font-size:10px;">
+        <!--<div style="border-bottom: 1px solid #000;text-align:left">Trang </div>-->
+        <div style="margin-top:30px;">
+            <p style="text-align:left;">Ghi chú:..............................................................................................................................................................................................................................................</p>
+            <p style="text-align:left;">...........................................................................................................................................................................................................................................................</p>
+            <p style="text-align:left;">...........................................................................................................................................................................................................................................................</p>
+        </div>
+        <div style="margin-top: 50px">
+            <label style="width:30%;text-align:left;">Người báo cáo<p></p><p></p><p>..........................</p></label>
+            <label style="width:40%;text-align:left;">Ngày báo cáo<p>{{datenow}}</p><p></p><p></p></label>
+
+        </div>
+    </div>
+</div>
+
+<script type="x/kendo-template" id="page-template">
+    <div class="page-template">
+      <div class="header">
+            <div style="float: left">Trang #: pageNum # / #: totalPages + 1 #</div>
+      </div>
+     # if(pageNum === 1){#
+     <label style="width:100%;text-align:center;font-weight: 700;height:25px;line-height:25px;position: absolute; top:30px;">BÁO CÁO TỔNG HỢP BOOKING THEO NCC</label>
+    # } #
+    </div>
+
+</script>
+<style>
+    .page-template > * {
+        left: 20px;
+        right: 20px;
+    }
+
+    .page-template .header {
+        top: 0px;
+        position: absolute;
+        border-bottom: 1px solid #000;
+    }
+
+    .page-template .footer {
+        bottom: 200px;
+        position: absolute;
+    }
+</style>

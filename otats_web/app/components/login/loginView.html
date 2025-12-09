@@ -1,0 +1,92 @@
+﻿<link href="/app/components/login/loginStyle.css" rel="stylesheet" />
+<div class="container body-login">
+    <div class="row justify-content-center h-100">
+        <div class="col-sm-5 card card-background">
+            <div class="card-header background-header-footer">
+                <img src="../../../images/icon.ico" alt="LSCLOUD" class="logo-login" />
+            </div>
+            <div class="card-body">
+                <form name="form" role="form">
+                    <div class="form-group" ng-class="{ 'has-error': form.macongty.$dirty && form.macongty.$error.required }">
+                        <input title="{{bindTextI18n('label_vuilongnhaptruongnay')}}" type="text" name="macongty" id="macongty" placeholder="{{bindTextI18n('label_macongty')}}" class="form-control" ng-model="macongty" required />
+                        <div ng-show="form.macongty.$dirty && form.macongty.$error.required" class="alert alert-warning">(*) {{bindTextI18n('label_batbuocnhapmacongty')}}</div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+                        <input title="{{bindTextI18n('label_vuilongnhaptruongnay')}}" type="text" name="username" id="username" placeholder="{{bindTextI18n('label_tendangnhap')}}" class="form-control" ng-model="username" required />
+                        <div ng-show="form.username.$dirty && form.username.$error.required" class="alert alert-warning">(*) {{bindTextI18n('label_batbuocnhaptendangnhap')}}</div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                        <input title="{{bindTextI18n('label_vuilongnhaptruongnay')}}" type="password" name="password" id="password" placeholder="{{bindTextI18n('label_matkhau')}}" class="form-control" ng-model="password" required />
+                        <div ng-show="form.password.$dirty && form.password.$error.required" class="alert alert-warning">(*) {{bindTextI18n('label_batbuocnhapmatkhau')}}</div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div id="login-radiobtn" class="btn-group">
+                                <div class="custom-control custom-radio custom-control-inline custom-margin ">
+                                    <input type="radio" class="custom-control-input" id="isquanly" name="loailogin" value="0" checked>
+                                    <label class="custom-control-label" for="isquanly"><span ng-bind="bindTextI18n('button_quanly')"></span></label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline custom-margin">
+                                    <input type="radio" class="custom-control-input" id="isnhanvien" name="loailogin" value="1">
+                                    <label class="custom-control-label" for="isnhanvien"><span ng-bind="bindTextI18n('button_nhanvien')"></span></label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline custom-margin dropdown">
+                                    <button class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img class="langIcon" ng-src="{{ lang === 'vi-vn' ? '../../../assets/img/Flag_VI.svg' : '../../../assets/img/Flag_UK.svg'}}" src="../../../assets/img/Flag_VI.svg" />
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#" ng-click="changeLang('vi-vn')">
+                                            <img class="langIcon" src="../../../assets/img/Flag_VI.svg" /> Tiếng việt
+                                        </a>
+                                        <a class="dropdown-item" href="#" ng-click="changeLang('en-us')">
+                                            <img class="langIcon" src="../../../assets/img/Flag_UK.svg" /> English
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button ng-click="login()" ng-disabled="form.$invalid || dataLoading" class="btn btn-primary btn-login">{{bindTextI18n('button_dangnhap')}}</button>
+                        <img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                        <!--<a href="#!/dangkyhdv" class="btn btn-link">Register</a>-->
+                    </div>
+                    <div ng-show="flag" class="alert alert-danger alert-message">{{message}}</div>
+                    <!--<div style="padding-top:20px;">
+                        <div class="input-group">
+                            <div id="lang-radiobtn" class="btn-group">
+                                <div class="custom-control custom-radio custom-control-inline custom-margin ">
+                                    <input type="radio" ng-model="lang" ng-change="changeLang('vi-vn')" class="custom-control-input" id="langVi" name="langlogin" value="vi-vn">
+                                    <label class="custom-control-label" style="width:40px;" for="langVi">
+                                        <img class="langIcon" src="../../../assets/img/Flag_VI.svg" />
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline custom-margin">
+                                    <input type="radio" ng-model="lang" ng-change="changeLang('en-us')" class="custom-control-input" id="langEn" name="langlogin" value="en-us">
+                                    <label class="custom-control-label" for="langEn">
+                                        <img class="langIcon" src="../../../assets/img/Flag_UK.svg" />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+
+                </form>
+            </div>
+            <div class="card-footer background-header-footer text-center">
+                <label class="text-center">
+                    <span class="text-primary coppy">
+                        <a href="http://lscloud.vn/" target="_blank">Hotline:  0944876541</a>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="coppy text-center">
+    <a href="http://lscloud.vn/" class="text-center text-white" target="_blank"> Copyright © LSCLOUD.jsc </a>
+</div>

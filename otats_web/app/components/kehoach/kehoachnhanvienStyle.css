@@ -1,0 +1,46 @@
+﻿.k-window-title{
+    /*color:#fff;*/
+    font-weight:600;
+}
+.k-scheduler-views {
+    float: right !important;
+}
+
+.k-scheduler-navigation {
+    float: left !important;
+}
+
+.k-scheduler .k-header .k-link {
+    /*background-color: #0b62bb !important;*/
+    /*background: linear-gradient(#37aaea,#117ed2);*/
+}
+
+.k-header {
+    /*background: linear-gradient(#37aaea,#117ed2);*/
+}
+
+.k-scheduler-edit-form .row {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.k-scheduler-edit-form .col-sm-3 {
+    padding: 0px !important;
+}
+
+.k-scheduler-edit-form .col-sm-9 {
+    padding: 0px !important;
+}
+
+.k-scheduler-edit-form .labelForm {
+    line-height: 22px;
+}
+
+.k-scheduler-edit-form .k-combobox {
+    border: none !important;
+}
+
+.k-event {
+    border: none;
+    padding:0px;
+}

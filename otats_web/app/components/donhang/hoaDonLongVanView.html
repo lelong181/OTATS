@@ -1,0 +1,125 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="/app/components/donhang/hoaDonLongVanStyle.css" media="print" />
+</head>
+<body>
+    <div class="print-wrapper print-patient-summary">
+        <div class="print-header">
+            <div class="print-italic print-bold">Long Vân Store <br /> Hotline: 0912094233</div>
+            <!--<h1>
+                <img ng-if="visitTabConfig.getPrintConfigForCurrentTab().logo" class="logo" ng-src="{{visitTabConfig.getPrintConfigForCurrentTab().logo}}" alt="logo">
+                {{visitTabConfig.getPrintConfigForCurrentTab().title}}
+            </h1>-->
+        </div>
+        <div class="print-body">
+            <div class="print-center print-title">CHI TIẾT ĐƠN HÀNG</div>
+            <div class="print-center print-italic">Mã đơn hàng: {{objprint.maThamChieu}}</div>
+
+            <table class="table table-border-none" cellpadding="2" cellspacing="2" style="width: 100%; border-collapse: collapse">
+                <tr>
+                    <td style="width: 20%;">Ngày lập:</td>
+                    <td>{{objprint.ngayTao}}</td>
+                    <td style="width: 20%;">Chương trình KM:</td>
+                    <td style="width: 20%;">{{objprint.tenCTKM}}</td>
+                </tr>
+                <tr>
+                    <td style="width: 20%;">Nhân viên lập:</td>
+                    <td>{{objprint.tenNhanVien}}</td>
+                    <td style="width: 20%;">Chiết khấu (%):</td>
+                    <td style="width: 20%;">{{objprint.chietKhauPhanTram}}</td>
+                </tr>
+                <tr>
+                    <td style="width: 20%;">Khách hàng:</td>
+                    <td>{{objprint.tenKhachHang}}</td>
+                    <td style="width: 20%;">Chiết khấu tiền:</td>
+                    <td style="width: 20%;">{{objprint.chietKhauTien}}</td>
+                </tr>
+                <tr>
+                    <td style="width: 20%;">Điện thoại:</td>
+                    <td>{{objprint.dienThoai}}</td>
+                    <td style="width: 20%;">Chiết khấu khác(%):</td>
+                    <td style="width: 20%;">{{objprint.chietKhauTienKhac}}</td>
+                </tr>
+                <tr>
+                    <td style="width: 20%;">Trạng thái giao hàng:</td>
+                    <td>{{objprint.tenTrangThaiGiaoHang}}</td>
+                    <td style="width: 20%;">Chiết khấu tiền khác:</td>
+                    <td style="width: 20%;">{{objprint.chietKhauTienKhac}}</td>
+                </tr>
+                <tr>
+                    <td style="width: 20%;">Trạng thái thanh toán:</td>
+                    <td>{{objprint.iD_TrangThaiThanhToan}}</td>
+                    <td style="width: 20%;">Tổng tiền chiết khấu:</td>
+                    <td style="width: 20%;">{{objprint.tongTienChietKhau}}</td>
+                </tr>
+                <tr>
+                    <td style="width: 20%;">Địa chỉ:</td>
+                    <td colspan="1" style="width:20%,">
+                        {{objprint.diaChi}}
+                    </td>
+                    <td style="width: 20%;">Tổng tiền đơn hàng:</td>
+                    <td style="width: 20%;">{{objprint.tongTien}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Đã thanh toán:</td>
+                    <td>{{objprint.tienDaThanhToan}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Còn lại:</td>
+                    <td>{{objprint.conLai}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Ghi chú:</td>
+                    <td>{{objprint.ghiChu}}</td>
+                </tr>
+            </table>
+
+
+            <div class="table mt-lg-5">
+                <table cellpadding="7" cellspacing="3">
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã hàng</th>
+                        <th>Tên hàng</th>
+                        <th>ĐVT</th>
+                        <th>Số lượng</th>
+                        <th>Đơn giá</th>
+                        <th>Thành tiền</th>
+                        <th>Ghi chú</th>
+                        <th>Đã giao</th>
+                    </tr>
+                    <tr ng-repeat="data in list">
+                        <td style="text-align:center">{{data.$id}}</td>
+                        <td style="text-align:center">{{data.mahang}}</td>
+                        <td>{{data.tenhang}}</td>
+                        <td style="text-align:center">{{data.tendonvi}}</td>
+                        <td style="text-align:center">{{data.soluong}}</td>
+                        <td style="text-align:right">{{data.giaban}}</td>
+                        <td style="text-align:right">{{data.tongTien}}</td>
+                        <td>{{data.ghichu}}</td>
+                        <td style="text-align:center">{{data.dagiao}}</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+        </div>
+        <div class="print-footer">
+            <span>Khách hàng</span>
+            <span>Nhân viên giao nhận</span>
+            <span>Thủ kho</span>
+            <span>Kế toán</span>
+
+
+
+        </div>
+    </div>
+</body>
+</html>

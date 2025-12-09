@@ -1,0 +1,145 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Assets/printTicket/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/printQR.css" rel="stylesheet" />
+    <script src="~/Assets/printTicket/jquery.js"></script>
+    <script src="~/Scripts/qrcode.js"></script>
+    <script>
+    $(document).ready(function () {
+
+            var QR_CODE = new QRCode("qrcode", {
+                width: 200,
+                height: 200,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H,
+            });
+        QR_CODE.makeCode("@(Model.MaQRThanhToan.data)");
+
+    });
+
+        function checkthanhtoan() {
+            $("#btn-checkthanhtoan").hide();
+            $.ajax({
+                url: '/Booking/CheckThanhToan?ID_DonHang=@Model.lstChiTiet[0].iddonhang',
+                type: 'GET'
+            }).done(function successCallback(response) {
+                console.log(response);
+                if (response.data.trangthaidonhang == 3) {
+                    window.location.replace("https://server.lscloud.vn/Booking/PrintQRTicketByBookingCodeForBaiDinh" + window.location.search)
+                } else {
+                    $("#btn-checkthanhtoan").show();
+                    alert("Giao dịch đang xử lý! vui lòng kiểm tra lại sau giây lát!")
+                }
+            })
+        }
+    </script>
+</head>
+<body onload="printAndRemove();">
+    <div class="container">
+        @*<div id="hide">
+                <a href="" class="btn-print" onclick='printDiv();'>
+                    <i class="fa fa-print fa-style" aria-hidden="true" style="color: #ff9933;"></i>
+                    <span>In vé</span>
+                </a>
+            </div>*@
+        <div class="hideonprint" style="width: 400px; margin-left: 5px; margin-top:20px;margin-bottom:20px;">
+            <button id="btn-checkthanhtoan" style="width:100%; text-align:center; border:solid 1px #808080; height:30px" onclick="checkthanhtoan()">Check thanh toán</button>
+        </div>
+        <div style="width: 400px; margin-left: 5px;">
+            @*Hóa đơn tổng*@
+            @*<p style="width:100%;font-size:20px; text-align:center;font-weight:700;">KHU DU LỊCH BÁI ĐÍNH</p>*@
+            <b style="width: 100%; text-align: center; display: block;
+                            margin-top:5px;font-size:20px;">
+                Vui lòng quét mã bằng app ngân hàng để thanh toán
+            </b>
+            <div style="width: 100%; display: flex; flex-wrap: nowrap; flex-direction: row; justify-content: center;">
+                <div id="qrcode"></div>
+            </div>
+            <b style="width: 100%; text-align: center; display: block;
+                            margin-top:5px;font-size:22px;">
+                BIÊN LAI THANH TOÁN/ RECEIPT
+
+            </b>
+            <b style="width:100%;overflow:hidden;">----------------------------------------------------------------------------------</b>
+            <table>
+                <tr>
+                    <td style="width:65%">Mã OTA Booking:</td>
+                    <td><b>@Model.MaThamChieu</b></td>
+                </tr>
+                <tr>
+                    <td>Ngày/ Date:</td>
+                    <td> @DateTime.Now.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+                <tr>
+                    <td>Thu ngân/ Cashier:</td>
+                    <td><b>@Model.ThuNgan</b></td>
+                </tr>
+            </table>
+
+            <table style="width:95%">
+                <tr style="border-bottom: solid 1px;">
+                    <th><b>Dịch vụ<br /> Service</b></th>
+                    <th style="text-align:right"><b>SL<br /> Qty</b></th>
+                    <th style="text-align:right"><b>Đơn giá Price</b></th>
+                </tr>
+                @{double tongtien = 0; }
+                @foreach (LSPos_Data.Models.ChiTietDonHangModels chitiet in Model.lstChiTiet)
+                {
+                    tongtien = tongtien + chitiet.tongTien;
+                    <tr>
+                        <td>@chitiet.tenhang</td>
+                        <td style="text-align:right">@chitiet.soluong</td>
+                        <td style="text-align:right">@chitiet.tongTien.ToString("N0")</td>
+                    </tr>
+                }
+            </table>
+            <b style="width:100%;overflow:hidden;">----------------------------------------------------------------------------------</b>
+            <table style="width:95%">
+                <tr>
+                    <td>Thành tiền/ Amount</td>
+                    <td style="text-align:right">@tongtien.ToString("N0")</td>
+                </tr>
+                <tr>
+                    <td>Chiết khấu/ Discount </td>
+                    <td style="text-align:right">0 </td>
+                </tr>
+                <tr>
+                    <td>Tổng tiền/ Total</td>
+                    <td style="text-align:right">@tongtien.ToString("N0")</td>
+                </tr>
+            </table>
+            <b style="width:100%;overflow:hidden;">----------------------------------------------------------------------------------</b>
+            <div style="width: 100%; display: flex; flex-wrap: nowrap; flex-direction: row; justify-content: center;">
+                <div id="qrcode"></div>
+            </div>
+            <i style="width: 100%; font-size: 15px; font-weight:700; display: block; ">
+                Quý khách vui lòng giữ lại hóa đơn tổng để được hỗ trợ khi cần thiết
+            </i>
+            <i style="width: 100%; font-size: 15px; display: block;">
+                Hotline hỗ trợ:
+            </i>
+            <i style="width: 100%; font-size: 15px; display: block; ">
+                Mã biên lai thanh toán có giá trị xuất hóa đơn trong ngày
+            </i>
+            <i style="width: 90%; font-size: 15px; display: block; text-align: center;">
+                Power by LsCloud.vn - MST 0110236110
+            </i>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

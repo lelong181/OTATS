@@ -1,0 +1,116 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="/app/components/donhang/inDonHangPOSStyle.css" media="print" />
+</head>
+<body>
+    <div class="print-wrapper print-patient-summary">
+        <div class="print-header">
+            <!--<div class="print-center">{{objprint.tencongty}}</div>-->
+            <!--<h1>
+                <img ng-if="visitTabConfig.getPrintConfigForCurrentTab().logo" class="logo" ng-src="{{visitTabConfig.getPrintConfigForCurrentTab().logo}}" alt="logo">
+                {{visitTabConfig.getPrintConfigForCurrentTab().title}}
+            </h1>-->
+        </div>
+        <div class="print-body">
+            <div class="print-center print-title">BIÊN LAI THANH TOÁN/ RECEIPT</div>
+            <div class="print-center print-italic">{{objprint.maThamChieu}}</div>
+
+            <table class="table table-border-none" cellpadding="2" cellspacing="2" style="width: 100%; border-collapse: collapse">
+                <tr>
+                    <td style="width: 40%;">Ngày/Date:</td>
+                    <td>{{objprint.ngayTao}}</td>
+
+                </tr>
+                <tr>
+                    <td style="width: 40%;">Thu ngân/Cashier:</td>
+                    <td>{{objprint.tenNhanVien}}</td>
+
+                </tr>
+                <tr>
+                    <td style="width: 40%;">Khách hàng/Customer:</td>
+                    <td>{{objprint.tenKhachHang}}</td>
+
+                </tr>
+                <tr>
+                    <td style="width: 40%;">Ghi chú/Note:</td>
+                    <td>{{objprint.ghiChu}}</td>
+                </tr>
+            </table>
+
+
+            <div class="table mt-lg-5">
+                <table cellpadding="7" cellspacing="3">
+                    <tr>
+                        <th>STT</th>
+                        <!--<th>Mã hàng</th>-->
+                        <th>Tên hàng</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <!--<th>Đã giao</th>-->
+                        <!--<th>Đơn vị</th>-->
+                        <th>Tổng tiền CK</th>
+                        <th>Tổng Tiền</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <!--<th>Mã hàng</th>-->
+                        <th>(Name)</th>
+                        <th>(Price)</th>
+                        <th>(Quantity)</th>
+                        <!--<th>Đã giao</th>-->
+                        <!--<th>Đơn vị</th>-->
+                        <th>(Discount)</th>
+                        <th>(Total)</th>
+                    </tr>
+                    <tr ng-repeat="data in list">
+                        <td>{{data.$id}}</td>
+                        <!--<td>{{data.mahang}}</td>-->
+                        <td>{{data.tenhang}}</td>
+                        <td style="text-align:right">{{fomartnumber(data.giaban)}}</td>
+                        <td style="text-align:center">{{fomartnumber(data.soluong)}}</td>
+                        <!--<td style="text-align:center">{{fomartnumber(data.dagiao)}}</td>-->
+                        <!--<td style="text-align:center">{{data.tendonvi}}</td>-->
+                        <td style="text-align:right">{{fomartnumber(data.tongtienchietkhau)}}</td>
+                        <td style="text-align:right">{{fomartnumber(data.tongTien)}}</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <table class="table table-border-none" cellpadding="2" cellspacing="2" style="width: 100%; border-collapse: collapse">
+                <tr>
+                    <td style="width: 60%;">Khuyến mại/Discount:</td>
+                    <td>{{objprint.tenCTKM}}</td>
+                </tr>
+                <tr>
+                    <td style="width: 60%;">Tổng tiền KM/Discount total:</td>
+                    <td>{{fomartnumberpercent(objprint.tongTienChietKhau)}}</td>
+                </tr>
+                <tr>
+                    <td style="width: 60%;">Tổng tiền/Total:</td>
+                    <td>{{fomartnumber(objprint.tongTien)}}</td>
+                </tr>
+                <tr>
+                    <td style="width: 60%;">Trạng thái/Status:</td>
+                    <td>{{objprint.tenTrangThaiThanhToan}}</td>
+                </tr>
+                <tr>
+                    <td style="width: 60%;">Đã thanh toán/ Paid:</td>
+                    <td>{{fomartnumber(objprint.tienDaThanhToan)}}</td>
+                </tr>
+            </table>
+            <div class="row" id="qrthanhtoan">
+                <img style="width: 190px; margin: auto;" src="https://img.vietqr.io/image/{{objprint.nhanvien.chucVu}}-{{objprint.nhanvien.queQuan}}-compact.png?amount={{objprint.conLai}}&addInfo={{objprint.maThamChieu}}" />
+            </div>
+        </div>
+        <div class="print-footer">
+            <div class="print-italic print-bold print-center">Vui lòng kiểm tra thông tin phiếu thu trước khi rời quầy thanh toán!</div>
+            <div class="print-italic print-bold print-center">Xin cảm ơn quý khách!</div>
+            <hr />
+            <div class="print-italic print-center print-italic">Powered by LsCLoud.vn</div>
+        </div>
+    </div>
+</body>
+</html>

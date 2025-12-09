@@ -1,0 +1,66 @@
+﻿<link href="/app/components/album/albumStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div class="title-body">
+        <div class="text-dark">{{bindTextI18n('label_nguoitao')}}: <span class="text-bold">{{tenNhanVien}}</span></div>
+        <div class="text-dark">{{bindTextI18n('label_tenkhachhang')}}: <span class="text-bold">{{tenKhachHang}}</span></div>
+        <div class="text-dark">{{bindTextI18n('label_vitri')}}: <span class="text-bold">{{diaChi}}</span></div>
+    </div>
+
+    <div class="images-body mt-4">
+        <div class="row">
+            <div class="col-2" ng-repeat="item in listimages">
+                <div class="card">
+                    <div class="card-header text-center">{{gettime(item.thoigian)}}</div>
+                    <div class="card-body">
+                        <a href="" ng-click="openmodal(item.imageid)">
+                            <img id="img{{item.imageid}}" class="img-thumbnail p-0 hover-shadow" src="{{getPathImage(item.path)}}" />
+                        </a>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <a href="" class="mr-2" ng-click="opendiachi(item.kinhdo, item.vido)">
+                            <i class="fas fa-map-marker"> {{bindTextI18n('button_vitrichupanh')}}</i>
+                        </a>
+                        <a href="" ng-click="xoayanh(item.imageid)">
+                            <i class="fas fa-undo"> {{bindTextI18n('button_xoayanh')}}</i>
+                        </a>
+                    </div>
+                    <div class="card-footer">
+                        <label>{{bindTextI18n('label_ghichu')}}</label>
+                        <textarea class="form-control" rows="3" readonly>{{item.ghichu}}</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <span class="close cursor" ng-click="closemodal()">&times;</span>
+    <div class="modal-content">
+        <div class="content" ng-repeat="item in listimages">
+            <div class="mySlides">
+                <div class="caption-container">
+                    <p id="caption">{{bindTextI18n('label_ghichu')}}: {{item.ghichu}}</p>
+                </div>
+
+                <img class="img-slide" src="{{getPathImage(item.path)}}">
+            </div>
+        </div>
+        
+        <a class="prev" ng-click="plusSlides(-1)">&#10094;</a>
+        <a class="next" ng-click="plusSlides(1)">&#10095;</a>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+

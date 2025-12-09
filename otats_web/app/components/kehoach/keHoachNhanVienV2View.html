@@ -1,0 +1,102 @@
+﻿<div class="container-fluid">
+    <!--<div class="content-title text-info"><i class="fas fa-id-card"></i> KẾ HOẠCH LÀM VIỆC NHÂN VIÊN</div>-->
+        <div kendo-scheduler="scheduler" id="scheduler" k-options="schedulerOptions">
+        </div>
+</div>
+<link href="app/components/kehoach/kehoachnhanvienStyle.css" rel="stylesheet" />
+<div id="kehoachnhanvien_dialogRoot"></div>
+
+<div id="templateSchedulerTooltipNhanVien" style="display:none">
+    #var uid = target.attr("data-uid"); #
+    #var scheduler = target.closest("[data-role=scheduler]").data("kendoScheduler");#
+    #var model = scheduler.occurrenceByUid(uid);#
+    <p>{{bindTextI18n('label_nhanvien')}}: #= model.tenNhanVien #</p>
+    <p>{{bindTextI18n('label_khachhang')}}: #= model.title #</p>
+    <p>{{bindTextI18n('label_vaoradukien')}}: #= kendo.toString(model.start,'HH:mm') # - #= kendo.toString(model.end,'HH:mm') #</p>
+    <p>{{bindTextI18n('label_vaorathucte')}}: #= kendo.toString(model.checkinthucte,'HH:mm') # - #= kendo.toString(model.checkoutthucte,'HH:mm') #</p>
+    <p>#= $.i18n(model.text_color_mota) #</p>
+</div>
+
+<script id="eventschedule_template" type="text/x-kendo-template">
+    <div style="background-color:#: text_color #; height:100%;padding-top:5px;text-align:center;width:100%">
+        #: title #
+    </div>
+</script>
+
+<script id="scheduler_customEditorTemplate" type="text/x-kendo-template">
+
+    <div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachnv_nhanvien" class="labelForm">{{bindTextI18n('label_nhanvien')}} :</label>
+        </div>
+        <div class="col-sm-9">
+            <input style="width:100%" id="kehoachnv_nhanvien" />
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachnv_khachhang" class="labelForm">{{bindTextI18n('label_khachhang')}} :</label>
+        </div>
+        <div class="col-sm-9">
+            <input style="width:100%" id="kehoachnv_khachhang" />
+        </div>
+    </div>
+
+    <!--<div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachnv_ngay" class="labelForm">Ngày kế hoạch :</label>
+        </div>
+        <div class="col-sm-9">
+            <input style="width:100%" id="kehoachnv_ngay" />
+        </div>
+    </div>-->
+
+    <div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachnv_giocheckin" class="labelForm">{{bindTextI18n('label_ngaygiobatdau')}} :</label>
+        </div>
+        <div class="col-sm-9">
+            <input style="width:100%" id="kehoachnv_giocheckin" />
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachnv_giocheckout" class="labelForm">{{bindTextI18n('label_ngaygioketthuc')}} :</label>
+        </div>
+        <div class="col-sm-9">
+            <input style="width:100%" id="kehoachnv_giocheckout" />
+
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachnv_vieccanlam" class="labelForm">{{bindTextI18n('label_vieccanlam')}} :</label>
+        </div>
+        <div class="col-sm-9">
+            <input class="k-textbox" style="width:100%" id="kehoachnv_vieccanlam" />
+
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-sm-3">
+            <label for="kehoachnv_ghichu" class="labelForm">{{bindTextI18n('label_ghichu')}} :</label>
+        </div>
+        <div class="col-sm-9">
+            <input class="k-textbox" style="width:100%" id="kehoachnv_ghichu" />
+
+        </div>
+    </div>
+
+</script>
+
+<div id="windowThemKeHoachMulti" style="padding:0;">
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+    <div class="k-edit-buttons k-state-default" style="border:none">
+        <a class="k-button k-primary k-scheduler-update" style="color:#fff" ng-click="saveMultiKeHoach()">{{bindTextI18n('button_luukehoach')}}</a>
+        <a class="k-button k-scheduler-cancel" onclick="huyMultiKeHoach()">{{bindTextI18n('button_huy')}}</a>
+    </div>
+</div>

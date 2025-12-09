@@ -1,0 +1,9 @@
+﻿.btn-viengtham {
+    margin-top: 2rem;
+}
+
+.body-viengtham {
+    height: calc(100vh - 7rem);
+    overflow-y: scroll;
+}
+

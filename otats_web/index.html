@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html id="root">
+<head>
+    <title>HỆ THỐNG QUẢN LÝ NHÂN VIÊN KINH DOANH</title>
+    <link rel="shortcut icon" href="images/icon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="assets/libs/kendo/styles/kendo.bootstrap-v4.min.css" rel="stylesheet" />
+    <link href="assets/libs/kendo/styles/kendo.bootstrap.mobile.min.css" rel="stylesheet" />
+    <link href="Content/angular-ui-notification.min.css" rel="stylesheet" />
+    <link href="app/common/css/Common.css" rel="stylesheet" />
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/icons/icon-180x180.ico" />
+    <link rel="icon" sizes="128x128" href="/images/icons/icon-128x128.ico">
+    <meta name="theme-color" content="#317EFB" />
+    <script type="text/javascript">
+        (function (d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.src = "https://cdn.pushalert.co/integrate_5bee9f55bc3cc738458c61bbf31e6a1b.js";
+            s.parentNode.insertBefore(g, s);
+        }(document, "script"));
+    </script>
+
+</head>
+<body ng-app="app">
+
+    <section ui-view="viewMain"></section>
+
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="Scripts/umd/popper.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!-- <script src="Scripts/jquery.LoadingBox.js"></script> -->
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    <script src="Scripts/angular-cookies.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-ui-notification.min.js"></script>
+    <script src="Scripts/Chart.min.js"></script>
+    <!--<script src="Scripts/chartjs-plugin-datalabels.min.js"></script>-->
+    <script src="Scripts/angular-chart.min.js"></script>
+
+    <script src="Scripts/ocLazyLoad.min.js"></script>
+    <script src="assets/libs/kendo/js/jszip.min.js"></script>
+    <script src="assets/libs/kendo/js/kendo.all.min.js"></script>
+    <script src="assets/libs/kendo/js/kendo-multi-date-select.min.js"></script>
+    <script src="assets/libs/kendo/js/kendo-multi-calendar.min.js"></script>
+    <script src="assets/libs/kendo/js/cultures/kendo.culture.vi-VN.min.js"></script>
+    <!--<script src="Scripts/jquery.signalR-2.4.1.min.js"></script>
+    <script src="http://localhost:53261//signalr/hubs"></script>-->
+    <script src="https://cdn.jsdelivr.net/jsbarcode/3.3.20/JsBarcode.all.min.js"></script>
+    <script src="Scripts/html5-qrcode.min.js"></script>
+    <script src="Scripts/ng-map.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyA8nFWV2zIy2-zTlNNC1PeEBAB7O35eZcs" type="text/javascript"></script>
+    <script src="Scripts/i18n/ksmart.i18n.js"></script>
+    <script src="Scripts/i18n/ksmart.i18n.messagestore.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/common/js/common.js"></script>
+    <script src="app/services/ComboboxDataService.js"></script>
+    <script type="text/javascript">
+        //kendo.culture("vi-VN");
+        $.i18n().locale = 'vi';
+        $.i18n().load('Scripts/i18n/message/vi.json', 'vi').done();
+        $.i18n().load('Scripts/i18n/message/en.json', 'en').done();
+    </script>
+</body>
+</html>

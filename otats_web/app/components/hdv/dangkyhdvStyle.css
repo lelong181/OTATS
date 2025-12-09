@@ -1,0 +1,68 @@
+﻿body {
+    height: 100vh;
+    background-image: url(https://hrm.disantrangan.vn/Images/bbg.jpg);
+    background-position: center center;
+    background-size: cover;
+    overflow:scroll;
+}
+
+.custom-margin {
+    margin-left: 5%;
+    width: 25%;
+}
+
+.coppy {
+    margin-top: 28px;
+}
+
+    .coppy > a {
+        /*//color: #f8f9fa;*/
+    }
+
+        .coppy > a:hover {
+            text-decoration: none;
+            color: #17a2b8;
+        }
+
+.card-background {
+    background-color: #0000008c;
+}
+
+.background-header-footer {
+    background-color: #ffff;
+}
+
+.body-login {
+    margin-top: 6em;
+}
+
+.help-block {
+    color: red;
+}
+
+.alert-message {
+    margin-top: 0.5em;
+}
+
+.btn-login {
+    width: 100%;
+}
+
+.logo-login {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    width: 200px;
+}
+
+.card-body p {
+    color: #fff;
+}
+.card-body h5 {
+    color: #fff;
+}
+.card-header{
+    color:#fff;
+}

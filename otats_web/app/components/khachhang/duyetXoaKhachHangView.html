@@ -1,0 +1,19 @@
+﻿<link href="app/components/khachhang/duyetXoaKhachHangStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+<div kendo-window="form_chitiet" id="form_chitiet" k-title="bindTextI18n('label_chonnhanvienchuyenquyen')" k-visible="false" k-modal="true" k-width="1340" k-height="600">
+    <div class="toolbarmenu">
+        <button ng-click="capNhatChuyenQuyen()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_capnhat')"></span></button>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div id="treeview"></div>
+        </div>
+        <div class="col-sm-9">
+            <div kendo-grid="grid_chiTiet" k-data-source="gridData_chiTiet" k-options="gridOptions_chitiet" id="grid_chiTiet"></div>
+        </div>
+    </div>
+    
+</div>

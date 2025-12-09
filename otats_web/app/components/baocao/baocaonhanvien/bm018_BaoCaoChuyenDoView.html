@@ -1,0 +1,148 @@
+﻿
+<div class="container-fluid">
+
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_tungay')"></span>:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_TuNgay"
+                           k-ng-model="obj_TuNgay"
+                           k-max="maxDate"
+                           k-rebind="maxDate"
+                           k-on-change="fromDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_denngay')"></span>:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_DenNgay"
+                           k-ng-model="obj_DenNgay"
+                           k-min="minDate"
+                           k-rebind="minDate"
+                           k-on-change="toDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label"><span ng-bind="bindTextI18n('label_trangthai')"></span>:</label>
+                    <select kendo-combo-box="trangthaicombo"
+                            id="trangthaicombo"
+                            k-placeholder="bindTextI18n('label_trangthai')"
+                            k-data-text-field="'trangthai'"
+                            k-data-value-field="'Id'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="trangthaiSelect"
+                            k-data-source="listrangthai"
+                            k-on-change="trangthaiOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <button id="btn_bm018xembaocao" class="btn btn-outline-info btn-menu__report" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm "></i> {{bindTextI18n('button_xembaocao')}}</button>
+                <button id="btn_bm018xuatexcel" class="btn btn-outline-secondary btn-menu__report" ng-click="XuatExcel()"><i class="fas fa-file-excel fas-sm "></i> <span ng-bind="bindTextI18n('button_xuatexcel')"></span></button>
+                <button ng-show="trangthaiSelect.Id == 0" id="btn_bm018openform" class="btn btn-outline-success btn-menu__report" ng-click="openformchitiet()"><i class="fas fa-download fas-sm "></i> Thu thẻ hàng loạt</button>
+            </div>
+        </div>
+    </div>
+
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+
+
+<div kendo-window="formdetail" id="formdetail" k-title="'Xủ lý thu lại thẻ đò'" k-visible="false" k-modal="true" k-width="800" k-height="520">
+    <div class="body-detail">
+        <div class="row">
+            <div class="col-12">
+                <div class="toolbarmenu">
+                    <!--<button id="btn_themdongchitiet" ng-click="themdongchitiet()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-success"></i> {{bindTextI18n('button_themdong')}}</button>-->
+                    <button id="btn_luuchitiet" ng-click="thuthedo()" ng-show="thedo.trangthai != 1" class="btn btn-link btn-menubar"><i class="fas fa-download fas-sm color-infor"></i> Thu lại thẻ đò</button>
+                    <button id="btn_huychitiet" ng-click="huythuthedo()" ng-show="thedo.trangthai == 1" class="btn btn-link btn-menubar"><i class="fas fa-sync fas-sm color-primary"></i> Hủy thu thẻ đò</button>
+                    <button id="btn_huy" ng-click="huy()" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> Hủy</button>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="mathe">Mã thẻ</label>
+                            <input placeholder="Mã thẻ" class="k-textbox" id="mathe" ng-model="thedo.mathe" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="mathe">Loại thẻ</label>
+                            <input placeholder="Loại thẻ" class="k-textbox" id="mathe" ng-model="thedo.loaithe" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="mathe">Trạng thái</label>
+                            <input placeholder="Trạng thái" class="k-textbox" id="mathe" ng-model="thedo.tenTrangThai" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="mathe">Số tiền</label>
+                            <input placeholder="Số tiền" class="k-textbox" id="mathe" ng-model="thedo.sotien" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="mathe">Ngày mua</label>
+                            <input placeholder="Ngày mua" class="k-textbox" id="mathe" ng-model="thedo.ngaymua" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="mathe">Tổng số thẻ</label>
+                            <input placeholder="Tổng số thẻ" class="k-textbox" id="mathe" ng-model="thedo.tongsothe" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="mathe">Tổng tiền</label>
+                            <input placeholder="Tổng tiền" class="k-textbox" id="mathe" ng-model="thedo.tongtien" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="mathe">Tổng tiền đơn giá</label>
+                            <input placeholder="Tổng tiền đơn giá" class="k-textbox" id="mathe" ng-model="thedo.donGia" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div kendo-window="formthuthe" id="formthuthe" k-title="'Danh sách thẻ đò cần thu'" k-close-button="false" k-visible="false" k-modal="true" k-width="800" k-height="430">
+    <div class="body-detail">
+        <!--<h5>Danh sách chi tiết kích thước mặt hàng</h5>-->
+        <div class="row">
+            <div class="col-12">
+                <div class="toolbarmenu inputmathedo">
+                    <!--<button id="btn_themdongchitiet" ng-click="themdongchitiet()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-success"></i> {{bindTextI18n('button_themdong')}}</button>-->
+                    <input class="k-textbox" style=" width: 50%; height: 46px; font-size: 1.5em;" id="mathedo" ng-model="mathedo" ng-keyup="keyupMaTheDo()" placeholder="Nhập mã thẻ đò" />
+                    <button id="btn_luuchitiet" ng-click="luuchitiet()" class="btn btn-link btn-menubar text-center"><i class="fas fa-save fas-sm color-infor"></i> Thu thẻ đò</button>
+                </div>
+                <div kendo-grid="gridchitiet" k-data-source="gridchitietData" k-options="gridchitietOptions" id="gridchitiet"></div>
+            </div>
+        </div>
+    </div>
+
+</div>

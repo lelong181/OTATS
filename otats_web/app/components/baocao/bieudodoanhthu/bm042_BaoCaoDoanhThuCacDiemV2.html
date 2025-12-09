@@ -1,0 +1,82 @@
+﻿
+<div class="container-fluid" style="position:absolute;z-index:99;background:#fff">
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_tungay')}}:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_TuNgay"
+                           k-ng-model="obj_TuNgay"
+                           k-max="maxDate"
+                           k-rebind="maxDate"
+                           k-on-change="fromDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_denngay')}}:</label>
+                    <input kendo-date-time-picker
+                           ng-model="str_DenNgay"
+                           k-ng-model="obj_DenNgay"
+                           k-min="minDate"
+                           k-rebind="minDate"
+                           k-on-change="toDateChanged()"
+                           k-format="'yyyy/MM/dd HH:mm:ss'" />
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label>Khu du lịch</label>
+                    <select kendo-combo-box="sitecombo"
+                            id="sitecombo"
+                            k-data-text-field="'siteName'"
+                            k-data-value-field="'siteCode'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="siteselect"
+                            k-data-source="sitedata"
+                            k-on-change="siteOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="content-filter__label">{{bindTextI18n('label_nhommathang')}}</label>
+                    <input kendo-drop-down-tree="nhomhanghoa"
+                           id="nhomhanghoa"
+                           k-options="nhomhanghoaOptions"
+                           k-ng-model="nhomhanghoaSelected"
+                           k-on-change="nhomhanghoaOnChange(kendoEvent)" />
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <button id="btn_bm009xembaocao" class="btn btn-outline-info btn-menu__report" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm "></i> {{bindTextI18n('button_xembaocao')}}</button>
+                <button id="btn_bm009xuatexcel" class="btn btn-outline-secondary btn-menu__report" ng-click="XuatExcel()" id="dataBm009_XuatExcel"><i class="fas fa-file-excel fas-sm" style="color:green"></i> Xuất excel</button>
+            </div>
+        </div>
+    </div>
+
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+
+
+<style>
+    .page-template > * {
+        left: 20px;
+        right: 20px;
+    }
+
+    .page-template .header {
+        top: 0px;
+        position: absolute;
+        border-bottom: 1px solid #000;
+    }
+
+    .page-template .footer {
+        bottom: 200px;
+        position: absolute;
+    }
+</style>

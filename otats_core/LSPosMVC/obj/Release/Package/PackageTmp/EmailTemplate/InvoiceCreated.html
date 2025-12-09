@@ -1,0 +1,147 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>XÁC NHẬN KHỞI TẠO ĐƠN - @Model.MaThamChieu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="booking,vietnam,reserve" />
+    <style>
+        .table-group {
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        .table-list-header {
+            font-weight: bold;
+        }
+
+            .table-list-header td {
+                text-align: center;
+                border-top: solid 1px #b4b4b4;
+                border-left: solid 1px #b4b4b4;
+                border-right: solid 1px #b4b4b4;
+            }
+
+        .table-list-item td {
+            border-left: solid 1px #b4b4b4;
+            border-right: solid 1px #b4b4b4;
+            padding: 3px;
+        }
+
+        .table-list-item-end td {
+            padding: 3px;
+            border-bottom: solid 1px #b4b4b4;
+            border-left: solid 1px #b4b4b4;
+            border-right: solid 1px #b4b4b4;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Arial',sans-serif; font-size: 14px;">
+    <div style="width:100%">
+        Xin chào @Model.TenKhachHang, OTA Tràng An Group đã nhận được yêu cầu đặt dịch vụ của bạn và đang xử lý nhé. Bạn sẽ nhận được thông báo tiếp theo khi đơn hàng được phê duyệt.
+    </div>
+    <div style="width:100%">
+        <div style="width: 100%; padding: 20px; text-align: center; background-color: #76bcff;">OTA TRÀNG AN GROUP XÁC NHẬN ĐƠN HÀNG ĐƯỢC KHỞI TẠO</div>
+        <div style="width:100%;padding:20px">
+            <table border="0">
+
+                <tr class="table-group"><td colspan="4">I.Thông tin đơn hàng:</td></tr>
+                <tr>
+                    <td colspan="2">Mã OTA Booking:</td>
+                    <td colspan="2">@Model.MaThamChieu</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Trạng thái đơn hàng:</td>
+                    <td colspan="2">Khởi tạo đơn hàng</td>
+                </tr>
+                <tr>
+                    <td colspan="2">OTA/Nhân viên lập:</td>
+                    <td colspan="2">@Model.TenNhanVien</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Ngày lập:</td>
+                    <td colspan="2">@Model.NgayTao.ToString("dd-MM-yyyy")</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Thanh toán:</td>
+                    <td><label style="width:100%">Thanh toán qua cổng Onepay</label><a href="http://server.lscloud.vn/Booking/ProcessPaymentB2C?iddh=@Model.ID_DonHang"><img style="width: 250px;margin: auto;" src="https://play-lh.googleusercontent.com/mvedVCbQg6ADKUYYraVLOlmOfOy2Rz66kEPvbmxt5xZ2TTa90Go9jBD2dJrwWmEo5g8" /></a></td>
+                </tr>
+            </table>
+            <table>
+                <tr class="table-group"><td colspan="4">II.Thông tin Khách hàng:</td></tr>
+                <tr>
+                    <td>Khách hàng:</td>
+                    <td>@Model.TenKhachHang</td>
+                </tr>
+                <tr>
+                    <td>Số điện thoại:</td>
+                    <td>@Model.DienThoai</td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ:</td>
+                    <td>@Model.DiaChi</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>@Model.Email</td>
+                </tr>
+                <tr>
+                    <td>Xuất hóa đơn điện tử:</td>
+                    <td>@if(Model.XuatHoaDon){ <p>Có</p>}else {<p>Không</p>}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Ghi chú đơn hàng:</td>
+                    <td colspan="2">@Model.GhiChu</td>
+                </tr>
+                <tr>
+                    <td style="height:20px;"></td>
+                </tr>
+            </table>
+            <table>
+                <tr class="table-group"><td colspan="4">III.Thông tin dịch vụ:</td></tr>
+                <tr class="table-list-header">
+                    <td style="width: 20%; border-top-left-radius: 5px; background-color: #86ace8;">Dịch vụ</td>
+                    <td style="width: 10%; background-color: #86ace8;">Số lượng</td>
+                    <td style="width: 10%; background-color: #86ace8;">Dự kiến đi</td>
+                    <td style="width: 15%; background-color: #86ace8;">Đơn giá (VNĐ)</td>
+                    <td style="width: 15%; background-color: #86ace8;">Thành tiền (VNĐ)</td>
+                    <td style="width: 20%; background-color: #86ace8;">Trạng thái booking</td>
+                    <td style="width: 10%; border-top-right-radius: 5px; background-color: #86ace8;">Ghi chú</td>
+                </tr>
+                @foreach (LSPos_Data.Models.DonHang_DichVuRequestAPIModel ct in Model.chitietdonhang)
+                {
+                <tr class="table-list-item">
+                    <td>@ct.DichVu.TenDichVu</td>
+                    <td style="text-align:right">@ct.SoLuong</td>
+                    <td style="text-align:right">@ct.Ngay.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td style="text-align:right">@ct.GiaBan.ToString("N0")</td>
+                    <td style="text-align:right">@((@ct.SoLuong*@ct.GiaBan).ToString("N0"))</td>
+                    <td style="text-align:center;color:#327216">Đang xử lý Booking...</td>
+                    <td></td>
+                </tr>
+                }
+                <tr class="table-list-item-end">
+                    <td style=" border-bottom-left-radius: 5px;">Tổng tiền</td>
+                    <td colspan="6" style="border-bottom-right-radius: 5px;text-align:right">@Model.TongTien.ToString("N0") VNĐ</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div style="width:100%;color:red">
+        <p> Quý khách sẽ nhận được Email xác nhận sau khi thanh toán.</p>
+        <p> Nếu không nhận được Email tiếp theo vui lòng:</p>
+        <p>  - Bước 1/ Kiểm tra hòm thư rác sau 5-10 phút</p>
+        <p>  - Bước 2/ Nếu vẫn không được xin gọi tới hotline để được hỗ trợ: <a href="tel:+84888713535">0888.713.535</a> hoặc qua fanpage chính thức: <a href="https://facebook.com/disantrangan.vn">facebook.com/disantrangan.vn</a> (thời gian trả lời sẽ trong giờ hành chính từ 7h tới 17h)</p>
+        <p> You will receive an email confirming successful payment.</p>
+        <p> If you do not receive it, please follow these steps:</p>
+        <p>  - Step 1: Check your spam folder after 5-10 minutes.</p>
+        <p>  - Step 2: If you still haven't received it, please call our hotline at <a href="tel:+84888713535">0888.713.535</a> or contact us via our official fanpage: <a href="https://facebook.com/disantrangan.vn">facebook.com/disantrangan.vn</a> (Response time is during business hours from 7:00 AM to 5:00 PM).</p>
+    </div>
+    <div style="width:100%;text-align:center;font-size:11px;font-weight:700;margin-top:10px;">
+        Giải pháp Quản lý Tour Du Lịch/Khu Vui chơi được cung cấp bởi: <a href="https://lscloud.vn">LsCloud.Vn - MST: 0110236110</a>
+    </div>
+</body>
+
+</html>

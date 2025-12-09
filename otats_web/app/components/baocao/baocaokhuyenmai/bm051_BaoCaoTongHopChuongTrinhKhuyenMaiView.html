@@ -1,0 +1,59 @@
+﻿
+<div class="container-fluid">
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-2">
+                <label class="labelBaoCaoNgang">{{bindTextI18n('label_chuongtrinhkhuyenmai')}}</label>
+                <select kendo-combo-box
+                        id="chuongTrinhKhuyenMai"
+                        k-data-text-field="'tenCTKM'"
+                        k-data-value-field="'iD_CTKM'"
+                        k-filter="'contains'"
+                        k-auto-bind="true"
+                        k-data-source="listChuongTrinhKhuyenMai"
+                        k-ng-model="selectChuongTrinhKhuyenMai"
+                        k-on-change="chuongTrinhKhuyenMaiOnChange(kendoEvent)"></select>
+            </div>
+
+            <div class="col-2">
+                <label class="labelBaoCaoNgang">{{bindTextI18n('label_khohang')}}</label>
+                <select kendo-combo-box
+                        id="khoHang"
+                        k-data-text-field="'tenKho'"
+                        k-data-value-field="'iD_Kho'"
+                        k-filter="'contains'"
+                        k-auto-bind="true"
+                        k-data-source="listKhoHang"
+                        k-ng-model="selectKhoHang"
+                        k-on-change="khoHangOnChange(kendoEvent)"></select>
+            </div>
+
+            <div class="col-2">
+                <label class="labelBaoCaoNgang">{{bindTextI18n('label_giamsatbanhang')}}</label>
+                <select kendo-combo-box
+                        id="nhomNhanVien"
+                        k-data-text-field="'tenNhom'"
+                        k-data-value-field="'iD_Nhom'"
+                        k-filter="'contains'"
+                        k-auto-bind="true"
+                        k-data-source="listNhomNhanVien"
+                        k-ng-model="selectNhomNhanVien"
+                        k-on-change="nhomNhanVienOnChange(kendoEvent)"></select>
+            </div>
+
+            <div class="col-6">
+                <div class="grButtonNgang">
+                    <button id="btn_xembaocao" class="btn btn-outline-info btn-menu__report" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm "></i> {{bindTextI18n('button_xembaocao')}}</button>
+                    <button id="btn_xuatexcel" class="btn btn-outline-secondary btn-menu__report" ng-click="XuatExcel()"><i class="fas fa-file-excel fas-sm "></i> {{bindTextI18n('button_xuatexcel')}}</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h5>{{tenctkm}}</h5>
+            </div>
+        </div>
+    </div>
+
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>

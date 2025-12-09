@@ -1,0 +1,17 @@
+﻿<div class="container-fluid">
+    <button type="button" ng-click="chuyenQuyen()" class="btn btn-success pl-5 pr-5"><i class="fas fa-arrow-alt-circle-right pr-2"></i>{{bindTextI18n('button_chuyen')}}</button>
+    <div class="row mt-3">
+        <div class="col-3">
+            {{bindTextI18n('label_tunhanvien')}}
+            <div kendo-grid="grid_employeesFrom" k-data-source="gridData_employeesFrom" k-options="gridOptions_employeesFrom" id="grid_employeesFrom"></div>
+        </div>
+        <div class="col-6">
+            {{bindTextI18n('label_danhsachkhachhangdangquanly')}}
+            <div kendo-grid="grid_customer" k-data-source="gridData_customer" k-options="gridOptions_customer" id="grid_customer"></div>
+        </div>
+        <div class="col-3">
+            {{bindTextI18n('label_chuyenchonhanvien')}}
+            <div kendo-grid="grid_employeesTo" k-data-source="gridData_employeesTo" k-options="gridOptions_employeesTo" id="grid_employeesTo"></div>
+        </div>
+    </div>
+</div>

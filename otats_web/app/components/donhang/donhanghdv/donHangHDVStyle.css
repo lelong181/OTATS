@@ -1,0 +1,18 @@
+﻿.k-multiselect {
+    border-radius: .25rem;
+    width: 100%;
+    max-height: 2.375rem;
+    overflow-y: scroll;
+}
+
+label.content-filter__label {
+    width: 100%;
+}
+
+.btn-menubar {
+    text-decoration: none;
+    color: #343a40;
+    /* height: 40px; */
+    font-size: 1.2em;
+    border: solid 1px #169db2;
+}

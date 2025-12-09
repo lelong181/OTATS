@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "tourshopping",
+  "private_key_id": "6bb85abcf6fd6c175244859c3bdbd47571b1a637",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC1tYJDqQESDnWI\ntA0q1Oy4WlftTiy9MvHZpmT8eBAseNOcBdQFgvVPPNR5maqMEYbLdF/skRyuf/xS\nD7r0UCwqbLZbrc9m5w6U8clD76XjB9tCywsPmIVYHJpjaayS9709Em0lBjSmFTlU\nYeEyBn1yEWlJylPvmHnrYKaPlchxg6ChaW+eqa6qNdgSqPIR62HVLjRFXXfUMiUQ\n5lnpM08OwY00SDUuGTxykzWKuaNamMmVNdJEcGbb9oR3enJhJDXv1tVgLomjOk4X\np3QO0huxZkq3arvQparj7c+WmAb+fHDbxmkObdb6YMh6iI2cySVtbEOq2nbnA6Dd\n7HVEvjw1AgMBAAECggEAMuwA63ErSaIfsgWzQvOUuz0mMuybgRIL0NDesBn9flkG\nBE1l032VvXTwnns/3izzN4UPdL5d6VEYpu6dl+X32pPIrvyQiOfroDX6Dz3ToUIM\nYjWAjghSJhUt9vogULd4ourNB3kru/dqr4kWkOxcr2DNvs4io5x5Xkshok95csXV\nOPiSU3bMqz0KM0vaOtu7DXTPrtlI2+T/ZK7FlTFIluxHOpoU7yPO7yNSKx0qcR9j\nA4gI8psztmVDVVrRKCJ4Qw0fhmSJq2OS5ZK75SUUUf+uzsQb7R0g1BAKDg8fuwNU\ngkC8kCdNt1ENemIiveTM9b2UL8UmHjOXTjPH/xnYaQKBgQDpBU6W6HKPrXbg3UOp\nEnZyw5wPOZdcYteK0stjp1HlxpQKPkVZdP2uV8VqbgLyTgYLwkGU0Zjsqw7t6Ron\nGr+kjSquXFtxsL8aftICn6/Ln5wXe4XkAWwIZH/l6Vm0A76WWn1wezeERMtGwK08\nwZPSfM0aJnZaJZTEcjwzPufORwKBgQDHoNGteR6rqDmiiiSPWd1H7QZ2STsAhkOd\nCOmdaXRij4EkanAIj6SvGT061urbVd2ljsdZtSHvFmEjYpsxOVnw5pkMV8NepVOc\ngyZvWFELB48IWhm3mANGNNEZg2kegwxdD8cpWTNl0x+hEXs75FSlgX59muXFyVq2\nXuCmkKRzowKBgQCDufRLauwYPL9PLsXo9f7vsZSvJqdiGp4uZCuGEjhB5Jgbkkgx\n4ejmfcej+ry/rUvNqerY7gO9BpZR98xI/t4Hb6YJGzy2cGwX1klyIkOGoJvkyndO\nBV/E/ssudVO4Z8V9yXnP9FfV9e3T+Wf1SJkADH0Fo2iUXVpUEx/k+FKiUQKBgQCW\nNyJwedqlatHryC2YnROQwwAA1DwMuft42DMKm0bTv456+4jQOF7Az6ouc3iIkYVW\nxiimDVG6mkmAGfwTv0c5qhvymLvPpXJULLAoSvm45fgwXbRKXZ3hH29U1nisWApe\noLfKGnA9p+9+ASyNNdSoMdgf5gYOneSfpKdBT0ggJwKBgQCi2L14d8Y1fIQv6U78\n5vkPC1vY3cYtQ9+gaYt61U1fCia9y1RRAnnSo81H06LGt7Vdlnbxv4FZFN7+6Qli\np+5GJOmHWvxeD1gVzABYFGlNSgEzLQOeBi3VjTk0MuGUAxfe+r75v4ka40XaInB/\n/rx31AbTxe2vJlEIUqNFK9HlOg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "ota-lscloud@tourshopping.iam.gserviceaccount.com",
+  "client_id": "103066158601077967261",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ota-lscloud%40tourshopping.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,48 @@
+﻿.table-border-none td {
+    border: 0;
+    font-size: .8em;
+}
+
+.table-border-none > tr > .td-width {
+    width: 20%;
+}
+
+.print-center {
+    text-align: center;
+}
+
+.print-italic {
+    font-style: italic;
+}
+
+.print-bold {
+    font-weight: bold;
+}
+
+.print-title {
+    font-size: 1.2em;
+}
+
+.print-body {
+    margin-top: 50px;
+}
+
+.print-footer {
+    margin-top: 50px;
+}
+
+    .print-footer > span {
+        font-weight: bold;
+        padding-right: 3rem;
+        padding-left: 2rem;
+    }
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    font-size: .8em;
+}

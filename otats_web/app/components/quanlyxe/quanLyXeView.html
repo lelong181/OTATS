@@ -1,0 +1,127 @@
+﻿
+<div class="container-fluid">
+    <div class="toolbarmenu">
+        <button ng-click="addXe()" ng-show="(permission.them > 0)" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_them')}}</button>
+        <button ng-click="editXe()" ng-show="(permission.sua > 0)" class="btn btn-link btn-menubar"><i class="fas fa-edit fas-sm color-infor"></i> {{bindTextI18n('button_sua')}}</button>
+        <button id="btn_exportexcel" ng-show="(permission.sua > 0)" ng-click="xuatExcel()" class="btn btn-link btn-menubar"><i class="fas fa-file-excel fas-sm color-infor"></i> {{bindTextI18n('button_xuatexcel')}}</button>
+        <button ng-click="deleteXe()" ng-show="(permission.xoa > 0)" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> {{bindTextI18n('button_xoa')}}</button>
+    </div>
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+
+</div>
+
+<!--popup chi tiết -->
+<div kendo-window="formdetail" id="formdetail" k-title="bindTextI18n('label_thongtinxe')" k-visible="false" k-modal="true" k-width="700" k-height="450">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="toolbarmenu">
+                <button id="btn_luuThongTinXe" ng-show="((permission.them > 0 && idxe <= 0) ||(permission.sua > 0 && idxe > 0))" ng-click="luuThongTinXe()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+                <button id="btn_huyluuThongTinXe" ng-click="huyLuuThongTinXe()" class="btn btn-link btn-menubar"><i class="fas fa-ban fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-detail mt-2">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="bienKiemSoat">{{bindTextI18n('label_bienkiemsoat')}} <span class="color-danger">(*)</span></label>
+                    <input type="text" class="k-textbox" id="bienKiemSoat" ng-model="objectXe.bienKiemSoat" />
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="loaiXe">{{bindTextI18n('label_loaixe')}}</label>
+                    <input type="text" class="k-textbox" id="loaiXe" ng-model="objectXe.loaiXe" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="content-filter__label">
+                        <label for="loaiXe">{{bindTextI18n('label_nhanvienquanly')}}</label>
+                        <span class="color-danger">(*)</span>
+                    </label>
+                    <select id="nhanVien" kendo-combo-box="nhanvien"
+                            k-data-text-field="'tenDayDu'"
+                            k-data-value-field="'idnv'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-ng-model="nhanvienselect"
+                            k-data-source="nhanvienData"
+                            k-on-change="nhanvienOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="chuKy">{{bindTextI18n('label_chukybaoduong')}}</label>
+                    <input kendo-numeric-text-box k-min="0" ng-model="objectXe.chuKyBaoDuong" id="chuKy" ng-change="chuKyOnchange()" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="namSX">{{bindTextI18n('label_namsanxuat')}}</label>
+                    <input type="text" class="k-textbox" ng-model="objectXe.namSanXuat" id="namSX" />
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="form-group">
+                    <label>{{bindTextI18n('label_ngaybaoduongannhat')}}</label>
+                    <input id="ngayBDGanNhat" kendo-date-picker
+                           ng-model="ngayBDGanNhat"
+                           k-ng-model="obj_ngayBDGanNhat"
+                           k-format="'dd/MM/yyyy'" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="soCho">{{bindTextI18n('label_socho')}}</label>
+                    <input kendo-numeric-text-box k-min="0" ng-model="objectXe.soCho" id="soCho" ng-change="soChoOnchange()" />
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="form-group">
+                    <label>{{bindTextI18n('label_ngaybaoduongtieptheo')}}</label>
+                    <input id="ngayBDTiepTheo" kendo-date-picker
+                           ng-model="ngayBDTiepTheo"
+                           k-ng-model="obj_ngayBDTiepTheo"
+                           k-format="'dd/MM/yyyy'" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="moTa">{{bindTextI18n('label_mota')}}</label>
+                    <textarea type="text" placeholder="{{bindTextI18n('label_mota')}}" class="k-textbox text-area" id="moTa" ng-model="objectXe.moTa" />
+                </div>
+            </div>
+
+            
+        </div>
+
+    </div>
+
+</div>
+
+<div kendo-window="formdetail_BaoDuong" id="formdetail_BaoDuong" k-title="bindTextI18n('label_lichsubaoduong')" k-visible="false" k-modal="true" k-width="800" k-height="450">
+    <div kendo-grid="grid" k-data-source="gridData_BaoDuong" k-options="gridOptions_BaoDuong" id="grid"></div>
+
+</div>
+
+<div kendo-window="formdetail_SuDung" id="formdetail_SuDung" k-title="bindTextI18n('label_lichsusudung')" k-visible="false" k-modal="true" k-width="800" k-height="450">
+    <div kendo-grid="grid" k-data-source="gridData_SuDung" k-options="gridOptions_SuDung" id="grid"></div>
+
+</div>

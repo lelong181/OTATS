@@ -1,0 +1,180 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Assets/printTicket/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/printQR.css" rel="stylesheet" />
+    <script src="~/Assets/printTicket/jquery.js"></script>
+    <script src="~/Scripts/qrcode.js"></script>
+    <script>
+    function printDiv(svcode) {
+        $('#hide').css('display', 'none');
+        $('.ticket').css('margin-top', '120px');
+        $('.ticket').first().css('margin-top', '0');
+        console.log(svcode);
+        $('.ticket').css('display', 'block');
+        if (svcode != undefined) {
+            $('.sv-' + svcode).css('display', 'none');
+        }
+        if (print()) {
+
+            $('#hide').css('display', 'none');
+        } else {
+            //$('#hide').css('display', 'block');
+        }
+    }
+        $(document).ready(function () {
+            window.onafterprint = window.close;
+    @foreach (LSPos_Data.Models.ChiTietMatHangDonHangModels ct in Model.lstTicket)
+    {
+            <text>
+            var QR_CODE1@(ct.MaVeDichVu) = new QRCode("qrcode1@(ct.MaVeDichVu)", {
+                width: 70,
+                height: 70,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H,
+            });
+            QR_CODE1@(ct.MaVeDichVu).makeCode("@(ct.MaVeDichVu)");
+            var QR_CODE2@(ct.MaVeDichVu) = new QRCode("qrcode2@(ct.MaVeDichVu)", {
+                width: 70,
+                height: 70,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H,
+            });
+            QR_CODE2@(ct.MaVeDichVu).makeCode("@(ct.MaVeDichVu)");
+            var QR_CODE3@(ct.MaVeDichVu) = new QRCode("qrcode3@(ct.MaVeDichVu)", {
+                width: 70,
+                height: 70,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H,
+            });
+            QR_CODE3@(ct.MaVeDichVu).makeCode("@(ct.MaVeDichVu)");
+            var QR_CODE4@(ct.MaVeDichVu) = new QRCode("qrcode4@(ct.MaVeDichVu)", {
+                width: 70,
+                height: 70,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H,
+            });
+            QR_CODE4@(ct.MaVeDichVu).makeCode("@(ct.MaVeDichVu)");
+         </text>
+        }
+    });
+    </script>
+</head>
+<body onload="printAndRemove();">
+    <div class="container">
+        <div id="hide">
+            <a href="" class="btn-print" onclick='printDiv();'>
+                <i class="fa fa-print fa-style" aria-hidden="true" style="color: #ff9933;"></i>
+                <span>In vé</span>
+            </a>
+        </div>
+        <div style="width:400px;">
+            @{ int i = 1; }
+            @foreach (LSPos_Data.Models.ChiTietMatHangDonHangModels ct in Model.lstTicket)
+            {
+
+                <p style="width:100%;font-size:20px; text-align:center;font-weight:700;">KHU DU LỊCH SINH THÁI TRÀNG AN</p>
+                <div style="width: 100%; display: flex; flex-wrap: nowrap; flex-direction: row; justify-content: center;">
+                    @if (!string.IsNullOrEmpty(ct.Icon))
+                    {
+                        <img src="@ct.Icon" class="iconleft" />
+                        <div id="qrcode1@(ct.MaVeDichVu)"></div>
+                        <div style="margin-left:25px;" id="qrcode2@(ct.MaVeDichVu)"></div>
+                        <img src="@ct.Icon" class="iconright" />
+                    }
+                    else
+                    {
+                        <div id="qrcode1@(ct.MaVeDichVu)"></div>
+                        <div style="margin-left:25px;" id="qrcode2@(ct.MaVeDichVu)"></div>
+                    }
+                </div>
+                <b style="width: 100%; text-align: center; display: block;
+                            margin-top:5px;font-size:22px;">
+                    VÉ / TICKET
+                </b>
+                <b style="width: 100%; text-align: center; display: block;
+                            margin-top:5px;font-size:22px;">
+                    @ct.TenHienThi
+                </b>
+                <b style="width: 100%; display: block" ;>
+                    Quý khách vui lòng không vò vé và giữ vé cẩn thận
+                </b>
+                <b style="width: 100%; display: block; ">
+                    Please keep the code ticket carefully
+                </b>
+                <table>
+                    <tr>
+                        <td style="width:65%">Ngày sử dụng/ Valid On:</td>
+                        <td><b>@Model.Ngay.ToString("dd/MM/yyyy")</b></td>
+                    </tr>
+                    <tr>
+                        <td>Ngày hết hạn/ Expiration time:</td>
+                        <td><b>@Model.Ngay.ToString("dd/MM/yyyy")</b></td>
+                    </tr>
+                    @*<tr>
+                        <td>Mã OTA Booking:</td>
+                        <td><b>@Model.MaThamChieu</b></td>
+                    </tr>*@
+                    <tr>
+                        <td>Mã vé/ Ticket code:</td>
+                        <td><b>@ct.MaVeDichVu</b></td>
+                    </tr>
+                    <tr>
+                        <td>Số biên lai/ Receipt No:</td>
+                        <td> @ct.MaDonHangDichVu</td>
+                    </tr>
+                    <tr>
+                        <td>Thời gian in vé / Time Print:</td>
+                        <td> @DateTime.Now.ToString("dd/MM/yyyy HH:mm")</td>
+                    </tr>
+                    <tr>
+                        <td>Số thứ tự/ Ticket No:</td>
+                        <td>@(i++)</td>
+                    </tr>
+                    <tr>
+                        <td>Giá vé/ Price:</td>
+                        <td><b style="font-size:20px;">@ct.GiaInTrenVe.ToString("N0") VNĐ</b></td>
+                    </tr>
+                </table>
+                <b style="width:100%;overflow:hidden;">----------------------------------------------------------------------------------</b>
+                <b style="width: 100%; font-size: 15px; display: block; ">
+                    KDL không chịu trách nhiệm nếu quý khách làm mất vé
+                </b>
+                <b style="width: 90%; font-size: 15px; text-align: center; display: block;  ">
+                    Vé có giá trị trong ngày
+                </b>
+                <b style="width: 100%; font-size: 15px; display: block;  ">
+                    Quý khách quan tâm các dịch vụ khác của KDL xin truy cập:
+                </b>
+                <b style="width: 90%; font-size: 15px; display: block; text-align: center; ">
+                    dichvu.disantrangan.vn
+                </b>
+                <div style="width: 100%; display: flex; flex-wrap: nowrap; flex-direction: row; justify-content: center;">
+                    <div id="qrcode3@(ct.MaVeDichVu)"></div>
+                    <div style="margin-left:25px;" id="qrcode4@(ct.MaVeDichVu)"></div>
+                </div>
+                if (i <= Model.lstTicket.Count)
+                {
+                    <div class="page-break"></div>
+                }
+
+            }
+        </div>
+    </div>
+</body>
+
+</html>

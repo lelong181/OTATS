@@ -1,0 +1,109 @@
+﻿<link href="app/components/maps/loTrinhDiChuyenStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <div class="form-group">
+                <label class="content-filter__label"><span ng-bind="bindTextI18n('label_nhomnhanvien')"></span>:</label>
+                <select id="nhomnhanvien" kendo-combo-box="nhomnhanvien"
+                        k-placeholder="bindTextI18n('label_nhomnhanvien')"
+                        k-data-text-field="'tenNhom'"
+                        k-data-value-field="'iD_Nhom'"
+                        k-filter="'contains'"
+                        k-auto-bind="false"
+                        k-ng-model="nhomnhanvienselect"
+                        k-data-source="nhomnhanvienData"
+                        k-on-change="nhomnhanvienOnChange(kendoEvent)"></select>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="form-group">
+                <label class="content-filter__label"><span ng-bind="bindTextI18n('label_nhanvien')"></span>:</label>
+                <select kendo-combo-box="nhanvien"
+                        id="nhanvien"
+                        k-placeholder="bindTextI18n('label_nhanvien')"
+                        k-data-text-field="'tenNhanVien'"
+                        k-data-value-field="'iD_NhanVien'"
+                        k-filter="'contains'"
+                        k-auto-bind="false"
+                        k-ng-model="nhanvienselect"
+                        k-data-source="nhanvienData"
+                        k-on-change="nhanvienOnChange(kendoEvent)"></select>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="form-group">
+                <label class="content-filter__label"><span ng-bind="bindTextI18n('label_tungay')"></span>:</label>
+                <input kendo-date-time-picker
+                       ng-model="str_TuNgay"
+                       k-ng-model="obj_TuNgay"
+                       k-max="maxDate"
+                       k-rebind="maxDate"
+                       k-on-change="fromDateChanged()"
+                       k-format="'yyyy/MM/dd HH:mm:ss'" />
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="form-group">
+                <label class="content-filter__label"><span ng-bind="bindTextI18n('label_denngay')"></span>:</label>
+                <input kendo-date-time-picker
+                       ng-model="str_DenNgay"
+                       k-ng-model="obj_DenNgay"
+                       k-min="minDate"
+                       k-rebind="minDate"
+                       k-on-change="toDateChanged()"
+                       k-format="'yyyy/MM/dd HH:mm:ss'" />
+            </div>
+        </div>
+        <div class="col-4">
+            <button id="btn_xembaocao" class="btn btn-outline-info btn-viengtham" ng-click="xemBaoCao()"><i class="fas fa-map-marked-alt fas-sm"></i> <span ng-bind="bindTextI18n('button_xemlotrinh')"></span></button>
+            <button ng-show="false" id="btn_xuatExcel" class="btn btn-outline-secondary btn-viengtham" ng-click="XuatExcel()"><i class="fas fa-file-excel fas-sm"></i> <span ng-bind="bindTextI18n('button_xuatexcel')"></span></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <input type="radio" name="engine" id="engine1" class="k-radio" value="3" ng-model="loai" ng-change="locduongdi()">
+            <label class="k-radio-label" for="engine1"><span ng-bind="bindTextI18n('label_duongdi')"></span></label>
+        </div>
+        <div class="col-2">
+            <input type="radio" name="engine" id="engine2" class="k-radio" value="1" ng-model="loai" ng-change="locduongdi()">
+            <label class="k-radio-label" for="engine2"><span ng-bind="bindTextI18n('label_duongdivavitri')"></span></label>
+        </div>
+        <div class="col-2">
+            <input type="radio" name="engine" id="engine3" class="k-radio" value="2" ng-model="loai" ng-change="locduongdi()">
+            <label class="k-radio-label" for="engine3"><span ng-bind="bindTextI18n('label_vitriGPS')"></span></label>
+        </div>
+        <div class="col-2">
+            <input type="radio" name="engine" id="engine4" class="k-radio" ng-model="loai" value="0" ng-change="locduongdi()">
+            <label class="k-radio-label" for="engine4"><span ng-bind="bindTextI18n('label_vitriGPSkhongnoi')"></span></label>
+        </div>
+        <div class="col-2">
+            <input type="radio" name="engine" id="engine5" class="k-radio" ng-model="loai" value="-1" ng-change="locduongdi()">
+            <label class="k-radio-label" for="engine5"><span ng-bind="bindTextI18n('label_vitriGPSall')"></span></label>
+        </div>
+        <div class="col-2">
+            <input type="checkbox" id="eq1" class="k-checkbox" ng-model="phienlamviec">
+            <label class="k-checkbox-label" for="eq1"><span ng-bind="bindTextI18n('label_phienlamviec')"></span></label>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <section class="wrapper_2">
+                <article class="timelineBlock">
+                    <ul id="timelineContent"></ul>
+                    <section class="timelineControl">
+                        <a href="" ng-click="backC()" id="backC" title="{{bindTextI18n('button_quaylai')}}">&nbsp;</a>
+                        <a href="" ng-click="pauseC()" id="pauseC" title="{{bindTextI18n('button_tamdung')}}">&nbsp;</a>
+                        <a href="" ng-click="playC()" id="playC" title="{{bindTextI18n('button_chaylotrinh')}}">&nbsp;</a>
+                        <a href="" ng-click="stopC()" id="stopC" title="{{bindTextI18n('button_dunglotrinh')}}">&nbsp;</a>
+                        <a href="" ng-click="nextC()" id="nextC" title="{{bindTextI18n('button_ditiep')}}">&nbsp;</a>
+                        <a href="" ng-click="morong()" id="show-hide" class="shows" title="{{bindTextI18n('button_morong')}}">&nbsp;</a>
+                    </section>
+                </article>
+
+                <ng-map id="map-lotrinhdichuyen" default-style="false" center="[21.0374858, 105.8374116]" zoom="10" class="map-lotrinhdichuyen">
+                </ng-map>
+            </section>
+        </div>
+    </div>
+</div>

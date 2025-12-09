@@ -1,0 +1,77 @@
+﻿.container-scroll{
+    height: calc(100vh - 6rem);
+    overflow: auto;
+}
+
+
+#treehangchon {
+    max-height: 300px;
+}
+
+#treenhomhang {
+    max-height: calc(100vh);
+}
+
+#btn_capnhatall {
+    margin-top: 2rem;
+}
+.text-formgroup {
+    font-size: 1rem;
+}
+.discount-detail {
+    padding: 0rem 1rem;
+}
+
+.card .card-header:not([data-background-color]) {
+    background-color: transparent;
+}
+
+.card .card-header {
+    padding: 15px 15px 0;
+    border: 0;
+}
+
+.content-form {
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.collapse-content.collapsed .fa-caret-right {
+    display: none;
+}
+
+.collapse-content .fa-caret-right {
+    display: block;
+}
+
+.collapse-content.collapsed .fa-caret-down {
+    display: block;
+}
+
+.collapse-content .fa-caret-down {
+    display: none;
+}
+
+.collapse-content {
+    padding: .75rem 0;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    cursor: pointer;
+    color: #048da2;
+}
+
+.k-widget.k-upload.k-header.k-upload-sync {
+    text-align: center;
+    border: none;
+    background: none;
+}
+
+.card.card-img {
+    min-height: calc(48vh);
+}
+
+
+

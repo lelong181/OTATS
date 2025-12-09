@@ -1,0 +1,111 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/print.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+
+</head>
+<body>
+    <div class="page-order-detail">
+        <section id="order-detail">
+            <div class="container">
+                <div class="row">
+                    <div class="wrap-order-detail" id="test">
+                        <div id="hide">
+
+                            <div class="text-center">
+                                    <div class="col-md-12">
+                                        @*<a href="{{ route('print.excel',$site_lang) }}?booking_code={{ $_GET['booking_code'] }}" class="btn-print">
+                                            <i class="far fa-file-excel fa-style" aria-hidden="true" style=" color: #00cc33;"></i>
+                                            <span>Exel file</span>
+                                        </a>*@
+                                        <a href="" class="btn-print" onclick='printDiv();'>
+                                            <i class="fa fa-print fa-style" aria-hidden="true" style="color: #ff9933;"></i>
+                                            <span>In vé</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                @*<div class="info-user">
+                                    <div class="col-md-12">
+                                        <h3 class="title-h3">Số booking: {{ $order->bookingCode }}</h3>
+                                        @if (count($order->customerRes) > 0)
+                                            <p style="float: left">Họ Tên: <span class="span-info">{{ $order->customerRes[0]->name }}</span></p>
+                                        <p style="margin-left: 350px">Email: <span class="span-info">{{ $order->customerRes[0]->email }}</span></p>
+                                        <p style="float: left; clear: both">Điện thoại: <span class="span-info">{{ $order->customerRes[0]->phoneNumber }}</span></p>
+                                        <p style="margin-left: 350px">Địa chỉ: <span class="span-info">{{ $order->customerRes[0]->address }}</span></p>
+                                        @endif
+                                    </div>
+                                </div>*@
+                        </div>
+                        @foreach (LSPos_Data.Models.ChiTietDonHangModels mh in Model)
+                        {
+                            <div class="wrap-bottom-block" id="section-print">
+
+                                <div>
+                                    @foreach (LSPos_Data.Models.ChiTietMatHangDonHangModels ct in mh.dschitietmathang)
+                                    {
+                                        <div class="col-md-12 ticket" style="position: relative;">
+                                            <img src="~/Images/logo/test.png" alt="" style="position: absolute; z-index: 10000; top: -6px;left: -9px; transform: rotate(-271deg);"> @*{{-- Trên trái --}}*@
+                                            <img src="~/Images/logo/test.png" alt="" style="position: absolute; z-index: 10000; top: -8px; right: -8px; transform: rotate(-180deg);"> @*{{-- Trên phải --}}*@
+                                            <img src="~/Images/logo/test.png" alt="" style="position: absolute; z-index: 10000; top: 362px;left: -7px;"> @*{{-- Dưới trái --}}*@
+                                            <img src="~/Images/logo/test.png" alt="" style="position: absolute; z-index: 10000; top: 361px;right: -8px; transform: rotate(-90deg);"> @*{{-- Dưới phải --}}*@
+
+                                            <div class="row style-print" style="border: 1.5px solid #cccccc;">
+
+                                                <div class="col-md-7 print-col-1" >
+                                                    <div style="border: 10px solid transparent; border-image: url('../../Images/logo/list-ve.png') 0 30 0 0 repeat; height: 400px; padding-top: 30px; ">
+                                                        <img src="~/Images/logo/logo.png" alt="" style="margin-left: 105px; margin-bottom: 30px; height: 140px;">
+                                                        <h5>Site/Địa điểm: <span style="font-size: 22px; font-weight: bold">@mh.tenhang</span></h5>
+                                                        @*<h5>Expire On/Hạn sử dụng: <span style="font-weight: bold;">{{ date('d-m-Y', strtotime($or->usingDate)) }}</span></h5>*@
+                                                        <h5>Tên dịch vụ: <span style="font-size: 22px; font-weight: bold">@mh.tenhang</span></h5>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-5 print-col-2">
+                                                    <h3>@mh.tenhang</h3>
+                                                    <div class="image-qrcode" style="">
+                                                        <img style="" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=@ct.MaVeDichVu&choe=UTF-8" alt="">
+                                                    </div>
+                                                    <h6>Code/Mã vé: <span>  @ct.MaVeDichVu</span></h6>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+        </section>
+    </div>
+</body>
+<script>
+    function printDiv() {
+        $('#hide').css('display', 'none');
+        $('.ticket').css('margin-top', '120px');
+        $('.ticket').first().css('margin-top', '0');
+        if (print()) {
+            $('#hide').css('display', 'none');
+        } else {
+            $('#hide').css('display', 'block');
+        }
+    }
+    $(document).ready(function () {
+    });
+</script>
+
+

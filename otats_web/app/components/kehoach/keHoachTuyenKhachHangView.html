@@ -1,0 +1,135 @@
+﻿<link href="app/components/kehoach/keHoachTuyenKhachHangStyle.css" rel="stylesheet" />
+<div class="container-fluid">
+    <!--<div class="content-title text-info"><i class="fas fa-id-card"></i> KẾ HOẠCH TUYẾN KHÁCH HÀNG</div>-->
+    <div class="toolbarmenu">
+        <button class="btn btn-link btn-menubar" ng-click="openCreateTuyenWindow()"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_them')}}</button>
+        <button class="btn btn-link btn-menubar" ng-click="openEditTuyenWindow()"><i class="fas fa-edit fas-sm color-infor"></i> {{bindTextI18n('button_sua')}}</button>
+        <button class="btn btn-link btn-menubar" ng-click="exportExcelTuyen()"><i class="fas fa-file-excel fas-sm color-infor"></i> {{bindTextI18n('button_xuatexcel')}}</button>
+        <button class="btn btn-link btn-menubar" ng-click="deleteItemTuyen()"><i class="fas fa-trash fas-sm color-danger"></i> {{bindTextI18n('button_xoa')}}</button>
+    </div>
+
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="tuyen_grid"></div>
+</div>
+
+<div id="tuyen_WindowMap">
+    <div id="MapTuyen" style="width:100%;height:calc(100vh - 40px);"></div>
+</div>
+<div id="tuyen_windowTuyen">
+    <form kendo-validator="validator" id="tuyen_formTuyen" ng-submit="validate($event)">
+        <div class="toolbarmenu">
+            <button ng-click="LuuTuyen()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_luu')}}</button>
+            <button ng-click="closeWindowTuyen()" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> {{bindTextI18n('button_huy')}}</button>
+        </div>
+        <div class="row content-form">
+            <div class="title-block"><span>{{bindTextI18n('label_thongtintuyen')}}</span></div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="TenTuyen">{{bindTextI18n('header_tentuyen')}} <span class="required-field-icon">(*)</span></label>
+                        <input name="TenTuyen" type="text" placeholder="{{bindTextI18n('header_tentuyen')}}" ng-model="objTuyen.TenTuyen" class="k-textbox" id="TenTuyen" />
+                        <!--<span class="k-invalid-msg" data-for="TenTuyen"></span>-->
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="NhomNhanVien">{{bindTextI18n('label_nhomnhanvien')}}</label>
+                        <select kendo-multi-select="NhomNhanVien"
+                                k-placeholder="bindTextI18n('label_nhomnhanvien')"
+                                k-data-text-field="'tenNhom'"
+                                k-data-value-field="'iD_Nhom'"
+                                k-filter="'contains'"
+                                k-auto-bind="true"
+                                k-options="optionNhomNhanVien"
+                                k-auto-close="false"
+                                k-ng-model="objTuyen.DsNhom"
+                                k-value-primitive="true"
+                                k-data-source="lstNhomNhanVien"
+                                k-on-close="nhomNhanVienOnChange(kendoEvent)"></select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="Mota">{{bindTextI18n('label_mota')}}</label>
+                        <input name="MoTa" type="text" placeholder="{{bindTextI18n('label_mota')}}" ng-model="objTuyen.MoTa" class="k-textbox" id="MoTa" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="NhanVien">{{bindTextI18n('label_nhanvien')}}</label>
+                        <select kendo-multi-select="NhanVien"
+                                k-placeholder="bindTextI18n('label_nhanvien')"
+                                k-data-text-field="'tenDayDu'"
+                                k-data-value-field="'idnv'"
+                                k-options="optionNhanVien"
+                                k-value-primitive="true"
+                                k-ng-model="objTuyen.DsNhanVien"
+                                k-data-source="lstNhanVien"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="title-block">{{bindTextI18n('label_lichviengtham')}}</div>
+            <div class="col-sm-6">
+                <p style="width:100%;text-align:center;font-weight:700;">{{bindTextI18n('label_lichthucong')}}</p>
+                <div class="form-group">
+                    <label for="tuyen_NgayViengTham" style="width:100%">{{bindTextI18n('label_ngayviengtham')}}</label>
+                    <div style="width:100%" id="tuyen_NgayViengTham"></div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <p style="width:100%;text-align:center;font-weight:700;">{{bindTextI18n('label_lichtudong')}}</p>
+                <div class="form-group">
+                    <label for="tuyen_LoaiTanSuat" style="width:100%">{{bindTextI18n('label_loaitansuat')}}</label>
+                    <!--<input style="width:100%" id="tuyen_LoaiTanSuat" />-->
+                    <select kendo-combo-box="LoaiTanSuat"
+                            id="LoaiTanSuat"
+                            k-placeholder="bindTextI18n('label_loaitansuat')"
+                            k-data-text-field="'tenKieu'"
+                            k-data-value-field="'kieu'"
+                            k-filter="'contains'"
+                            k-auto-bind="false"
+                            k-value-primitive="true"
+                            k-ng-model="objTuyen.LoaiTanSuat"
+                            k-data-source="lstLoaiTanSuat"
+                            k-on-change="loaiTanSuatOnChange(kendoEvent)"></select>
+                </div>
+                <div class="form-group">
+                    <label for="tuyen_NgayViengTham" style="width:100%">{{bindTextI18n('label_ngayviengtham')}}</label>
+                    <!--<input style="width:100%" id="tuyen_NgayViengThamTuan" />-->
+                    <select kendo-multi-select="NgayViengThamTuan"
+                            k-placeholder="bindTextI18n('label_ngayviengtham')"
+                            k-data-text-field="'text'"
+                            k-data-value-field="'value'"
+                            k-value-primitive="true"
+                            k-options="optionNgayViengThamTuan"
+                            k-ng-model="objTuyen.Thu"
+                            k-data-source="lstNgayViengThamTuan"></select>
+                </div>
+                <div class="form-group">
+                    <label for="tuyen_NgayKetThuc" style="width:100%">{{bindTextI18n('label_ngayketthuc')}}</label>
+                    <input kendo-date-picker="NgayKetThuc"
+                           id="ngayketthuc"
+                           k-options="ngayKetThucOptions"
+                           k-placeholder="bindTextI18n('label_ngayketthuc')"
+                           k-ng-model="objTuyen.NgayKetThuc" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 title-block"><span>{{bindTextI18n('label_khachhangtrongtuyen')}}</span></div>
+        <div class="toolbarmenu">
+            <button ng-click="openWindowSelect_KhachHang()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i> {{bindTextI18n('button_chonkhachhang')}}</button>
+            <button ng-click="XoaKhachDaChon()" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> {{bindTextI18n('button_xoa')}}</button>
+        </div>
+        <div kendo-grid="GridKhachHangTrongTuyen" k-data-source="gridKhachHangTrongTuyenData" k-options="gridKhachHangTrongTuyenOptions"></div>
+    </form>
+</div>
+<div id="tuyen_WindowChonKhachHang">
+    <div class="toolbarmenu">
+        <button ng-click="ChonKhachHang()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-infor"></i><span> {{bindTextI18n('button_chon')}}</span></button>
+        <button ng-click="closeWindowChonKhachHang()" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i><span> {{bindTextI18n('button_huy')}}</span></button>
+    </div>
+    <div kendo-grid="GridKhachHangNgoaiTuyen" k-data-source="gridKhachHangTrongNgoaiData" k-options="gridKhachHangNgoaiTuyenOptions"></div>
+</div>

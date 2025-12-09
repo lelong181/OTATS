@@ -1,0 +1,140 @@
+﻿
+.font-light {
+    font-size: small;
+    font-weight: 500;
+}
+
+.body-dashboard {
+    background-color: white;
+    margin-top: 0rem;
+    padding: 0.5rem;
+    height: calc(100vh - 5rem);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.card-stats .card-body {
+    padding: 15px 15px 0;
+}
+
+.card .card-body {
+    padding: 5px 15px 0px 15px;
+}
+
+.card-stats .card-footer {
+    padding: 0 15px 12px;
+}
+ 
+.card-header {
+    background-color: white;
+    border-bottom: none;
+}
+.card-header:hover {
+    background-color: rgba(0,0,0,.03);
+}
+
+.card-category.link:hover {
+    color: #17a2b8;
+    text-decoration: none;
+}
+
+.card-footer {
+    background-color: transparent;
+    border: 0;
+}
+
+.card-stats .icon-big {
+    font-size: 3em;
+    min-height: 64px;
+}
+
+.card-stats .card-body .numbers {
+    text-align: right;
+    font-size: 2em;
+}
+
+.card .numbers {
+    font-size: 2em;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0056b3;
+}
+
+.card-stats .card-body .numbers .card-category {
+    font-size: 16px;
+    line-height: 1.4em;
+}
+
+.card-stats .card-body .numbers p {
+    margin-bottom: 0;
+}
+
+.card-category {
+    font-size: 1em;
+}
+
+.card-category, .category {
+    font-weight: 400;
+    color: #9a9a9a;
+    font-size: .7142em;
+}
+
+.card-stats .card-footer .stats {
+    color: #9a9a9a;
+}
+
+.card-link, .card .card-footer .stats i {
+    margin-right: 5px;
+    position: relative;
+    top: 0;
+    color: #66615b;
+}
+
+.link-truycapnhanh {
+    color: #66615b;
+    font-size: 1rem;
+    margin: 13px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    line-height: 25px;
+}
+
+    .link-truycapnhanh > i {
+        padding-right: 10px;
+    }
+
+    .link-truycapnhanh:hover {
+        text-decoration: none;
+        color: #dc3545;
+        font-weight: bold;
+    }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: blueviolet;
+    background-color: white !important;
+    border-bottom: blueviolet solid;
+}
+
+.favorite-list {
+    list-style-type: none;
+    margin-left: -2rem;
+}
+
+.favorite-link {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.favorite-item {
+    padding: .5rem 0;
+}
+
+.card.card-home {
+    height: calc(100vh - 15rem);
+}

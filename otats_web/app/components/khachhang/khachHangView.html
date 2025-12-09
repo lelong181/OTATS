@@ -1,0 +1,45 @@
+﻿
+<div class="container-fluid">
+    <div class="toolbarmenu">
+        <button ng-show="(permission.them > 0)" class="btn btn-link btn-menubar" ng-click="themMoiKhachHang()"><i class="fas fa-plus-circle fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_themmoi')"></span></button>
+        <button ng-show="(permission.sua > 0)" class="btn btn-link btn-menubar" ng-click="openEditMultiKhachHang()"><i class="fas fa-edit fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_sua')"></span></button>
+        <button ng-show="(permission.sua > 0)" class="btn btn-link btn-menubar" ng-click="xuatExcel()" id="btn_xuatexcelkhachhang"> <i class="fas fa-file-excel fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_xuatexcel')"></span></button>
+        <button ng-show="(permission.them > 0)" class="btn btn-link btn-menubar" ng-click="taiFileMau()" id="btn_taifilemaukhachhang"> <i class="fas fa-file-download fas-sm color-success"></i> <span ng-bind="bindTextI18n('button_taifilemau')"></span></button>
+        <button ng-show="(permission.them > 0)" class="btn btn-link btn-menubar" ng-click="importExcel()"><i class="fas fa-file-import fas-sm color-success"></i> <span ng-bind="bindTextI18n('button_thembangexcel')"></span></button>
+        <button ng-show="(permission.xoa > 0)" class="btn btn-link btn-menubar" ng-click="xoaKhachHang()"><i class="fas fa-trash fas-sm color-danger"></i> <span ng-bind="bindTextI18n('button_xoa')"></span></button>
+        <button ng-show="(permission.xoa > 0)" class="btn btn-link btn-menubar" ng-click="xoaAllKhachHang()"><i class="fas fa-trash fas-sm color-danger"></i> <span ng-bind="bindTextI18n('button_xoaall')"></span></button>
+    </div>
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+
+<!--popup import-->
+<div kendo-window="formimport" id="formimport" k-title="bindTextI18n('button_thembangexcel')" k-visible="false" k-modal="true" k-width="500" k-height="200">
+    <div class="import-body">
+        <div class="row">
+            <div class="col-12">
+                <div class="choose-file-import">
+                    <label class="labelDetail">{{bindTextI18n('label_chonfile')}}:</label>
+                    <input name="filesExcelimport" title="" id="filesExcel" type="file" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="import-btn">
+                    <button ng-disabled="(fileUpload == '')" id="btn_capnhatimport" ng-click="capNhatTuExcel()" class="btn btn-sm btn-info btn-import"><i class="fa fa-plus" aria-hidden="true"></i> {{bindTextI18n('button_luu')}}</button>
+                    <button id="btn_huycapnhatimport" ng-click="huyCapNhatExcel()" class="btn btn-sm btn-danger btn-import"><i class="fa fa-trash-o" aria-hidden="true"></i> {{bindTextI18n('button_huy')}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--popup edit multi-->
+<div kendo-window="khachhang_window_editmulti" k-title="bindTextI18n('label_capnhatthongtin')" k-visible="false" k-modal="true" id="khachhang_window_editmulti">
+    <div class="toolBarMenu">
+        <button class="btn btn-link btn-menubar" ng-click="SaveMulti()" title="{{bindTextI18n('button_luu')}}"><i class="fas fa-save fas-sm color-infor"></i> <span ng-bind="bindTextI18n('button_luuthaydoi')"></span></button>
+        <button class="btn btn-link btn-menubar" ng-click="closekhachhang_window_editmulti()"><i class="fas fa-trash fas-sm color-danger"></i> <span ng-bind="bindTextI18n('button_huy')"></span> </button>
+    </div>
+    <div kendo-grid="khachhang_grid_edit" k-data-source="khachhang_grid_editData" k-options="khachhang_grid_editOptions" id="khachhang_grid_edit"></div>
+</div>

@@ -1,0 +1,110 @@
+﻿<link href="/app/components/home/homeStyle.css" rel="stylesheet" />
+<div class="container-fluid">
+    <div class="content-filter">
+        <div class="row">
+            <div class="col-sm-1">
+                <div class="form-group">
+                    <select kendo-drop-down-list="loaikhoangthoigian"
+                            id="loaikhoangthoigian"
+                            k-data-text-field="'name'"
+                            k-data-value-field="'id'"
+                            k-ng-model="loaikhoangthoigianselect"
+                            k-data-source="loaikhoangthoigianData"
+                            k-on-change="loaikhoangthoigianOnChange(kendoEvent)"></select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <select kendo-drop-down-list="khoangthoigian"
+                        id="khoangthoigian"
+                        k-data-text-field="'name'"
+                        k-data-value-field="'id'"
+                        k-ng-model="khoangthoigianselect"
+                        k-data-source="khoangthoigianData"
+                        k-on-change="khoangthoigianOnChange(kendoEvent)"></select>
+            </div>
+        </div>
+    </div>
+    <div class="toolbarmenu">
+        <button id="btn_xembaocao" class="btn btn-link btn-menubar" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm color-infor"></i> {{bindTextI18n('button_xembaocao')}}</button>
+    </div>
+    <div class="tab-content">
+        <div class="body-dashboard" style="height:500px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h5 class="m-0 font-weight-bold text-info">{{bindTextI18n('label_bieudochitieudoanhso')}}</h5>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="bar" class="chart chart-bar"
+                                        chart-options="options_doanhso"
+                                        chart-colors="colors"
+                                        chart-data="data_doanhso"
+                                        chart-labels="labels"
+                                        chart-series="series"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h5 class="m-0 font-weight-bold text-info">{{bindTextI18n('label_bieudochitieudonhang')}}</h5>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="bar" class="chart chart-bar"
+                                        chart-options="options_donhang"
+                                        chart-colors="colors"
+                                        chart-data="data_donhang"
+                                        chart-labels="labels"
+                                        chart-series="series"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h5 class="m-0 font-weight-bold text-info">{{bindTextI18n('label_bieudochitieuviengtham')}}</h5>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="bar" class="chart chart-bar"
+                                        chart-options="options_viengtham"
+                                        chart-colors="colors"
+                                        chart-data="data_viengtham"
+                                        chart-labels="labels"
+                                        chart-series="series"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h5 class="m-0 font-weight-bold text-info">{{bindTextI18n('label_bieudochitieungaycong')}}</h5>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="bar" class="chart chart-bar"
+                                        chart-colors="colors"
+                                        chart-options="options_ngaycong"
+                                        chart-data="data_ngaycong"
+                                        chart-labels="labels"
+                                        chart-series="series"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

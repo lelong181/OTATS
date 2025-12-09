@@ -1,0 +1,20 @@
+﻿<link href="../../../Content/intheA6.css" rel="stylesheet" />
+<script src="../../../Scripts/qrcode.js"></script>
+<div class="hocsinh" ng-repeat="i in list">
+    <h2 style="font-weight: 600; letter-spacing: 5px; margin-top: 44px;">TOUR<span style="color:#00ff21">SHOPPING</span>.VN</h2>
+    <h5 style=" margin-top: 47px; padding: 0 10px;"> NỀN TẢNG ĐẶT DỊCH VỤ VÉ KDL - HƯỚNG DẪN VIÊN - VẬN CHUYỂN - LƯU TRÚ ONLINE</h5>
+    <h5 style="padding: 0 10px;">       
+        (Online Booking Platform for Tourism Services - Tour Guides - Transportation - Accommodation)
+    </h5>
+    <h3 style="font-family: cursive; font-weight: 600; color: #00ff21; margin-top: 30px; ">SCAN HERE FOR BUY</h3>
+    <h3 style="font-family: cursive; font-weight: 600; color: #00ff21; margin-bottom: 20px;">TICKET AND SERVICES</h3>
+    <div class="qr-border">
+        <div class="name">{{i.tenAdmin}}</div>
+        <div class="qrcode" id="qrcode{{$index}}">
+            <img class="loadding-gif" src="../../../assets/img/default.gif" />
+        </div>
+    </div>
+    <p style="position: relative;bottom: 0;margin-top: 350px;padding: 0 10px;">
+        COMBO TRÀNG AN - BÁI ĐÍNH - PHỐ CỔ HOA LƯ - TAXI - LIMOSUIE - HƯỚNG DẪN VIÊN - QUÀ LƯU NIỆM
+    </p>
+</div>

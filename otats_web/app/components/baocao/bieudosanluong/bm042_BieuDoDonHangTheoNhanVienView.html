@@ -1,0 +1,59 @@
+﻿<div class="container-fluid">
+    <div class="body-chart-report">
+        <div class="content-filter">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label class="content-filter__label"><span ng-bind="bindTextI18n('label_tungay')"></span>:</label>
+                        <input kendo-date-time-picker
+                               ng-model="str_TuNgay"
+                               k-ng-model="obj_TuNgay"
+                               k-max="maxDate"
+                               k-rebind="maxDate"
+                               k-on-change="fromDateChanged()"
+                               k-format="'yyyy/MM/dd HH:mm:ss'" />
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label class="content-filter__label"><span ng-bind="bindTextI18n('label_denngay')"></span>:</label>
+                        <input kendo-date-time-picker
+                               ng-model="str_DenNgay"
+                               k-ng-model="obj_DenNgay"
+                               k-min="minDate"
+                               k-rebind="minDate"
+                               k-on-change="toDateChanged()"
+                               k-format="'yyyy/MM/dd HH:mm:ss'" />
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <button id="btn_xembaocao" class="btn btn-outline-info btn-viengtham" ng-click="xemBaoCao()"><i class="fas fa-chart-pie fas-sm"></i> {{bindTextI18n('button_xembaocao')}}</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="body-chart mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center color-gray" ng-show="!showchart"><span ng-bind="bindTextI18n('label_khongcodulieubieudo')"></span></h2>
+                    <div class="chart-container">
+                        <canvas id="bar" class="chart chart-horizontal-bar"
+                                chart-options="options"
+                                chart-colors="colors"
+                                chart-data="data"
+                                chart-labels="labels"
+                                chart-dataset-override="datasetOverride">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+

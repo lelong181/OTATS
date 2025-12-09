@@ -1,0 +1,55 @@
+﻿<link href="/app/components/hdv/dangkyhdvStyle.css" rel="stylesheet" />
+<div class="container body-login">
+    <div class="row justify-content-center h-100">
+        <div class="col-sm-10 card card-background">
+            <div class="card-header text-center">
+                <!--<img src="../../../images/icon.ico" alt="LSCLOUD" class="logo-login" />-->
+                <b>ĐĂNG KÝ THÔNG TIN HƯỚNG DẪN VIÊN - KDL SINH THÁI TRÀNG AN</b>
+            </div>
+            <div class="row card-body">
+                <div class="col-sm-8">
+                    <h5>Thông báo!</h5>
+                    <p>Để đảm bảo chất lượng dịch vụ tại khu du lịch Tràng An, BQL khu du lịch thông báo tới các Hướng dẫn viên có lịch trình dẫn khách tại khu du lịch vui lòng đăng ký thông tin để được sử dụng vè FOC khi dẫn khách thăm quan tại Tràng An. Vui lòng làm theo hướng dẫn:</p>
+                    <p>- B1: Khai báo đầy đủ thông tin bắt buộc và đăng ký với KDL</p>
+                    <p>- B2: Sau khi được cấp tài khoản( thông tin tài khoản gửi qua Email đã đăng ký ở B1), đăng nhập vào hệ thống tại địa chỉ: <a href="https://ota.lscloud.vn/">ota.lscloud.vn</a></p>
+                    <p>- B3: Xem danh sách các booking mà bạn được chọn là HDV cùng với vé FOC đã được cấp cho booking đó.</p>
+                    <p>- B4: Làm theo hướng dẫn ở mục "Hướng dẫn lấy vé FOC".</p>
+                </div>
+                <div class="col-sm-4">
+                    <h5>Thông tin HDV</h5>
+                    <form name="form" role="form">
+                        <div class="form-group" ng-class="{ 'has-error': form.tendaydu.$dirty && form.tendaydu.$error.required }">
+                            <input title="{{bindTextI18n('label_vuilongnhaptruongnay')}}" type="text" name="tendaydu" id="tendaydu" placeholder="Tên đầy đủ" class="form-control" ng-model="tendaydu" required />
+                            <div ng-show="form.tendaydu.$dirty && form.tendaydu.$error.required" class="alert alert-warning">(*) {{bindTextI18n('label_vuilongnhaptruongnay')}}</div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': form.dienthoai.$dirty && form.dienthoai.$error.required }">
+                            <input title="{{bindTextI18n('label_vuilongnhaptruongnay')}}" type="tel" name="dienthoai" id="dienthoai" placeholder="Điện thoại" class="form-control" ng-model="dienthoai" required />
+                            <div ng-show="form.dienthoai.$dirty && form.dienthoai.$error.required" class="alert alert-warning">(*) {{bindTextI18n('label_vuilongnhaptruongnay')}}</div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+                            <input title="{{bindTextI18n('label_vuilongnhaptruongnay')}}" type="email" name="email" id="email" placeholder="Email" class="form-control" ng-model="email" required />
+                            <div ng-show="form.email.$dirty && form.email.$error.required" class="alert alert-warning">(*) {{bindTextI18n('label_vuilongnhaptruongnay')}}</div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': form.sothehdv.$dirty && form.sothehdv.$error.required }">
+                            <input title="{{bindTextI18n('label_vuilongnhaptruongnay')}}" type="text" name="sothehdv" id="sothehdv" placeholder="Số thẻ HDV" class="form-control" ng-model="sothehdv" required />
+                            <div ng-show="form.sothehdv.$dirty && form.sothehdv.$error.required" class="alert alert-warning">(*) {{bindTextI18n('label_vuilongnhaptruongnay')}}</div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': form.CCCD.$dirty && form.cccd.$error.required }">
+                            <input title="{{bindTextI18n('label_vuilongnhaptruongnay')}}" type="text" name="cccd" id="cccd" placeholder="Số căn cước công dân" class="form-control" ng-model="cccd" required />
+                            <div ng-show="form.cccd.$dirty && form.cccd.$error.required" class="alert alert-warning">(*) {{bindTextI18n('label_vuilongnhaptruongnay')}}</div>
+                        </div>
+                        <div class="form-actions text-center">
+                            <button ng-click="register()" ng-disabled="form.$invalid || dataLoading" class="btn btn-primary btn-login">Đăng ký thông tin HDV</button>
+                            <img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                            <!--<a href="#!/register" class="btn btn-link">Register</a>-->
+                        </div>
+                        <div ng-show="flag" class="alert {{messageClass}} alert-message">{{message}}</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="coppy text-center">
+    <a href="http://lscloud.vn/" class="text-center text-white" target="_blank"> Copyright © LSCLOUD.jsc </a>
+</div>

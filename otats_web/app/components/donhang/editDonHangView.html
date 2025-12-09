@@ -1,0 +1,592 @@
+﻿<link href="/app/components/donhang/editDonHangStyle.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <ul class="nav nav-pills mb-3 mt-1" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="pills-detail-tab" data-toggle="pill" ng-click="clickdetail()" data-target="#pills-detail" href="detail" ui-sref-active="false" role="tab" aria-controls="pills-detail" aria-selected="true">{{bindTextI18n('label_chitietdonhang')}}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-thanhtoan-tab" data-toggle="pill" ng-click="clickthanhtoan()" data-target="#pills-thanhtoan" href="thanhtoan" ui-sref-active="false" role="tab" aria-controls="pills-thanhtoan" aria-selected="false">{{bindTextI18n('label_thanhtoan')}}</a>
+        </li>
+        <!--<li class="nav-item">
+            <a class="nav-link" id="pills-giaohang-tab" data-toggle="pill" ng-click="clickgiaohang()" data-target="#pills-giaohang" href="giaohang" ui-sref-active="false" role="tab" aria-controls="pills-giaohang" aria-selected="false">{{bindTextI18n('label_lichsugiaohang')}}</a>
+        </li>-->
+        <li class="nav-item" ng-show="isAdmin == 1">
+            <a class="nav-link" id="pills-xuly-tab" data-toggle="pill" ng-click="clickxuly()" data-target="#pills-xuly" href="xuly" ui-sref-active="false" role="tab" aria-controls="pills-phanquyen" aria-selected="false">{{bindTextI18n('label_xuly')}}</a>
+        </li>
+        <!--<li class="nav-item" ng-show="isAdmin == 1">
+            <a class="nav-link" id="pills-phanquyen-tab" data-toggle="pill" ng-click="clickphanquyen()" data-target="#pills-phanquyen" href="phanquyen" ui-sref-active="false" role="tab" aria-controls="pills-xuly" aria-selected="false">{{bindTextI18n('label_phanquyen')}}</a>
+        </li>-->
+
+        <!--<li class="nav-item">
+            <a class="nav-link" id="pills-trahang-tab" data-toggle="pill" ng-click="clicktrahang()" data-target="#pills-trahang" href="trahang" ui-sref-active="false" role="tab" aria-controls="pills-trahang" aria-selected="false">{{bindTextI18n('label_lichsutrahang')}}</a>
+        </li>-->
+        <!--<li class="nav-item">
+            <a class="nav-link" id="pills-album-tab" data-toggle="pill" data-target="#pills-album" href="album" ui-sref-active="false" role="tab" aria-controls="pills-album" aria-selected="false">{{bindTextI18n('label_albumanh')}}</a>
+        </li>-->
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <!--Chi tiết đơn hàng-->
+        <div class="tab-pane fade show active" id="pills-detail" role="tabpanel" aria-labelledby="pills-detail-tab">
+            <div class="body-donhang__chitiet">
+                <div class="body-donhang__chitiet-infor">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="toolbarmenu menu-chitietdonhang">
+                                <button id="btn_luudonhang" ng-show="(permission.sua > 0)" ng-disabled="(objectDonHang.isProcess > 0 || objectDonHang.iD_TrangThaiThanhToan > 1)" ng-click="luudonhang()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_capnhat')}}</button>
+                                <button id="btn_huydonhang" ng-show="(permission.xoa > 0)" ng-disabled="(objectDonHang.isProcess > 0 || objectDonHang.iD_TrangThaiGiaoHang > 1 || objectDonHang.iD_TrangThaiThanhToan > 1)" ng-click="huydonhang()" class="btn btn-link btn-menubar"><i class="fas fa-trash fas-sm color-danger"></i> {{bindTextI18n('button_huydonhang')}}</button>
+                                <!--<button id="btn_trahang" ng-show="(permission.sua > 0)" ng-disabled="(objectDonHang.isProcess > 0)" ng-click="trahang()" class="btn btn-link btn-menubar"><i class="fas fa-sign-out-alt fas-sm color-primary"></i> {{bindTextI18n('button_trahang')}}</button>-->
+                                <!--<button id="btn_giaohang" ng-show="(permission.sua > 0)" ng-disabled="(objectDonHang.isProcess > 0 || objectDonHang.iD_TrangThaiGiaoHang == 4)" ng-click="giaohang()" class="btn btn-link btn-menubar"><i class="fas fa-shipping-fast fas-sm color-success"></i> {{bindTextI18n('button_giaohang')}}</button>-->
+                                <!--<button id="btn_giaotatcahang" ng-show="(permission.sua > 0)" ng-disabled="(objectDonHang.isProcess > 0 || objectDonHang.iD_TrangThaiGiaoHang == 4)" ng-click="giaotatcahang()" class="btn btn-link btn-menubar"><i class="fas fa-check-square fas-sm color-success"></i> {{bindTextI18n('button_giaohangtoanbo')}}</button>-->
+                                <button id="btn_inhoadon" ng-disabled="(objectDonHang.isProcess == 2)" ng-click="inhoadon()" class="btn btn-link btn-menubar"><i class="fas fa-print fas-sm color-dark"></i> {{bindTextI18n('button_inhoadon')}}</button>
+                                <button id="btn_quayvedonhang" ng-click="quayvedonhang()" class="btn btn-link btn-menubar"><i class="fas fa-arrow-alt-circle-left fas-sm color-secondary"></i> {{bindTextI18n('button_quayvedonhang')}}</button>
+                            </div>
+
+                            <div class="body-donhang__thongtin"  style="overflow-y:scroll; overflow-x:hidden;">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group__donhang">
+                                            <div class="label-donhang-4">
+                                                <label>{{bindTextI18n('label_madonhang')}}:</label>
+                                            </div>
+
+                                            <div class="chitietdonhang-value font-weight-bold">{{objectDonHang.maThamChieu}}</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <div class="form-group__donhang">
+                                            <div class="label-donhang-4">
+                                                <label>{{bindTextI18n('label_nhanvienlap')}}:</label>
+                                            </div>
+                                            <div class="chitietdonhang-value font-weight-bold">{{objectDonHang.tenNhanVien}}</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <div class="form-group__donhang">
+                                            <div class="label-donhang-4">
+                                                <label>{{bindTextI18n('label_ngaylap')}}:</label>
+                                            </div>
+                                            <div class="chitietdonhang-value font-weight-bold">{{objectDonHang.ngayTao}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!--<div class="col-sm-4">
+        <div class="form-group__donhang">
+            <div class="label-donhang-4">
+                <label>{{bindTextI18n('label_makhachhang')}}:</label>
+            </div>
+
+            <div class="chitietdonhang-value font-weight-bold">{{maKH}}</div>
+        </div>
+    </div>-->
+
+                                    <div class="col-sm-4">
+                                        <div class="form-group__donhang">
+                                            <div class="label-donhang-4">
+                                                <label>{{bindTextI18n('label_tenkhachhang')}}:</label>
+                                            </div>
+
+                                            <a href="" ng-click="openkhachhang()"><span class="chitietdonhang-value font-weight-bold">{{objectDonHang.tenKhachHang}}</span></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <div class="form-group__donhang">
+                                            <div class="label-donhang-4">
+                                                <label>{{bindTextI18n('label_sodienthoai')}}:</label>
+                                            </div>
+
+                                            <span class="chitietdonhang-value font-weight-bold">{{dienThoai}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group__donhang">
+                                            <div class="label-donhang-4">
+                                                <label>{{bindTextI18n('label_xuathoadon')}}:</label>
+                                            </div>
+
+                                            <span class="chitietdonhang-value font-weight-bold" ng-if="xuatHoaDon">Có</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group__donhang">
+                                            <div class="label-donhang-4">
+                                                <label>{{bindTextI18n('label_trangthai')}}:</label>
+                                            </div>
+
+                                            <span class="chitietdonhang-value font-weight-bold">{{objectDonHang.tenTrangThaiGiaoHang}} - {{nametrangthaithanhtoan}}</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <!--<div class="form-group__donhang">
+                                            <div class="label-donhang-2">
+                                                <label>{{bindTextI18n('label_diachitaodon')}}:</label>
+                                            </div>
+
+                                            <span class="chitietdonhang-value font-weight-bold"> {{diaChiTao}}</span>
+                                        </div>-->
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group__donhang">
+                                            <div class="label-donhang-4">
+                                                <label>In tại quầy:</label>
+                                            </div>
+                                            <span class="chitietdonhang-value font-weight-bold" ng-if="inVeTaiQuay">Có</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="body-line">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group__donhang">
+                                                <div class="label-donhang-4">
+                                                    <label>{{bindTextI18n('label_ghichu')}}:</label>
+                                                </div>
+
+                                                <!--<span class="chitietdonhang-value font-weight-bold">{{ghiChu}}</span>-->
+                                                <textarea type="text" class="k-textbox" id="ghichu" ng-model="objectDonHang.ghiChu" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-8" ng-show="true">
+                                            <div class="form-group__donhang">
+                                                <div class="label-donhang-4">
+                                                    <label>{{bindTextI18n('label_lydohuy')}}:</label>
+                                                </div>
+
+                                                <span class="chitietdonhang-value font-weight-bold"> {{lyDo}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group__donhang">
+                                                <div class="label-donhang-4">
+                                                    <label>{{bindTextI18n('label_capnhat')}}:</label>
+                                                </div>
+
+                                                <span class="chitietdonhang-value font-weight-bold">{{objectDonHang.lastUpdate_Ten_NhanVien}} - {{objectDonHang.lastUpdate_ThoiGian_NhanVien}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="form-group__donhang">
+                                                <div class="label-donhang-4">
+                                                    <label>{{bindTextI18n('label_trangthaiduyet')}}:</label>
+                                                </div>
+                                                <select class="combo-trangthaidonhang color-infor font-weight-bold" ng-model="trangthaidonhang"
+                                                        ng-options="trangthaidonhang.tenTrangThai for trangthaidonhang in listtrangthaidonhang track by trangthaidonhang.iD_TrangThaiDonHang"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="body-donhang__thanhtien">
+                                <ul class="nav nav-tabs" id="moneyTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="thanhtien-tab" data-toggle="tab" data-target="#thanhtien" href="thanhtien" role="tab" aria-controls="thanhtien" aria-selected="true">{{bindTextI18n('label_tongtien')}}</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="khuyenmai-tab" data-toggle="tab" data-target="#khuyenmai" href="khuyenmai" role="tab" aria-controls="khuyenmai" aria-selected="false">{{bindTextI18n('label_khuyenmai')}}</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="moneyTabContent">
+                                    <!--Tổng tiền-->
+                                    <div class="tab-pane fade show active" id="thanhtien" role="tabpanel" aria-labelledby="thanhtien-tab">
+                                        <div class="body-thanhtien--thanhtien" style="overflow-y:scroll; overflow-x:hidden;">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <div class="form-group">
+                                                        <span class="thanhtien-label">{{bindTextI18n('label_tongtien')}}:</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div class="form-group text-right">
+                                                        <span class="thanhtien-number font-weight-bold">{{fomartnumber(objectDonHang.tongTien)}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <div class="form-group">
+                                                        <span class="thanhtien-label">{{bindTextI18n('label_tiendathanhtoan')}}:</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div class="form-group text-right">
+                                                        <span class="thanhtien-number font-weight-bold">{{fomartnumber(objectDonHang.tienDaThanhToan)}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <div class="form-group">
+                                                        <span class="thanhtien-label">{{bindTextI18n('label_conlai')}}:</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div class="form-group text-right">
+                                                        <span class="thanhtien-number text-right font-weight-bold">{{fomartnumber(objectDonHang.conLai)}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6" id="qrthanhtoan"></div>
+                                                <div class="col-sm-6" id="onepaythanhtoan">
+                                                </div>
+                                                <!--<img style="width: 190px; margin: auto;" ng-src="vietqrurl" src="https://img.vietqr.io/image/TCB-9009101994-compact2.png?amount={{objectDonHang.conLai}}&addInfo=lsi{{objectDonHang.iD_DonHang}}" />-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Khuyến mãi-->
+                                    <div class="tab-pane fade" id="khuyenmai" role="tabpanel" aria-labelledby="khuyenmai-tab">
+                                        <div class="body-thanhtien--khuyenmai">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <span class="font-weight-bold" ng-click="openchuongtrinhkhuyenmai()">{{objectDonHang.tenCTKM}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <p class="thanhtien-label">{{bindTextI18n('label_chietkhauphantram')}}:</p>
+                                                </div>
+                                                <div class="col-sm-4 text-right">
+                                                    <p class="thanhtien-number font-weight-bold">{{fomartnumberpercent(objectDonHang.chietKhauPhanTramTheoCTKM)}}</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <p class="thanhtien-label">{{bindTextI18n('label_chietkhautien')}}:</p>
+                                                </div>
+                                                <div class="col-sm-4 text-right">
+                                                    <p class="thanhtien-number font-weight-bold">{{fomartnumber(objectDonHang.chietKhauTienTheoCTKM)}}</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <p class="thanhtien-label">{{bindTextI18n('label_chietkhauphantramkhac')}}:</p>
+                                                </div>
+                                                <div class="col-sm-4 text-right">
+                                                    <p class="thanhtien-number font-weight-bold">{{fomartnumberpercent(objectDonHang.chietKhauPhanTramKhac)}}</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <p class="thanhtien-label">{{bindTextI18n('label_chietkhautienkhac')}}:</p>
+                                                </div>
+                                                <div class="col-sm-4 text-right">
+                                                    <p class="thanhtien-number font-weight-bold">{{fomartnumber(objectDonHang.chietKhauTienKhac)}}</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <p class="thanhtien-label">{{bindTextI18n('label_tongchietkhau')}}:</p>
+                                                </div>
+                                                <div class="col-sm-4 text-right">
+                                                    <p class="thanhtien-number font-weight-bold">{{fomartnumber(objectDonHang.tongTienChietKhau)}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-donhang__chitiet-grid">
+                    <div kendo-grid="grid" k-options="gridOptions" id="grid"></div>
+                </div>
+            </div>
+        </div>
+        <!--Thanh toán-->
+        <div class="tab-pane fade" id="pills-thanhtoan" role="tabpanel" aria-labelledby="pills-thanhtoan-tab">
+            <div class="body-thanhtoan">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card card-thanhtoan" style=" overflow-y: scroll;">
+                            <div class="card-header">
+                                <h5 class="color-infor"> <i class="fas fa-money-bill"></i> {{bindTextI18n('label_thongtinthanhtoan')}}</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <p class="thanhtoan-label">{{bindTextI18n('label_tongtienthanhtoan')}}:</p>
+                                    </div>
+                                    <div class="col-5 text-right">
+                                        <p class="thanhtoan-number font-weight-bold">{{fomartnumber(objectDonHang.tongTien)}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-7">
+                                        <p class="thanhtoan-label">{{bindTextI18n('label_sotiendathanhtoan')}}:</p>
+                                    </div>
+                                    <div class="col-5 text-right">
+                                        <p class="thanhtoan-number font-weight-bold">{{fomartnumber(objectDonHang.tienDaThanhToan)}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-7">
+                                        <p class="thanhtoan-label">{{bindTextI18n('label_sotienconlai')}}:</p>
+                                    </div>
+                                    <div class="col-5 text-right">
+                                        <p class="thanhtoan-number font-weight-bold">{{fomartnumber(objectDonHang.conLai)}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="soTienThanhToan">{{bindTextI18n('label_sotienthanhtoan')}}</label>
+                                            <input kendo-numeric-text-box k-min="0" ng-model="sotienthanhtoan" id="soTienThanhToan" ng-change="soTienThanhToanOnchange()" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="checkbox" disabled id="thanhtoantoanbo" class="k-checkbox" ng-model="thanhtoantoanbo">
+                                            <label class="k-checkbox-label" for="thanhtoantoanbo">{{bindTextI18n('label_thanhtoantoanbo')}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="ghichu">{{bindTextI18n('label_ghichu')}}</label>
+                                            <textarea placeholder="{{bindTextI18n('label_ghichuthanhtoan')}}" class="k-textbox textarea-lydo" id="ghichuthanhtoan" ng-model="ghichuthanhtoan" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <div class="image_frame">
+                                                <div style="text-align:center" id="preview">
+                                                </div>
+                                            </div>
+                                            <div class="selectfile">
+                                                <input name="files" title="" id="files" type="file" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="radio" name="thanhtoan" id="ttTrucTiep" ng-click="showAvailableBalance = false" ng-model="ttTrucTiep"/>
+                                        <label>Thanh Toán Trực Tiếp</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="radio" name="thanhtoan" id="ttViTraTruoc" ng-click="showAvailableBalance = true" ng-model="ttViTraTruoc"/>
+                                        <label>Thanh Toán Bằng Ví</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <label style="font-size: 12px; font-style: italic;" ng-show="showAvailableBalance">Số dư khả dụng: {{sodukhadung}}</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <button ng-show="(permission.sua > 0)" ng-disabled="(objectDonHang.conLai <= 0 || objectDonHang.isProcess > 0)" id="btn_thanhtoan" ng-click="thanhtoan()" type="button" class="btn btn-success"><i class="fas fa-credit-card"></i> {{bindTextI18n('button_thanhtoan')}}</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="card card-thanhtoan">
+                            <div class="card-header">
+                                <h5 class="color-infor"> <i class="fas fa-money-check"></i> {{bindTextI18n('label_lichsuthanhtoan')}}</h5>
+                            </div>
+                            <div class="card-body">
+                                <div kendo-grid="gridthanhtoan" k-data-source="gridthanhtoanData" k-options="gridthanhtoanOptions" id="gridthanhtoan"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!--Giao hàng-->
+        <div class="tab-pane fade" id="pills-giaohang" role="tabpanel" aria-labelledby="pills-giaohang-tab">
+            <div class="body-giaohang">
+                <div kendo-grid="gridGiaoHang" k-data-source="gridGiaoHangData" k-options="gridGiaoHangOptions" id="gridGiaoHang"></div>
+            </div>
+        </div>
+        <!--Phân quyền-->
+        <!--<div class="tab-pane fade" id="pills-phanquyen" role="tabpanel" aria-labelledby="pills-phanquyen-tab">
+            <div class="body-phanquyen">
+                <div class="toolbarmenu">
+                    <button id="btn_capnhatphanquyen" ng-show="(permission.sua > 0)" ng-disabled="(objectDonHang.isProcess > 0)" ng-click="capnhatphanquyen()" class="btn btn-link btn-menubar"><i class="far fa-save fas-sm color-infor"></i> {{bindTextI18n('button_capnhatphanquyen')}}</button>
+                </div>
+                <div kendo-grid="gridPhanQuyen" k-data-source="gridPhanQuyenData" k-options="gridPhanQuyenOptions" id="gridPhanQuyen"></div>
+            </div>
+        </div>-->
+        <!--Xử lý-->
+        <div class="tab-pane fade" id="pills-xuly" role="tabpanel" aria-labelledby="pills-xuly-tab">
+            <div class="toolbarmenu menu-chitietdonhang">
+                <button id="btn_xulydonhang" ng-show="(permission.sua > 0 && UserInfo.level == 1)" ng-disabled="(objectDonHang.iD_TrangThaiThanhToan == 1 || objectDonHang.iD_TrangThaiDongHang == 3 || objectDonHang.isProcess == 2)" ng-click="xulydonhang()" class="btn btn-link btn-menubar"><i class="fas fa-tasks fas-sm color-infor"></i> {{bindTextI18n('button_xulydonhang')}}</button>
+                <button id="btn_capnhatdsve" ng-show="(permission.sua > 0 && UserInfo.level == 1)" ng-disabled="(objectDonHang.iD_TrangThaiThanhToan == 1)" ng-click="capnhatdsve()" class="btn btn-link btn-menubar"><i class="fas fa-sync fas-sm color-infor"></i> Cập nhật vé</button>
+            </div>
+            <div class="body-phanquyen">
+                <div kendo-grid="gridXuLy" k-data-source="gridXuLyData" k-options="gridXuLyOptions" id="gridXuLy"></div>
+            </div>
+        </div>
+        <!--Trả hàng-->
+        <div class="tab-pane fade" id="pills-trahang" role="tabpanel" aria-labelledby="pills-trahang-tab">
+            <div class="body-trahang">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="toolbarmenu">
+                            <h5 class="toolbarmenu-title color-infor"> <i class="fas fa-comment-dots"></i> {{bindTextI18n('label_lantranhang')}}</h5>
+                        </div>
+                        <div kendo-grid="gridTraHang" k-data-source="gridTraHangData" k-options="gridTraHangOptions" id="gridTraHang"></div>
+                    </div>
+                    <div class="col-8">
+                        <div class="toolbarmenu">
+                            <h5 class="toolbarmenu-title color-infor"> <i class="fas fa-comment-dots"></i> {{bindTextI18n('label_chitietmathang')}}</h5>
+                        </div>
+                        <div kendo-grid="gridTraHangDetail" k-data-source="gridTraHangDetailData" k-options="gridTraHangDetailOptions" id="gridTraHangDetail"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--Album-->
+        <div class="tab-pane fade" id="pills-album" role="tabpanel" aria-labelledby="pills-album-tab">
+            <div class="body-album">
+                <h5 class="color-infor"><i class="fas fa-adjust"></i> {{bindTextI18n('header_soanhchup')}}: {{tongsoanh}} </h5>
+                <h2 class="text-center color-gray" ng-show="(tongsoanh <= 0)">{{bindTextI18n('label_donhangkhongcodulieuanh')}}</h2>
+                <div class="body-listimage">
+                    <div class="row">
+                        <div class="col-2" ng-repeat="item in listimages">
+                            <div class="img-body">
+                                <div class="img-item">
+                                    <img src="{{getPathImage(item.path)}}" class="img-donhang" />
+                                </div>
+                                <div class="img-ghichu">
+                                    <p>{{bindTextI18n('label_ghichu')}}: {{item.ghichu}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--popup hủy đơn hàng-->
+<div kendo-window="formhuydonhang" id="formhuydonhang" k-title="bindTextI18n('button_huydonhang')" k-visible="false" k-modal="true" k-width="450" k-height="220">
+    <div class="body-huydonhang">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="lyDoHuy">{{bindTextI18n('label_lydohuy')}}</label>
+                    <textarea placeholder="{{bindTextI18n('label_lydohuy')}}" class="k-textbox textarea-lydo" id="lyDoHuy" ng-model="lyDoHuy" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-huydonhang float-right">
+        <button ng-click="donghuydonhang()" class="btn btn-outline-secondary btn-lg"><i class="fas fa-close"></i> {{bindTextI18n('button_dong')}}</button>
+        <button id="btn_apdunghuydonhang" ng-click="apdunghuydonhang()" class="btn btn-danger btn-lg"><i class="fas fa-bell"></i> {{bindTextI18n('button_huydonhang')}}</button>
+    </div>
+</div>
+
+<!--popup giao hàng-->
+<div kendo-window="formgiaohang" id="formgiaohang" k-title="bindTextI18n('label_giaohang')" k-visible="false" k-modal="true" k-width="400" k-height="200">
+    <div class="body-giaohang">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="ghichugiaohang">{{bindTextI18n('label_ghichugiaohang')}}</label>
+                    <textarea placeholder="{{bindTextI18n('label_ghichugiaohang')}}" class="k-textbox textarea-lydo" id="ghichugiaohang" ng-model="ghiChuGiaoHang" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-giaohang float-right">
+        <button ng-click="donggiaohang()" class="btn btn-outline-secondary btn-lg"><i class="fas fa-close"></i> {{bindTextI18n('button_dong')}}</button>
+        <button id="btn_apdunggiaohang" ng-click="apdunggiaohang()" class="btn btn-primary btn-lg"><i class="fas fa-bell"></i> {{bindTextI18n('button_giaohang')}}</button>
+    </div>
+</div>
+
+<!--popup trả hàng-->
+<div kendo-window="formtrahang" id="formtrahang" k-title="bindTextI18n('button_trahang')" k-visible="false" k-modal="true" k-width="800" k-height="475">
+    <div class="body-trahang">
+        <div class="toolbarmenu menu-chitietdonhang">
+            <button id="btn_capnhattrahang" ng-click="capnhattrahang()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_capnhattrahang')}}</button>
+        </div>
+        <div kendo-grid="gridPhieuTraHang" k-data-source="gridPhieuTraHangData" k-options="gridPhieuTraHangOptions" id="gridPhieuTraHang"></div>
+    </div>
+</div>
+
+<div kendo-window="formdetail" id="formdetail" k-title="bindTextI18n('label_chitietmathang')" k-visible="false" k-modal="true" k-width="1000" k-height="520">
+    <div class="body-detail">
+        <!--<h5>Danh sách chi tiết kích thước mặt hàng</h5>-->
+        <div class="row">
+            <div class="col-12">
+                <div class="toolbarmenu">
+                    <!--<button id="btn_themdongchitiet" ng-click="themdongchitiet()" class="btn btn-link btn-menubar"><i class="fas fa-plus-circle fas-sm color-success"></i> {{bindTextI18n('button_themdong')}}</button>-->
+                    <button id="btn_luuchitiet" ng-click="luuchitiet()" class="btn btn-link btn-menubar"><i class="fas fa-save fas-sm color-infor"></i> {{bindTextI18n('button_capnhat')}}</button>
+                </div>
+                <div kendo-grid="gridchitiet" k-data-source="gridchitietData" k-options="gridchitietOptions" id="gridchitiet"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div kendo-window="formdetailve" k-options="formdetailveOptions" id="formdetailve" k-title="bindTextI18n('label_chitietmathang')" k-visible="false" k-modal="true" k-width="1050" k-height="420">
+    <div class="body-detail">
+        <!--<h5>Danh sách chi tiết kích thước mặt hàng</h5>-->
+        <div class="row">
+            <div class="col-12">
+                <div kendo-grid="gridchitietve" k-data-source="gridchitietveData" k-options="gridchitietveOptions" id="gridchitietve"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div kendo-window="windowHangChon" id="windowHangChon" k-title="bindTextI18n('label_chitietmathang')" k-visible="false" k-modal="true" k-width="1200" k-height="600">
+    <div class="body-detail">
+        <!--<h5>Danh sách chi tiết kích thước mặt hàng</h5>-->
+        <div class="row">
+            <div class="col-sm-3">
+                <div id="treehangchon"></div>
+            </div>
+            <div class="col-sm-9">
+                <div kendo-grid="gridHangChon" k-data-source="gridHangChonData" k-options="gridHangChonOptions" id="gridHangChon"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+﻿#treeview {
+    height: calc( 100vh - 125px) !important;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    float: left;
+    border-color: grey;
+    border: 1px solid #d9d9d9 !important;
+    line-height: 30px !important;
+}
+
+.k-widget.k-upload.k-header.k-upload-sync {
+    text-align: center;
+    border: none;
+    background: none;
+}
+
+.image-preview {
+    width: 50%;
+    margin-left: 25%;
+}

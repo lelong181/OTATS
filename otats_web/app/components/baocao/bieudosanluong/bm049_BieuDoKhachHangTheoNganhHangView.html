@@ -1,0 +1,35 @@
+﻿<div class="container-fluid body-chart-report">
+        <div class="tab-pane fade show active" id="pills-bieudo" role="tabpanel" aria-labelledby="pills-bieudo-tab">
+            <div class="body-chart mt-4">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card card-chart mb-4">
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h5 class="m-0 font-weight-bold text-info text-uppercase"><span ng-bind="bindTextI18n('label_bieudosanluong')"></span></h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-area">
+                                    <canvas id="pie" class="chart chart-pie"
+                                            chart-colors="colors"
+                                            chart-data="data"
+                                            chart-labels="labels"
+                                            chart-options="options"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card card-chart mb-4">
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h5 class="m-0 font-weight-bold text-info text-uppercase"><span ng-bind="bindTextI18n('label_baocaosanluong')"></span></h5>
+                            </div>
+                            <div class="card-body">
+                                <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

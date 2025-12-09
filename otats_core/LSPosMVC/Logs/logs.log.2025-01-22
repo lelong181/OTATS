@@ -1,0 +1,7 @@
+﻿2025/01/22 12:50:28,516 ERROR 11 LSPos_Data.Utilities.Log - System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s)
+   at LSPos_Data.Data.DonHangData.BienDongSoDuNhom_TongTienHienTai(Int32 ID_Nhom) in D:\OneDrive\Documents\source\lscloudhub_core\LSPos_Data\Data\DonHangData.cs:line 2250
+2025/01/22 12:50:43,208 INFO 5 LSPos_Data.Utilities.Log - Print: 241414 - 8576636786 - TRANGAN
+2025/01/22 12:51:41,872 INFO 16 LSPos_Data.Utilities.Log - Print: 241414 - 8576636786 - TRANGAN
+2025/01/22 12:51:56,047 INFO 16 LSPos_Data.Utilities.Log - Print: 241414 - 8576636786 - TRANGAN

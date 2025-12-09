@@ -1,0 +1,57 @@
+﻿
+
+<div class="container-fluid">
+    <div kendo-grid="grid" k-data-source="gridData" k-options="gridOptions" id="grid"></div>
+</div>
+<div class="container-fluid" kendo-window="formdetail" id="formdetail" k-title="bindTextI18n('label_mathangkygui')" k-visible="false" k-modal="true" k-width="900" k-height="500">
+    <div class="row">
+        <div class="col-2">
+            <div class="form-group">
+                <label class="content-filter__label">{{bindTextI18n('label_tungay')}}:</label>
+                <input kendo-date-picker
+                       ng-model="str_TuNgay"
+                       k-ng-model="obj_TuNgay"
+                       k-min="minDate"
+                       k-max="maxDate"
+                       k-rebind="maxDate"
+                       k-on-change="fromDateChanged()"
+                       k-format="'yyyy/MM/dd'"
+                       />
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="form-group">
+                <label class="content-filter__label">{{bindTextI18n('label_denngay')}}:</label>
+                <input kendo-date-picker
+                       ng-model="str_DenNgay"
+                       k-ng-model="obj_DenNgay"
+                       k-min="minDate"
+                       k-rebind="minDate"
+                       k-on-change="toDateChanged()"
+                       k-format="'yyyy/MM/dd'" />
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="ghichu">{{bindTextI18n('label_ghichu')}}</label>
+                <input type="text" placeholder="{{bindTextI18n('label_ghichu')}}" class="k-textbox" id="ghichu" ng-model="ghichu" />
+            </div>
+        </div>
+        <div class="col-3">
+            <button id="luuthaydoi" class="btn btn-outline-info btn-menu__report" ng-click="luuthaydoi()"><i class="fas fa-save fas-sm"></i> {{bindTextI18n('button_hoantat')}}</button>
+        </div>
+
+        </div>
+        <div class="body-detail">
+            <div class="row">
+                <div class="col-6">
+                    <div class="text-center font-weight-bold"><h4>{{bindTextI18n('label_mathangchuaguiban')}}</h4></div>
+                    <div kendo-grid="gridChuaGui" k-data-source="gridDataChuaGui" k-options="gridOptionsChuaGui" id="gridChuaGui"></div>
+                </div>
+                <div class="col-6">
+                    <div class="text-center font-weight-bold"><h4>{{bindTextI18n('label_mathangdaguiban')}}</h4></div>
+                    <div kendo-grid="gridDaGui" k-data-source="gridDataDaGui" k-options="gridOptionsDaGui" id="gridDaGui"></div>
+                </div>
+            </div>
+        </div>
+    </div>

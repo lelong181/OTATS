@@ -1,64 +1,21 @@
 ﻿<link href="/app/components/checkinmaqr/checkInMaQrStyle.css" rel="stylesheet" />
 <script src="/Scripts/html5-qrcode.min.js"></script>
-<style>
-    .qr-container {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-        text-align: center;
-    }
-
-    #reader {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .result-container {
-        margin-top: 20px;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background-color: #f9f9f9;
-        text-align: left;
-    }
-
-    .result-item {
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-
-    .result-label {
-        font-weight: bold;
-        margin-right: 5px;
-    }
-
-    .status-active {
-        color: green;
-        font-weight: bold;
-    }
-
-    .status-inactive {
-        color: red;
-        font-weight: bold;
-    }
-
-    .input-manual {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-
-    .btn-scan {
-        margin-bottom: 10px;
-    }
-</style>
 
 <div class="container-fluid">
     <div class="body-dashboard">
         <div class="body-box">
             <div class="qr-container">
                 <h2 class="text-info">Check-in QR Code</h2>
+
+                <div class="mode-selection" style="margin-bottom: 15px;">
+                    <label class="radio-inline" style="margin-right: 15px;">
+                        <input type="radio" ng-model="checkInMode" value="SCAN" ng-change="changeMode()"
+                            ng-checked="true"> Scan vé
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="checkInMode" value="CHECK" ng-change="changeMode()"> Kiểm tra vé
+                    </label>
+                </div>
 
                 <!-- Input for Scanner Device / Manual Entry -->
                 <input type="text" id="manualInput" class="form-control input-manual" ng-model="manualCode"
@@ -68,38 +25,122 @@
                 <button class="btn btn-primary btn-scan" ng-click="toggleCamera()">
                     <i class="fas fa-camera"></i> {{ isCameraOpen ? 'Đóng Camera' : 'Mở Camera (Mobile)' }}
                 </button>
+                <button class="btn btn-primary btn-scan" ng-click="usingTicket(ticketResult.code)"
+                    ng-show="checkInMode === 'CHECK'" ng-if="ticketResult.status==='INACTIVE'">
+                    <i class="fas fa-check"></i> Sử dụng vé
+                </button>
+
+                <!-- Scan Message Display (Popup Style) -->
+                <div class="scan-result-popup" ng-if="showScanResult">
+                    <div class="popup-icon"
+                        ng-class="{'success': scanStatus === 'SUCCESS', 'error': scanStatus === 'ERROR'}">
+                        <i class="fas"
+                            ng-class="{'fa-check': scanStatus === 'SUCCESS', 'fa-times': scanStatus === 'ERROR'}"></i>
+                    </div>
+                    <div class="popup-title"
+                        ng-class="{'text-success': scanStatus === 'SUCCESS', 'text-danger': scanStatus === 'ERROR'}">
+                        {{ scanStatus === 'SUCCESS' ? 'Successfully' : 'Failed' }}
+                    </div>
+                    <div class="popup-message">
+                        {{ scanMessage }}
+                    </div>
+                    <button class="popup-btn" ng-click="closeScanResult()">Oke</button>
+                </div>
 
                 <!-- Camera Viewfinder -->
                 <div id="reader" ng-show="isCameraOpen"></div>
 
-                <!-- Result Display -->
-                <div class="result-container" ng-if="ticketResult">
-                    <div class="result-item">
-                        <span class="result-label">Trạng thái:</span>
-                        <span
-                            ng-class="{'status-active': ticketResult.status === 'Chưa sử dụng', 'status-inactive': ticketResult.status !== 'Chưa sử dụng'}">
-                            {{ ticketResult.status }}
-                        </span>
+                <!-- End of qr-container inputs -->
+            </div>
+
+            <!-- Result Display - Full Width Split Layout -->
+            <div ng-if="ticketResult" style="width: 100%; margin-top: 20px;">
+                <!-- Horizontal Container for History and Ticket Info -->
+                <div class="row">
+                    <!-- Left Side: Ticket Information Grid (75%) -->
+                    <div class="col-md-9 col-sm-12">
+                        <div class="result-container" style="min-width: 0;">
+                            <div class="ticket-info-grid">
+                                <!-- Left Column -->
+                                <div class="ticket-info-column">
+                                    <div class="result-item">
+                                        <span class="result-label">Trạng thái:</span>
+                                        <span
+                                            ng-class="{'status-active': ticketResult.status === 'INACTIVE', 'status-inactive': ticketResult.status === 'ACTIVE'}">
+                                            {{ ticketResult.statusStr }}
+                                        </span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Code/Mã vé:</span>
+                                        <span>{{ ticketResult.code }}</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Booking/Mã đặt chỗ:</span>
+                                        <span>{{ ticketResult.bookingCode }}</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">InvoiceCode/Số bill:</span>
+                                        <span>{{ ticketResult.invoiceCode }}</span>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column -->
+                                <div class="ticket-info-column">
+                                    <div class="result-item">
+                                        <span class="result-label">Tên vé:</span>
+                                        <span>{{ ticketResult.ticketName }}</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Hạn sử dụng:</span>
+                                        <span>{{ ticketResult.expirationDate | date:'dd/MM/yyyy HH:mm:ss' }}</span>
+                                    </div>
+                                    <div class="result-item" ng-if="ticketResult.status === 'ACTIVE'">
+                                        <span class="result-label">Lần sử dụng cuối:</span>
+                                        <span>{{ ticketResult.lastUsingTime | date:'dd/MM/yyyy HH:mm:ss' }}</span>
+                                    </div>
+                                    <div class="result-item" ng-if="ticketResult.status === 'ACTIVE'">
+                                        <span class="result-label">Người soát vé:</span>
+                                        <span>{{ ticketResult.lastUsingACM}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="result-item">
-                        <span class="result-label">Code/Mã vé:</span>
-                        <span>{{ ticketResult.code }}</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-label">Booking/Mã đặt chỗ:</span>
-                        <span>{{ ticketResult.bookingCode }}</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-label">InvoiceCode/Số bill:</span>
-                        <span>{{ ticketResult.invoiceCode }}</span>
+
+                    <!-- Right Side: Ticket History Grid (25%) -->
+                    <div class="col-md-3 col-sm-12" ng-if="ticketHistory.length > 0">
+                        <div class="result-container" style="width: 100%; min-width: 0;">
+                            <h4 class="text-info"
+                                style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">Lịch
+                                sử sử
+                                dụng</h4>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Người soát vé</th>
+                                            <th>Thời gian soát vé</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="item in ticketHistory">
+                                            <td>{{ item.device_ID }}</td>
+                                            <td>{{ item.device_Time | date:'dd/MM/yyyy HH:mm:ss' }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="result-container" ng-if="errorMessage">
-                    <div class="result-item text-danger">
-                        {{ errorMessage }}
-                    </div>
+            </div>
+
+            <div class="result-container" ng-if="errorMessage">
+                <div class="result-item text-danger">
+                    {{ errorMessage }}
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>

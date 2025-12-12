@@ -9,11 +9,12 @@
     function checkInMaQrDataService($http, $cookies, $rootScope, $timeout) {
         var service = {};
         service.checkTicket = checkTicket;
+        service.usingTicket = usingTicket;
 
         return service;
 
         function checkTicket(obj) {
-            var apiUrl = 'http://42.96.58.57:8888/mobile/check-ticket';
+            var apiUrl = 'https://localapits.lscloud.vn/mobile/check-ticket';
             return $http.post(apiUrl, obj).then(function (response) {
                 if (response.data.status === 'SUCCESS')
                     return { flag: true, data: response.data }
@@ -24,6 +25,13 @@
             });
         }
 
+        function usingTicket(code, device) {
+            return $http.post('https://localapits.lscloud.vn/mobile/using-ticket?code=' + code + "&device=" + device).then(function (response) {
+                return { flag: true, data: response }
+            }, function (response) {
+                return { flag: false, data: [] }
+            });
+        }
     }
 
 })();

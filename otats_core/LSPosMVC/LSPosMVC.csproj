@@ -437,6 +437,7 @@
     <Compile Include="App_Start\GlobalUtilities.cs" />
     <Compile Include="App_Start\NotifyData.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Common\ClientHttpGet.cs" />
     <Compile Include="Common\Common.cs" />
@@ -464,7 +465,11 @@
     <Compile Include="Common\utilsCommon.cs" />
     <Compile Include="Common\VnPayUtils.cs" />
     <Compile Include="Common\VPCRequest.cs" />
+    <Compile Include="Controllers\BuildingsController.cs" />
+    <Compile Include="Controllers\DailyRatesController.cs" />
+    <Compile Include="Controllers\FloorsController.cs" />
     <Compile Include="Controllers\HDVController.cs" />
+    <Compile Include="Controllers\HotelsController.cs" />
     <Compile Include="Controllers\OtaController.cs" />
     <Compile Include="Controllers\albumController.cs" />
     <Compile Include="Controllers\BanDoController.cs" />
@@ -519,6 +524,10 @@
     <Compile Include="Controllers\PhieuTonDauController.cs" />
     <Compile Include="Controllers\QuanController.cs" />
     <Compile Include="Controllers\QuyenController.cs" />
+    <Compile Include="Controllers\RatePlansController.cs" />
+    <Compile Include="Controllers\RoomsController.cs" />
+    <Compile Include="Controllers\RoomTypeRatePlansController.cs" />
+    <Compile Include="Controllers\RoomTypesController.cs" />
     <Compile Include="Controllers\TinhController.cs" />
     <Compile Include="Controllers\TrangThaiDonHangController.cs" />
     <Compile Include="Controllers\TuyenKhachHangController.cs" />
@@ -526,6 +535,7 @@
     <Compile Include="Controllers\UserinfoController.cs" />
     <Compile Include="Controllers\XaPhuongController.cs" />
     <Compile Include="Controllers\XeController.cs" />
+    <Compile Include="Controllers\ZonesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1292,6 +1302,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Analyzer Include="..\LSPos_Data\bin\Release\LSPos_Data.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>

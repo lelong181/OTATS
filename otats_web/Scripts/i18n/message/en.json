@@ -751,6 +751,7 @@
   "menu_vitrihientaicuanhanvien": "Employee Current Position",
   "menu_vitrikhachhang": "Customer Location",
   "menu_xemkehoachlamviecnhanvien": "View Employee Work Plan",
+  "menu_hotels": "Hotels",
   "label_baocaoviengtham": "Visited Report",
   "label_bieudoviengtham": "Visited Graph",
   "label_bieudophanloaikhachhang": "Customer Classification Graph",
@@ -1005,7 +1006,6 @@
   "button_cauhinhchung": "Configuration",
   "button_dangxuat": "Logout",
   "label_tennhanvien": "Employee Name",
-
   "label_khongthethaydoigiabanle": "Cannot change retail price",
   "label_khongthethaydoigiabanbuon": "Cannot change wholesale price",
   "label_hinhthucbantrung,khongthethaydoi": "Duplicated sale type, cannot change!",
@@ -1199,8 +1199,6 @@
   "label_chonkhachhangtrongtuyen": "Select Customer Based On Router",
   "label_danhsachtuyen": "List Of Routes",
   "header_loaidieuchinh": "Type Of Transfer",
-
-
   "header_tendonvitinh": "Unit Type",
   "label_tendonvitinh": " Unit Type ",
   "header_tenkenhbanhang": "Sales Channel Name",
@@ -1250,9 +1248,6 @@
   "label_xoanhanhieukhongthanhcongvuilonglienhequantri": "Brand not deleted. Please contact your manager!",
   "label_luunhacungcapkhongthanhcongvuilonglienhequantri": "Failed to save supplier. Please contact your manager!",
   "label_luunhanhieukhongthanhcongvuilonglienhequantri": "Failed to save brand. Please contact your manager!",
-
-
-
   "label_bancochacchanmuonxoamathang": "Are you sure to delete this product?",
   "label_xoathanhcongmathang": "… product(s) deleted",
   "label_luuchuongtrinhkhuyenmaithanhcong": "Discount program saved",
@@ -1507,7 +1502,6 @@
   "label_filemaukhongdungdinhdang": " Invalidated template format! ",
   "label_khongtontaibanghi": " No existing records.",
   "label_dulieutrongfileimportkhongduocqua2000dongvuilongkiemtralai": " Import files data must not exceed 2000 lines, please check again.",
-
   "label_tacvuthuchienkhongthanhcongdatontaitaikhoantronghethong": "label_tacvuthuchienkhongthanhcongdatontaitaikhoantronghethong",
   "label_phatsinhloitrongquatrinhthaotactacvuthuchienkhongthanhcong": "An error occurred. Task failed",
   "label_tontainhanviendacokhachangquanlycanchuyenkhachhangchonhanvienkhactruockhixoa": "Already exist customer service delegated to this employee. You must transfer this employee's delegation to another employee before performing delete",

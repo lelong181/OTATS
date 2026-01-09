@@ -1504,6 +1504,48 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$ocLaz
                     }]
                 }
             })
+            .state('hotels', {
+                parent: 'layout',
+                abstract: false,
+                url: '/hotels',
+                views: {
+                    'mainContent@layout': {
+                        templateUrl: '/app/components/hotels/hotelsView.html',
+                        controller: 'hotelsController'
+                    }
+                }, resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load({
+                            serie: true,
+                            files: ['/app/components/hotels/hotelsController.js',
+                                '/app/components/hotels/hotelsDataService.js'
+                            ]
+                        });
+                    }]
+                }
+            })
+
+        $stateProvider
+            .state('zones', {
+                parent: 'layout',
+                abstract: false,
+                url: '/zones',
+                views: {
+                    'mainContent@layout': {
+                        templateUrl: '/app/components/zones/zonesView.html',
+                        controller: 'zonesController'
+                    }
+                }, resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load({
+                            serie: true,
+                            files: ['/app/components/zones/zonesController.js',
+                                '/app/components/zones/zonesDataService.js'
+                            ]
+                        });
+                    }]
+                }
+            })
 
         $stateProvider
             .state('quanlyxe', {

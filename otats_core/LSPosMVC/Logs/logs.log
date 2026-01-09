@@ -1,0 +1,20 @@
+﻿2026/01/09 09:41:57,333 ERROR 8 LSPos_Data.Utilities.Log - System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.OrderedEnumerable`2..ctor(IEnumerable`1 source, Func`2 keySelector, IComparer`1 comparer, Boolean descending)
+   at System.Linq.Enumerable.OrderBy[TSource,TKey](IEnumerable`1 source, Func`2 keySelector)
+   at LSPosMVC.Controllers.XaPhuongController.get(Int32 IdQuan) in D:\OTA\OTATS\otats_core\LSPosMVC\Controllers\XaPhuongController.cs:line 38
+2026/01/09 09:41:57,501 ERROR 73 LSPos_Data.Utilities.Log - System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.OrderedEnumerable`2..ctor(IEnumerable`1 source, Func`2 keySelector, IComparer`1 comparer, Boolean descending)
+   at System.Linq.Enumerable.OrderBy[TSource,TKey](IEnumerable`1 source, Func`2 keySelector)
+   at LSPosMVC.Controllers.QuanController.get(TieuChiLoc tieuchi) in D:\OTA\OTATS\otats_core\LSPosMVC\Controllers\QuanController.cs:line 40
+2026/01/09 09:41:58,071 ERROR 181 LSPos_Data.Utilities.Log - System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.OrderedEnumerable`2..ctor(IEnumerable`1 source, Func`2 keySelector, IComparer`1 comparer, Boolean descending)
+   at System.Linq.Enumerable.OrderBy[TSource,TKey](IEnumerable`1 source, Func`2 keySelector)
+   at LSPosMVC.Controllers.QuanController.get(TieuChiLoc tieuchi) in D:\OTA\OTATS\otats_core\LSPosMVC\Controllers\QuanController.cs:line 40
+2026/01/09 09:41:58,102 ERROR 23 LSPos_Data.Utilities.Log - System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.OrderedEnumerable`2..ctor(IEnumerable`1 source, Func`2 keySelector, IComparer`1 comparer, Boolean descending)
+   at System.Linq.Enumerable.OrderBy[TSource,TKey](IEnumerable`1 source, Func`2 keySelector)
+   at LSPosMVC.Controllers.XaPhuongController.get(Int32 IdQuan) in D:\OTA\OTATS\otats_core\LSPosMVC\Controllers\XaPhuongController.cs:line 38

@@ -1,0 +1,90 @@
+<div class="container-fluid">
+    <div class="toolbarmenu">
+        <button class="btn btn-link btn-menubar" ng-click="openAdd()"><i
+                class="fas fa-plus-circle fas-sm color-infor"></i> <span>Thêm mới</span></button>
+        <button class="btn btn-link btn-menubar" ng-click="openEdit()"><i class="fas fa-edit fas-sm color-infor"></i>
+            <span>Sửa</span></button>
+        <button class="btn btn-link btn-menubar" ng-click="confirmDelete()"><i
+                class="fas fa-trash fas-sm color-danger"></i> <span>Xóa</span></button>
+        <button class="btn btn-link btn-menubar" ng-click="refreshGrid()">
+            <i class="fas fa-sync-alt fas-sm color-success"></i> <span>Tải lại</span>
+        </button>
+    </div>
+    <div id="gridHotels" kendo-grid options="gridOptions"></div>
+</div>
+
+<!-- Modal Add/Edit (Kendo Window) -->
+<div kendo-window="hotelWindow" id="hotelWindow" k-title="''" k-visible="false" k-modal="true" k-width="800"
+    k-resizable="false" k-actions="['Close']">
+    <div class="container-fluid" style="padding: 15px;">
+        <form class="form-horizontal" role="form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label style="margin-bottom: 5px; font-weight: bold;">Tên Khách sạn <span
+                                class="required">*</span></label>
+                        <input type="text" class="form-control" ng-model="currentHotel.hotelName">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label style="margin-bottom: 5px; font-weight: bold;">Mã khách sạn</label>
+                        <input type="text" class="form-control" ng-model="currentHotel.code">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label style="margin-bottom: 5px; font-weight: bold;">Điện thoại</label>
+                        <input type="text" class="form-control" ng-model="currentHotel.phone">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label style="margin-bottom: 5px; font-weight: bold;">Email</label>
+                        <input type="email" class="form-control" ng-model="currentHotel.email">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label style="margin-bottom: 5px; font-weight: bold;">Địa chỉ</label>
+                        <input type="text" class="form-control" ng-model="currentHotel.address">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label style="margin-bottom: 5px; font-weight: bold;">Website</label>
+                        <input type="text" class="form-control" ng-model="currentHotel.website">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label style="margin-bottom: 5px; font-weight: bold;">Logo URL</label>
+                        <input type="text" class="form-control" ng-model="currentHotel.logoUrl">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mt-checkbox-list" style="padding-top: 0;">
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            <input type="checkbox" ng-model="currentHotel.isActive"> Hoạt động
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="text-right" style="margin-top: 10px; border-top: 1px solid #e5e5e5; padding-top: 10px;">
+            <button class="btn btn-link btn-menubar" ng-click="saveHotel()"><i
+                    class="fas fa-save fas-sm color-primary"></i> <span>Lưu</span></button>
+            <button class="btn btn-link btn-menubar" ng-click="hotelWindow.close()"><i
+                    class="fas fa-times fas-sm color-danger"></i> <span>Đóng</span></button>
+        </div>
+    </div>
+</div>

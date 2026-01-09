@@ -1,14 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OneDrive\\Documents\\source\\lscloudhub_core\\LSPos_Data\\LSPos_Data.csproj": {}
+    "D:\\OTA\\OTATS\\otats_core\\LSPos_Data\\LSPos_Data.csproj": {}
   },
   "projects": {
-    "D:\\OneDrive\\Documents\\source\\lscloudhub_core\\LSPos_API\\LSPos_API.csproj": {
+    "D:\\OTA\\OTATS\\otats_core\\LSPos_API\\LSPos_API.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\OneDrive\\Documents\\source\\lscloudhub_core\\LSPos_API\\LSPos_API.csproj",
+        "projectUniqueName": "D:\\OTA\\OTATS\\otats_core\\LSPos_API\\LSPos_API.csproj",
         "projectName": "LSPos_API",
-        "projectPath": "D:\\OneDrive\\Documents\\source\\lscloudhub_core\\LSPos_API\\LSPos_API.csproj",
+        "projectPath": "D:\\OTA\\OTATS\\otats_core\\LSPos_API\\LSPos_API.csproj",
+        "UsingMicrosoftNETSdk": false,
         "frameworks": {
           "net48": {
             "projectReferences": {}
@@ -19,23 +20,22 @@
         "net48": {}
       }
     },
-    "D:\\OneDrive\\Documents\\source\\lscloudhub_core\\LSPos_Data\\LSPos_Data.csproj": {
+    "D:\\OTA\\OTATS\\otats_core\\LSPos_Data\\LSPos_Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OneDrive\\Documents\\source\\lscloudhub_core\\LSPos_Data\\LSPos_Data.csproj",
+        "projectUniqueName": "D:\\OTA\\OTATS\\otats_core\\LSPos_Data\\LSPos_Data.csproj",
         "projectName": "LSPos_Data",
-        "projectPath": "D:\\OneDrive\\Documents\\source\\lscloudhub_core\\LSPos_Data\\LSPos_Data.csproj",
-        "packagesPath": "C:\\Users\\quang\\.nuget\\packages\\",
-        "outputPath": "D:\\OneDrive\\Documents\\source\\lscloudhub_core\\LSPos_Data\\obj\\",
+        "projectPath": "D:\\OTA\\OTATS\\otats_core\\LSPos_Data\\LSPos_Data.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\OTA\\OTATS\\otats_core\\LSPos_Data\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\quang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,15 +43,14 @@
           "net48"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net48": {
             "projectReferences": {
-              "D:\\OneDrive\\Documents\\source\\lscloudhub_core\\LSPos_API\\LSPos_API.csproj": {
-                "projectPath": "D:\\OneDrive\\Documents\\source\\lscloudhub_core\\LSPos_API\\LSPos_API.csproj"
+              "D:\\OTA\\OTATS\\otats_core\\LSPos_API\\LSPos_API.csproj": {
+                "projectPath": "D:\\OTA\\OTATS\\otats_core\\LSPos_API\\LSPos_API.csproj"
               }
             }
           }

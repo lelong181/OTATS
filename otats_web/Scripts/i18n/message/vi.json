@@ -765,6 +765,7 @@
   "menu_vitrihientaicuanhanvien": "2.3 Vị trí hiện tại của nhân viên",
   "menu_vitrikhachhang": "1.2 Vị trí khách hàng",
   "menu_xemkehoachlamviecnhanvien": "4.2 Xem Kế hoạch làm việc ",
+  "menu_hotels": "12. Khách sạn ",
   "label_baocaoviengtham": "Báo cáo viếng thăm",
   "label_bieudoviengtham": "Biểu đồ viếng thăm",
   "label_bieudophanloaikhachhang": "Biểu đồ phân loại khách hàng",
@@ -1020,7 +1021,6 @@
   "button_cauhinhchung": "Cấu hình chung",
   "button_dangxuat": "Đăng xuất",
   "label_tennhanvien": "Tên nhân viên",
-
   "label_khongthethaydoigiabanle": "Không thể thay đổi giá bán lẻ",
   "label_khongthethaydoigiabanbuon": "Không thể thay đổi giá bán buôn",
   "label_hinhthucbantrungkhongthethaydoi": "Hình thức bán trùng, không thể thay đổi!",
@@ -1268,9 +1268,6 @@
   "label_xoanhanhieukhongthanhcongvuilonglienhequantri": "Xóa điểm đến không thành công. Vui lòng liên hệ quản trị!",
   "label_luunhacungcapkhongthanhcongvuilonglienhequantri": "Lưu nhà cung cấp không thành công. Vui lòng liên hệ quản trị!",
   "label_luunhanhieukhongthanhcongvuilonglienhequantri": "Lưu điểm đến không thành công. Vui lòng liên hệ quản trị!",
-
-
-
   "label_bancochacchanmuonxoamathang": "Bạn có chắc chắn muốn xóa mặt hàng?",
   "label_xoathanhcongmathang": "Xóa thành công ... mặt hàng",
   "label_luuchuongtrinhkhuyenmaithanhcong": "Lưu chương trình khuyến mãi thành công",
@@ -1498,8 +1495,6 @@
   "label_luudanhmucthanhcong": "Lưu danh mục thành công",
   "label_xoadanhmucthanhcong": "Xóa danh mục thành công",
   "label_xoadanhmucthatbai": "Xóa danh mục thất bại",
-
-
   "label_mahaohutdatontai": "Mã hao hụt đã tồn tại",
   "label_suakhohangthatbai": "Sửa kho hàng thất bại",
   "label_themkhohangthatbai": "Thêm kho hàng thất bại",
@@ -1507,7 +1502,6 @@
   "label_xoakhohangthanhcong": "Xóa kho hàng thành công",
   "label_xoakhohangthatbai": "Xóa kho hàng thất bại",
   "label_xoataikhoanquanlysedongthoixoacacquanlycapduoibancochacchanxoa": "Xóa tài khoản quản lý sẽ đồng thời xóa các quản lý cấp dưới. Bạn có chắc chắn xóa?",
-
   "label_capnhatmatkhaukhongthanhcongvuilongthulai": "Cập nhật mật khẩu không thành công. Vui lòng thử lại!",
   "label_macongtykhongtontaivuilongkiemtralai": "Mã công ty không tồn tại, vui lòng kiểm tra lại.",
   "label_thoihanhopdongdahetvuilongkiemtralai": "Thời hạn hợp đồng đã hết, vui lòng kiểm tra lại.",
@@ -1521,8 +1515,6 @@
   "label_xoataikhoanthanhcong": "Xóa tài khoản thành công",
   "label_bankhongthexoachinhtaikhoandangdangnhap": "Bạn không thể xóa chính tài khoản đang đăng nhập",
   "label_quanlyvoitendangnhapnaydatontai": "Quản lý với tên đăng nhập này đã tồn tại",
-
-
   "label_chuachonkhachhangdethuchiendanquyen": "Chưa chọn khách hàng để thực hiện dán quyền",
   "label_khongcodulieukhachhangsaochepdethuchien": "Không có dữ liệu khách hàng sao chép để thực hiện",
   "label_bancochacchanmuonxoacacnhanviendaphanchokhachhangkhong": "Bạn có chắc chắn muốn xóa các nhân viên đã phân cho khách hàng không?",
@@ -1537,7 +1529,6 @@
   "label_filemaukhongdungdinhdang": "File mẫu không đúng định dạng.",
   "label_khongtontaibanghi": "Không tồn tại bản ghi.",
   "label_dulieutrongfileimportkhongduocqua2000dongvuilongkiemtralai": "Dữ liệu trong file import không được quá 2000 dòng, vui lòng kiểm tra lại.",
-
   "label_tacvuthuchienkhongthanhcongdatontaitaikhoantronghethong": "Tác vụ thực hiện không thành công. Đã tồn tại tại tài khoản trong hệ thống",
   "label_phatsinhloitrongquatrinhthaotactacvuthuchienkhongthanhcong": "Phát sinh lỗi trong quá trình thao tác. Tác vụ thực hiện không thành công",
   "label_tontainhanviendacokhachangquanlycanchuyenkhachhangchonhanvienkhactruockhixoa": "Tồn tại nhân viên đã có khách hàng quản lý, cần chuyển khách hàng cho nhân viên khác trước khi xóa",

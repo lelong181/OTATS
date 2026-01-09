@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="toolbarmenu">
+        <button class="btn btn-link btn-menubar" ng-click="openAdd()">
+            <i class="fas fa-plus-circle fas-sm color-infor"></i> <span>Thêm mới</span>
+        </button>
+        <button class="btn btn-link btn-menubar" ng-click="refreshGrid()">
+            <i class="fas fa-sync-alt fas-sm color-success"></i> <span>Tải lại</span>
+        </button>
+    </div>
+    <div id="gridZones" kendo-grid options="gridOptions"></div>
+</div>
+
+<!-- Modal Add/Edit -->
+<div class="modal fade" id="modalZone" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title">{{isEdit ? 'Cập nhật Phân khu' : 'Thêm mới Phân khu'}}</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Tên Phân khu <span class="required">*</span></label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" ng-model="currentZone.zoneName"
+                                placeholder="Nhập tên phân khu">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Mô tả</label>
+                        <div class="col-md-9">
+                            <textarea class="form-control" ng-model="currentZone.description" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Khoảng cách đến Lễ tân (m)</label>
+                        <div class="col-md-9">
+                            <input type="number" class="form-control" ng-model="currentZone.distanceToReception">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn default" data-dismiss="modal">Đóng</button>
+                <button type="button" class="btn blue" ng-click="saveZone()">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>
